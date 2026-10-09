@@ -1,0 +1,18 @@
+# Exemple documentaire : J02/J03 lisent les variables d'environnement et options CLI.
+# Le schéma source exécuté par J03 est dans config/datasets.yaml.
+bigquery:
+  project_id: replace-with-your-project-id
+  location: EU
+  datasets:
+    development: sncf_dev
+    test: sncf_test
+    publication: sncf_publish
+    audit: sncf_audit
+  maximum_bytes_billed_per_query: 100000000
+storage:
+  data_dir_environment_variable: SNCF_DATA_DIR
+  data_dir_default: "%LOCALAPPDATA%\\SNCF_Service_Reliability_Analytics\\data"
+ingestion:
+  raw_table_prefix: raw_tgv
+  current_view: raw_tgv_current
+  audit_table: raw_tgv_load_events

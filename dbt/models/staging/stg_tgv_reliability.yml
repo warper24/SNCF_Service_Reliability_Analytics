@@ -1,0 +1,125 @@
+version: 2
+models:
+- name: stg_tgv_reliability
+  description: Vue des 26 champs normalisés au grain mois × départ × arrivée × service,
+    sans correction des valeurs.
+  columns:
+  - name: month
+    data_type: DATE
+    description: Mois représenté au premier jour ; aucune observation journalière.
+    data_tests:
+    - not_null
+  - name: service_type
+    data_type: STRING
+    description: Service source, National ou International, sans reclassification.
+    data_tests:
+    - not_null
+    - accepted_values:
+        arguments:
+          values:
+          - National
+          - International
+  - name: departure_station
+    data_type: STRING
+    description: Libellé source de départ ; direction préservée.
+    data_tests:
+    - not_null
+  - name: arrival_station
+    data_type: STRING
+    description: Libellé source d’arrivée, sans fusion approximative.
+    data_tests:
+    - not_null
+  - name: scheduled_duration_minutes
+    data_type: INT64
+    description: Durée moyenne prévue ; ne reconstruit pas les seuils individuels.
+  - name: scheduled_trains
+    data_type: INT64
+    description: Effectif prévu publié.
+  - name: cancelled_trains
+    data_type: INT64
+    description: Effectif annulé publié ; convention de préavis non certifiée.
+  - name: cancellation_comment
+    data_type: STRING
+    description: Commentaire facultatif ; null conservé.
+  - name: departure_delayed_trains
+    data_type: INT64
+    description: Effectif publié en retard au départ.
+  - name: mean_departure_delay_late_minutes
+    data_type: FLOAT64
+    description: Moyenne publiée des trains en retard au départ.
+  - name: mean_departure_delay_all_minutes
+    data_type: FLOAT64
+    description: Moyenne tous trains au départ ; signe conservé.
+  - name: departure_delay_comment
+    data_type: STRING
+    description: Commentaire facultatif ; null conservé.
+  - name: arrival_delayed_trains
+    data_type: INT64
+    description: Effectif composite publié ; pas de reconstruction des seuils.
+  - name: mean_arrival_delay_late_minutes
+    data_type: FLOAT64
+    description: Moyenne des trains en retard ; exclusion si négative.
+  - name: mean_arrival_delay_all_minutes
+    data_type: FLOAT64
+    description: Moyenne tous trains à l’arrivée ; signe conservé.
+  - name: arrival_delay_comment
+    data_type: STRING
+    description: Commentaire facultatif, conservé sans NLP.
+  - name: arrival_delayed_over_15_trains
+    data_type: INT64
+    description: 'Périmètre aérien non identifié : aucun KPI générique V1.'
+  - name: mean_arrival_delay_over_15_minutes
+    data_type: FLOAT64
+    description: Moyenne au périmètre restreint >15, exclue des KPI génériques.
+  - name: arrival_delayed_over_30_trains
+    data_type: INT64
+    description: Effectif publié >30 ; valeur brute conservée, quarantaine T1 2025.
+  - name: arrival_delayed_over_60_trains
+    data_type: INT64
+    description: Effectif >60 ; usage du couple soumis au contrat D04.
+  - name: external_cause_pct
+    data_type: FLOAT64
+    description: Part publiée externe, échelle 0–100 ; population non certifiée.
+  - name: infrastructure_cause_pct
+    data_type: FLOAT64
+    description: Part publiée infrastructure, échelle 0–100.
+  - name: traffic_management_cause_pct
+    data_type: FLOAT64
+    description: Part publiée gestion du trafic, échelle 0–100.
+  - name: rolling_stock_cause_pct
+    data_type: FLOAT64
+    description: Part publiée matériel roulant, échelle 0–100.
+  - name: station_management_cause_pct
+    data_type: FLOAT64
+    description: Part publiée gestion de gare, échelle 0–100.
+  - name: passenger_handling_cause_pct
+    data_type: FLOAT64
+    description: Part publiée prise en charge voyageurs, échelle 0–100.
+  - name: version_id
+    data_type: STRING
+    description: Identité canonique du contenu J03.
+    data_tests:
+    - not_null
+  - name: row_number
+    data_type: INT64
+    description: Position dans le brut ; provenance, pas clé métier.
+    data_tests:
+    - not_null
+    - unique
+  - name: row_sha256
+    data_type: STRING
+    description: Empreinte canonique de la ligne source.
+    data_tests:
+    - not_null
+  - name: raw_payload
+    data_type: STRING
+    description: JSON brut inchangé pour revue et fidélité.
+  - name: invalid_json
+    data_type: BOOL
+    description: JSON illisible ; erreur bloquante.
+  - name: conversion_error_fields
+    data_type: ARRAY<STRING>
+    description: Champs présents de type inattendu ou non convertibles ; erreur bloquante.
+  - name: missing_schema_fields
+    data_type: ARRAY<STRING>
+    description: Champs absents du schéma source ; distinct de JSON null.

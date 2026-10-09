@@ -1,0 +1,175 @@
+{
+  "purpose": "Copies publiques de preuves historiques ; aucune nouvelle validation revendiquée.",
+  "transformation": "Remplacement du nom de profil Windows par <utilisateur> ; valeurs métier inchangées.",
+  "hash_policy": "Les empreintes internes des validations restent celles des originaux. Utiliser ce manifeste pour vérifier les octets publics.",
+  "entries": [
+    {
+      "path": "audit_evidence/anomalies.csv",
+      "original_sha256": "3f1b451c2428e2e2004951b732f0216eb80eb156f120ec800f0ff8b2286e76c2",
+      "public_sha256": "3f1b451c2428e2e2004951b732f0216eb80eb156f120ec800f0ff8b2286e76c2",
+      "anonymized": false
+    },
+    {
+      "path": "audit_evidence/eligibility.csv",
+      "original_sha256": "4869c0b8a42ec3f66b37c94e34a360760613ffe60fafa9875e8d6221a2dd7975",
+      "public_sha256": "4869c0b8a42ec3f66b37c94e34a360760613ffe60fafa9875e8d6221a2dd7975",
+      "anonymized": false
+    },
+    {
+      "path": "audit_evidence/eligibility_2025_vs_2024.csv",
+      "original_sha256": "bb8a54c25423eac662d8a3b26c23c86be6e952c27661d448a5296d4718489b6d",
+      "public_sha256": "bb8a54c25423eac662d8a3b26c23c86be6e952c27661d448a5296d4718489b6d",
+      "anonymized": false
+    },
+    {
+      "path": "audit_evidence/fields.csv",
+      "original_sha256": "954446914648920146e9f4296904d87826172c5b8d6408738a39f8fbc465830b",
+      "public_sha256": "954446914648920146e9f4296904d87826172c5b8d6408738a39f8fbc465830b",
+      "anonymized": false
+    },
+    {
+      "path": "audit_evidence/monthly_coverage.csv",
+      "original_sha256": "071b3d061f86e3b901c64a88e6775cdca8fc51f8a71392d4e8cf57a9882828cb",
+      "public_sha256": "071b3d061f86e3b901c64a88e6775cdca8fc51f8a71392d4e8cf57a9882828cb",
+      "anonymized": false
+    },
+    {
+      "path": "audit_evidence/provenance.json",
+      "original_sha256": "fd07e62776daea876dfa8734ee5d16641341d2dfde06e6594131568f9fd177ee",
+      "public_sha256": "fd07e62776daea876dfa8734ee5d16641341d2dfde06e6594131568f9fd177ee",
+      "anonymized": false
+    },
+    {
+      "path": "audit_evidence/routes.csv",
+      "original_sha256": "f8cca4364f78db7589f74af6150b961ae795d6843829ea402f1b81f401ad1aea",
+      "public_sha256": "f8cca4364f78db7589f74af6150b961ae795d6843829ea402f1b81f401ad1aea",
+      "anonymized": false
+    },
+    {
+      "path": "audit_evidence/service_scope.csv",
+      "original_sha256": "4e81fbd1b15287db2f39fc63da06066e5fe9ad512057b793e01ab8e83ccce9ff",
+      "public_sha256": "4e81fbd1b15287db2f39fc63da06066e5fe9ad512057b793e01ab8e83ccce9ff",
+      "anonymized": false
+    },
+    {
+      "path": "audit_evidence/summary.json",
+      "original_sha256": "c870bea14cdd7cc80307e60fc84abc02da444b5dae78c183485ed8824edbce85",
+      "public_sha256": "c870bea14cdd7cc80307e60fc84abc02da444b5dae78c183485ed8824edbce85",
+      "anonymized": false
+    },
+    {
+      "path": "audit_evidence/validation.json",
+      "original_sha256": "4adb4bea414cd9fd18b86dc189f268003597b22a4de646ded8303e4abd3b4b67",
+      "public_sha256": "4adb4bea414cd9fd18b86dc189f268003597b22a4de646ded8303e4abd3b4b67",
+      "anonymized": false
+    },
+    {
+      "path": "ingestion_evidence/cloud_scenarios.json",
+      "original_sha256": "13176d7980880433d2fad0fd90480018812c395c071eec15b877dee5b7dcf549",
+      "public_sha256": "f6a46d394ae5ba42b76cab725461956d9d326c156a759929f5a8fb6231e8a63f",
+      "anonymized": true
+    },
+    {
+      "path": "ingestion_evidence/cloud_scenarios_initial.json",
+      "original_sha256": "f1984b961cc91499cddc77b06731733dcb123ff3b52fd4ace9eaf67f9bcce72a",
+      "public_sha256": "8915847ead48c22a43ed4fdfc81aa22fea162a1ea6a972c422f7092a2287a038",
+      "anonymized": true
+    },
+    {
+      "path": "ingestion_evidence/git_review.json",
+      "original_sha256": "89b68e9f851fb69cf5f7c30055baa0588fc66acbe3e990a719d3b41aa62cc6fc",
+      "public_sha256": "d84ff38c7054279efe6a24904dc50e63b9823d8aaaea01332d84534142be59f2",
+      "anonymized": true
+    },
+    {
+      "path": "ingestion_evidence/live_warehouse.json",
+      "original_sha256": "bcd9eb703ad289268632be5f934f840f1c5e90592ff93c34674bf2e310192fa4",
+      "public_sha256": "b79cdbbd4439c37d6347d050828a1d12b1522b74ca91abab80806d1e0327b191",
+      "anonymized": true
+    },
+    {
+      "path": "ingestion_evidence/numeric_precision_review.json",
+      "original_sha256": "805a285fe46184875cb19f722753fc7bd5c863e70ee94f2b7bea9358add9f3cf",
+      "public_sha256": "805a285fe46184875cb19f722753fc7bd5c863e70ee94f2b7bea9358add9f3cf",
+      "anonymized": false
+    },
+    {
+      "path": "ingestion_evidence/source_comparison.json",
+      "original_sha256": "b939bc8154e8cb55f5fee5e38ff09a8e22b23391c9253a9d7cf59f02698c52f0",
+      "public_sha256": "b939bc8154e8cb55f5fee5e38ff09a8e22b23391c9253a9d7cf59f02698c52f0",
+      "anonymized": false
+    },
+    {
+      "path": "ingestion_evidence/tests.txt",
+      "original_sha256": "8285ca44987a49f23c6659938d1deaf7174db0bcce23c76c351e2f79b822a2b3",
+      "public_sha256": "8285ca44987a49f23c6659938d1deaf7174db0bcce23c76c351e2f79b822a2b3",
+      "anonymized": false
+    },
+    {
+      "path": "ingestion_evidence/validation.json",
+      "original_sha256": "1aadb3b0a6cec7255b03dc406d7f845f39717d9175fdad218ea153b3a163103f",
+      "public_sha256": "e3da3a079dbfad457b1bb34a21c1ae26cb30d71e150e9c277dc0b68d7b26c6cf",
+      "anonymized": true
+    },
+    {
+      "path": "data_quality_evidence/anomaly_examples.csv",
+      "original_sha256": "644f2ce25964a0d55425a4d35c9c5abb761f1ebfba00664133eb4a5f786585e7",
+      "public_sha256": "644f2ce25964a0d55425a4d35c9c5abb761f1ebfba00664133eb4a5f786585e7",
+      "anonymized": false
+    },
+    {
+      "path": "data_quality_evidence/compile.txt",
+      "original_sha256": "e4f3b0cf62dd1534248fc46284157f3741747766141483eae9479b3cbed198e4",
+      "public_sha256": "e4f3b0cf62dd1534248fc46284157f3741747766141483eae9479b3cbed198e4",
+      "anonymized": false
+    },
+    {
+      "path": "data_quality_evidence/coverage.csv",
+      "original_sha256": "775a1f5b34bff76453b8a04de85c089db473b325b8097478287814caedea92b6",
+      "public_sha256": "775a1f5b34bff76453b8a04de85c089db473b325b8097478287814caedea92b6",
+      "anonymized": false
+    },
+    {
+      "path": "data_quality_evidence/git_review.json",
+      "original_sha256": "f01266a1a12f2b130be415dceb15f7309df10cfeea165fdb17ffa39b52e3112f",
+      "public_sha256": "f01266a1a12f2b130be415dceb15f7309df10cfeea165fdb17ffa39b52e3112f",
+      "anonymized": false
+    },
+    {
+      "path": "data_quality_evidence/manual_cases.csv",
+      "original_sha256": "07819a1b584273c210ec1dfb988dddb691984cddb0a7562cc805045fffbe81d6",
+      "public_sha256": "07819a1b584273c210ec1dfb988dddb691984cddb0a7562cc805045fffbe81d6",
+      "anonymized": false
+    },
+    {
+      "path": "data_quality_evidence/models.txt",
+      "original_sha256": "1ddc3b6acfe620abe9a7a762b0051ef38afc8193b493c01bb09c96e3cbd29c42",
+      "public_sha256": "1ddc3b6acfe620abe9a7a762b0051ef38afc8193b493c01bb09c96e3cbd29c42",
+      "anonymized": false
+    },
+    {
+      "path": "data_quality_evidence/period_coverage.csv",
+      "original_sha256": "0b681291a3ad486b582eb2e559cdc560355e787d19b1293363989e0ebc8e7d9c",
+      "public_sha256": "0b681291a3ad486b582eb2e559cdc560355e787d19b1293363989e0ebc8e7d9c",
+      "anonymized": false
+    },
+    {
+      "path": "data_quality_evidence/quality_summary.csv",
+      "original_sha256": "e63a64b5986ad1b88182070c2631549ca6fa77df15d22977ee00f0628f471b11",
+      "public_sha256": "e63a64b5986ad1b88182070c2631549ca6fa77df15d22977ee00f0628f471b11",
+      "anonymized": false
+    },
+    {
+      "path": "data_quality_evidence/tests.txt",
+      "original_sha256": "1dd7bfa1ea0de9e89e83dbabbce7be159094a2cd87f311425a3cbb8dcfd83e16",
+      "public_sha256": "19adbc23edb9e77966750e10ca6ddb3ac3148609d1607e58d762adb8f5e8260d",
+      "anonymized": true
+    },
+    {
+      "path": "data_quality_evidence/validation.json",
+      "original_sha256": "520afcf68e1c7df83b6f8d2b6ef2d2dce1010026c404463c5e09f26b484c0e0e",
+      "public_sha256": "308635006e95e54d26c9b154c4c3e9d941ae719d2dbf55eb00ed2a29e2832be5",
+      "anonymized": true
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+version: 2
+sources:
+  - name: sncf_raw
+    description: >
+      Brut J03 validé au transport, sans correction métier. La qualification J04
+      fige raw_tgv_identifier sur la table de version du manifeste ; le défaut
+      raw_tgv_current permet un usage courant explicite, sans fraîcheur garantie.
+    database: "{{ env_var('GOOGLE_CLOUD_PROJECT') }}"
+    schema: "{{ env_var('BQ_RAW_DATASET', 'sncf_dev') }}"
+    tables:
+      - name: tgv_reliability
+        identifier: "{{ var('raw_tgv_identifier', 'raw_tgv_current') }}"
+        description: >
+          Une ligne JSON source et son enveloppe version_id, row_number, row_sha256.
+          Les versions historiques ne sont jamais réunies comme observations métier.

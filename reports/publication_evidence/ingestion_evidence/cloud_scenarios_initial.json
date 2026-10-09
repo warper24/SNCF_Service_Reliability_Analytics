@@ -1,0 +1,279 @@
+{
+  "attempt_paths": [
+    "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\attempts\\b62a54131a2842c6bcbd1e7733438569",
+    "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\attempts\\c8908afc8b564dc1987553ce76b3990f",
+    "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\attempts\\7c40e63c8bea4773ad0c83138017f2a5",
+    "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\attempts\\e270a61ad26a49bdb2528df66092ab2e",
+    "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\attempts\\998f5658e8474cba8a651b4dfaede234",
+    "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\attempts\\8d94f4892e834e85a3abc63344a139fd",
+    "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\attempts\\62978209fbac49adb0816d9cf7acdafd",
+    "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\attempts\\db758d3fc7094d728e305489deedf0e0"
+  ],
+  "audit_resynchronization": {
+    "duplicate_event_groups": 0,
+    "reconciled": {
+      "attempt_path": "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\attempts\\7c40e63c8bea4773ad0c83138017f2a5",
+      "current_points_to_attempt_version": false,
+      "current_view": "sncf-reliability-analytics.sncf_test.j03_check_da7c0d7d12_current",
+      "events_synchronized": 4
+    }
+  },
+  "dataset": "sncf_test",
+  "historical_correction_and_deletion": {
+    "corrected_cancellations": 7,
+    "current_count": 1,
+    "historical_count": 2,
+    "raw_negative_preserved": true,
+    "result": {
+      "audit_dataset": "sncf_test",
+      "current_view": "sncf-reliability-analytics.sncf_test.j03_check_da7c0d7d12_current",
+      "dataset_id": "regularite-mensuelle-tgv-aqst",
+      "manifest_sha256": "511976914dfdd8549ab6579571b378a523a80ea404896fb6cdbb514fec20ccdc",
+      "project": "sncf-reliability-analytics",
+      "promotion_changed": true,
+      "received_count": 1,
+      "reused": false,
+      "rows_verified": 1,
+      "snapshot_id": "20261007T125804734457Z_e270a61a",
+      "snapshot_path": "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\ingestion\\20261007T125804734457Z_e270a61a",
+      "source_sha256": "bca95330657d8a90c67e0ef4f05ea49068962f7f6959c570be875d2366f83c1c",
+      "status": "complete",
+      "table_id": "sncf-reliability-analytics.sncf_test.j03_check_da7c0d7d12_v_5ce2ffa0d12eddc5be242a356923349a768d4b9a1808a6e7a08919d1d359ac37",
+      "table_prefix": "j03_check_da7c0d7d12",
+      "total_bytes_billed": 10485760,
+      "total_bytes_processed": 933,
+      "verification_job_id": "sncf_check_j03_check_da7c0d7d12_998f5658e8474cba8a651b4dfaede234",
+      "version_id": "5ce2ffa0d12eddc5be242a356923349a768d4b9a1808a6e7a08919d1d359ac37",
+      "warehouse_dataset": "sncf_test"
+    }
+  },
+  "idempotence": {
+    "first": {
+      "audit_dataset": "sncf_test",
+      "current_view": "sncf-reliability-analytics.sncf_test.j03_check_da7c0d7d12_current",
+      "dataset_id": "regularite-mensuelle-tgv-aqst",
+      "manifest_sha256": "37c90df002926a7b0e1fe305a36dc3ddba2f6dfca939ebdb2432ed415bc3a371",
+      "project": "sncf-reliability-analytics",
+      "promotion_changed": true,
+      "received_count": 2,
+      "reused": false,
+      "rows_verified": 2,
+      "snapshot_id": "20261007T125723070218Z_b62a5413",
+      "snapshot_path": "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\ingestion\\20261007T125723070218Z_b62a5413",
+      "source_sha256": "99081621dffc1862f1aee1ce4342f431e7bd8a542e25fd840cf0082c4a6c9c2c",
+      "status": "complete",
+      "table_id": "sncf-reliability-analytics.sncf_test.j03_check_da7c0d7d12_v_f82388517444608b810c3b162d74f6d7a7550f69b8179cfa6ec3a549494b8099",
+      "table_prefix": "j03_check_da7c0d7d12",
+      "total_bytes_billed": 10485760,
+      "total_bytes_processed": 1823,
+      "verification_job_id": "sncf_check_j03_check_da7c0d7d12_c8908afc8b564dc1987553ce76b3990f",
+      "version_id": "f82388517444608b810c3b162d74f6d7a7550f69b8179cfa6ec3a549494b8099",
+      "warehouse_dataset": "sncf_test"
+    },
+    "replay": {
+      "audit_dataset": "sncf_test",
+      "current_view": "sncf-reliability-analytics.sncf_test.j03_check_da7c0d7d12_current",
+      "dataset_id": "regularite-mensuelle-tgv-aqst",
+      "manifest_sha256": "37c90df002926a7b0e1fe305a36dc3ddba2f6dfca939ebdb2432ed415bc3a371",
+      "project": "sncf-reliability-analytics",
+      "promotion_changed": false,
+      "received_count": 2,
+      "reused": true,
+      "rows_verified": 2,
+      "snapshot_id": "20261007T125723070218Z_b62a5413",
+      "snapshot_path": "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\ingestion\\20261007T125723070218Z_b62a5413",
+      "source_sha256": "99081621dffc1862f1aee1ce4342f431e7bd8a542e25fd840cf0082c4a6c9c2c",
+      "status": "complete",
+      "table_id": "sncf-reliability-analytics.sncf_test.j03_check_da7c0d7d12_v_f82388517444608b810c3b162d74f6d7a7550f69b8179cfa6ec3a549494b8099",
+      "table_prefix": "j03_check_da7c0d7d12",
+      "total_bytes_billed": 0,
+      "total_bytes_processed": 0,
+      "verification_job_id": "sncf_check_j03_check_da7c0d7d12_7c40e63c8bea4773ad0c83138017f2a5",
+      "version_id": "f82388517444608b810c3b162d74f6d7a7550f69b8179cfa6ec3a549494b8099",
+      "warehouse_dataset": "sncf_test"
+    }
+  },
+  "incompatible_schema": {
+    "current_preserved": true,
+    "error": "Schéma source incompatible avec config/datasets.yaml."
+  },
+  "invalid_load": {
+    "current_preserved": true,
+    "error": "400 Error while reading data, error message: JSON table encountered too many errors, giving up. Rows: 1; errors: 1. Please look into the errors[] collection for more details.; reason: invalid, message: Error while reading data, error message: JSON table encountered too many errors, giving up. Rows: 1; errors: 1. Please look into the errors[] collection for more details.; reason: invalid, message: Error while reading data, error message: JSON processing encountered too many errors, giving up. Rows: 1; errors: 1; max bad: 0; error percent: 0; reason: invalid, message: Error while reading data, error message: JSON parsing error in row starting at position 0: Could not convert value 'string_value: \t \"invalid-integer-for-J03-test\"' to integer. Field: row_number; Value: invalid-integer-for-J03-test",
+    "error_type": "BadRequest",
+    "partial_rows_visible": false
+  },
+  "jobs": [
+    {
+      "errors": null,
+      "job_id": "sncf_audit_j03_check_da7c0d7d12_c8908afc8b564dc1987553ce76b3990f_5ecfef45477c7d840669f9d4",
+      "job_type": "query",
+      "total_bytes_billed": 0,
+      "total_bytes_processed": 0
+    },
+    {
+      "errors": null,
+      "job_id": "sncf_raw_j03_check_da7c0d7d12_c8908afc8b564dc1987553ce76b3990f",
+      "job_type": "load",
+      "total_bytes_billed": null,
+      "total_bytes_processed": null
+    },
+    {
+      "errors": null,
+      "job_id": "sncf_check_j03_check_da7c0d7d12_c8908afc8b564dc1987553ce76b3990f",
+      "job_type": "query",
+      "total_bytes_billed": 10485760,
+      "total_bytes_processed": 1823
+    },
+    {
+      "errors": null,
+      "job_id": "sncf_audit_j03_check_da7c0d7d12_c8908afc8b564dc1987553ce76b3990f_176c8f86154520b9e6f32105",
+      "job_type": "query",
+      "total_bytes_billed": 20971520,
+      "total_bytes_processed": 1326
+    },
+    {
+      "errors": null,
+      "job_id": "sncf_promote_j03_check_da7c0d7d12_c8908afc8b564dc1987553ce76b3990f",
+      "job_type": "query",
+      "total_bytes_billed": 0,
+      "total_bytes_processed": 0
+    },
+    {
+      "errors": null,
+      "job_id": "sncf_audit_j03_check_da7c0d7d12_c8908afc8b564dc1987553ce76b3990f_6037670566dd947d0dbf5053",
+      "job_type": "query",
+      "total_bytes_billed": 20971520,
+      "total_bytes_processed": 3811
+    },
+    {
+      "errors": null,
+      "job_id": "sncf_audit_j03_check_da7c0d7d12_7c40e63c8bea4773ad0c83138017f2a5_4bff11dfd534f66107f1763e",
+      "job_type": "query",
+      "total_bytes_billed": 20971520,
+      "total_bytes_processed": 6203
+    },
+    {
+      "errors": null,
+      "job_id": "sncf_check_j03_check_da7c0d7d12_7c40e63c8bea4773ad0c83138017f2a5",
+      "job_type": "query",
+      "total_bytes_billed": 0,
+      "total_bytes_processed": 0
+    },
+    {
+      "errors": null,
+      "job_id": "sncf_audit_j03_check_da7c0d7d12_7c40e63c8bea4773ad0c83138017f2a5_08b15e7f8af8ff10d46a4a45",
+      "job_type": "query",
+      "total_bytes_billed": 20971520,
+      "total_bytes_processed": 7529
+    },
+    {
+      "errors": null,
+      "job_id": "sncf_audit_j03_check_da7c0d7d12_7c40e63c8bea4773ad0c83138017f2a5_97a0a6f9acec503d7202fcda",
+      "job_type": "query",
+      "total_bytes_billed": 20971520,
+      "total_bytes_processed": 9828
+    },
+    {
+      "errors": null,
+      "job_id": "sncf_audit_j03_check_da7c0d7d12_998f5658e8474cba8a651b4dfaede234_19bb27850cb911662b66e7a2",
+      "job_type": "query",
+      "total_bytes_billed": 20971520,
+      "total_bytes_processed": 11010
+    },
+    {
+      "errors": null,
+      "job_id": "sncf_raw_j03_check_da7c0d7d12_998f5658e8474cba8a651b4dfaede234",
+      "job_type": "load",
+      "total_bytes_billed": null,
+      "total_bytes_processed": null
+    },
+    {
+      "errors": null,
+      "job_id": "sncf_check_j03_check_da7c0d7d12_998f5658e8474cba8a651b4dfaede234",
+      "job_type": "query",
+      "total_bytes_billed": 10485760,
+      "total_bytes_processed": 933
+    },
+    {
+      "errors": null,
+      "job_id": "sncf_audit_j03_check_da7c0d7d12_998f5658e8474cba8a651b4dfaede234_48e852814132030d389a06b7",
+      "job_type": "query",
+      "total_bytes_billed": 20971520,
+      "total_bytes_processed": 12336
+    },
+    {
+      "errors": null,
+      "job_id": "sncf_promote_j03_check_da7c0d7d12_998f5658e8474cba8a651b4dfaede234",
+      "job_type": "query",
+      "total_bytes_billed": 0,
+      "total_bytes_processed": 0
+    },
+    {
+      "errors": null,
+      "job_id": "sncf_audit_j03_check_da7c0d7d12_998f5658e8474cba8a651b4dfaede234_b3336a6f82f82684f59b0345",
+      "job_type": "query",
+      "total_bytes_billed": 20971520,
+      "total_bytes_processed": 14820
+    },
+    {
+      "errors": null,
+      "job_id": "sncf_scenario_2746c2972f4d468db816c4d0673a3f6e",
+      "job_type": "query",
+      "total_bytes_billed": 10485760,
+      "total_bytes_processed": 793
+    },
+    {
+      "errors": null,
+      "job_id": "sncf_audit_j03_check_da7c0d7d12_62978209fbac49adb0816d9cf7acdafd_05de7492c39eae3fbfca6e21",
+      "job_type": "query",
+      "total_bytes_billed": 20971520,
+      "total_bytes_processed": 17212
+    },
+    {
+      "errors": [
+        {
+          "message": "Error while reading data, error message: JSON table encountered too many errors, giving up. Rows: 1; errors: 1. Please look into the errors[] collection for more details.",
+          "reason": "invalid"
+        },
+        {
+          "message": "Error while reading data, error message: JSON processing encountered too many errors, giving up. Rows: 1; errors: 1; max bad: 0; error percent: 0",
+          "reason": "invalid"
+        },
+        {
+          "message": "Error while reading data, error message: JSON parsing error in row starting at position 0: Could not convert value 'string_value: \t \"invalid-integer-for-J03-test\"' to integer. Field: row_number; Value: invalid-integer-for-J03-test",
+          "reason": "invalid"
+        }
+      ],
+      "job_id": "sncf_raw_j03_check_da7c0d7d12_62978209fbac49adb0816d9cf7acdafd",
+      "job_type": "load",
+      "total_bytes_billed": null,
+      "total_bytes_processed": null
+    },
+    {
+      "errors": null,
+      "job_id": "sncf_audit_j03_check_da7c0d7d12_62978209fbac49adb0816d9cf7acdafd_9685918a68877be171d0f368",
+      "job_type": "query",
+      "total_bytes_billed": 20971520,
+      "total_bytes_processed": 18538
+    },
+    {
+      "errors": null,
+      "job_id": "sncf_audit_j03_check_da7c0d7d12_db758d3fc7094d728e305489deedf0e0_6430b19d1fb33eaa21617513",
+      "job_type": "query",
+      "total_bytes_billed": 20971520,
+      "total_bytes_processed": 20423
+    },
+    {
+      "errors": null,
+      "job_id": "sncf_scenario_5e7c552dd1e64bc6bde373a8c227b14c",
+      "job_type": "query",
+      "total_bytes_billed": 10485760,
+      "total_bytes_processed": 840
+    }
+  ],
+  "prefix": "j03_check_da7c0d7d12",
+  "project": "sncf-reliability-analytics",
+  "status": "passed",
+  "synthetic_data": true
+}

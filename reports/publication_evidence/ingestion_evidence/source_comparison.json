@@ -1,0 +1,43 @@
+{
+  "added_keys": 363,
+  "added_months": {
+    "2026-07": 121,
+    "2026-08": 121,
+    "2026-09": 121
+  },
+  "ambiguous_common_keys": 0,
+  "changed_fields": {
+    "prct_cause_externe": 56,
+    "prct_cause_gestion_gare": 51,
+    "prct_cause_gestion_trafic": 31,
+    "prct_cause_infra": 48,
+    "prct_cause_materiel_roulant": 65,
+    "prct_cause_prise_en_charge_voyageurs": 37,
+    "retard_moyen_arrivee": 34,
+    "retard_moyen_depart": 39,
+    "retard_moyen_tous_trains_arrivee": 25,
+    "retard_moyen_tous_trains_depart": 38,
+    "retard_moyen_trains_retard_sup15": 36
+  },
+  "changed_months": {
+    "2026-01": 6,
+    "2026-02": 6,
+    "2026-03": 8,
+    "2026-04": 79,
+    "2026-05": 73,
+    "2026-06": 71
+  },
+  "changed_unique_keys": 243,
+  "current_count": 12907,
+  "current_version_id": "e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6",
+  "key_fields": [
+    "date",
+    "gare_depart",
+    "gare_arrivee",
+    "service"
+  ],
+  "previous_count": 12544,
+  "previous_version_id": "e32b513e9d631f48df17345d09bc4cd70179a32a678187f84ad20de004b59732",
+  "removed_keys": 0,
+  "unchanged_unique_keys": 12301
+}

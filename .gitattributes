@@ -1,0 +1,4 @@
+# Préserver les octets des preuves et empreintes malgré core.autocrlf sur Windows.
+* -text
+# Les journaux de preuve sont des copies fidèles, espaces de fin de ligne inclus.
+reports/publication_evidence/** whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol

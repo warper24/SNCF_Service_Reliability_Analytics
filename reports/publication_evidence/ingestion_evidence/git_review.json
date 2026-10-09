@@ -1,0 +1,100 @@
+{
+  "git_root": "C:\\Users\\<utilisateur>\\OneDrive\\Documenten\\DATA PORTFOLIO\\SNCF_Service_Reliability_Analytics",
+  "branch": "codex/j03-ingestion",
+  "temporary_index_only": true,
+  "default_index_untouched": true,
+  "whitespace_check": "passed",
+  "files_addable": [
+    ".env.example",
+    ".gitignore",
+    "AGENTS.md",
+    "PLAN.md",
+    "config/datasets.yaml",
+    "config/settings.example.yaml",
+    "dbt/dbt_project.yml",
+    "dbt/models/j02_connection_check.sql",
+    "dbt/profiles.yml.example",
+    "docs/architecture.md",
+    "docs/data_contract.md",
+    "docs/ingestion.md",
+    "docs/kpi_dictionary.md",
+    "docs/milestones/J01_handoff.md",
+    "docs/milestones/J02_handoff.md",
+    "docs/milestones/J03_handoff.md",
+    "docs/project_charter.md",
+    "docs/setup.md",
+    "infra/bootstrap.sql",
+    "pyproject.toml",
+    "reports/audit_evidence/anomalies.csv",
+    "reports/audit_evidence/eligibility.csv",
+    "reports/audit_evidence/eligibility_2025_vs_2024.csv",
+    "reports/audit_evidence/fields.csv",
+    "reports/audit_evidence/monthly_coverage.csv",
+    "reports/audit_evidence/provenance.json",
+    "reports/audit_evidence/routes.csv",
+    "reports/audit_evidence/service_scope.csv",
+    "reports/audit_evidence/summary.json",
+    "reports/audit_evidence/validation.json",
+    "reports/ingestion_evidence/cloud_scenarios.json",
+    "reports/ingestion_evidence/cloud_scenarios_initial.json",
+    "reports/ingestion_evidence/git_review.json",
+    "reports/ingestion_evidence/live_warehouse.json",
+    "reports/ingestion_evidence/numeric_precision_review.json",
+    "reports/ingestion_evidence/source_comparison.json",
+    "reports/ingestion_evidence/tests.txt",
+    "reports/ingestion_evidence/validation.json",
+    "reports/source_audit.md",
+    "scripts/check_bigquery.py",
+    "scripts/profile_source.py",
+    "scripts/run_dbt.py",
+    "scripts/run_ingestion.py",
+    "scripts/validate_ingestion_cloud.py",
+    "scripts/validate_ingestion_local.py",
+    "scripts/validate_ingestion_warehouse.py",
+    "src/sncf_reliability/__init__.py",
+    "src/sncf_reliability/api_client.py",
+    "src/sncf_reliability/cli.py",
+    "src/sncf_reliability/ingest.py",
+    "src/sncf_reliability/warehouse.py",
+    "tests/fixtures/ingestion_rows.json",
+    "tests/test_ingestion.py",
+    "tests/test_profile_source.py",
+    "uv.lock"
+  ],
+  "forbidden_files": [],
+  "largest_files": [
+    {
+      "file": "uv.lock",
+      "bytes": 166476
+    },
+    {
+      "file": "reports/audit_evidence/anomalies.csv",
+      "bytes": 146093
+    },
+    {
+      "file": "PLAN.md",
+      "bytes": 65966
+    },
+    {
+      "file": "scripts/profile_source.py",
+      "bytes": 22788
+    },
+    {
+      "file": "docs/milestones/J03_handoff.md",
+      "bytes": 21739
+    },
+    {
+      "file": "docs/ingestion.md",
+      "bytes": 18138
+    },
+    {
+      "file": "tests/test_ingestion.py",
+      "bytes": 18022
+    },
+    {
+      "file": "src/sncf_reliability/ingest.py",
+      "bytes": 15667
+    }
+  ],
+  "review_note": "Revue des noms, tailles et contenus des nouveaux livrables : preuves synthétiques et configuration sans export complet ni secret. Aucun commit effectué."
+}

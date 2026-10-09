@@ -1,0 +1,122 @@
+version: 2
+models:
+- name: int_tgv_quality_flags
+  description: Vue J04, valeurs staging intactes et usages par indicateur selon D01–D07.
+    Aucun KPI, classement ou population de cause reconstruite.
+  columns:
+  - name: scheduled_population_valid
+    data_type: BOOL
+    description: P et A renseignés et 0 ≤ A ≤ P. Ne certifie pas la population officielle.
+  - name: central_counts_compatible
+    data_type: BOOL
+    description: P, A, L renseignés et 0 ≤ A ≤ P, 0 ≤ L ≤ P−A.
+  - name: is_important_delay_quarantined
+    data_type: BOOL
+    description: Tout janvier–mars 2025 ; restriction du couple >30/>60, pas de toute
+      la ligne.
+  - name: cause_present_count
+    data_type: INT64
+    description: Nombre de parts non nulles sur six, sans remplacer les absences.
+  - name: cause_out_of_bounds_count
+    data_type: INT64
+    description: Nombre de parts connues hors de [0,100].
+  - name: cause_sum_pct
+    data_type: FLOAT64
+    description: Somme seulement lorsque les six parts sont présentes ; ne prouve
+      pas la population.
+  - name: services_in_month
+    data_type: INT64
+    description: Nombre de services pour la paire orientée et le mois.
+  - name: services_in_history
+    data_type: INT64
+    description: Nombre de services observés dans l’historique ; signal, pas exclusion
+      globale.
+  - name: operated_trains_proxy
+    data_type: INT64
+    description: P−A si population compatible ; convention analytique D01 non certifiée.
+  - name: important_delay_nesting_valid
+    data_type: BOOL
+    description: 0 ≤ >60 ≤ >30 ≤ retards arrivée ; complété par les effectifs centraux.
+  - name: is_cause_profile_complete
+    data_type: BOOL
+    description: Six parts présentes.
+  - name: is_cause_profile_all_zero
+    data_type: BOOL
+    description: 'Six parts égales à zéro : profil non exploitable.'
+  - name: has_cause_sum_warning
+    data_type: BOOL
+    description: 'Profil complet non nul : écart >0,1 point + garde flottante de 1e-9
+      point.'
+  - name: is_cancellation_count_usable
+    data_type: BOOL
+    description: Compatibilité P/A ; indépendant du retard arrivée.
+  - name: is_cancellation_rate_usable
+    data_type: BOOL
+    description: Compatibilité P/A et P strictement positif.
+  - name: is_arrival_delay_count_usable
+    data_type: BOOL
+    description: Compatibilité des effectifs centraux ; N=0 autorisé pour l’effectif
+      nul.
+  - name: is_arrival_delay_rate_usable
+    data_type: BOOL
+    description: Effectifs centraux compatibles et proxy strictement positif.
+  - name: is_departure_delay_count_usable
+    data_type: BOOL
+    description: Effectif départ entre zéro et proxy compatible.
+  - name: is_important_delay_count_usable
+    data_type: BOOL
+    description: Effectifs centraux et imbrication valides, hors quarantaine.
+  - name: is_important_delay_rate_usable
+    data_type: BOOL
+    description: Couple important utilisable et proxy strictement positif.
+  - name: is_cause_profile_usable
+    data_type: BOOL
+    description: Profil complet, borné, non entièrement nul, éventuellement avec avertissement
+      de somme ; aucun volume ni agrégation permis.
+  - name: is_mean_arrival_delay_late_usable
+    data_type: BOOL
+    description: Population compatible, retards arrivée >0 et moyenne publiée non
+      négative.
+  - name: is_mean_departure_delay_late_usable
+    data_type: BOOL
+    description: Population départ compatible, retards départ >0 et moyenne non négative.
+  - name: is_over_15_generic_usable
+    data_type: BOOL
+    description: 'Toujours faux : périmètre aérien non identifiable.'
+  - name: has_negative_mean_departure_all
+    data_type: BOOL
+    description: Moyenne tous trains négative conservée, sans correction.
+  - name: has_negative_mean_arrival_all
+    data_type: BOOL
+    description: Moyenne tous trains négative conservée, sans correction.
+  - name: has_negative_mean_arrival_late
+    data_type: BOOL
+    description: Moyenne négative des seuls trains en retard exclue de son usage.
+  - name: has_negative_mean_departure_late
+    data_type: BOOL
+    description: Moyenne négative des seuls trains en retard exclue de son usage.
+  - name: has_negative_scheduled_duration
+    data_type: BOOL
+    description: Durée moyenne négative signalée, sans reconstruction des seuils.
+  - name: has_multiple_services_in_month
+    data_type: BOOL
+    description: Plusieurs services simultanés ; à examiner dans les fenêtres de comparaison.
+  - name: has_multiple_services_in_history
+    data_type: BOOL
+    description: Plusieurs services historiques ; aucune fusion implicite.
+  - name: cause_profile_status
+    data_type: STRING
+    description: missing / out_of_bounds / all_zero / sum_warning / available.
+    data_tests:
+    - accepted_values:
+        arguments:
+          values:
+          - missing
+          - out_of_bounds
+          - all_zero
+          - sum_warning
+          - available
+  - name: quality_reasons
+    data_type: ARRAY<STRING>
+    description: Motifs cumulatifs ; ne pas les additionner pour compter des observations
+      distinctes.

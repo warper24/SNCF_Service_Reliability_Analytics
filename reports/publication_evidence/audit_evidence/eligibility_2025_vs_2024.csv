@@ -1,0 +1,117 @@
+﻿gare_depart,gare_arrivee,service,current_operated_proxy,previous_operated_proxy,eligible,reasons
+AIX EN PROVENCE TGV,PARIS LYON,National,5487,5544,True,
+ANGERS SAINT LAUD,PARIS MONTPARNASSE,National,6397,6525,True,
+ANGOULEME,PARIS MONTPARNASSE,National,3668,3629,True,
+ANNECY,PARIS LYON,National,1738,1804,True,
+ARRAS,PARIS NORD,National,5612,5739,True,
+AVIGNON TGV,PARIS LYON,National,5699,5743,True,
+BARCELONA,PARIS LYON,National,190,0,False,current:missing_or_duplicate_month;previous:missing_or_duplicate_month;service_scope_requires_review
+BELLEGARDE (AIN),PARIS LYON,National,2396,3042,False,current:low_monthly_volume;service_scope_requires_review
+BESANCON FRANCHE COMTE TGV,PARIS LYON,National,1995,1975,True,
+BORDEAUX ST JEAN,PARIS MONTPARNASSE,National,12369,12604,True,
+BORDEAUX ST JEAN,PARIS VAUGIRARD,National,0,0,False,current:missing_or_duplicate_month;previous:missing_or_duplicate_month
+BORDEAUX ST JEAN,TOURCOING,National,319,348,False,current:low_monthly_volume;previous:low_monthly_volume
+BREST,PARIS MONTPARNASSE,National,3331,3270,True,
+CHAMBERY CHALLES LES EAUX,PARIS LYON,National,2775,2586,False,service_scope_requires_review
+DIJON VILLE,PARIS LYON,National,4014,4585,False,service_scope_requires_review
+DOUAI,PARIS NORD,National,1882,2035,True,
+DUNKERQUE,PARIS NORD,National,1888,1899,True,
+GRENOBLE,PARIS LYON,National,2371,2397,True,
+LA ROCHELLE VILLE,PARIS MONTPARNASSE,National,2576,2610,True,
+LAVAL,PARIS MONTPARNASSE,National,2774,3421,True,
+LE CREUSOT MONTCEAU MONTCHANIN,PARIS LYON,National,2592,2852,True,
+LE MANS,PARIS MONTPARNASSE,National,5411,5413,True,
+LILLE,LYON PART DIEU,National,4303,4381,True,
+LILLE,MARSEILLE ST CHARLES,National,2789,2854,True,
+LILLE,PARIS NORD,National,7175,8098,True,
+LYON PART DIEU,LILLE,National,4034,4000,True,
+LYON PART DIEU,MARNE LA VALLEE,National,4143,4152,True,
+LYON PART DIEU,MARSEILLE ST CHARLES,National,5722,5842,False,service_scope_requires_review
+LYON PART DIEU,MONTPELLIER,National,3242,2828,True,
+LYON PART DIEU,PARIS LYON,National,7843,8543,True,
+LYON PART DIEU,RENNES,National,1057,1080,True,
+MACON LOCHE,PARIS LYON,National,2534,2639,False,service_scope_requires_review
+MARNE LA VALLEE,LYON PART DIEU,National,4712,4813,True,
+MARNE LA VALLEE,MARSEILLE ST CHARLES,National,3186,3292,True,
+MARSEILLE ST CHARLES,LILLE,National,2546,2511,True,
+MARSEILLE ST CHARLES,LYON PART DIEU,National,5753,5532,False,service_scope_requires_review
+MARSEILLE ST CHARLES,MARNE LA VALLEE,National,3265,3331,True,
+MARSEILLE ST CHARLES,PARIS LYON,National,6294,6213,True,
+MARSEILLE ST CHARLES,TOURCOING,National,252,332,False,current:low_monthly_volume;previous:low_monthly_volume
+METZ,PARIS EST,National,3566,3582,True,
+MONTPELLIER,LYON PART DIEU,National,2154,2130,True,
+MONTPELLIER,PARIS LYON,National,2563,2466,True,
+MULHOUSE VILLE,PARIS LYON,National,3093,3617,False,service_scope_requires_review
+NANCY,PARIS EST,National,3280,3378,True,
+NANTES,PARIS MONTPARNASSE,National,7433,7587,True,
+NANTES,PARIS VAUGIRARD,National,0,0,False,current:missing_or_duplicate_month;previous:missing_or_duplicate_month
+NANTES,STRASBOURG,National,675,678,True,
+NICE VILLE,PARIS LYON,National,2604,2636,True,
+NIMES,PARIS LYON,National,2560,2462,True,
+PARIS EST,METZ,National,3187,3248,True,
+PARIS EST,NANCY,National,3329,3435,True,
+PARIS EST,REIMS,National,2629,2687,True,
+PARIS EST,STRASBOURG,National,6817,7074,False,service_scope_requires_review
+PARIS LYON,AIX EN PROVENCE TGV,National,5608,5808,True,
+PARIS LYON,ANNECY,National,1726,1806,True,
+PARIS LYON,AVIGNON TGV,National,5724,5650,True,
+PARIS LYON,BARCELONA,National,190,0,False,current:missing_or_duplicate_month;previous:missing_or_duplicate_month;service_scope_requires_review
+PARIS LYON,BELLEGARDE (AIN),National,2403,3052,False,current:low_monthly_volume;service_scope_requires_review
+PARIS LYON,BESANCON FRANCHE COMTE TGV,National,1819,1971,True,
+PARIS LYON,CHAMBERY CHALLES LES EAUX,National,2810,2568,False,service_scope_requires_review
+PARIS LYON,DIJON VILLE,National,3902,4590,False,service_scope_requires_review
+PARIS LYON,GRENOBLE,National,2442,2645,True,
+PARIS LYON,LE CREUSOT MONTCEAU MONTCHANIN,National,2506,2556,True,
+PARIS LYON,LYON PART DIEU,National,7754,8102,True,
+PARIS LYON,MACON LOCHE,National,2838,2568,False,service_scope_requires_review
+PARIS LYON,MARSEILLE ST CHARLES,National,6681,6704,True,
+PARIS LYON,MONTPELLIER,National,2746,2887,True,
+PARIS LYON,MULHOUSE VILLE,National,3056,3715,False,service_scope_requires_review
+PARIS LYON,NICE VILLE,National,2612,2569,True,
+PARIS LYON,NIMES,National,2742,2822,True,
+PARIS LYON,PERPIGNAN,National,2510,2688,True,
+PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,1374,1239,True,
+PARIS LYON,TOULON,National,3323,3251,True,
+PARIS LYON,VALENCE ALIXAN TGV,National,4924,5038,True,
+PARIS MONTPARNASSE,ANGERS SAINT LAUD,National,6359,6396,True,
+PARIS MONTPARNASSE,ANGOULEME,National,3513,3386,True,
+PARIS MONTPARNASSE,BORDEAUX ST JEAN,National,12022,12239,True,
+PARIS MONTPARNASSE,BREST,National,3246,3135,True,
+PARIS MONTPARNASSE,LA ROCHELLE VILLE,National,2680,2656,True,
+PARIS MONTPARNASSE,LAVAL,National,2716,3647,True,
+PARIS MONTPARNASSE,LE MANS,National,5318,5287,True,
+PARIS MONTPARNASSE,NANTES,National,7112,7233,True,
+PARIS MONTPARNASSE,POITIERS,National,6907,7030,True,
+PARIS MONTPARNASSE,QUIMPER,National,3088,3164,True,
+PARIS MONTPARNASSE,RENNES,National,9326,9372,True,
+PARIS MONTPARNASSE,ST MALO,National,1198,1185,True,
+PARIS MONTPARNASSE,ST PIERRE DES CORPS,National,5952,6150,True,
+PARIS MONTPARNASSE,TOULOUSE MATABIAU,National,2343,2513,True,
+PARIS MONTPARNASSE,TOURS,National,1808,2106,False,current:low_monthly_volume
+PARIS MONTPARNASSE,VANNES,National,3278,3326,True,
+PARIS NORD,ARRAS,National,5693,5857,True,
+PARIS NORD,DOUAI,National,1454,1581,True,
+PARIS NORD,DUNKERQUE,National,1907,2144,True,
+PARIS NORD,LILLE,National,7247,8006,True,
+PARIS VAUGIRARD,BORDEAUX ST JEAN,National,0,0,False,current:missing_or_duplicate_month;previous:missing_or_duplicate_month
+PARIS VAUGIRARD,NANTES,National,0,0,False,current:missing_or_duplicate_month;previous:missing_or_duplicate_month
+PARIS VAUGIRARD,RENNES,National,0,0,False,current:missing_or_duplicate_month;previous:missing_or_duplicate_month
+PERPIGNAN,PARIS LYON,National,2633,2662,True,
+POITIERS,PARIS MONTPARNASSE,National,5418,5764,True,
+QUIMPER,PARIS MONTPARNASSE,National,3112,3134,True,
+REIMS,PARIS EST,National,2618,2744,True,
+RENNES,LYON PART DIEU,National,1067,1091,True,
+RENNES,PARIS MONTPARNASSE,National,9483,9580,True,
+RENNES,PARIS VAUGIRARD,National,0,0,False,current:missing_or_duplicate_month;previous:missing_or_duplicate_month
+SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,1356,1223,True,
+ST MALO,PARIS MONTPARNASSE,National,1217,1198,True,
+ST PIERRE DES CORPS,PARIS MONTPARNASSE,National,5301,6082,True,
+STRASBOURG,NANTES,National,673,669,True,
+STRASBOURG,PARIS EST,National,6707,6860,False,service_scope_requires_review
+TOULON,PARIS LYON,National,3211,3286,True,
+TOULOUSE MATABIAU,PARIS MONTPARNASSE,National,2374,2471,True,
+TOURCOING,BORDEAUX ST JEAN,National,320,350,False,current:low_monthly_volume;previous:low_monthly_volume
+TOURCOING,MARSEILLE ST CHARLES,National,0,0,False,current:missing_or_duplicate_month;previous:missing_or_duplicate_month
+TOURS,PARIS MONTPARNASSE,National,1776,2154,False,current:low_monthly_volume
+VALENCE ALIXAN TGV,PARIS LYON,National,4560,4606,True,
+VANNES,PARIS MONTPARNASSE,National,3355,3405,True,

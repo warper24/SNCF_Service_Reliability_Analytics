@@ -1,0 +1,29 @@
+# Raw source data must live outside this project (SNCF_DATA_DIR).
+/data/
+/exports/
+*.partial
+__pycache__/
+*.py[cod]
+.venv/
+.python-version
+.env
+.env.*
+!.env.example
+!config/settings.example.yaml
+# Local cloud identity and dbt connection profiles.
+*credentials*.json
+*service-account*.json
+dbt/profiles.yml
+dbt/target/
+dbt/logs/
+# Preuves originales locales ; publier seulement leurs copies anonymisées.
+/reports/audit_evidence/
+/reports/ingestion_evidence/
+/reports/data_quality_evidence/
+# Local BI files may contain imported data.
+*.pbix
+*.pbit
+**/.pbi/
+# Ignore future local Power BI caches, not report definitions.
+**/.pbi/localSettings.json
+**/.pbi/cache.abf

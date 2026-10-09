@@ -1,0 +1,85 @@
+{
+  "all_zero_cause_profiles": 270,
+  "all_zero_causes_with_arrival_delays": 78,
+  "annual_comparison": {
+    "current": "2025-01/2025-12",
+    "eligible_national_routes": 88,
+    "previous": "2024-01/2024-12"
+  },
+  "anomalies_by_rule": {
+    "cancelled_above_planned": 63,
+    "cause_sum_not_100": 275,
+    "delay_above_operated_proxy": 318,
+    "invalid_count": 43,
+    "negative_duration_or_mean": 301,
+    "nested_counts_inconsistent": 361,
+    "zero_operated_proxy": 10,
+    "zero_planned": 73
+  },
+  "candidate_key": [
+    "date",
+    "gare_depart",
+    "gare_arrivee",
+    "service"
+  ],
+  "comparison": {
+    "eligible_national_routes": 102,
+    "end": "2026-06",
+    "minimum_monthly_operated_proxy": 30,
+    "national_routes": 116,
+    "previous_year_same_months": true,
+    "start": "2026-01"
+  },
+  "complete_cause_profiles": 12544,
+  "coverage_sensitivity": {
+    "15": 106,
+    "30": 102,
+    "60": 100
+  },
+  "distinct_rows_by_rule": {
+    "cancelled_above_planned": 63,
+    "cause_sum_not_100": 275,
+    "delay_above_operated_proxy": 66,
+    "invalid_count": 43,
+    "negative_duration_or_mean": 277,
+    "nested_counts_inconsistent": 361,
+    "zero_operated_proxy": 10,
+    "zero_planned": 73
+  },
+  "duplicate_key_excess_rows": 0,
+  "duplicate_key_groups": 0,
+  "exact_duplicate_excess_rows": 0,
+  "extracted_at_utc": "2026-10-01T14:02:43.677485+00:00",
+  "fields": 26,
+  "first_month": "2018-01",
+  "global_expected_months": 102,
+  "global_observed_months": 102,
+  "internal_missing_route_months": 88,
+  "last_month": "2026-06",
+  "profile_script_sha256": "956197e4bb73a261b93d52fc457ffb0e06883fb2718f2d8d0fd54153cb5c0e4b",
+  "records": 12544,
+  "routes": 146,
+  "routes_by_service": {
+    "International": 30,
+    "National": 116
+  },
+  "routes_ending_before_global_last": 25,
+  "routes_starting_after_global_first": 16,
+  "routes_with_internal_gaps": 10,
+  "scope": {
+    "oriented_pairs": 130,
+    "pairs_with_multiple_services": 16,
+    "pairs_with_simultaneous_services": 14,
+    "station_labels": 59,
+    "station_normalization_collisions": []
+  },
+  "services": {
+    "International": 1532,
+    "National": 11012
+  },
+  "snapshot_id": "20261001T140237476619Z",
+  "source_metadata_processed": "2026-10-01T04:30:11.330000+00:00",
+  "source_modified": "2026-07-27T14:51:45+00:00",
+  "source_sha256": "1b18c596c59b38f4feb230a630d5a8b8a3b3f13fa5802407ece9c269c575f24f",
+  "valid_core_count_rows": 12481
+}

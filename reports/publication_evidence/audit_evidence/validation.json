@@ -1,0 +1,53 @@
+{
+  "artifact_sha256": {
+    "anomalies.csv": "3f1b451c2428e2e2004951b732f0216eb80eb156f120ec800f0ff8b2286e76c2",
+    "eligibility.csv": "4869c0b8a42ec3f66b37c94e34a360760613ffe60fafa9875e8d6221a2dd7975",
+    "eligibility_2025_vs_2024.csv": "bb8a54c25423eac662d8a3b26c23c86be6e952c27661d448a5296d4718489b6d",
+    "fields.csv": "954446914648920146e9f4296904d87826172c5b8d6408738a39f8fbc465830b",
+    "monthly_coverage.csv": "071b3d061f86e3b901c64a88e6775cdca8fc51f8a71392d4e8cf57a9882828cb",
+    "provenance.json": "fd07e62776daea876dfa8734ee5d16641341d2dfde06e6594131568f9fd177ee",
+    "routes.csv": "f8cca4364f78db7589f74af6150b961ae795d6843829ea402f1b81f401ad1aea",
+    "service_scope.csv": "4e81fbd1b15287db2f39fc63da06066e5fe9ad512057b793e01ab8e83ccce9ff",
+    "summary.json": "c870bea14cdd7cc80307e60fc84abc02da444b5dae78c183485ed8824edbce85"
+  },
+  "code_sha256": {
+    "scripts/profile_source.py": "956197e4bb73a261b93d52fc457ffb0e06883fb2718f2d8d0fd54153cb5c0e4b",
+    "tests/test_profile_source.py": "943b28da50db41da4286cb1bfca2354bcfc5aa45577aac46a436a3989839baa8"
+  },
+  "commands": [
+    "python -m unittest discover -s tests -v",
+    "Offline run(snapshot, output, 2026-01, 2026-06, 30) with urllib.request.urlopen forbidden"
+  ],
+  "documentation_checks": {
+    "code_and_artifact_checksums": "passed",
+    "local_markdown_links": "passed",
+    "markdown_files_checked": 7
+  },
+  "not_executed": [
+    "BigQuery",
+    "dbt",
+    "Power BI",
+    "Official operated-train denominator reconciliation"
+  ],
+  "offline_replay_byte_identical": {
+    "anomalies.csv": true,
+    "eligibility.csv": true,
+    "eligibility_2025_vs_2024.csv": true,
+    "fields.csv": true,
+    "monthly_coverage.csv": true,
+    "provenance.json": true,
+    "routes.csv": true,
+    "service_scope.csv": true,
+    "summary.json": true
+  },
+  "python_version": "3.13.15",
+  "source_sha256": "1b18c596c59b38f4feb230a630d5a8b8a3b3f13fa5802407ece9c269c575f24f",
+  "unit_test_log": "test_absent_null_and_zero_are_distinct (test_profile_source.AuditTests.test_absent_null_and_zero_are_distinct) ... ok\ntest_bad_counts_and_nested_thresholds (test_profile_source.AuditTests.test_bad_counts_and_nested_thresholds) ... ok\ntest_checksum_detects_tampering_without_network (test_profile_source.AuditTests.test_checksum_detects_tampering_without_network) ... ok\ntest_coverage_and_low_volume (test_profile_source.AuditTests.test_coverage_and_low_volume) ... ok\ntest_direction_is_part_of_key (test_profile_source.AuditTests.test_direction_is_part_of_key) ... ok\ntest_exact_and_conflicting_duplicates (test_profile_source.AuditTests.test_exact_and_conflicting_duplicates) ... ok\ntest_incomplete_export_preserves_failed_snapshot (test_profile_source.AuditTests.test_incomplete_export_preserves_failed_snapshot) ... ok\ntest_invalid_month_and_missing_schema (test_profile_source.AuditTests.test_invalid_month_and_missing_schema) ... ok\ntest_no_cause_volume_reconstruction (test_profile_source.AuditTests.test_no_cause_volume_reconstruction) ... ok\ntest_ratio_denominator_and_zero (test_profile_source.AuditTests.test_ratio_denominator_and_zero) ... ok\ntest_service_changes_are_not_merged (test_profile_source.AuditTests.test_service_changes_are_not_merged) ... ok\ntest_simultaneous_services_require_review (test_profile_source.AuditTests.test_simultaneous_services_require_review) ... ok\ntest_year_boundary_comparison (test_profile_source.AuditTests.test_year_boundary_comparison) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.013s\n\nOK\n",
+  "unit_tests": {
+    "errors": 0,
+    "failures": 0,
+    "run": 13,
+    "successful": true
+  },
+  "validated_at_utc": "2026-10-01T14:13:05.091150+00:00"
+}

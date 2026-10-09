@@ -1,0 +1,164 @@
+{
+  "audit": {
+    "all_local_events_match_cloud": true,
+    "cloud_event_count": 31,
+    "duplicate_event_groups": 0,
+    "local_event_count": 31,
+    "query_job_id": "sncf_final_audit_be3c3029f7a0480e9900c236366ee97a",
+    "table_id": "sncf-reliability-analytics.sncf_audit.raw_tgv_load_events",
+    "total_bytes_billed": 10485760,
+    "total_bytes_processed": 28751
+  },
+  "current_view": "sncf-reliability-analytics.sncf_dev.raw_tgv_current",
+  "current_view_definition": "SELECT version_id, row_number, row_sha256, payload FROM `sncf-reliability-analytics.sncf_dev.raw_tgv_v_e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6`",
+  "full_payload_verification": {
+    "rows_verified": 12907,
+    "total_bytes_billed": 0,
+    "total_bytes_processed": 0,
+    "verification_job_id": "sncf_final_check_15eb0bae5f9f4b10ace4cdce4c467a1a"
+  },
+  "raw_table": {
+    "expires": null,
+    "num_rows": 12907,
+    "schema": [
+      {
+        "mode": "REQUIRED",
+        "name": "version_id",
+        "type": "STRING"
+      },
+      {
+        "mode": "REQUIRED",
+        "name": "row_number",
+        "type": "INTEGER"
+      },
+      {
+        "mode": "REQUIRED",
+        "name": "row_sha256",
+        "type": "STRING"
+      },
+      {
+        "mode": "REQUIRED",
+        "name": "payload",
+        "type": "STRING"
+      }
+    ]
+  },
+  "recorded_attempts": [
+    {
+      "attempt_id": "0f7603991487438583d51395ed4db56a",
+      "attempt_path": "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\attempts\\0f7603991487438583d51395ed4db56a",
+      "events": [
+        "attempt_started",
+        "replay_validated",
+        "load_started",
+        "raw_loaded",
+        "version_validated",
+        "promotion_requested",
+        "promoted"
+      ],
+      "result": {
+        "audit_dataset": "sncf_audit",
+        "current_view": "sncf-reliability-analytics.sncf_dev.raw_tgv_current",
+        "dataset_id": "regularite-mensuelle-tgv-aqst",
+        "manifest_sha256": "606a76b8ffcc02f2f1fa1fdacd0f70bf59ed915eba5287d95ab28a95581fe7ba",
+        "project": "sncf-reliability-analytics",
+        "promotion_changed": true,
+        "received_count": 12907,
+        "reused": false,
+        "rows_verified": 12907,
+        "snapshot_id": "20261007T125529945750Z_cdc81d27",
+        "snapshot_path": "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\ingestion\\20261007T125529945750Z_cdc81d27",
+        "source_sha256": "8dc2b0a9a3707306c3087f899163465e34b20ed44b4dfc4ad46d5af4686334b2",
+        "status": "complete",
+        "table_id": "sncf-reliability-analytics.sncf_dev.raw_tgv_v_e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6",
+        "table_prefix": "raw_tgv",
+        "total_bytes_billed": 13631488,
+        "total_bytes_processed": 12963445,
+        "verification_job_id": "sncf_check_raw_tgv_0f7603991487438583d51395ed4db56a",
+        "version_id": "e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6",
+        "warehouse_dataset": "sncf_dev"
+      }
+    },
+    {
+      "attempt_id": "bce4ef2494e5460d9da4b9dd27f1397a",
+      "attempt_path": "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\attempts\\bce4ef2494e5460d9da4b9dd27f1397a",
+      "events": [
+        "attempt_started",
+        "http_started",
+        "http_complete",
+        "http_started",
+        "http_complete",
+        "http_started",
+        "http_complete",
+        "capture_validated",
+        "load_started",
+        "raw_reused",
+        "version_validated",
+        "current_unchanged"
+      ],
+      "result": {
+        "audit_dataset": "sncf_audit",
+        "current_view": "sncf-reliability-analytics.sncf_dev.raw_tgv_current",
+        "dataset_id": "regularite-mensuelle-tgv-aqst",
+        "manifest_sha256": "1cca3fcbf6e4a94343866eedec4badf35d1ef2961cac75550cc0d666ea03b5cd",
+        "project": "sncf-reliability-analytics",
+        "promotion_changed": false,
+        "received_count": 12907,
+        "reused": true,
+        "rows_verified": 12907,
+        "snapshot_id": "20261007T130103249967Z_bce4ef24",
+        "snapshot_path": "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\ingestion\\20261007T130103249967Z_bce4ef24",
+        "source_sha256": "8dc2b0a9a3707306c3087f899163465e34b20ed44b4dfc4ad46d5af4686334b2",
+        "status": "complete",
+        "table_id": "sncf-reliability-analytics.sncf_dev.raw_tgv_v_e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6",
+        "table_prefix": "raw_tgv",
+        "total_bytes_billed": 0,
+        "total_bytes_processed": 0,
+        "verification_job_id": "sncf_check_raw_tgv_bce4ef2494e5460d9da4b9dd27f1397a",
+        "version_id": "e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6",
+        "warehouse_dataset": "sncf_dev"
+      }
+    },
+    {
+      "attempt_id": "cdc81d27c313482384a7f224406814f1",
+      "attempt_path": "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\attempts\\cdc81d27c313482384a7f224406814f1",
+      "events": [
+        "attempt_started",
+        "http_started",
+        "http_complete",
+        "http_started",
+        "http_complete",
+        "http_started",
+        "http_complete",
+        "capture_validated",
+        "load_started",
+        "load_failed",
+        "attempt_error",
+        "reconciled"
+      ],
+      "result": null
+    }
+  ],
+  "snapshot": {
+    "dataset_id": "regularite-mensuelle-tgv-aqst",
+    "expected_count": 12907,
+    "first_business_month": "2018-01",
+    "last_business_month": "2026-09",
+    "manifest_sha256": "1cca3fcbf6e4a94343866eedec4badf35d1ef2961cac75550cc0d666ea03b5cd",
+    "missing_or_invalid_months": 0,
+    "received_count": 12907,
+    "schema_sha256": "50735f50c533e44d2aa0fc5bf1e1f3e081d04ef5823c67ed57cd60fd8cde05ec",
+    "snapshot_id": "20261007T130103249967Z_bce4ef24",
+    "snapshot_path": "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\ingestion\\20261007T130103249967Z_bce4ef24",
+    "source_data_processed": "2026-10-02T10:10:31+00:00",
+    "source_modified": "2026-10-02T10:10:31+00:00",
+    "source_sha256": "8dc2b0a9a3707306c3087f899163465e34b20ed44b4dfc4ad46d5af4686334b2",
+    "version_id": "e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6"
+  },
+  "status": "passed",
+  "table_id": "sncf-reliability-analytics.sncf_dev.raw_tgv_v_e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6",
+  "verified_at_utc": "2026-10-07T13:05:44.431352+00:00",
+  "version_tables": [
+    "raw_tgv_v_e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6"
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "code_sha256": {
+    "config/datasets.yaml": "c6ecff9aff11cbdcbbd4c3165713a1392ed281e5ce13e85a7868c0d8c451d4ba",
+    "pyproject.toml": "69e720314f62ddffe4e0698594d1fe6b73cfb45d9915e2d1ca18eddd435b510c",
+    "scripts/run_ingestion.py": "66388aa60234f39bce922adfeb764a1f0de30883522422e8f1e1b51a61e38eb5",
+    "scripts/validate_ingestion_cloud.py": "354784927d8790db8db3daf5289ddc034f14359d8fa9520d9bfbca3ebd872d94",
+    "scripts/validate_ingestion_local.py": "e9d8ee319361f2754ebd5a830bc112df4c3422a66b15d2a61885a11ed563dd75",
+    "scripts/validate_ingestion_warehouse.py": "7fe7c9879cff587ad4eaacf71dbbb6fc096f8659016817d2c1b97fc402262020",
+    "src/sncf_reliability/__init__.py": "e9d97ec647ea77420293f77389d0f73d2009ac432ba8e0dceaaab6ea8e2081d5",
+    "src/sncf_reliability/api_client.py": "3274ca595b537c186ba31af5c4967736538544219f936d855b4dc6a1bdfb0552",
+    "src/sncf_reliability/cli.py": "734290572343a6f46e01d54734a522a655e37fd4d53322406e2b279909157897",
+    "src/sncf_reliability/ingest.py": "63d2d2414945f809eece86e11694783fffffd3037e3695d0c57e1a2d04ef36fc",
+    "src/sncf_reliability/warehouse.py": "38dc61d3cfd61a67ad61cd96f8747c27e467cc68169b9961fe038d93835462c1",
+    "tests/fixtures/ingestion_rows.json": "28f0beb1dc1d580c879e15d927da6d39ba5e88c79e7ebc0a70b7c5a0832a1799",
+    "tests/test_ingestion.py": "95b40a55af9c56e654d12475e2e0d79e2a6a08ba48ae9a562978196824de9a2e",
+    "uv.lock": "457eddb590af0419554482a6c1ad72d842ab8a00efe878e01c3b2af21cc8bede"
+  },
+  "comparison": {
+    "added_keys": 363,
+    "added_months": {
+      "2026-07": 121,
+      "2026-08": 121,
+      "2026-09": 121
+    },
+    "ambiguous_common_keys": 0,
+    "changed_fields": {
+      "prct_cause_externe": 56,
+      "prct_cause_gestion_gare": 51,
+      "prct_cause_gestion_trafic": 31,
+      "prct_cause_infra": 48,
+      "prct_cause_materiel_roulant": 65,
+      "prct_cause_prise_en_charge_voyageurs": 37,
+      "retard_moyen_arrivee": 34,
+      "retard_moyen_depart": 39,
+      "retard_moyen_tous_trains_arrivee": 25,
+      "retard_moyen_tous_trains_depart": 38,
+      "retard_moyen_trains_retard_sup15": 36
+    },
+    "changed_months": {
+      "2026-01": 6,
+      "2026-02": 6,
+      "2026-03": 8,
+      "2026-04": 79,
+      "2026-05": 73,
+      "2026-06": 71
+    },
+    "changed_unique_keys": 243,
+    "current_count": 12907,
+    "current_version_id": "e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6",
+    "key_fields": [
+      "date",
+      "gare_depart",
+      "gare_arrivee",
+      "service"
+    ],
+    "previous_count": 12544,
+    "previous_version_id": "e32b513e9d631f48df17345d09bc4cd70179a32a678187f84ad20de004b59732",
+    "removed_keys": 0,
+    "unchanged_unique_keys": 12301
+  },
+  "git_branch": "codex/j03-ingestion",
+  "git_commit": null,
+  "previous_snapshot": {
+    "dataset_id": "regularite-mensuelle-tgv-aqst",
+    "expected_count": 12544,
+    "first_business_month": "2018-01",
+    "last_business_month": "2026-06",
+    "manifest_sha256": "5bddc3e680a7d162d3684f96bd2e9457140dfeac880e447fafb6050051c4805e",
+    "missing_or_invalid_months": 0,
+    "received_count": 12544,
+    "schema_sha256": "50735f50c533e44d2aa0fc5bf1e1f3e081d04ef5823c67ed57cd60fd8cde05ec",
+    "snapshot_id": "20261001T140237476619Z",
+    "snapshot_path": "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\audit\\20261001T140237476619Z",
+    "source_data_processed": "2026-07-27T14:51:45+00:00",
+    "source_modified": "2026-07-27T14:51:45+00:00",
+    "source_sha256": "1b18c596c59b38f4feb230a630d5a8b8a3b3f13fa5802407ece9c269c575f24f",
+    "version_id": "e32b513e9d631f48df17345d09bc4cd70179a32a678187f84ad20de004b59732"
+  },
+  "python_version": "3.13.15",
+  "recorded_cloud_scenarios": {
+    "code_matches": true,
+    "file": "cloud_scenarios.json",
+    "note": "Preuve archivée ; cette commande ne renouvelle pas la vérification cloud.",
+    "sha256": "13176d7980880433d2fad0fd90480018812c395c071eec15b877dee5b7dcf549",
+    "status": "passed"
+  },
+  "scope": "local_only",
+  "snapshot": {
+    "dataset_id": "regularite-mensuelle-tgv-aqst",
+    "expected_count": 12907,
+    "first_business_month": "2018-01",
+    "last_business_month": "2026-09",
+    "manifest_sha256": "1cca3fcbf6e4a94343866eedec4badf35d1ef2961cac75550cc0d666ea03b5cd",
+    "missing_or_invalid_months": 0,
+    "received_count": 12907,
+    "schema_sha256": "50735f50c533e44d2aa0fc5bf1e1f3e081d04ef5823c67ed57cd60fd8cde05ec",
+    "snapshot_id": "20261007T130103249967Z_bce4ef24",
+    "snapshot_path": "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\ingestion\\20261007T130103249967Z_bce4ef24",
+    "source_data_processed": "2026-10-02T10:10:31+00:00",
+    "source_modified": "2026-10-02T10:10:31+00:00",
+    "source_sha256": "8dc2b0a9a3707306c3087f899163465e34b20ed44b4dfc4ad46d5af4686334b2",
+    "version_id": "e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6"
+  },
+  "status": "passed",
+  "tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "log": "tests.txt",
+    "log_sha256": "8285ca44987a49f23c6659938d1deaf7174db0bcce23c76c351e2f79b822a2b3",
+    "return_code": 0
+  },
+  "validated_at_utc": "2026-10-07T13:11:15.807485+00:00"
+}

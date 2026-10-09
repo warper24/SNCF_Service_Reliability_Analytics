@@ -1,0 +1,1339 @@
+version: 2
+unit_tests:
+- name: j04_staging_parsing_and_missing
+  description: '12 cas : typage, mois strict, null/champ absent, structure invalide,
+    valeurs signées et décimal non round-trip.'
+  model: stg_tgv_reliability
+  config:
+    tags:
+    - j04
+  given:
+  - input: source('sncf_raw', 'tgv_reliability')
+    rows:
+    - version_id: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      row_number: 1
+      row_sha256: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      payload: '{"date": "2025-04", "service": "National", "gare_depart": "DIJON VILLE",
+        "gare_arrivee": "PARIS LYON", "duree_moyenne": 100, "nb_train_prevu": 100,
+        "nb_annulation": 10, "commentaire_annulation": null, "nb_train_depart_retard":
+        10, "retard_moyen_depart": 3.0, "retard_moyen_tous_trains_depart": -0.5, "commentaire_retards_depart":
+        null, "nb_train_retard_arrivee": 18, "retard_moyen_arrivee": 12.0, "retard_moyen_tous_trains_arrivee":
+        2.0, "commentaires_retard_arrivee": null, "nb_train_retard_sup_15": 10, "retard_moyen_trains_retard_sup15":
+        20.0, "nb_train_retard_sup_30": 5, "nb_train_retard_sup_60": 2, "prct_cause_externe":
+        40.0, "prct_cause_infra": 20.0, "prct_cause_gestion_trafic": 10.0, "prct_cause_materiel_roulant":
+        10.0, "prct_cause_gestion_gare": 10.0, "prct_cause_prise_en_charge_voyageurs":
+        10.0}'
+    - version_id: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      row_number: 2
+      row_sha256: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      payload: '{"date": "2025-04", "service": "National", "gare_depart": "DIJON VILLE",
+        "gare_arrivee": "PARIS LYON", "duree_moyenne": 100, "nb_train_prevu": null,
+        "nb_annulation": 10, "commentaire_annulation": null, "nb_train_depart_retard":
+        10, "retard_moyen_depart": 3.0, "retard_moyen_tous_trains_depart": -0.5, "commentaire_retards_depart":
+        null, "nb_train_retard_arrivee": 18, "retard_moyen_arrivee": 12.0, "retard_moyen_tous_trains_arrivee":
+        2.0, "commentaires_retard_arrivee": null, "nb_train_retard_sup_15": 10, "retard_moyen_trains_retard_sup15":
+        20.0, "nb_train_retard_sup_30": 5, "nb_train_retard_sup_60": 2, "prct_cause_externe":
+        40.0, "prct_cause_infra": 20.0, "prct_cause_gestion_trafic": 10.0, "prct_cause_materiel_roulant":
+        10.0, "prct_cause_gestion_gare": 10.0, "prct_cause_prise_en_charge_voyageurs":
+        10.0}'
+    - version_id: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      row_number: 3
+      row_sha256: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      payload: '{"date": "2025-13", "service": "National", "gare_depart": "DIJON VILLE",
+        "gare_arrivee": "PARIS LYON", "duree_moyenne": 100, "nb_train_prevu": 100,
+        "nb_annulation": 10, "commentaire_annulation": null, "nb_train_depart_retard":
+        10, "retard_moyen_depart": 3.0, "retard_moyen_tous_trains_depart": -0.5, "commentaire_retards_depart":
+        null, "nb_train_retard_arrivee": 18, "retard_moyen_arrivee": 12.0, "retard_moyen_tous_trains_arrivee":
+        2.0, "commentaires_retard_arrivee": null, "nb_train_retard_sup_15": 10, "retard_moyen_trains_retard_sup15":
+        20.0, "nb_train_retard_sup_30": 5, "nb_train_retard_sup_60": 2, "prct_cause_externe":
+        40.0, "prct_cause_infra": 20.0, "prct_cause_gestion_trafic": 10.0, "prct_cause_materiel_roulant":
+        10.0, "prct_cause_gestion_gare": 10.0, "prct_cause_prise_en_charge_voyageurs":
+        10.0}'
+    - version_id: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      row_number: 4
+      row_sha256: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      payload: '{"date": "2025-4", "service": "National", "gare_depart": "DIJON VILLE",
+        "gare_arrivee": "PARIS LYON", "duree_moyenne": 100, "nb_train_prevu": 100,
+        "nb_annulation": 10, "commentaire_annulation": null, "nb_train_depart_retard":
+        10, "retard_moyen_depart": 3.0, "retard_moyen_tous_trains_depart": -0.5, "commentaire_retards_depart":
+        null, "nb_train_retard_arrivee": 18, "retard_moyen_arrivee": 12.0, "retard_moyen_tous_trains_arrivee":
+        2.0, "commentaires_retard_arrivee": null, "nb_train_retard_sup_15": 10, "retard_moyen_trains_retard_sup15":
+        20.0, "nb_train_retard_sup_30": 5, "nb_train_retard_sup_60": 2, "prct_cause_externe":
+        40.0, "prct_cause_infra": 20.0, "prct_cause_gestion_trafic": 10.0, "prct_cause_materiel_roulant":
+        10.0, "prct_cause_gestion_gare": 10.0, "prct_cause_prise_en_charge_voyageurs":
+        10.0}'
+    - version_id: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      row_number: 5
+      row_sha256: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      payload: '{"date": "2025-04", "service": "National", "gare_depart": "DIJON VILLE",
+        "gare_arrivee": "PARIS LYON", "duree_moyenne": 100, "nb_train_prevu": 1.5,
+        "nb_annulation": 10, "commentaire_annulation": null, "nb_train_depart_retard":
+        10, "retard_moyen_depart": 3.0, "retard_moyen_tous_trains_depart": -0.5, "commentaire_retards_depart":
+        null, "nb_train_retard_arrivee": 18, "retard_moyen_arrivee": 12.0, "retard_moyen_tous_trains_arrivee":
+        2.0, "commentaires_retard_arrivee": null, "nb_train_retard_sup_15": 10, "retard_moyen_trains_retard_sup15":
+        20.0, "nb_train_retard_sup_30": 5, "nb_train_retard_sup_60": 2, "prct_cause_externe":
+        40.0, "prct_cause_infra": 20.0, "prct_cause_gestion_trafic": 10.0, "prct_cause_materiel_roulant":
+        10.0, "prct_cause_gestion_gare": 10.0, "prct_cause_prise_en_charge_voyageurs":
+        10.0}'
+    - version_id: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      row_number: 6
+      row_sha256: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      payload: '{"date": "2025-04", "service": "National", "gare_depart": 123, "gare_arrivee":
+        "PARIS LYON", "duree_moyenne": 100, "nb_train_prevu": 100, "nb_annulation":
+        10, "commentaire_annulation": null, "nb_train_depart_retard": 10, "retard_moyen_depart":
+        3.0, "retard_moyen_tous_trains_depart": -0.5, "commentaire_retards_depart":
+        null, "nb_train_retard_arrivee": 18, "retard_moyen_arrivee": 12.0, "retard_moyen_tous_trains_arrivee":
+        2.0, "commentaires_retard_arrivee": null, "nb_train_retard_sup_15": 10, "retard_moyen_trains_retard_sup15":
+        20.0, "nb_train_retard_sup_30": 5, "nb_train_retard_sup_60": 2, "prct_cause_externe":
+        40.0, "prct_cause_infra": 20.0, "prct_cause_gestion_trafic": 10.0, "prct_cause_materiel_roulant":
+        10.0, "prct_cause_gestion_gare": 10.0, "prct_cause_prise_en_charge_voyageurs":
+        10.0}'
+    - version_id: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      row_number: 7
+      row_sha256: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      payload: '{"date": "2025-04", "service": "National", "gare_depart": "DIJON VILLE",
+        "gare_arrivee": "PARIS LYON", "duree_moyenne": 100, "nb_train_prevu": 100,
+        "nb_annulation": 10, "commentaire_annulation": null, "nb_train_depart_retard":
+        10, "retard_moyen_depart": 3.0, "retard_moyen_tous_trains_depart": -2.0, "commentaire_retards_depart":
+        null, "nb_train_retard_arrivee": 18, "retard_moyen_arrivee": 12.0, "retard_moyen_tous_trains_arrivee":
+        2.0, "commentaires_retard_arrivee": null, "nb_train_retard_sup_15": 10, "retard_moyen_trains_retard_sup15":
+        20.0, "nb_train_retard_sup_30": 5, "nb_train_retard_sup_60": 2, "prct_cause_externe":
+        40.0, "prct_cause_infra": 20.0, "prct_cause_gestion_trafic": 10.0, "prct_cause_materiel_roulant":
+        10.0, "prct_cause_gestion_gare": 10.0, "prct_cause_prise_en_charge_voyageurs":
+        10.0}'
+    - version_id: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      row_number: 8
+      row_sha256: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      payload: '{"date": "2025-04", "service": "National", "gare_depart": "DIJON VILLE",
+        "gare_arrivee": "PARIS LYON", "duree_moyenne": 100, "nb_train_prevu": 100,
+        "commentaire_annulation": null, "nb_train_depart_retard": 10, "retard_moyen_depart":
+        3.0, "retard_moyen_tous_trains_depart": -0.5, "commentaire_retards_depart":
+        null, "nb_train_retard_arrivee": 18, "retard_moyen_arrivee": 12.0, "retard_moyen_tous_trains_arrivee":
+        2.0, "commentaires_retard_arrivee": null, "nb_train_retard_sup_15": 10, "retard_moyen_trains_retard_sup15":
+        20.0, "nb_train_retard_sup_30": 5, "nb_train_retard_sup_60": 2, "prct_cause_externe":
+        40.0, "prct_cause_infra": 20.0, "prct_cause_gestion_trafic": 10.0, "prct_cause_materiel_roulant":
+        10.0, "prct_cause_gestion_gare": 10.0, "prct_cause_prise_en_charge_voyageurs":
+        10.0}'
+    - version_id: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      row_number: 9
+      row_sha256: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      payload: '{"date": "2025-04", "service": null, "gare_depart": "DIJON VILLE",
+        "gare_arrivee": "PARIS LYON", "duree_moyenne": 100, "nb_train_prevu": 100,
+        "nb_annulation": 10, "commentaire_annulation": null, "nb_train_depart_retard":
+        10, "retard_moyen_depart": 3.0, "retard_moyen_tous_trains_depart": -0.5, "commentaire_retards_depart":
+        null, "nb_train_retard_arrivee": 18, "retard_moyen_arrivee": 12.0, "retard_moyen_tous_trains_arrivee":
+        2.0, "commentaires_retard_arrivee": null, "nb_train_retard_sup_15": 10, "retard_moyen_trains_retard_sup15":
+        20.0, "nb_train_retard_sup_30": 5, "nb_train_retard_sup_60": 2, "prct_cause_externe":
+        40.0, "prct_cause_infra": 20.0, "prct_cause_gestion_trafic": 10.0, "prct_cause_materiel_roulant":
+        10.0, "prct_cause_gestion_gare": 10.0, "prct_cause_prise_en_charge_voyageurs":
+        10.0}'
+    - version_id: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      row_number: 10
+      row_sha256: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      payload: '{"date": "2025-04", "service": "National", "gare_depart": "DIJON VILLE",
+        "gare_arrivee": "PARIS LYON", "duree_moyenne": 100, "nb_train_prevu": {"x":
+        1}, "nb_annulation": 10, "commentaire_annulation": null, "nb_train_depart_retard":
+        10, "retard_moyen_depart": 3.0, "retard_moyen_tous_trains_depart": -0.5, "commentaire_retards_depart":
+        null, "nb_train_retard_arrivee": 18, "retard_moyen_arrivee": 12.0, "retard_moyen_tous_trains_arrivee":
+        2.0, "commentaires_retard_arrivee": null, "nb_train_retard_sup_15": 10, "retard_moyen_trains_retard_sup15":
+        20.0, "nb_train_retard_sup_30": 5, "nb_train_retard_sup_60": 2, "prct_cause_externe":
+        40.0, "prct_cause_infra": 20.0, "prct_cause_gestion_trafic": 10.0, "prct_cause_materiel_roulant":
+        10.0, "prct_cause_gestion_gare": 10.0, "prct_cause_prise_en_charge_voyageurs":
+        10.0}'
+    - version_id: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      row_number: 11
+      row_sha256: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      payload: invalid JSON
+    - version_id: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      row_number: 12
+      row_sha256: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+      payload: '{"date": "2025-04", "service": "National", "gare_depart": "DIJON VILLE",
+        "gare_arrivee": "PARIS LYON", "duree_moyenne": 100, "nb_train_prevu": 100,
+        "nb_annulation": 10, "commentaire_annulation": null, "nb_train_depart_retard":
+        10, "retard_moyen_depart": 3.0, "retard_moyen_tous_trains_depart": -0.5, "commentaire_retards_depart":
+        null, "nb_train_retard_arrivee": 18, "retard_moyen_arrivee": 12.0, "retard_moyen_tous_trains_arrivee":
+        2.0, "commentaires_retard_arrivee": null, "nb_train_retard_sup_15": 10, "retard_moyen_trains_retard_sup15":
+        20.0, "nb_train_retard_sup_30": 5, "nb_train_retard_sup_60": 2, "prct_cause_externe":
+        40.0, "prct_cause_infra": 10.25641026, "prct_cause_gestion_trafic": 10.0,
+        "prct_cause_materiel_roulant": 10.0, "prct_cause_gestion_gare": 10.0, "prct_cause_prise_en_charge_voyageurs":
+        10.0}'
+  expect:
+    rows:
+    - row_number: 1
+      month: '2025-04-01'
+      service_type: National
+      departure_station: DIJON VILLE
+      scheduled_trains: 100
+      mean_departure_delay_all_minutes: -0.5
+      invalid_json: false
+      conversion_error_fields: &id001 []
+      missing_schema_fields: &id002 []
+    - row_number: 2
+      month: '2025-04-01'
+      service_type: National
+      departure_station: DIJON VILLE
+      scheduled_trains: null
+      mean_departure_delay_all_minutes: -0.5
+      invalid_json: false
+      conversion_error_fields: []
+      missing_schema_fields: []
+    - row_number: 3
+      month: null
+      service_type: National
+      departure_station: DIJON VILLE
+      scheduled_trains: 100
+      mean_departure_delay_all_minutes: -0.5
+      invalid_json: false
+      conversion_error_fields:
+      - date
+      missing_schema_fields: []
+    - row_number: 4
+      month: null
+      service_type: National
+      departure_station: DIJON VILLE
+      scheduled_trains: 100
+      mean_departure_delay_all_minutes: -0.5
+      invalid_json: false
+      conversion_error_fields:
+      - date
+      missing_schema_fields: []
+    - row_number: 5
+      month: '2025-04-01'
+      service_type: National
+      departure_station: DIJON VILLE
+      scheduled_trains: null
+      mean_departure_delay_all_minutes: -0.5
+      invalid_json: false
+      conversion_error_fields:
+      - nb_train_prevu
+      missing_schema_fields: []
+    - row_number: 6
+      month: '2025-04-01'
+      service_type: National
+      departure_station: '123'
+      scheduled_trains: 100
+      mean_departure_delay_all_minutes: -0.5
+      invalid_json: false
+      conversion_error_fields:
+      - gare_depart
+      missing_schema_fields: []
+    - row_number: 7
+      month: '2025-04-01'
+      service_type: National
+      departure_station: DIJON VILLE
+      scheduled_trains: 100
+      mean_departure_delay_all_minutes: -2.0
+      invalid_json: false
+      conversion_error_fields: []
+      missing_schema_fields: []
+    - row_number: 8
+      month: '2025-04-01'
+      service_type: National
+      departure_station: DIJON VILLE
+      scheduled_trains: 100
+      mean_departure_delay_all_minutes: -0.5
+      invalid_json: false
+      conversion_error_fields: []
+      missing_schema_fields:
+      - nb_annulation
+    - row_number: 9
+      month: '2025-04-01'
+      service_type: null
+      departure_station: DIJON VILLE
+      scheduled_trains: 100
+      mean_departure_delay_all_minutes: -0.5
+      invalid_json: false
+      conversion_error_fields: []
+      missing_schema_fields: []
+    - row_number: 10
+      month: '2025-04-01'
+      service_type: National
+      departure_station: DIJON VILLE
+      scheduled_trains: null
+      mean_departure_delay_all_minutes: -0.5
+      invalid_json: false
+      conversion_error_fields:
+      - nb_train_prevu
+      missing_schema_fields: []
+    - row_number: 11
+      month: null
+      service_type: null
+      departure_station: null
+      scheduled_trains: null
+      mean_departure_delay_all_minutes: null
+      invalid_json: true
+      conversion_error_fields: []
+      missing_schema_fields:
+      - date
+      - service
+      - gare_depart
+      - gare_arrivee
+      - duree_moyenne
+      - nb_train_prevu
+      - nb_annulation
+      - commentaire_annulation
+      - nb_train_depart_retard
+      - retard_moyen_depart
+      - retard_moyen_tous_trains_depart
+      - commentaire_retards_depart
+      - nb_train_retard_arrivee
+      - retard_moyen_arrivee
+      - retard_moyen_tous_trains_arrivee
+      - commentaires_retard_arrivee
+      - nb_train_retard_sup_15
+      - retard_moyen_trains_retard_sup15
+      - nb_train_retard_sup_30
+      - nb_train_retard_sup_60
+      - prct_cause_externe
+      - prct_cause_infra
+      - prct_cause_gestion_trafic
+      - prct_cause_materiel_roulant
+      - prct_cause_gestion_gare
+      - prct_cause_prise_en_charge_voyageurs
+    - row_number: 12
+      month: '2025-04-01'
+      service_type: National
+      departure_station: DIJON VILLE
+      scheduled_trains: 100
+      mean_departure_delay_all_minutes: -0.5
+      invalid_json: false
+      conversion_error_fields: *id001
+      missing_schema_fields: *id002
+- name: j04_quality_populations_boundaries_and_scope
+  description: 27 cas métier, dont Dijon réel ; nulls, zéro, populations, seuils,
+    moyennes, tolérance des causes, services et directions.
+  model: int_tgv_quality_flags
+  config:
+    tags:
+    - j04
+  given:
+  - input: ref('stg_tgv_reliability')
+    rows:
+    - month: '2025-04-01'
+      departure_station: ordinary
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 100
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 18
+      arrival_delayed_over_30_trains: 5
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 40.0
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 1
+    - month: '2025-04-01'
+      departure_station: zero_population
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 0
+      cancelled_trains: 0
+      departure_delayed_trains: 0
+      arrival_delayed_trains: 0
+      arrival_delayed_over_30_trains: 0
+      arrival_delayed_over_60_trains: 0
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 40.0
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 2
+    - month: '2025-04-01'
+      departure_station: null_arrival
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 100
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: null
+      arrival_delayed_over_30_trains: 5
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 40.0
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 3
+    - month: '2025-04-01'
+      departure_station: missing_scheduled
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: null
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 18
+      arrival_delayed_over_30_trains: 5
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 40.0
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 4
+    - month: '2025-04-01'
+      departure_station: annulations_above_scheduled
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 100
+      cancelled_trains: 101
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 18
+      arrival_delayed_over_30_trains: 5
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 40.0
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 5
+    - month: '2025-04-01'
+      departure_station: arrival_above_proxy
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 100
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 91
+      arrival_delayed_over_30_trains: 5
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 40.0
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 6
+    - month: '2025-04-01'
+      departure_station: negative_30
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 100
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 18
+      arrival_delayed_over_30_trains: -1
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 40.0
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 7
+    - month: '2025-01-01'
+      departure_station: quarantine_start
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 100
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 18
+      arrival_delayed_over_30_trains: 5
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 40.0
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 8
+    - month: '2025-03-01'
+      departure_station: quarantine_end
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 100
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 18
+      arrival_delayed_over_30_trains: 5
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 40.0
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 9
+    - month: '2024-12-01'
+      departure_station: before_quarantine
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 100
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 18
+      arrival_delayed_over_30_trains: 5
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 40.0
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 10
+    - month: '2025-04-01'
+      departure_station: nesting_60_above_30
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 100
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 18
+      arrival_delayed_over_30_trains: 5
+      arrival_delayed_over_60_trains: 6
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 40.0
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 11
+    - month: '2025-04-01'
+      departure_station: nesting_30_above_arrival
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 100
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 18
+      arrival_delayed_over_30_trains: 19
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 40.0
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 12
+    - month: '2025-04-01'
+      departure_station: negative_late_mean
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 100
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 18
+      arrival_delayed_over_30_trains: 5
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: -1
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 40.0
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 13
+    - month: '2025-04-01'
+      departure_station: missing_cause
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 100
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 18
+      arrival_delayed_over_30_trains: 5
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: null
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 14
+    - month: '2025-04-01'
+      departure_station: zero_causes
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 100
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 18
+      arrival_delayed_over_30_trains: 5
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 0.0
+      infrastructure_cause_pct: 0.0
+      traffic_management_cause_pct: 0.0
+      rolling_stock_cause_pct: 0.0
+      station_management_cause_pct: 0.0
+      passenger_handling_cause_pct: 0.0
+      row_number: 15
+    - month: '2025-04-01'
+      departure_station: out_of_bounds_cause
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 100
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 18
+      arrival_delayed_over_30_trains: 5
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: -1
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 16
+    - month: '2025-04-01'
+      departure_station: within_sum_tolerance
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 100
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 18
+      arrival_delayed_over_30_trains: 5
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 39.9
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 17
+    - month: '2025-04-01'
+      departure_station: outside_sum_tolerance
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 100
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 18
+      arrival_delayed_over_30_trains: 5
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 39.89
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 18
+    - month: '2025-04-01'
+      departure_station: upper_sum_boundary
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 100
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 18
+      arrival_delayed_over_30_trains: 5
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 40.1
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 19
+    - month: '2025-04-01'
+      departure_station: upper_sum_outside
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 100
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 18
+      arrival_delayed_over_30_trains: 5
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 40.11
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 20
+    - month: '2025-04-01'
+      departure_station: negative_scheduled
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: -1
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 18
+      arrival_delayed_over_30_trains: 5
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 40.0
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 21
+    - month: '2025-01-01'
+      departure_station: real_dijon
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 426
+      cancelled_trains: 4
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 60
+      arrival_delayed_over_30_trains: -1
+      arrival_delayed_over_60_trains: 30
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 40.0
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 22
+    - month: '2025-04-01'
+      departure_station: missing_late_mean
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 100
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 18
+      arrival_delayed_over_30_trains: 5
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: null
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 40.0
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 23
+    - month: '2025-04-01'
+      departure_station: negative_departure_mean
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 100
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 18
+      arrival_delayed_over_30_trains: 5
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: -1
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 40.0
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 24
+    - month: '2025-04-01'
+      departure_station: shared
+      arrival_station: B
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 100
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 18
+      arrival_delayed_over_30_trains: 5
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 40.0
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 25
+    - month: '2025-04-01'
+      departure_station: shared
+      arrival_station: B
+      service_type: International
+      scheduled_duration_minutes: 100
+      scheduled_trains: 100
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 18
+      arrival_delayed_over_30_trains: 5
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 40.0
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 26
+    - month: '2025-04-01'
+      departure_station: B
+      arrival_station: shared
+      service_type: National
+      scheduled_duration_minutes: 100
+      scheduled_trains: 100
+      cancelled_trains: 10
+      departure_delayed_trains: 10
+      arrival_delayed_trains: 18
+      arrival_delayed_over_30_trains: 5
+      arrival_delayed_over_60_trains: 2
+      mean_arrival_delay_late_minutes: 12.0
+      mean_departure_delay_late_minutes: 3.0
+      mean_arrival_delay_all_minutes: 2.0
+      mean_departure_delay_all_minutes: -0.5
+      external_cause_pct: 40.0
+      infrastructure_cause_pct: 20.0
+      traffic_management_cause_pct: 10.0
+      rolling_stock_cause_pct: 10.0
+      station_management_cause_pct: 10.0
+      passenger_handling_cause_pct: 10.0
+      row_number: 27
+  expect:
+    rows:
+    - operated_trains_proxy: 90
+      is_cancellation_rate_usable: true
+      is_arrival_delay_count_usable: true
+      is_arrival_delay_rate_usable: true
+      is_important_delay_count_usable: true
+      is_important_delay_rate_usable: true
+      cause_profile_status: available
+      is_cause_profile_usable: true
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: true
+      is_mean_departure_delay_late_usable: true
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 1
+    - operated_trains_proxy: 0
+      is_cancellation_rate_usable: false
+      is_arrival_delay_count_usable: true
+      is_arrival_delay_rate_usable: false
+      is_important_delay_count_usable: true
+      is_important_delay_rate_usable: false
+      cause_profile_status: available
+      is_cause_profile_usable: true
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: false
+      is_mean_departure_delay_late_usable: false
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 2
+    - operated_trains_proxy: 90
+      is_cancellation_rate_usable: true
+      is_arrival_delay_count_usable: false
+      is_arrival_delay_rate_usable: false
+      is_important_delay_count_usable: false
+      is_important_delay_rate_usable: false
+      cause_profile_status: available
+      is_cause_profile_usable: true
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: false
+      is_mean_departure_delay_late_usable: true
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 3
+    - operated_trains_proxy: null
+      is_cancellation_rate_usable: false
+      is_arrival_delay_count_usable: false
+      is_arrival_delay_rate_usable: false
+      is_important_delay_count_usable: false
+      is_important_delay_rate_usable: false
+      cause_profile_status: available
+      is_cause_profile_usable: true
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: false
+      is_mean_departure_delay_late_usable: false
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 4
+    - operated_trains_proxy: null
+      is_cancellation_rate_usable: false
+      is_arrival_delay_count_usable: false
+      is_arrival_delay_rate_usable: false
+      is_important_delay_count_usable: false
+      is_important_delay_rate_usable: false
+      cause_profile_status: available
+      is_cause_profile_usable: true
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: false
+      is_mean_departure_delay_late_usable: false
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 5
+    - operated_trains_proxy: 90
+      is_cancellation_rate_usable: true
+      is_arrival_delay_count_usable: false
+      is_arrival_delay_rate_usable: false
+      is_important_delay_count_usable: false
+      is_important_delay_rate_usable: false
+      cause_profile_status: available
+      is_cause_profile_usable: true
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: false
+      is_mean_departure_delay_late_usable: true
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 6
+    - operated_trains_proxy: 90
+      is_cancellation_rate_usable: true
+      is_arrival_delay_count_usable: true
+      is_arrival_delay_rate_usable: true
+      is_important_delay_count_usable: false
+      is_important_delay_rate_usable: false
+      cause_profile_status: available
+      is_cause_profile_usable: true
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: true
+      is_mean_departure_delay_late_usable: true
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 7
+    - operated_trains_proxy: 90
+      is_cancellation_rate_usable: true
+      is_arrival_delay_count_usable: true
+      is_arrival_delay_rate_usable: true
+      is_important_delay_count_usable: false
+      is_important_delay_rate_usable: false
+      cause_profile_status: available
+      is_cause_profile_usable: true
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: true
+      is_mean_departure_delay_late_usable: true
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 8
+    - operated_trains_proxy: 90
+      is_cancellation_rate_usable: true
+      is_arrival_delay_count_usable: true
+      is_arrival_delay_rate_usable: true
+      is_important_delay_count_usable: false
+      is_important_delay_rate_usable: false
+      cause_profile_status: available
+      is_cause_profile_usable: true
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: true
+      is_mean_departure_delay_late_usable: true
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 9
+    - operated_trains_proxy: 90
+      is_cancellation_rate_usable: true
+      is_arrival_delay_count_usable: true
+      is_arrival_delay_rate_usable: true
+      is_important_delay_count_usable: true
+      is_important_delay_rate_usable: true
+      cause_profile_status: available
+      is_cause_profile_usable: true
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: true
+      is_mean_departure_delay_late_usable: true
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 10
+    - operated_trains_proxy: 90
+      is_cancellation_rate_usable: true
+      is_arrival_delay_count_usable: true
+      is_arrival_delay_rate_usable: true
+      is_important_delay_count_usable: false
+      is_important_delay_rate_usable: false
+      cause_profile_status: available
+      is_cause_profile_usable: true
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: true
+      is_mean_departure_delay_late_usable: true
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 11
+    - operated_trains_proxy: 90
+      is_cancellation_rate_usable: true
+      is_arrival_delay_count_usable: true
+      is_arrival_delay_rate_usable: true
+      is_important_delay_count_usable: false
+      is_important_delay_rate_usable: false
+      cause_profile_status: available
+      is_cause_profile_usable: true
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: true
+      is_mean_departure_delay_late_usable: true
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 12
+    - operated_trains_proxy: 90
+      is_cancellation_rate_usable: true
+      is_arrival_delay_count_usable: true
+      is_arrival_delay_rate_usable: true
+      is_important_delay_count_usable: true
+      is_important_delay_rate_usable: true
+      cause_profile_status: available
+      is_cause_profile_usable: true
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: false
+      is_mean_departure_delay_late_usable: true
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 13
+    - operated_trains_proxy: 90
+      is_cancellation_rate_usable: true
+      is_arrival_delay_count_usable: true
+      is_arrival_delay_rate_usable: true
+      is_important_delay_count_usable: true
+      is_important_delay_rate_usable: true
+      cause_profile_status: missing
+      is_cause_profile_usable: false
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: true
+      is_mean_departure_delay_late_usable: true
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 14
+    - operated_trains_proxy: 90
+      is_cancellation_rate_usable: true
+      is_arrival_delay_count_usable: true
+      is_arrival_delay_rate_usable: true
+      is_important_delay_count_usable: true
+      is_important_delay_rate_usable: true
+      cause_profile_status: all_zero
+      is_cause_profile_usable: false
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: true
+      is_mean_departure_delay_late_usable: true
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 15
+    - operated_trains_proxy: 90
+      is_cancellation_rate_usable: true
+      is_arrival_delay_count_usable: true
+      is_arrival_delay_rate_usable: true
+      is_important_delay_count_usable: true
+      is_important_delay_rate_usable: true
+      cause_profile_status: out_of_bounds
+      is_cause_profile_usable: false
+      has_cause_sum_warning: true
+      is_mean_arrival_delay_late_usable: true
+      is_mean_departure_delay_late_usable: true
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 16
+    - operated_trains_proxy: 90
+      is_cancellation_rate_usable: true
+      is_arrival_delay_count_usable: true
+      is_arrival_delay_rate_usable: true
+      is_important_delay_count_usable: true
+      is_important_delay_rate_usable: true
+      cause_profile_status: available
+      is_cause_profile_usable: true
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: true
+      is_mean_departure_delay_late_usable: true
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 17
+    - operated_trains_proxy: 90
+      is_cancellation_rate_usable: true
+      is_arrival_delay_count_usable: true
+      is_arrival_delay_rate_usable: true
+      is_important_delay_count_usable: true
+      is_important_delay_rate_usable: true
+      cause_profile_status: sum_warning
+      is_cause_profile_usable: true
+      has_cause_sum_warning: true
+      is_mean_arrival_delay_late_usable: true
+      is_mean_departure_delay_late_usable: true
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 18
+    - operated_trains_proxy: 90
+      is_cancellation_rate_usable: true
+      is_arrival_delay_count_usable: true
+      is_arrival_delay_rate_usable: true
+      is_important_delay_count_usable: true
+      is_important_delay_rate_usable: true
+      cause_profile_status: available
+      is_cause_profile_usable: true
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: true
+      is_mean_departure_delay_late_usable: true
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 19
+    - operated_trains_proxy: 90
+      is_cancellation_rate_usable: true
+      is_arrival_delay_count_usable: true
+      is_arrival_delay_rate_usable: true
+      is_important_delay_count_usable: true
+      is_important_delay_rate_usable: true
+      cause_profile_status: sum_warning
+      is_cause_profile_usable: true
+      has_cause_sum_warning: true
+      is_mean_arrival_delay_late_usable: true
+      is_mean_departure_delay_late_usable: true
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 20
+    - operated_trains_proxy: null
+      is_cancellation_rate_usable: false
+      is_arrival_delay_count_usable: false
+      is_arrival_delay_rate_usable: false
+      is_important_delay_count_usable: false
+      is_important_delay_rate_usable: false
+      cause_profile_status: available
+      is_cause_profile_usable: true
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: false
+      is_mean_departure_delay_late_usable: false
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 21
+    - operated_trains_proxy: 422
+      is_cancellation_rate_usable: true
+      is_arrival_delay_count_usable: true
+      is_arrival_delay_rate_usable: true
+      is_important_delay_count_usable: false
+      is_important_delay_rate_usable: false
+      cause_profile_status: available
+      is_cause_profile_usable: true
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: true
+      is_mean_departure_delay_late_usable: true
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 22
+    - operated_trains_proxy: 90
+      is_cancellation_rate_usable: true
+      is_arrival_delay_count_usable: true
+      is_arrival_delay_rate_usable: true
+      is_important_delay_count_usable: true
+      is_important_delay_rate_usable: true
+      cause_profile_status: available
+      is_cause_profile_usable: true
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: false
+      is_mean_departure_delay_late_usable: true
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 23
+    - operated_trains_proxy: 90
+      is_cancellation_rate_usable: true
+      is_arrival_delay_count_usable: true
+      is_arrival_delay_rate_usable: true
+      is_important_delay_count_usable: true
+      is_important_delay_rate_usable: true
+      cause_profile_status: available
+      is_cause_profile_usable: true
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: true
+      is_mean_departure_delay_late_usable: false
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 24
+    - operated_trains_proxy: 90
+      is_cancellation_rate_usable: true
+      is_arrival_delay_count_usable: true
+      is_arrival_delay_rate_usable: true
+      is_important_delay_count_usable: true
+      is_important_delay_rate_usable: true
+      cause_profile_status: available
+      is_cause_profile_usable: true
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: true
+      is_mean_departure_delay_late_usable: true
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: true
+      has_multiple_services_in_history: true
+      is_over_15_generic_usable: false
+      row_number: 25
+    - operated_trains_proxy: 90
+      is_cancellation_rate_usable: true
+      is_arrival_delay_count_usable: true
+      is_arrival_delay_rate_usable: true
+      is_important_delay_count_usable: true
+      is_important_delay_rate_usable: true
+      cause_profile_status: available
+      is_cause_profile_usable: true
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: true
+      is_mean_departure_delay_late_usable: true
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: true
+      has_multiple_services_in_history: true
+      is_over_15_generic_usable: false
+      row_number: 26
+    - operated_trains_proxy: 90
+      is_cancellation_rate_usable: true
+      is_arrival_delay_count_usable: true
+      is_arrival_delay_rate_usable: true
+      is_important_delay_count_usable: true
+      is_important_delay_rate_usable: true
+      cause_profile_status: available
+      is_cause_profile_usable: true
+      has_cause_sum_warning: false
+      is_mean_arrival_delay_late_usable: true
+      is_mean_departure_delay_late_usable: true
+      has_negative_mean_departure_all: true
+      has_multiple_services_in_month: false
+      has_multiple_services_in_history: false
+      is_over_15_generic_usable: false
+      row_number: 27

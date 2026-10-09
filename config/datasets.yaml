@@ -1,0 +1,34 @@
+# Schéma de transport J03 ; les valeurs métier anormales restent dans le brut.
+dataset_id: regularite-mensuelle-tgv-aqst
+base_url: https://ressources.data.sncf.com/api/explore/v2.1/catalog/datasets
+network:
+  timeout: 60
+  attempts: 3
+  backoff: 2
+fields:
+  date: date
+  service: text
+  gare_depart: text
+  gare_arrivee: text
+  duree_moyenne: int
+  nb_train_prevu: int
+  nb_annulation: int
+  commentaire_annulation: text
+  nb_train_depart_retard: int
+  retard_moyen_depart: double
+  retard_moyen_tous_trains_depart: double
+  commentaire_retards_depart: text
+  nb_train_retard_arrivee: int
+  retard_moyen_arrivee: double
+  retard_moyen_tous_trains_arrivee: double
+  commentaires_retard_arrivee: text
+  nb_train_retard_sup_15: int
+  retard_moyen_trains_retard_sup15: double
+  nb_train_retard_sup_30: int
+  nb_train_retard_sup_60: int
+  prct_cause_externe: double
+  prct_cause_infra: double
+  prct_cause_gestion_trafic: double
+  prct_cause_materiel_roulant: double
+  prct_cause_gestion_gare: double
+  prct_cause_prise_en_charge_voyageurs: double

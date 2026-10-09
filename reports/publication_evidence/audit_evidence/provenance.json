@@ -1,0 +1,60 @@
+{
+  "evidence_errors": {},
+  "extraction_checks": {
+    "count_matches": true,
+    "schema_stable": true,
+    "source_stable": true
+  },
+  "files": {
+    "aqst_2022.pdf": {
+      "bytes": 18918512,
+      "retrieved_at_utc": "2026-10-01T14:03:00.893588+00:00",
+      "sha256": "142599d7819f7e6f36b422c4d7d169ae6ed055117b3c1bc63d4ca2b15c42268e",
+      "url": "https://www.qualitetransports.gouv.fr/IMG/pdf/bilan_aqst_2022_ok.pdf"
+    },
+    "aqst_definitions.html": {
+      "bytes": 148236,
+      "retrieved_at_utc": "2026-10-01T14:02:51.381361+00:00",
+      "sha256": "e9602645b4fb362196700d8cd506baeca82760b89b5e721849688d76832a5acf",
+      "url": "https://www.qualitetransports.gouv.fr/definition-des-indicateurs-et-chiffres-de-la-a460.html"
+    },
+    "metadata_after.json": {
+      "bytes": 11247,
+      "retrieved_at_utc": "2026-10-01T14:02:43.903214+00:00",
+      "sha256": "fa7551698612c8b84de2828d3ce33ee20a00b196f3c27b20e6768f65f8e8106a",
+      "url": "https://ressources.data.sncf.com/api/explore/v2.1/catalog/datasets/regularite-mensuelle-tgv-aqst"
+    },
+    "metadata_before.json": {
+      "bytes": 11247,
+      "retrieved_at_utc": "2026-10-01T14:02:37.744506+00:00",
+      "sha256": "fa7551698612c8b84de2828d3ce33ee20a00b196f3c27b20e6768f65f8e8106a",
+      "url": "https://ressources.data.sncf.com/api/explore/v2.1/catalog/datasets/regularite-mensuelle-tgv-aqst"
+    },
+    "odbl.html": {
+      "bytes": 51176,
+      "retrieved_at_utc": "2026-10-01T14:03:01.441971+00:00",
+      "sha256": "b8d8aebb21bf405f93f6e21bbf0d8f0a749844f9812ec58692f189add6402b47",
+      "url": "https://opendatacommons.org/licenses/odbl/1-0/"
+    },
+    "sncf_terms.html": {
+      "bytes": 325126,
+      "retrieved_at_utc": "2026-10-01T14:03:01.266104+00:00",
+      "sha256": "8b41aee93079e7b22fa7c2d257cfbc302615bc71d514aeebde89b8c253a53a4a",
+      "url": "https://ressources.data.sncf.com/pages/cgu/"
+    },
+    "source.json": {
+      "bytes": 11518814,
+      "retrieved_at_utc": "2026-10-01T14:02:43.677485+00:00",
+      "sha256": "1b18c596c59b38f4feb230a630d5a8b8a3b3f13fa5802407ece9c269c575f24f",
+      "url": "https://ressources.data.sncf.com/api/explore/v2.1/catalog/datasets/regularite-mensuelle-tgv-aqst/exports/json"
+    },
+    "source_information.html": {
+      "bytes": 358235,
+      "retrieved_at_utc": "2026-10-01T14:02:44.707804+00:00",
+      "sha256": "14b94172008a352dc67ab86db67d14339162a09e779db66ec4e060865b6155ba",
+      "url": "https://ressources.data.sncf.com/explore/dataset/regularite-mensuelle-tgv-aqst/information/"
+    }
+  },
+  "snapshot_id": "20261001T140237476619Z",
+  "source_sha256": "1b18c596c59b38f4feb230a630d5a8b8a3b3f13fa5802407ece9c269c575f24f"
+}

@@ -1,0 +1,43 @@
+select version_id, check_rule.rule, countif(check_rule.affected) as affected_observations,
+    count(*) as denominator_observations, 100 * safe_divide(countif(check_rule.affected), count(*)) as affected_pct
+from {{ ref('int_tgv_quality_flags') }}
+cross join unnest([
+        struct('central_counts_incompatible' as rule, coalesce(not central_counts_compatible, false) as affected),
+        struct('cancellation_rate_unavailable' as rule, coalesce(not is_cancellation_rate_usable, false) as affected),
+        struct('arrival_delay_rate_unavailable' as rule, coalesce(not is_arrival_delay_rate_usable, false) as affected),
+        struct('departure_delay_count_unavailable' as rule, coalesce(not is_departure_delay_count_usable, false) as affected),
+        struct('important_delay_quarantine' as rule, coalesce(is_important_delay_quarantined, false) as affected),
+        struct('important_delay_nesting' as rule, coalesce(not important_delay_nesting_valid, false) as affected),
+        struct('important_delay_rate_unavailable' as rule, coalesce(not is_important_delay_rate_usable, false) as affected),
+        struct('over_15_generic_unavailable' as rule, coalesce(not is_over_15_generic_usable, false) as affected),
+        struct('cause_profile_missing' as rule, coalesce(cause_profile_status = 'missing', false) as affected),
+        struct('cause_profile_all_zero' as rule, coalesce(cause_profile_status = 'all_zero', false) as affected),
+        struct('cause_profile_out_of_bounds' as rule, coalesce(cause_profile_status = 'out_of_bounds', false) as affected),
+        struct('cause_sum_warning' as rule, coalesce(has_cause_sum_warning, false) as affected),
+        struct('cause_profile_unavailable' as rule, coalesce(not is_cause_profile_usable, false) as affected),
+        struct('zero_scheduled_population' as rule, coalesce(scheduled_trains = 0, false) as affected),
+        struct('zero_operated_proxy' as rule, coalesce(operated_trains_proxy = 0, false) as affected),
+        struct('negative_mean_arrival_late' as rule, coalesce(has_negative_mean_arrival_late, false) as affected),
+        struct('negative_mean_departure_late' as rule, coalesce(has_negative_mean_departure_late, false) as affected),
+        struct('negative_mean_arrival_all' as rule, coalesce(has_negative_mean_arrival_all, false) as affected),
+        struct('negative_mean_departure_all' as rule, coalesce(has_negative_mean_departure_all, false) as affected),
+        struct('negative_scheduled_duration' as rule, coalesce(has_negative_scheduled_duration, false) as affected),
+        struct('negative_mean_over_15' as rule, coalesce(mean_arrival_delay_over_15_minutes < 0, false) as affected),
+        struct('multiple_services_in_month' as rule, coalesce(has_multiple_services_in_month, false) as affected),
+        struct('multiple_services_in_history' as rule, coalesce(has_multiple_services_in_history, false) as affected),
+        struct('any_quality_reason' as rule, coalesce(array_length(quality_reasons) > 0, false) as affected),
+        struct('negative_train_count' as rule, coalesce((select countif(v < 0) from unnest([scheduled_trains, cancelled_trains,
+departure_delayed_trains, arrival_delayed_trains, arrival_delayed_over_15_trains,
+arrival_delayed_over_30_trains, arrival_delayed_over_60_trains]) v) > 0, false) as affected),
+        struct('missing_numeric_value' as rule, coalesce((select countif(v is null) from unnest([cast(scheduled_trains as float64),
+cast(cancelled_trains as float64),cast(scheduled_duration_minutes as float64),
+cast(departure_delayed_trains as float64),cast(arrival_delayed_trains as float64),
+cast(arrival_delayed_over_15_trains as float64),cast(arrival_delayed_over_30_trains as float64),
+cast(arrival_delayed_over_60_trains as float64),mean_arrival_delay_late_minutes,
+mean_departure_delay_late_minutes,mean_arrival_delay_all_minutes,mean_departure_delay_all_minutes,
+mean_arrival_delay_over_15_minutes,external_cause_pct,infrastructure_cause_pct,
+traffic_management_cause_pct,rolling_stock_cause_pct,station_management_cause_pct,
+passenger_handling_cause_pct]) v) > 0, false) as affected)
+]) check_rule
+group by version_id, check_rule.rule
+order by check_rule.rule

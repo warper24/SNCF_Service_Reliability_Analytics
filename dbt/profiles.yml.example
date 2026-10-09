@@ -1,0 +1,14 @@
+# Copier vers un dossier privé, puis définir DBT_PROFILES_DIR sur ce dossier.
+# Ne jamais versionner le vrai profiles.yml.
+sncf_service_reliability:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: "{{ env_var('GOOGLE_CLOUD_PROJECT') }}"
+      dataset: "{{ env_var('BQ_DEV_DATASET', 'sncf_dev') }}"
+      location: "{{ env_var('BQ_LOCATION', 'EU') }}"
+      threads: 2
+      timeout_seconds: 300
+      maximum_bytes_billed: 100000000

@@ -1,0 +1,29 @@
+[
+  {
+    "date": "2025-01", "service": "National", "gare_depart": "GARE A", "gare_arrivee": "GARE B",
+    "duree_moyenne": 120, "nb_train_prevu": 100, "nb_annulation": 2,
+    "commentaire_annulation": null, "nb_train_depart_retard": 8,
+    "retard_moyen_depart": 12.5, "retard_moyen_tous_trains_depart": -0.2,
+    "commentaire_retards_depart": null, "nb_train_retard_arrivee": 10,
+    "retard_moyen_arrivee": 18.0, "retard_moyen_tous_trains_arrivee": 1.2,
+    "commentaires_retard_arrivee": "Donnée synthétique — aucune gare réelle.",
+    "nb_train_retard_sup_15": 5, "retard_moyen_trains_retard_sup15": 22.0,
+    "nb_train_retard_sup_30": -3, "nb_train_retard_sup_60": 1,
+    "prct_cause_externe": 40.0, "prct_cause_infra": 20.0,
+    "prct_cause_gestion_trafic": 10.0, "prct_cause_materiel_roulant": 10.0,
+    "prct_cause_gestion_gare": 10.0, "prct_cause_prise_en_charge_voyageurs": 10.0
+  },
+  {
+    "date": "2025-01", "service": "International", "gare_depart": "GARE B", "gare_arrivee": "GARE A",
+    "duree_moyenne": 125, "nb_train_prevu": 0, "nb_annulation": 0,
+    "commentaire_annulation": null, "nb_train_depart_retard": 0,
+    "retard_moyen_depart": null, "retard_moyen_tous_trains_depart": 0.0,
+    "commentaire_retards_depart": null, "nb_train_retard_arrivee": 0,
+    "retard_moyen_arrivee": null, "retard_moyen_tous_trains_arrivee": 0.0,
+    "commentaires_retard_arrivee": null, "nb_train_retard_sup_15": 0,
+    "retard_moyen_trains_retard_sup15": null, "nb_train_retard_sup_30": 0, "nb_train_retard_sup_60": 0,
+    "prct_cause_externe": null, "prct_cause_infra": null,
+    "prct_cause_gestion_trafic": null, "prct_cause_materiel_roulant": null,
+    "prct_cause_gestion_gare": null, "prct_cause_prise_en_charge_voyageurs": null
+  }
+]

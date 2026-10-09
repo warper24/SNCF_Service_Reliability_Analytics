@@ -1,0 +1,1445 @@
+﻿row_number,date,gare_depart,gare_arrivee,service,rule,detail
+319,2018-03,MARSEILLE ST CHARLES,TOURCOING,National,cause_sum_not_100,0.0
+390,2018-03,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+416,2018-04,ST MALO,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+422,2018-04,MARSEILLE ST CHARLES,TOURCOING,National,cause_sum_not_100,0.0
+422,2018-04,MARSEILLE ST CHARLES,TOURCOING,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+453,2018-04,PARIS VAUGIRARD,BORDEAUX ST JEAN,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+453,2018-04,PARIS VAUGIRARD,BORDEAUX ST JEAN,National,negative_duration_or_mean,retard_moyen_trains_retard_sup15
+494,2018-04,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+496,2018-04,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+496,2018-04,MARSEILLE ST CHARLES,MADRID,International,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+496,2018-04,MARSEILLE ST CHARLES,MADRID,International,negative_duration_or_mean,retard_moyen_trains_retard_sup15
+509,2018-04,RENNES,PARIS VAUGIRARD,National,cause_sum_not_100,0.0
+537,2018-05,BELLEGARDE (AIN),PARIS LYON,National,cause_sum_not_100,0.0
+547,2018-05,PARIS LYON,ITALIE,International,cause_sum_not_100,0.0
+548,2018-05,LAUSANNE,PARIS LYON,International,cause_sum_not_100,0.0
+549,2018-05,PARIS LYON,ZURICH,International,cause_sum_not_100,0.0
+572,2018-05,PARIS EST,FRANCFORT,International,cause_sum_not_100,0.0
+573,2018-05,PARIS EST,STUTTGART,International,cause_sum_not_100,0.0
+574,2018-05,MADRID,MARSEILLE ST CHARLES,International,cause_sum_not_100,0.0
+601,2018-05,FRANCFORT,PARIS EST,International,cause_sum_not_100,0.0
+602,2018-05,PARIS LYON,GENEVE,International,cause_sum_not_100,0.0
+603,2018-05,GENEVE,PARIS LYON,International,cause_sum_not_100,0.0
+603,2018-05,GENEVE,PARIS LYON,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+604,2018-05,ITALIE,PARIS LYON,International,cause_sum_not_100,0.0
+605,2018-05,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+613,2018-05,TOURCOING,MARSEILLE ST CHARLES,National,cause_sum_not_100,0.0
+621,2018-05,STUTTGART,PARIS EST,International,cause_sum_not_100,0.0
+622,2018-05,PARIS LYON,LAUSANNE,International,cause_sum_not_100,0.0
+623,2018-05,ZURICH,PARIS LYON,International,cause_sum_not_100,0.0
+624,2018-05,BARCELONA,PARIS LYON,International,cause_sum_not_100,0.0
+625,2018-05,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+679,2018-06,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+682,2018-06,PARIS EST,FRANCFORT,International,cause_sum_not_100,0.0
+683,2018-06,GENEVE,PARIS LYON,International,cause_sum_not_100,0.0
+683,2018-06,GENEVE,PARIS LYON,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+684,2018-06,PARIS LYON,LAUSANNE,International,cause_sum_not_100,0.0
+685,2018-06,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+714,2018-06,STUTTGART,PARIS EST,International,cause_sum_not_100,0.0
+715,2018-06,ZURICH,PARIS LYON,International,cause_sum_not_100,0.0
+728,2018-06,PARIS EST,STUTTGART,International,cause_sum_not_100,0.0
+729,2018-06,LAUSANNE,PARIS LYON,International,cause_sum_not_100,0.0
+730,2018-06,MADRID,MARSEILLE ST CHARLES,International,cause_sum_not_100,0.0
+730,2018-06,MADRID,MARSEILLE ST CHARLES,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+732,2018-06,PARIS MONTPARNASSE,ST PIERRE DES CORPS,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+750,2018-06,BARCELONA,PARIS LYON,International,cause_sum_not_100,0.0
+751,2018-06,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+758,2018-06,PARIS MONTPARNASSE,TOURS,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+776,2018-06,FRANCFORT,PARIS EST,International,cause_sum_not_100,0.0
+777,2018-06,PARIS LYON,GENEVE,International,cause_sum_not_100,0.0
+778,2018-06,PARIS LYON,ITALIE,International,cause_sum_not_100,0.0
+779,2018-06,ITALIE,PARIS LYON,International,cause_sum_not_100,0.0
+780,2018-06,PARIS LYON,ZURICH,International,cause_sum_not_100,0.0
+801,2018-07,PARIS LYON,GENEVE,International,cause_sum_not_100,0.0
+802,2018-07,ITALIE,PARIS LYON,International,cause_sum_not_100,0.0
+803,2018-07,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+826,2018-07,FRANCFORT,PARIS EST,International,cause_sum_not_100,0.0
+827,2018-07,PARIS EST,STUTTGART,International,cause_sum_not_100,0.0
+828,2018-07,GENEVE,PARIS LYON,International,cause_sum_not_100,0.0
+828,2018-07,GENEVE,PARIS LYON,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+829,2018-07,LAUSANNE,PARIS LYON,International,cause_sum_not_100,0.0
+830,2018-07,BARCELONA,PARIS LYON,International,cause_sum_not_100,0.0
+855,2018-07,STUTTGART,PARIS EST,International,cause_sum_not_100,0.0
+856,2018-07,MADRID,MARSEILLE ST CHARLES,International,cause_sum_not_100,0.0
+882,2018-07,PARIS EST,FRANCFORT,International,cause_sum_not_100,0.0
+883,2018-07,PARIS LYON,ITALIE,International,cause_sum_not_100,0.0
+884,2018-07,PARIS LYON,LAUSANNE,International,cause_sum_not_100,0.0
+908,2018-07,PARIS LYON,ZURICH,International,cause_sum_not_100,0.0
+909,2018-07,ZURICH,PARIS LYON,International,cause_sum_not_100,0.0
+910,2018-07,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+926,2018-08,PARIS EST,STUTTGART,International,cause_sum_not_100,0.0
+927,2018-08,STUTTGART,PARIS EST,International,cause_sum_not_100,0.0
+952,2018-08,FRANCFORT,PARIS EST,International,cause_sum_not_100,0.0
+953,2018-08,PARIS LYON,ITALIE,International,cause_sum_not_100,0.0
+954,2018-08,ZURICH,PARIS LYON,International,cause_sum_not_100,0.0
+955,2018-08,BARCELONA,PARIS LYON,International,cause_sum_not_100,0.0
+979,2018-08,PARIS EST,FRANCFORT,International,cause_sum_not_100,0.0
+980,2018-08,ITALIE,PARIS LYON,International,cause_sum_not_100,0.0
+981,2018-08,PARIS LYON,ZURICH,International,cause_sum_not_100,0.0
+982,2018-08,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+983,2018-08,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+1008,2018-08,PARIS LYON,GENEVE,International,cause_sum_not_100,0.0
+1009,2018-08,LAUSANNE,PARIS LYON,International,cause_sum_not_100,0.0
+1010,2018-08,MADRID,MARSEILLE ST CHARLES,International,cause_sum_not_100,0.0
+1039,2018-08,GENEVE,PARIS LYON,International,cause_sum_not_100,0.0
+1040,2018-08,PARIS LYON,LAUSANNE,International,cause_sum_not_100,0.0
+1071,2018-09,TOULOUSE MATABIAU,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+1103,2018-09,PARIS VAUGIRARD,RENNES,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+1104,2018-09,RENNES,PARIS VAUGIRARD,National,cause_sum_not_100,0.0
+1104,2018-09,RENNES,PARIS VAUGIRARD,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+1104,2018-09,RENNES,PARIS VAUGIRARD,National,negative_duration_or_mean,retard_moyen_trains_retard_sup15
+1149,2018-09,PARIS MONTPARNASSE,ST MALO,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+1149,2018-09,PARIS MONTPARNASSE,ST MALO,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+1149,2018-09,PARIS MONTPARNASSE,ST MALO,National,negative_duration_or_mean,retard_moyen_trains_retard_sup15
+1211,2018-10,MARSEILLE ST CHARLES,TOURCOING,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+1212,2018-10,PARIS VAUGIRARD,BORDEAUX ST JEAN,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+1224,2018-10,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+1259,2018-10,PARIS VAUGIRARD,NANTES,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+1285,2018-10,TOURCOING,MARSEILLE ST CHARLES,National,cause_sum_not_100,0.0
+1361,2018-11,PARIS MONTPARNASSE,TOURS,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+1391,2018-11,PARIS VAUGIRARD,RENNES,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+1467,2018-12,TOURCOING,MARSEILLE ST CHARLES,National,cause_sum_not_100,0.0
+1732,2019-02,MADRID,MARSEILLE ST CHARLES,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+1733,2019-02,MARSEILLE ST CHARLES,MADRID,International,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+1733,2019-02,MARSEILLE ST CHARLES,MADRID,International,negative_duration_or_mean,retard_moyen_trains_retard_sup15
+1770,2019-02,PARIS MONTPARNASSE,TOURS,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+1825,2019-03,PARIS LYON,DIJON VILLE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+1825,2019-03,PARIS LYON,DIJON VILLE,National,negative_duration_or_mean,retard_moyen_trains_retard_sup15
+1834,2019-03,ZURICH,PARIS LYON,International,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+1834,2019-03,ZURICH,PARIS LYON,International,negative_duration_or_mean,retard_moyen_trains_retard_sup15
+1962,2019-04,PARIS LYON,LAUSANNE,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+1984,2019-04,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+1984,2019-04,MARSEILLE ST CHARLES,MADRID,International,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+1984,2019-04,MARSEILLE ST CHARLES,MADRID,International,negative_duration_or_mean,retard_moyen_trains_retard_sup15
+2019,2019-04,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+2035,2019-04,MARSEILLE ST CHARLES,TOURCOING,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+2052,2019-04,BARCELONA,PARIS LYON,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+2067,2019-05,MARSEILLE ST CHARLES,TOURCOING,National,cause_sum_not_100,0.0
+2067,2019-05,MARSEILLE ST CHARLES,TOURCOING,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+2157,2019-05,PARIS LYON,ITALIE,International,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+2168,2019-05,PARIS LYON,BESANCON FRANCHE COMTE TGV,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+2175,2019-05,BARCELONA,PARIS LYON,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+2202,2019-06,BARCELONA,PARIS LYON,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+2213,2019-06,REIMS,PARIS EST,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+2334,2019-07,TOURCOING,BORDEAUX ST JEAN,National,cause_sum_not_100,0.0
+2334,2019-07,TOURCOING,BORDEAUX ST JEAN,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+2532,2019-08,BORDEAUX ST JEAN,TOURCOING,National,cause_sum_not_100,0.0
+2532,2019-08,BORDEAUX ST JEAN,TOURCOING,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+2650,2019-09,BORDEAUX ST JEAN,TOURCOING,National,cause_sum_not_100,0.0
+2759,2019-10,NIMES,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+2759,2019-10,NIMES,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+2760,2019-10,VALENCE ALIXAN TGV,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+2760,2019-10,VALENCE ALIXAN TGV,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+2782,2019-10,MONTPELLIER,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+2825,2019-11,MONTPELLIER,PARIS LYON,National,negative_duration_or_mean,retard_moyen_arrivee
+2825,2019-11,MONTPELLIER,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+2830,2019-11,VALENCE ALIXAN TGV,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+2830,2019-11,VALENCE ALIXAN TGV,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+2836,2019-11,BARCELONA,PARIS LYON,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+2837,2019-11,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+2858,2019-11,PARIS LYON,MONTPELLIER,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+2878,2019-11,NIMES,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+2878,2019-11,NIMES,PARIS LYON,National,negative_duration_or_mean,retard_moyen_arrivee
+2878,2019-11,NIMES,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+2887,2019-11,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+2951,2019-12,PARIS LYON,MONTPELLIER,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+2973,2019-12,METZ,PARIS EST,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+2975,2019-12,PARIS NORD,LILLE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+2986,2019-12,LYON PART DIEU,MONTPELLIER,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+2999,2019-12,STRASBOURG,NANTES,National,cause_sum_not_100,0.0
+2999,2019-12,STRASBOURG,NANTES,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3005,2019-12,TOURCOING,BORDEAUX ST JEAN,National,cause_sum_not_100,0.0
+3155,2020-01,LYON PART DIEU,MONTPELLIER,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3187,2020-02,STRASBOURG,NANTES,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3198,2020-02,MADRID,MARSEILLE ST CHARLES,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+3211,2020-02,TOURCOING,BORDEAUX ST JEAN,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+3254,2020-02,PARIS EST,FRANCFORT,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+3254,2020-02,PARIS EST,FRANCFORT,International,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3257,2020-02,BARCELONA,PARIS LYON,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+3290,2020-03,RENNES,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+3317,2020-03,MARSEILLE ST CHARLES,TOURCOING,National,cause_sum_not_100,0.0
+3317,2020-03,MARSEILLE ST CHARLES,TOURCOING,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+3331,2020-03,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+3405,2020-03,BARCELONA,PARIS LYON,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+3407,2020-04,PARIS MONTPARNASSE,ST MALO,National,cancelled_above_planned,8 > 0
+3407,2020-04,PARIS MONTPARNASSE,ST MALO,National,zero_planned,Cancellation rate unavailable
+3407,2020-04,PARIS MONTPARNASSE,ST MALO,National,delay_above_operated_proxy,nb_train_depart_retard
+3407,2020-04,PARIS MONTPARNASSE,ST MALO,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3407,2020-04,PARIS MONTPARNASSE,ST MALO,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3407,2020-04,PARIS MONTPARNASSE,ST MALO,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3407,2020-04,PARIS MONTPARNASSE,ST MALO,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3407,2020-04,PARIS MONTPARNASSE,ST MALO,National,cause_sum_not_100,0.0
+3408,2020-04,PARIS MONTPARNASSE,TOURS,National,cancelled_above_planned,9 > 0
+3408,2020-04,PARIS MONTPARNASSE,TOURS,National,zero_planned,Cancellation rate unavailable
+3408,2020-04,PARIS MONTPARNASSE,TOURS,National,delay_above_operated_proxy,nb_train_depart_retard
+3408,2020-04,PARIS MONTPARNASSE,TOURS,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3408,2020-04,PARIS MONTPARNASSE,TOURS,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3408,2020-04,PARIS MONTPARNASSE,TOURS,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3408,2020-04,PARIS MONTPARNASSE,TOURS,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3408,2020-04,PARIS MONTPARNASSE,TOURS,National,cause_sum_not_100,0.0
+3410,2020-04,NANTES,STRASBOURG,National,cancelled_above_planned,2 > 0
+3410,2020-04,NANTES,STRASBOURG,National,zero_planned,Cancellation rate unavailable
+3410,2020-04,NANTES,STRASBOURG,National,delay_above_operated_proxy,nb_train_depart_retard
+3410,2020-04,NANTES,STRASBOURG,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3410,2020-04,NANTES,STRASBOURG,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3410,2020-04,NANTES,STRASBOURG,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3410,2020-04,NANTES,STRASBOURG,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3410,2020-04,NANTES,STRASBOURG,National,cause_sum_not_100,0.0
+3412,2020-04,PARIS NORD,DOUAI,National,cancelled_above_planned,12 > 0
+3412,2020-04,PARIS NORD,DOUAI,National,zero_planned,Cancellation rate unavailable
+3412,2020-04,PARIS NORD,DOUAI,National,delay_above_operated_proxy,nb_train_depart_retard
+3412,2020-04,PARIS NORD,DOUAI,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3412,2020-04,PARIS NORD,DOUAI,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3412,2020-04,PARIS NORD,DOUAI,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3412,2020-04,PARIS NORD,DOUAI,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3412,2020-04,PARIS NORD,DOUAI,National,cause_sum_not_100,0.0
+3413,2020-04,DUNKERQUE,PARIS NORD,National,cancelled_above_planned,15 > 0
+3413,2020-04,DUNKERQUE,PARIS NORD,National,zero_planned,Cancellation rate unavailable
+3413,2020-04,DUNKERQUE,PARIS NORD,National,delay_above_operated_proxy,nb_train_depart_retard
+3413,2020-04,DUNKERQUE,PARIS NORD,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3413,2020-04,DUNKERQUE,PARIS NORD,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3413,2020-04,DUNKERQUE,PARIS NORD,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3413,2020-04,DUNKERQUE,PARIS NORD,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3413,2020-04,DUNKERQUE,PARIS NORD,National,cause_sum_not_100,0.0
+3414,2020-04,LYON PART DIEU,LILLE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3415,2020-04,MARSEILLE ST CHARLES,TOURCOING,National,cancelled_above_planned,1 > 0
+3415,2020-04,MARSEILLE ST CHARLES,TOURCOING,National,zero_planned,Cancellation rate unavailable
+3415,2020-04,MARSEILLE ST CHARLES,TOURCOING,National,delay_above_operated_proxy,nb_train_depart_retard
+3415,2020-04,MARSEILLE ST CHARLES,TOURCOING,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3415,2020-04,MARSEILLE ST CHARLES,TOURCOING,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3415,2020-04,MARSEILLE ST CHARLES,TOURCOING,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3415,2020-04,MARSEILLE ST CHARLES,TOURCOING,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3415,2020-04,MARSEILLE ST CHARLES,TOURCOING,National,cause_sum_not_100,0.0
+3416,2020-04,LYON PART DIEU,MARNE LA VALLEE,National,cancelled_above_planned,19 > 0
+3416,2020-04,LYON PART DIEU,MARNE LA VALLEE,National,zero_planned,Cancellation rate unavailable
+3416,2020-04,LYON PART DIEU,MARNE LA VALLEE,National,delay_above_operated_proxy,nb_train_depart_retard
+3416,2020-04,LYON PART DIEU,MARNE LA VALLEE,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3416,2020-04,LYON PART DIEU,MARNE LA VALLEE,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3416,2020-04,LYON PART DIEU,MARNE LA VALLEE,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3416,2020-04,LYON PART DIEU,MARNE LA VALLEE,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3416,2020-04,LYON PART DIEU,MARNE LA VALLEE,National,cause_sum_not_100,0.0
+3417,2020-04,MARNE LA VALLEE,MARSEILLE ST CHARLES,National,cancelled_above_planned,14 > 0
+3417,2020-04,MARNE LA VALLEE,MARSEILLE ST CHARLES,National,zero_planned,Cancellation rate unavailable
+3417,2020-04,MARNE LA VALLEE,MARSEILLE ST CHARLES,National,delay_above_operated_proxy,nb_train_depart_retard
+3417,2020-04,MARNE LA VALLEE,MARSEILLE ST CHARLES,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3417,2020-04,MARNE LA VALLEE,MARSEILLE ST CHARLES,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3417,2020-04,MARNE LA VALLEE,MARSEILLE ST CHARLES,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3417,2020-04,MARNE LA VALLEE,MARSEILLE ST CHARLES,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3417,2020-04,MARNE LA VALLEE,MARSEILLE ST CHARLES,National,cause_sum_not_100,0.0
+3418,2020-04,MARSEILLE ST CHARLES,MARNE LA VALLEE,National,cancelled_above_planned,13 > 0
+3418,2020-04,MARSEILLE ST CHARLES,MARNE LA VALLEE,National,zero_planned,Cancellation rate unavailable
+3418,2020-04,MARSEILLE ST CHARLES,MARNE LA VALLEE,National,delay_above_operated_proxy,nb_train_depart_retard
+3418,2020-04,MARSEILLE ST CHARLES,MARNE LA VALLEE,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3418,2020-04,MARSEILLE ST CHARLES,MARNE LA VALLEE,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3418,2020-04,MARSEILLE ST CHARLES,MARNE LA VALLEE,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3418,2020-04,MARSEILLE ST CHARLES,MARNE LA VALLEE,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3418,2020-04,MARSEILLE ST CHARLES,MARNE LA VALLEE,National,cause_sum_not_100,0.0
+3419,2020-04,PARIS LYON,AIX EN PROVENCE TGV,National,cancelled_above_planned,17 > 0
+3419,2020-04,PARIS LYON,AIX EN PROVENCE TGV,National,zero_planned,Cancellation rate unavailable
+3419,2020-04,PARIS LYON,AIX EN PROVENCE TGV,National,delay_above_operated_proxy,nb_train_depart_retard
+3419,2020-04,PARIS LYON,AIX EN PROVENCE TGV,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3419,2020-04,PARIS LYON,AIX EN PROVENCE TGV,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3419,2020-04,PARIS LYON,AIX EN PROVENCE TGV,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3419,2020-04,PARIS LYON,AIX EN PROVENCE TGV,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3419,2020-04,PARIS LYON,AIX EN PROVENCE TGV,National,cause_sum_not_100,0.0
+3420,2020-04,PARIS LYON,BELLEGARDE (AIN),National,cancelled_above_planned,15 > 0
+3420,2020-04,PARIS LYON,BELLEGARDE (AIN),National,zero_planned,Cancellation rate unavailable
+3420,2020-04,PARIS LYON,BELLEGARDE (AIN),National,delay_above_operated_proxy,nb_train_depart_retard
+3420,2020-04,PARIS LYON,BELLEGARDE (AIN),National,delay_above_operated_proxy,nb_train_retard_arrivee
+3420,2020-04,PARIS LYON,BELLEGARDE (AIN),National,delay_above_operated_proxy,nb_train_retard_sup_15
+3420,2020-04,PARIS LYON,BELLEGARDE (AIN),National,delay_above_operated_proxy,nb_train_retard_sup_30
+3420,2020-04,PARIS LYON,BELLEGARDE (AIN),National,delay_above_operated_proxy,nb_train_retard_sup_60
+3420,2020-04,PARIS LYON,BELLEGARDE (AIN),National,cause_sum_not_100,0.0
+3422,2020-04,GRENOBLE,PARIS LYON,National,cancelled_above_planned,9 > 0
+3422,2020-04,GRENOBLE,PARIS LYON,National,zero_planned,Cancellation rate unavailable
+3422,2020-04,GRENOBLE,PARIS LYON,National,delay_above_operated_proxy,nb_train_depart_retard
+3422,2020-04,GRENOBLE,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3422,2020-04,GRENOBLE,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3422,2020-04,GRENOBLE,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3422,2020-04,GRENOBLE,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3422,2020-04,GRENOBLE,PARIS LYON,National,cause_sum_not_100,0.0
+3423,2020-04,PARIS LYON,MONTPELLIER,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+3427,2020-04,MARSEILLE ST CHARLES,LYON PART DIEU,National,cause_sum_not_100,0.0
+3427,2020-04,MARSEILLE ST CHARLES,LYON PART DIEU,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+3428,2020-04,PARIS EST,FRANCFORT,International,cancelled_above_planned,12 > 0
+3428,2020-04,PARIS EST,FRANCFORT,International,zero_planned,Cancellation rate unavailable
+3428,2020-04,PARIS EST,FRANCFORT,International,delay_above_operated_proxy,nb_train_depart_retard
+3428,2020-04,PARIS EST,FRANCFORT,International,delay_above_operated_proxy,nb_train_retard_arrivee
+3428,2020-04,PARIS EST,FRANCFORT,International,delay_above_operated_proxy,nb_train_retard_sup_15
+3428,2020-04,PARIS EST,FRANCFORT,International,delay_above_operated_proxy,nb_train_retard_sup_30
+3428,2020-04,PARIS EST,FRANCFORT,International,delay_above_operated_proxy,nb_train_retard_sup_60
+3428,2020-04,PARIS EST,FRANCFORT,International,cause_sum_not_100,0.0
+3429,2020-04,FRANCFORT,PARIS EST,International,cancelled_above_planned,12 > 0
+3429,2020-04,FRANCFORT,PARIS EST,International,zero_planned,Cancellation rate unavailable
+3429,2020-04,FRANCFORT,PARIS EST,International,delay_above_operated_proxy,nb_train_depart_retard
+3429,2020-04,FRANCFORT,PARIS EST,International,delay_above_operated_proxy,nb_train_retard_arrivee
+3429,2020-04,FRANCFORT,PARIS EST,International,delay_above_operated_proxy,nb_train_retard_sup_15
+3429,2020-04,FRANCFORT,PARIS EST,International,delay_above_operated_proxy,nb_train_retard_sup_30
+3429,2020-04,FRANCFORT,PARIS EST,International,delay_above_operated_proxy,nb_train_retard_sup_60
+3429,2020-04,FRANCFORT,PARIS EST,International,cause_sum_not_100,0.0
+3430,2020-04,PARIS LYON,GENEVE,International,cancelled_above_planned,9 > 0
+3430,2020-04,PARIS LYON,GENEVE,International,zero_planned,Cancellation rate unavailable
+3430,2020-04,PARIS LYON,GENEVE,International,delay_above_operated_proxy,nb_train_depart_retard
+3430,2020-04,PARIS LYON,GENEVE,International,delay_above_operated_proxy,nb_train_retard_arrivee
+3430,2020-04,PARIS LYON,GENEVE,International,delay_above_operated_proxy,nb_train_retard_sup_15
+3430,2020-04,PARIS LYON,GENEVE,International,delay_above_operated_proxy,nb_train_retard_sup_30
+3430,2020-04,PARIS LYON,GENEVE,International,delay_above_operated_proxy,nb_train_retard_sup_60
+3430,2020-04,PARIS LYON,GENEVE,International,cause_sum_not_100,0.0
+3431,2020-04,PARIS LYON,ZURICH,International,delay_above_operated_proxy,nb_train_retard_sup_15
+3431,2020-04,PARIS LYON,ZURICH,International,nested_counts_inconsistent,nb_train_retard_sup_30 > nb_train_retard_arrivee
+3431,2020-04,PARIS LYON,ZURICH,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+3436,2020-04,ST MALO,PARIS MONTPARNASSE,National,cancelled_above_planned,4 > 0
+3436,2020-04,ST MALO,PARIS MONTPARNASSE,National,zero_planned,Cancellation rate unavailable
+3436,2020-04,ST MALO,PARIS MONTPARNASSE,National,delay_above_operated_proxy,nb_train_depart_retard
+3436,2020-04,ST MALO,PARIS MONTPARNASSE,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3436,2020-04,ST MALO,PARIS MONTPARNASSE,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3436,2020-04,ST MALO,PARIS MONTPARNASSE,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3436,2020-04,ST MALO,PARIS MONTPARNASSE,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3436,2020-04,ST MALO,PARIS MONTPARNASSE,National,cause_sum_not_100,0.0
+3439,2020-04,PARIS NORD,DUNKERQUE,National,cancelled_above_planned,14 > 0
+3439,2020-04,PARIS NORD,DUNKERQUE,National,zero_planned,Cancellation rate unavailable
+3439,2020-04,PARIS NORD,DUNKERQUE,National,delay_above_operated_proxy,nb_train_depart_retard
+3439,2020-04,PARIS NORD,DUNKERQUE,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3439,2020-04,PARIS NORD,DUNKERQUE,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3439,2020-04,PARIS NORD,DUNKERQUE,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3439,2020-04,PARIS NORD,DUNKERQUE,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3439,2020-04,PARIS NORD,DUNKERQUE,National,cause_sum_not_100,0.0
+3440,2020-04,ANNECY,PARIS LYON,National,cancelled_above_planned,7 > 0
+3440,2020-04,ANNECY,PARIS LYON,National,zero_planned,Cancellation rate unavailable
+3440,2020-04,ANNECY,PARIS LYON,National,delay_above_operated_proxy,nb_train_depart_retard
+3440,2020-04,ANNECY,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3440,2020-04,ANNECY,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3440,2020-04,ANNECY,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3440,2020-04,ANNECY,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3440,2020-04,ANNECY,PARIS LYON,National,cause_sum_not_100,0.0
+3441,2020-04,PARIS LYON,LE CREUSOT MONTCEAU MONTCHANIN,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+3441,2020-04,PARIS LYON,LE CREUSOT MONTCEAU MONTCHANIN,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3443,2020-04,PARIS LYON,TOULON,National,cancelled_above_planned,13 > 0
+3443,2020-04,PARIS LYON,TOULON,National,zero_planned,Cancellation rate unavailable
+3443,2020-04,PARIS LYON,TOULON,National,delay_above_operated_proxy,nb_train_depart_retard
+3443,2020-04,PARIS LYON,TOULON,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3443,2020-04,PARIS LYON,TOULON,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3443,2020-04,PARIS LYON,TOULON,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3443,2020-04,PARIS LYON,TOULON,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3443,2020-04,PARIS LYON,TOULON,National,cause_sum_not_100,0.0
+3444,2020-04,LYON PART DIEU,MARSEILLE ST CHARLES,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3452,2020-04,PARIS MONTPARNASSE,QUIMPER,National,cause_sum_not_100,0.0
+3454,2020-04,TOURS,PARIS MONTPARNASSE,National,cancelled_above_planned,11 > 0
+3454,2020-04,TOURS,PARIS MONTPARNASSE,National,zero_planned,Cancellation rate unavailable
+3454,2020-04,TOURS,PARIS MONTPARNASSE,National,delay_above_operated_proxy,nb_train_depart_retard
+3454,2020-04,TOURS,PARIS MONTPARNASSE,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3454,2020-04,TOURS,PARIS MONTPARNASSE,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3454,2020-04,TOURS,PARIS MONTPARNASSE,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3454,2020-04,TOURS,PARIS MONTPARNASSE,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3454,2020-04,TOURS,PARIS MONTPARNASSE,National,cause_sum_not_100,0.0
+3457,2020-04,PARIS EST,NANCY,National,cause_sum_not_100,0.0
+3457,2020-04,PARIS EST,NANCY,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3459,2020-04,PARIS NORD,LILLE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3461,2020-04,BORDEAUX ST JEAN,TOURCOING,National,cancelled_above_planned,1 > 0
+3461,2020-04,BORDEAUX ST JEAN,TOURCOING,National,zero_planned,Cancellation rate unavailable
+3461,2020-04,BORDEAUX ST JEAN,TOURCOING,National,delay_above_operated_proxy,nb_train_depart_retard
+3461,2020-04,BORDEAUX ST JEAN,TOURCOING,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3461,2020-04,BORDEAUX ST JEAN,TOURCOING,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3461,2020-04,BORDEAUX ST JEAN,TOURCOING,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3461,2020-04,BORDEAUX ST JEAN,TOURCOING,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3461,2020-04,BORDEAUX ST JEAN,TOURCOING,National,cause_sum_not_100,0.0
+3462,2020-04,MARNE LA VALLEE,LYON PART DIEU,National,cancelled_above_planned,21 > 0
+3462,2020-04,MARNE LA VALLEE,LYON PART DIEU,National,zero_planned,Cancellation rate unavailable
+3462,2020-04,MARNE LA VALLEE,LYON PART DIEU,National,delay_above_operated_proxy,nb_train_depart_retard
+3462,2020-04,MARNE LA VALLEE,LYON PART DIEU,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3462,2020-04,MARNE LA VALLEE,LYON PART DIEU,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3462,2020-04,MARNE LA VALLEE,LYON PART DIEU,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3462,2020-04,MARNE LA VALLEE,LYON PART DIEU,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3462,2020-04,MARNE LA VALLEE,LYON PART DIEU,National,cause_sum_not_100,0.0
+3464,2020-04,BELLEGARDE (AIN),PARIS LYON,National,cancelled_above_planned,14 > 0
+3464,2020-04,BELLEGARDE (AIN),PARIS LYON,National,zero_planned,Cancellation rate unavailable
+3464,2020-04,BELLEGARDE (AIN),PARIS LYON,National,delay_above_operated_proxy,nb_train_depart_retard
+3464,2020-04,BELLEGARDE (AIN),PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3464,2020-04,BELLEGARDE (AIN),PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3464,2020-04,BELLEGARDE (AIN),PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3464,2020-04,BELLEGARDE (AIN),PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3464,2020-04,BELLEGARDE (AIN),PARIS LYON,National,cause_sum_not_100,0.0
+3466,2020-04,LE CREUSOT MONTCEAU MONTCHANIN,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3467,2020-04,PARIS LYON,MACON LOCHE,National,cause_sum_not_100,0.0
+3472,2020-04,NICE VILLE,PARIS LYON,National,cancelled_above_planned,12 > 0
+3472,2020-04,NICE VILLE,PARIS LYON,National,zero_planned,Cancellation rate unavailable
+3472,2020-04,NICE VILLE,PARIS LYON,National,delay_above_operated_proxy,nb_train_depart_retard
+3472,2020-04,NICE VILLE,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3472,2020-04,NICE VILLE,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3472,2020-04,NICE VILLE,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3472,2020-04,NICE VILLE,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3472,2020-04,NICE VILLE,PARIS LYON,National,cause_sum_not_100,0.0
+3473,2020-04,PARIS LYON,NIMES,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+3474,2020-04,PERPIGNAN,PARIS LYON,National,cancelled_above_planned,10 > 0
+3474,2020-04,PERPIGNAN,PARIS LYON,National,zero_planned,Cancellation rate unavailable
+3474,2020-04,PERPIGNAN,PARIS LYON,National,delay_above_operated_proxy,nb_train_depart_retard
+3474,2020-04,PERPIGNAN,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3474,2020-04,PERPIGNAN,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3474,2020-04,PERPIGNAN,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3474,2020-04,PERPIGNAN,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3474,2020-04,PERPIGNAN,PARIS LYON,National,cause_sum_not_100,0.0
+3475,2020-04,TOULON,PARIS LYON,National,cancelled_above_planned,14 > 0
+3475,2020-04,TOULON,PARIS LYON,National,zero_planned,Cancellation rate unavailable
+3475,2020-04,TOULON,PARIS LYON,National,delay_above_operated_proxy,nb_train_depart_retard
+3475,2020-04,TOULON,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3475,2020-04,TOULON,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3475,2020-04,TOULON,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3475,2020-04,TOULON,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3475,2020-04,TOULON,PARIS LYON,National,cause_sum_not_100,0.0
+3476,2020-04,PARIS LYON,VALENCE ALIXAN TGV,National,cause_sum_not_100,0.0
+3476,2020-04,PARIS LYON,VALENCE ALIXAN TGV,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+3477,2020-04,ITALIE,PARIS LYON,International,cancelled_above_planned,3 > 0
+3477,2020-04,ITALIE,PARIS LYON,International,zero_planned,Cancellation rate unavailable
+3477,2020-04,ITALIE,PARIS LYON,International,delay_above_operated_proxy,nb_train_depart_retard
+3477,2020-04,ITALIE,PARIS LYON,International,delay_above_operated_proxy,nb_train_retard_arrivee
+3477,2020-04,ITALIE,PARIS LYON,International,delay_above_operated_proxy,nb_train_retard_sup_15
+3477,2020-04,ITALIE,PARIS LYON,International,delay_above_operated_proxy,nb_train_retard_sup_30
+3477,2020-04,ITALIE,PARIS LYON,International,delay_above_operated_proxy,nb_train_retard_sup_60
+3477,2020-04,ITALIE,PARIS LYON,International,cause_sum_not_100,0.0
+3478,2020-04,LAUSANNE,PARIS LYON,International,cancelled_above_planned,9 > 0
+3478,2020-04,LAUSANNE,PARIS LYON,International,zero_planned,Cancellation rate unavailable
+3478,2020-04,LAUSANNE,PARIS LYON,International,delay_above_operated_proxy,nb_train_depart_retard
+3478,2020-04,LAUSANNE,PARIS LYON,International,delay_above_operated_proxy,nb_train_retard_arrivee
+3478,2020-04,LAUSANNE,PARIS LYON,International,delay_above_operated_proxy,nb_train_retard_sup_15
+3478,2020-04,LAUSANNE,PARIS LYON,International,delay_above_operated_proxy,nb_train_retard_sup_30
+3478,2020-04,LAUSANNE,PARIS LYON,International,delay_above_operated_proxy,nb_train_retard_sup_60
+3478,2020-04,LAUSANNE,PARIS LYON,International,cause_sum_not_100,0.0
+3479,2020-04,BARCELONA,PARIS LYON,International,cancelled_above_planned,2 > 0
+3479,2020-04,BARCELONA,PARIS LYON,International,zero_planned,Cancellation rate unavailable
+3479,2020-04,BARCELONA,PARIS LYON,International,delay_above_operated_proxy,nb_train_depart_retard
+3479,2020-04,BARCELONA,PARIS LYON,International,delay_above_operated_proxy,nb_train_retard_arrivee
+3479,2020-04,BARCELONA,PARIS LYON,International,delay_above_operated_proxy,nb_train_retard_sup_15
+3479,2020-04,BARCELONA,PARIS LYON,International,delay_above_operated_proxy,nb_train_retard_sup_30
+3479,2020-04,BARCELONA,PARIS LYON,International,delay_above_operated_proxy,nb_train_retard_sup_60
+3479,2020-04,BARCELONA,PARIS LYON,International,cause_sum_not_100,0.0
+3482,2020-04,PARIS MONTPARNASSE,LA ROCHELLE VILLE,National,cancelled_above_planned,15 > 0
+3482,2020-04,PARIS MONTPARNASSE,LA ROCHELLE VILLE,National,zero_planned,Cancellation rate unavailable
+3482,2020-04,PARIS MONTPARNASSE,LA ROCHELLE VILLE,National,delay_above_operated_proxy,nb_train_depart_retard
+3482,2020-04,PARIS MONTPARNASSE,LA ROCHELLE VILLE,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3482,2020-04,PARIS MONTPARNASSE,LA ROCHELLE VILLE,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3482,2020-04,PARIS MONTPARNASSE,LA ROCHELLE VILLE,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3482,2020-04,PARIS MONTPARNASSE,LA ROCHELLE VILLE,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3482,2020-04,PARIS MONTPARNASSE,LA ROCHELLE VILLE,National,cause_sum_not_100,0.0
+3484,2020-04,LYON PART DIEU,RENNES,National,cancelled_above_planned,4 > 0
+3484,2020-04,LYON PART DIEU,RENNES,National,zero_planned,Cancellation rate unavailable
+3484,2020-04,LYON PART DIEU,RENNES,National,delay_above_operated_proxy,nb_train_depart_retard
+3484,2020-04,LYON PART DIEU,RENNES,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3484,2020-04,LYON PART DIEU,RENNES,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3484,2020-04,LYON PART DIEU,RENNES,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3484,2020-04,LYON PART DIEU,RENNES,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3484,2020-04,LYON PART DIEU,RENNES,National,cause_sum_not_100,0.0
+3485,2020-04,STRASBOURG,PARIS EST,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3485,2020-04,STRASBOURG,PARIS EST,National,nested_counts_inconsistent,nb_train_retard_sup_30 > nb_train_retard_arrivee
+3487,2020-04,LILLE,MARSEILLE ST CHARLES,National,cancelled_above_planned,13 > 0
+3487,2020-04,LILLE,MARSEILLE ST CHARLES,National,zero_planned,Cancellation rate unavailable
+3487,2020-04,LILLE,MARSEILLE ST CHARLES,National,delay_above_operated_proxy,nb_train_depart_retard
+3487,2020-04,LILLE,MARSEILLE ST CHARLES,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3487,2020-04,LILLE,MARSEILLE ST CHARLES,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3487,2020-04,LILLE,MARSEILLE ST CHARLES,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3487,2020-04,LILLE,MARSEILLE ST CHARLES,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3487,2020-04,LILLE,MARSEILLE ST CHARLES,National,cause_sum_not_100,0.0
+3488,2020-04,TOURCOING,BORDEAUX ST JEAN,National,cancelled_above_planned,2 > 0
+3488,2020-04,TOURCOING,BORDEAUX ST JEAN,National,zero_planned,Cancellation rate unavailable
+3488,2020-04,TOURCOING,BORDEAUX ST JEAN,National,delay_above_operated_proxy,nb_train_depart_retard
+3488,2020-04,TOURCOING,BORDEAUX ST JEAN,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3488,2020-04,TOURCOING,BORDEAUX ST JEAN,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3488,2020-04,TOURCOING,BORDEAUX ST JEAN,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3488,2020-04,TOURCOING,BORDEAUX ST JEAN,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3488,2020-04,TOURCOING,BORDEAUX ST JEAN,National,cause_sum_not_100,0.0
+3491,2020-04,PARIS LYON,CHAMBERY CHALLES LES EAUX,National,cancelled_above_planned,15 > 0
+3491,2020-04,PARIS LYON,CHAMBERY CHALLES LES EAUX,National,zero_planned,Cancellation rate unavailable
+3491,2020-04,PARIS LYON,CHAMBERY CHALLES LES EAUX,National,delay_above_operated_proxy,nb_train_depart_retard
+3491,2020-04,PARIS LYON,CHAMBERY CHALLES LES EAUX,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3491,2020-04,PARIS LYON,CHAMBERY CHALLES LES EAUX,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3491,2020-04,PARIS LYON,CHAMBERY CHALLES LES EAUX,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3491,2020-04,PARIS LYON,CHAMBERY CHALLES LES EAUX,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3491,2020-04,PARIS LYON,CHAMBERY CHALLES LES EAUX,National,cause_sum_not_100,0.0
+3493,2020-04,PARIS LYON,PERPIGNAN,National,cancelled_above_planned,11 > 0
+3493,2020-04,PARIS LYON,PERPIGNAN,National,zero_planned,Cancellation rate unavailable
+3493,2020-04,PARIS LYON,PERPIGNAN,National,delay_above_operated_proxy,nb_train_depart_retard
+3493,2020-04,PARIS LYON,PERPIGNAN,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3493,2020-04,PARIS LYON,PERPIGNAN,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3493,2020-04,PARIS LYON,PERPIGNAN,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3493,2020-04,PARIS LYON,PERPIGNAN,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3493,2020-04,PARIS LYON,PERPIGNAN,National,cause_sum_not_100,0.0
+3494,2020-04,MONTPELLIER,LYON PART DIEU,National,cause_sum_not_100,0.0
+3495,2020-04,PARIS EST,STUTTGART,International,cause_sum_not_100,0.0
+3496,2020-04,STUTTGART,PARIS EST,International,cause_sum_not_100,0.0
+3498,2020-04,MADRID,MARSEILLE ST CHARLES,International,cancelled_above_planned,1 > 0
+3498,2020-04,MADRID,MARSEILLE ST CHARLES,International,zero_planned,Cancellation rate unavailable
+3498,2020-04,MADRID,MARSEILLE ST CHARLES,International,delay_above_operated_proxy,nb_train_depart_retard
+3498,2020-04,MADRID,MARSEILLE ST CHARLES,International,delay_above_operated_proxy,nb_train_retard_arrivee
+3498,2020-04,MADRID,MARSEILLE ST CHARLES,International,delay_above_operated_proxy,nb_train_retard_sup_15
+3498,2020-04,MADRID,MARSEILLE ST CHARLES,International,delay_above_operated_proxy,nb_train_retard_sup_30
+3498,2020-04,MADRID,MARSEILLE ST CHARLES,International,delay_above_operated_proxy,nb_train_retard_sup_60
+3498,2020-04,MADRID,MARSEILLE ST CHARLES,International,cause_sum_not_100,0.0
+3499,2020-04,MARSEILLE ST CHARLES,MADRID,International,cancelled_above_planned,1 > 0
+3499,2020-04,MARSEILLE ST CHARLES,MADRID,International,zero_planned,Cancellation rate unavailable
+3499,2020-04,MARSEILLE ST CHARLES,MADRID,International,delay_above_operated_proxy,nb_train_depart_retard
+3499,2020-04,MARSEILLE ST CHARLES,MADRID,International,delay_above_operated_proxy,nb_train_retard_arrivee
+3499,2020-04,MARSEILLE ST CHARLES,MADRID,International,delay_above_operated_proxy,nb_train_retard_sup_15
+3499,2020-04,MARSEILLE ST CHARLES,MADRID,International,delay_above_operated_proxy,nb_train_retard_sup_30
+3499,2020-04,MARSEILLE ST CHARLES,MADRID,International,delay_above_operated_proxy,nb_train_retard_sup_60
+3499,2020-04,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+3501,2020-04,LA ROCHELLE VILLE,PARIS MONTPARNASSE,National,cancelled_above_planned,13 > 0
+3501,2020-04,LA ROCHELLE VILLE,PARIS MONTPARNASSE,National,zero_planned,Cancellation rate unavailable
+3501,2020-04,LA ROCHELLE VILLE,PARIS MONTPARNASSE,National,delay_above_operated_proxy,nb_train_depart_retard
+3501,2020-04,LA ROCHELLE VILLE,PARIS MONTPARNASSE,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3501,2020-04,LA ROCHELLE VILLE,PARIS MONTPARNASSE,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3501,2020-04,LA ROCHELLE VILLE,PARIS MONTPARNASSE,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3501,2020-04,LA ROCHELLE VILLE,PARIS MONTPARNASSE,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3501,2020-04,LA ROCHELLE VILLE,PARIS MONTPARNASSE,National,cause_sum_not_100,0.0
+3508,2020-04,RENNES,LYON PART DIEU,National,cancelled_above_planned,4 > 0
+3508,2020-04,RENNES,LYON PART DIEU,National,zero_planned,Cancellation rate unavailable
+3508,2020-04,RENNES,LYON PART DIEU,National,delay_above_operated_proxy,nb_train_depart_retard
+3508,2020-04,RENNES,LYON PART DIEU,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3508,2020-04,RENNES,LYON PART DIEU,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3508,2020-04,RENNES,LYON PART DIEU,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3508,2020-04,RENNES,LYON PART DIEU,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3508,2020-04,RENNES,LYON PART DIEU,National,cause_sum_not_100,0.0
+3509,2020-04,PARIS EST,METZ,National,cause_sum_not_100,0.0
+3509,2020-04,PARIS EST,METZ,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3510,2020-04,REIMS,PARIS EST,National,cause_sum_not_100,0.0
+3511,2020-04,PARIS EST,STRASBOURG,National,cause_sum_not_100,0.0
+3512,2020-04,STRASBOURG,NANTES,National,cancelled_above_planned,2 > 0
+3512,2020-04,STRASBOURG,NANTES,National,zero_planned,Cancellation rate unavailable
+3512,2020-04,STRASBOURG,NANTES,National,delay_above_operated_proxy,nb_train_depart_retard
+3512,2020-04,STRASBOURG,NANTES,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3512,2020-04,STRASBOURG,NANTES,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3512,2020-04,STRASBOURG,NANTES,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3512,2020-04,STRASBOURG,NANTES,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3512,2020-04,STRASBOURG,NANTES,National,cause_sum_not_100,0.0
+3514,2020-04,MARSEILLE ST CHARLES,LILLE,National,cancelled_above_planned,11 > 0
+3514,2020-04,MARSEILLE ST CHARLES,LILLE,National,zero_planned,Cancellation rate unavailable
+3514,2020-04,MARSEILLE ST CHARLES,LILLE,National,delay_above_operated_proxy,nb_train_depart_retard
+3514,2020-04,MARSEILLE ST CHARLES,LILLE,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3514,2020-04,MARSEILLE ST CHARLES,LILLE,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3514,2020-04,MARSEILLE ST CHARLES,LILLE,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3514,2020-04,MARSEILLE ST CHARLES,LILLE,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3514,2020-04,MARSEILLE ST CHARLES,LILLE,National,cause_sum_not_100,0.0
+3516,2020-04,PARIS LYON,ANNECY,National,cancelled_above_planned,7 > 0
+3516,2020-04,PARIS LYON,ANNECY,National,zero_planned,Cancellation rate unavailable
+3516,2020-04,PARIS LYON,ANNECY,National,delay_above_operated_proxy,nb_train_depart_retard
+3516,2020-04,PARIS LYON,ANNECY,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3516,2020-04,PARIS LYON,ANNECY,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3516,2020-04,PARIS LYON,ANNECY,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3516,2020-04,PARIS LYON,ANNECY,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3516,2020-04,PARIS LYON,ANNECY,National,cause_sum_not_100,0.0
+3517,2020-04,CHAMBERY CHALLES LES EAUX,PARIS LYON,National,cancelled_above_planned,13 > 0
+3517,2020-04,CHAMBERY CHALLES LES EAUX,PARIS LYON,National,zero_planned,Cancellation rate unavailable
+3517,2020-04,CHAMBERY CHALLES LES EAUX,PARIS LYON,National,delay_above_operated_proxy,nb_train_depart_retard
+3517,2020-04,CHAMBERY CHALLES LES EAUX,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3517,2020-04,CHAMBERY CHALLES LES EAUX,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3517,2020-04,CHAMBERY CHALLES LES EAUX,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3517,2020-04,CHAMBERY CHALLES LES EAUX,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3517,2020-04,CHAMBERY CHALLES LES EAUX,PARIS LYON,National,cause_sum_not_100,0.0
+3519,2020-04,PARIS LYON,GRENOBLE,National,cancelled_above_planned,10 > 0
+3519,2020-04,PARIS LYON,GRENOBLE,National,zero_planned,Cancellation rate unavailable
+3519,2020-04,PARIS LYON,GRENOBLE,National,delay_above_operated_proxy,nb_train_depart_retard
+3519,2020-04,PARIS LYON,GRENOBLE,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3519,2020-04,PARIS LYON,GRENOBLE,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3519,2020-04,PARIS LYON,GRENOBLE,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3519,2020-04,PARIS LYON,GRENOBLE,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3519,2020-04,PARIS LYON,GRENOBLE,National,cause_sum_not_100,0.0
+3520,2020-04,PARIS LYON,MARSEILLE ST CHARLES,National,cause_sum_not_100,0.0
+3521,2020-04,PARIS LYON,NICE VILLE,National,cancelled_above_planned,9 > 0
+3521,2020-04,PARIS LYON,NICE VILLE,National,zero_planned,Cancellation rate unavailable
+3521,2020-04,PARIS LYON,NICE VILLE,National,delay_above_operated_proxy,nb_train_depart_retard
+3521,2020-04,PARIS LYON,NICE VILLE,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3521,2020-04,PARIS LYON,NICE VILLE,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3521,2020-04,PARIS LYON,NICE VILLE,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3521,2020-04,PARIS LYON,NICE VILLE,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3521,2020-04,PARIS LYON,NICE VILLE,National,cause_sum_not_100,0.0
+3522,2020-04,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,cancelled_above_planned,4 > 0
+3522,2020-04,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,zero_planned,Cancellation rate unavailable
+3522,2020-04,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,delay_above_operated_proxy,nb_train_depart_retard
+3522,2020-04,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3522,2020-04,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3522,2020-04,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3522,2020-04,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3522,2020-04,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,cause_sum_not_100,0.0
+3523,2020-04,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,cancelled_above_planned,4 > 0
+3523,2020-04,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,zero_planned,Cancellation rate unavailable
+3523,2020-04,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,delay_above_operated_proxy,nb_train_depart_retard
+3523,2020-04,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3523,2020-04,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3523,2020-04,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3523,2020-04,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3523,2020-04,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,cause_sum_not_100,0.0
+3525,2020-04,GENEVE,PARIS LYON,International,cancelled_above_planned,10 > 0
+3525,2020-04,GENEVE,PARIS LYON,International,zero_planned,Cancellation rate unavailable
+3525,2020-04,GENEVE,PARIS LYON,International,delay_above_operated_proxy,nb_train_depart_retard
+3525,2020-04,GENEVE,PARIS LYON,International,delay_above_operated_proxy,nb_train_retard_arrivee
+3525,2020-04,GENEVE,PARIS LYON,International,delay_above_operated_proxy,nb_train_retard_sup_15
+3525,2020-04,GENEVE,PARIS LYON,International,delay_above_operated_proxy,nb_train_retard_sup_30
+3525,2020-04,GENEVE,PARIS LYON,International,delay_above_operated_proxy,nb_train_retard_sup_60
+3525,2020-04,GENEVE,PARIS LYON,International,cause_sum_not_100,0.0
+3526,2020-04,PARIS LYON,ITALIE,International,cancelled_above_planned,4 > 0
+3526,2020-04,PARIS LYON,ITALIE,International,zero_planned,Cancellation rate unavailable
+3526,2020-04,PARIS LYON,ITALIE,International,delay_above_operated_proxy,nb_train_depart_retard
+3526,2020-04,PARIS LYON,ITALIE,International,delay_above_operated_proxy,nb_train_retard_arrivee
+3526,2020-04,PARIS LYON,ITALIE,International,delay_above_operated_proxy,nb_train_retard_sup_15
+3526,2020-04,PARIS LYON,ITALIE,International,delay_above_operated_proxy,nb_train_retard_sup_30
+3526,2020-04,PARIS LYON,ITALIE,International,delay_above_operated_proxy,nb_train_retard_sup_60
+3526,2020-04,PARIS LYON,ITALIE,International,cause_sum_not_100,0.0
+3527,2020-04,PARIS LYON,LAUSANNE,International,cancelled_above_planned,7 > 0
+3527,2020-04,PARIS LYON,LAUSANNE,International,zero_planned,Cancellation rate unavailable
+3527,2020-04,PARIS LYON,LAUSANNE,International,delay_above_operated_proxy,nb_train_depart_retard
+3527,2020-04,PARIS LYON,LAUSANNE,International,delay_above_operated_proxy,nb_train_retard_arrivee
+3527,2020-04,PARIS LYON,LAUSANNE,International,delay_above_operated_proxy,nb_train_retard_sup_15
+3527,2020-04,PARIS LYON,LAUSANNE,International,delay_above_operated_proxy,nb_train_retard_sup_30
+3527,2020-04,PARIS LYON,LAUSANNE,International,delay_above_operated_proxy,nb_train_retard_sup_60
+3527,2020-04,PARIS LYON,LAUSANNE,International,cause_sum_not_100,0.0
+3528,2020-04,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+3528,2020-04,PARIS LYON,BARCELONA,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+3531,2020-05,LAVAL,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3544,2020-05,PARIS LYON,ANNECY,National,cause_sum_not_100,0.0
+3544,2020-05,PARIS LYON,ANNECY,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+3547,2020-05,PARIS LYON,MACON LOCHE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+3554,2020-05,ZURICH,PARIS LYON,International,cause_sum_not_100,0.0
+3555,2020-05,PARIS MONTPARNASSE,BREST,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3559,2020-05,ST MALO,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3566,2020-05,ANNECY,PARIS LYON,National,cause_sum_not_100,0.0
+3568,2020-05,LE CREUSOT MONTCEAU MONTCHANIN,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3570,2020-05,PARIS LYON,PERPIGNAN,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+3572,2020-05,TOULON,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3575,2020-05,FRANCFORT,PARIS EST,International,cause_sum_not_100,0.0
+3576,2020-05,STUTTGART,PARIS EST,International,cause_sum_not_100,0.0
+3586,2020-05,STRASBOURG,NANTES,National,cancelled_above_planned,2 > 0
+3586,2020-05,STRASBOURG,NANTES,National,zero_planned,Cancellation rate unavailable
+3586,2020-05,STRASBOURG,NANTES,National,delay_above_operated_proxy,nb_train_depart_retard
+3586,2020-05,STRASBOURG,NANTES,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3586,2020-05,STRASBOURG,NANTES,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3586,2020-05,STRASBOURG,NANTES,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3586,2020-05,STRASBOURG,NANTES,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3586,2020-05,STRASBOURG,NANTES,National,cause_sum_not_100,0.0
+3595,2020-05,PARIS LYON,LE CREUSOT MONTCEAU MONTCHANIN,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+3595,2020-05,PARIS LYON,LE CREUSOT MONTCEAU MONTCHANIN,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3597,2020-05,NICE VILLE,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3598,2020-05,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,cancelled_above_planned,4 > 0
+3598,2020-05,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,zero_planned,Cancellation rate unavailable
+3598,2020-05,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,delay_above_operated_proxy,nb_train_depart_retard
+3598,2020-05,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3598,2020-05,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3598,2020-05,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3598,2020-05,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3598,2020-05,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,cause_sum_not_100,0.0
+3603,2020-05,MADRID,MARSEILLE ST CHARLES,International,cancelled_above_planned,1 > 0
+3603,2020-05,MADRID,MARSEILLE ST CHARLES,International,zero_planned,Cancellation rate unavailable
+3603,2020-05,MADRID,MARSEILLE ST CHARLES,International,delay_above_operated_proxy,nb_train_depart_retard
+3603,2020-05,MADRID,MARSEILLE ST CHARLES,International,delay_above_operated_proxy,nb_train_retard_arrivee
+3603,2020-05,MADRID,MARSEILLE ST CHARLES,International,delay_above_operated_proxy,nb_train_retard_sup_15
+3603,2020-05,MADRID,MARSEILLE ST CHARLES,International,delay_above_operated_proxy,nb_train_retard_sup_30
+3603,2020-05,MADRID,MARSEILLE ST CHARLES,International,delay_above_operated_proxy,nb_train_retard_sup_60
+3603,2020-05,MADRID,MARSEILLE ST CHARLES,International,cause_sum_not_100,0.0
+3605,2020-05,BREST,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3606,2020-05,LA ROCHELLE VILLE,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3612,2020-05,RENNES,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3613,2020-05,TOULOUSE MATABIAU,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3615,2020-05,LILLE,MARSEILLE ST CHARLES,National,nested_counts_inconsistent,nb_train_retard_sup_30 > nb_train_retard_arrivee
+3616,2020-05,BORDEAUX ST JEAN,TOURCOING,National,cancelled_above_planned,1 > 0
+3616,2020-05,BORDEAUX ST JEAN,TOURCOING,National,zero_planned,Cancellation rate unavailable
+3616,2020-05,BORDEAUX ST JEAN,TOURCOING,National,delay_above_operated_proxy,nb_train_depart_retard
+3616,2020-05,BORDEAUX ST JEAN,TOURCOING,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3616,2020-05,BORDEAUX ST JEAN,TOURCOING,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3616,2020-05,BORDEAUX ST JEAN,TOURCOING,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3616,2020-05,BORDEAUX ST JEAN,TOURCOING,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3616,2020-05,BORDEAUX ST JEAN,TOURCOING,National,cause_sum_not_100,0.0
+3617,2020-05,MARSEILLE ST CHARLES,TOURCOING,National,cancelled_above_planned,1 > 0
+3617,2020-05,MARSEILLE ST CHARLES,TOURCOING,National,zero_planned,Cancellation rate unavailable
+3617,2020-05,MARSEILLE ST CHARLES,TOURCOING,National,delay_above_operated_proxy,nb_train_depart_retard
+3617,2020-05,MARSEILLE ST CHARLES,TOURCOING,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3617,2020-05,MARSEILLE ST CHARLES,TOURCOING,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3617,2020-05,MARSEILLE ST CHARLES,TOURCOING,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3617,2020-05,MARSEILLE ST CHARLES,TOURCOING,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3617,2020-05,MARSEILLE ST CHARLES,TOURCOING,National,cause_sum_not_100,0.0
+3625,2020-05,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,cancelled_above_planned,4 > 0
+3625,2020-05,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,zero_planned,Cancellation rate unavailable
+3625,2020-05,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,delay_above_operated_proxy,nb_train_depart_retard
+3625,2020-05,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3625,2020-05,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3625,2020-05,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3625,2020-05,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3625,2020-05,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,cause_sum_not_100,0.0
+3628,2020-05,MARSEILLE ST CHARLES,MADRID,International,cancelled_above_planned,1 > 0
+3628,2020-05,MARSEILLE ST CHARLES,MADRID,International,zero_planned,Cancellation rate unavailable
+3628,2020-05,MARSEILLE ST CHARLES,MADRID,International,delay_above_operated_proxy,nb_train_depart_retard
+3628,2020-05,MARSEILLE ST CHARLES,MADRID,International,delay_above_operated_proxy,nb_train_retard_arrivee
+3628,2020-05,MARSEILLE ST CHARLES,MADRID,International,delay_above_operated_proxy,nb_train_retard_sup_15
+3628,2020-05,MARSEILLE ST CHARLES,MADRID,International,delay_above_operated_proxy,nb_train_retard_sup_30
+3628,2020-05,MARSEILLE ST CHARLES,MADRID,International,delay_above_operated_proxy,nb_train_retard_sup_60
+3628,2020-05,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+3629,2020-05,PARIS LYON,BARCELONA,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+3632,2020-05,QUIMPER,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3636,2020-05,TOURS,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3637,2020-05,VANNES,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3640,2020-05,NANTES,STRASBOURG,National,cancelled_above_planned,2 > 0
+3640,2020-05,NANTES,STRASBOURG,National,zero_planned,Cancellation rate unavailable
+3640,2020-05,NANTES,STRASBOURG,National,delay_above_operated_proxy,nb_train_depart_retard
+3640,2020-05,NANTES,STRASBOURG,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3640,2020-05,NANTES,STRASBOURG,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3640,2020-05,NANTES,STRASBOURG,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3640,2020-05,NANTES,STRASBOURG,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3640,2020-05,NANTES,STRASBOURG,National,cause_sum_not_100,0.0
+3641,2020-05,TOURCOING,BORDEAUX ST JEAN,National,cancelled_above_planned,1 > 0
+3641,2020-05,TOURCOING,BORDEAUX ST JEAN,National,zero_planned,Cancellation rate unavailable
+3641,2020-05,TOURCOING,BORDEAUX ST JEAN,National,delay_above_operated_proxy,nb_train_depart_retard
+3641,2020-05,TOURCOING,BORDEAUX ST JEAN,National,delay_above_operated_proxy,nb_train_retard_arrivee
+3641,2020-05,TOURCOING,BORDEAUX ST JEAN,National,delay_above_operated_proxy,nb_train_retard_sup_15
+3641,2020-05,TOURCOING,BORDEAUX ST JEAN,National,delay_above_operated_proxy,nb_train_retard_sup_30
+3641,2020-05,TOURCOING,BORDEAUX ST JEAN,National,delay_above_operated_proxy,nb_train_retard_sup_60
+3641,2020-05,TOURCOING,BORDEAUX ST JEAN,National,cause_sum_not_100,0.0
+3643,2020-05,MARNE LA VALLEE,MARSEILLE ST CHARLES,National,nested_counts_inconsistent,nb_train_retard_sup_30 > nb_train_retard_arrivee
+3648,2020-05,PARIS LYON,LYON PART DIEU,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+3650,2020-05,PARIS EST,STUTTGART,International,cause_sum_not_100,0.0
+3650,2020-05,PARIS EST,STUTTGART,International,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3651,2020-05,PARIS LYON,ZURICH,International,cause_sum_not_100,0.0
+3652,2020-06,ANGOULEME,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3655,2020-06,ST PIERRE DES CORPS,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3657,2020-06,BORDEAUX ST JEAN,TOURCOING,National,cause_sum_not_100,0.0
+3669,2020-06,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3679,2020-06,RENNES,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3699,2020-06,MADRID,MARSEILLE ST CHARLES,International,cancelled_above_planned,1 > 0
+3699,2020-06,MADRID,MARSEILLE ST CHARLES,International,zero_planned,Cancellation rate unavailable
+3699,2020-06,MADRID,MARSEILLE ST CHARLES,International,delay_above_operated_proxy,nb_train_depart_retard
+3699,2020-06,MADRID,MARSEILLE ST CHARLES,International,delay_above_operated_proxy,nb_train_retard_arrivee
+3699,2020-06,MADRID,MARSEILLE ST CHARLES,International,delay_above_operated_proxy,nb_train_retard_sup_15
+3699,2020-06,MADRID,MARSEILLE ST CHARLES,International,delay_above_operated_proxy,nb_train_retard_sup_30
+3699,2020-06,MADRID,MARSEILLE ST CHARLES,International,delay_above_operated_proxy,nb_train_retard_sup_60
+3699,2020-06,MADRID,MARSEILLE ST CHARLES,International,cause_sum_not_100,0.0
+3701,2020-06,BORDEAUX ST JEAN,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3703,2020-06,LAVAL,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3707,2020-06,PARIS MONTPARNASSE,ST PIERRE DES CORPS,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3716,2020-06,NICE VILLE,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+3720,2020-06,STUTTGART,PARIS EST,International,cancelled_above_planned,2 > 0
+3720,2020-06,STUTTGART,PARIS EST,International,zero_planned,Cancellation rate unavailable
+3720,2020-06,STUTTGART,PARIS EST,International,delay_above_operated_proxy,nb_train_depart_retard
+3720,2020-06,STUTTGART,PARIS EST,International,delay_above_operated_proxy,nb_train_retard_arrivee
+3720,2020-06,STUTTGART,PARIS EST,International,delay_above_operated_proxy,nb_train_retard_sup_15
+3720,2020-06,STUTTGART,PARIS EST,International,delay_above_operated_proxy,nb_train_retard_sup_30
+3720,2020-06,STUTTGART,PARIS EST,International,delay_above_operated_proxy,nb_train_retard_sup_60
+3720,2020-06,STUTTGART,PARIS EST,International,cause_sum_not_100,0.0
+3722,2020-06,MARSEILLE ST CHARLES,MADRID,International,cancelled_above_planned,1 > 0
+3722,2020-06,MARSEILLE ST CHARLES,MADRID,International,zero_planned,Cancellation rate unavailable
+3722,2020-06,MARSEILLE ST CHARLES,MADRID,International,delay_above_operated_proxy,nb_train_depart_retard
+3722,2020-06,MARSEILLE ST CHARLES,MADRID,International,delay_above_operated_proxy,nb_train_retard_arrivee
+3722,2020-06,MARSEILLE ST CHARLES,MADRID,International,delay_above_operated_proxy,nb_train_retard_sup_15
+3722,2020-06,MARSEILLE ST CHARLES,MADRID,International,delay_above_operated_proxy,nb_train_retard_sup_30
+3722,2020-06,MARSEILLE ST CHARLES,MADRID,International,delay_above_operated_proxy,nb_train_retard_sup_60
+3722,2020-06,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+3727,2020-06,TOULOUSE MATABIAU,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3728,2020-06,TOURS,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3736,2020-06,ANNECY,PARIS LYON,National,cause_sum_not_100,0.0
+3745,2020-06,PARIS EST,STUTTGART,International,cancelled_above_planned,2 > 0
+3745,2020-06,PARIS EST,STUTTGART,International,zero_planned,Cancellation rate unavailable
+3745,2020-06,PARIS EST,STUTTGART,International,delay_above_operated_proxy,nb_train_depart_retard
+3745,2020-06,PARIS EST,STUTTGART,International,delay_above_operated_proxy,nb_train_retard_arrivee
+3745,2020-06,PARIS EST,STUTTGART,International,delay_above_operated_proxy,nb_train_retard_sup_15
+3745,2020-06,PARIS EST,STUTTGART,International,delay_above_operated_proxy,nb_train_retard_sup_30
+3745,2020-06,PARIS EST,STUTTGART,International,delay_above_operated_proxy,nb_train_retard_sup_60
+3745,2020-06,PARIS EST,STUTTGART,International,cause_sum_not_100,0.0
+3746,2020-06,PARIS LYON,BARCELONA,International,nested_counts_inconsistent,nb_train_retard_sup_30 > nb_train_retard_arrivee
+3746,2020-06,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+3752,2020-06,ST MALO,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3759,2020-06,NANTES,STRASBOURG,National,cause_sum_not_100,0.0
+3760,2020-06,DUNKERQUE,PARIS NORD,National,cause_sum_not_100,0.0
+3762,2020-06,TOURCOING,BORDEAUX ST JEAN,National,cause_sum_not_100,0.0
+3774,2020-06,BARCELONA,PARIS LYON,International,nested_counts_inconsistent,nb_train_retard_sup_30 > nb_train_retard_arrivee
+3838,2020-07,BARCELONA,PARIS LYON,International,nested_counts_inconsistent,nb_train_retard_sup_30 > nb_train_retard_arrivee
+3867,2020-07,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+3870,2020-07,MADRID,MARSEILLE ST CHARLES,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+3922,2020-08,MARSEILLE ST CHARLES,MADRID,International,zero_planned,Cancellation rate unavailable
+3922,2020-08,MARSEILLE ST CHARLES,MADRID,International,zero_operated_proxy,Delay rate unavailable
+3922,2020-08,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+3980,2020-08,MADRID,MARSEILLE ST CHARLES,International,zero_planned,Cancellation rate unavailable
+3980,2020-08,MADRID,MARSEILLE ST CHARLES,International,zero_operated_proxy,Delay rate unavailable
+3980,2020-08,MADRID,MARSEILLE ST CHARLES,International,cause_sum_not_100,0.0
+4070,2020-09,MADRID,MARSEILLE ST CHARLES,International,zero_planned,Cancellation rate unavailable
+4070,2020-09,MADRID,MARSEILLE ST CHARLES,International,zero_operated_proxy,Delay rate unavailable
+4070,2020-09,MADRID,MARSEILLE ST CHARLES,International,cause_sum_not_100,0.0
+4071,2020-09,BARCELONA,PARIS LYON,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4072,2020-09,MARSEILLE ST CHARLES,MADRID,International,zero_planned,Cancellation rate unavailable
+4072,2020-09,MARSEILLE ST CHARLES,MADRID,International,zero_operated_proxy,Delay rate unavailable
+4072,2020-09,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+4208,2020-10,BARCELONA,PARIS LYON,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4209,2020-10,MARSEILLE ST CHARLES,MADRID,International,zero_planned,Cancellation rate unavailable
+4209,2020-10,MARSEILLE ST CHARLES,MADRID,International,zero_operated_proxy,Delay rate unavailable
+4209,2020-10,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+4244,2020-10,MADRID,MARSEILLE ST CHARLES,International,zero_planned,Cancellation rate unavailable
+4244,2020-10,MADRID,MARSEILLE ST CHARLES,International,zero_operated_proxy,Delay rate unavailable
+4244,2020-10,MADRID,MARSEILLE ST CHARLES,International,cause_sum_not_100,0.0
+4267,2020-11,PARIS MONTPARNASSE,ANGOULEME,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4275,2020-11,PARIS MONTPARNASSE,RENNES,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4280,2020-11,PARIS EST,STRASBOURG,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4281,2020-11,PARIS NORD,DOUAI,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4283,2020-11,PARIS NORD,DUNKERQUE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4287,2020-11,BORDEAUX ST JEAN,TOURCOING,National,cause_sum_not_100,0.0
+4288,2020-11,TOURCOING,BORDEAUX ST JEAN,National,cause_sum_not_100,0.0
+4294,2020-11,PARIS LYON,LAUSANNE,International,cause_sum_not_100,0.0
+4294,2020-11,PARIS LYON,LAUSANNE,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4295,2020-11,BARCELONA,PARIS LYON,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4296,2020-11,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+4300,2020-11,PARIS MONTPARNASSE,LE MANS,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4302,2020-11,PARIS MONTPARNASSE,ST PIERRE DES CORPS,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4315,2020-11,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,cause_sum_not_100,0.0
+4321,2020-11,PARIS MONTPARNASSE,LAVAL,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4332,2020-11,PARIS LYON,MACON LOCHE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4343,2020-11,STRASBOURG,NANTES,National,cause_sum_not_100,0.0
+4343,2020-11,STRASBOURG,NANTES,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4344,2020-11,NANTES,STRASBOURG,National,cause_sum_not_100,0.0
+4363,2020-11,PARIS EST,STUTTGART,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4365,2020-11,MADRID,MARSEILLE ST CHARLES,International,zero_planned,Cancellation rate unavailable
+4365,2020-11,MADRID,MARSEILLE ST CHARLES,International,zero_operated_proxy,Delay rate unavailable
+4365,2020-11,MADRID,MARSEILLE ST CHARLES,International,cause_sum_not_100,0.0
+4375,2020-11,PARIS LYON,ANNECY,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4385,2020-11,STUTTGART,PARIS EST,International,cause_sum_not_100,0.0
+4385,2020-11,STUTTGART,PARIS EST,International,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4389,2020-11,MARSEILLE ST CHARLES,MADRID,International,zero_planned,Cancellation rate unavailable
+4389,2020-11,MARSEILLE ST CHARLES,MADRID,International,zero_operated_proxy,Delay rate unavailable
+4389,2020-11,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+4395,2020-12,ST MALO,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4403,2020-12,TOURCOING,BORDEAUX ST JEAN,National,cause_sum_not_100,0.0
+4408,2020-12,PARIS LYON,LE CREUSOT MONTCEAU MONTCHANIN,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4413,2020-12,PARIS LYON,ITALIE,International,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4414,2020-12,ZURICH,PARIS LYON,International,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4415,2020-12,MARSEILLE ST CHARLES,MADRID,International,zero_planned,Cancellation rate unavailable
+4415,2020-12,MARSEILLE ST CHARLES,MADRID,International,zero_operated_proxy,Delay rate unavailable
+4415,2020-12,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+4443,2020-12,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4447,2020-12,PARIS MONTPARNASSE,ST MALO,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4464,2020-12,MADRID,MARSEILLE ST CHARLES,International,zero_planned,Cancellation rate unavailable
+4464,2020-12,MADRID,MARSEILLE ST CHARLES,International,zero_operated_proxy,Delay rate unavailable
+4464,2020-12,MADRID,MARSEILLE ST CHARLES,International,cause_sum_not_100,0.0
+4486,2020-12,PARIS MONTPARNASSE,LA ROCHELLE VILLE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4511,2020-12,BARCELONA,PARIS LYON,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4512,2020-12,PARIS LYON,BARCELONA,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4515,2021-01,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+4515,2021-01,PARIS LYON,BARCELONA,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4516,2021-01,PARIS LYON,ITALIE,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4558,2021-01,PARIS LYON,MACON LOCHE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4561,2021-01,PARIS LYON,PERPIGNAN,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4584,2021-01,PARIS LYON,GRENOBLE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4623,2021-01,PARIS LYON,ANNECY,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4662,2021-02,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+4732,2021-02,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4750,2021-02,PARIS MONTPARNASSE,LE MANS,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4751,2021-02,PARIS NORD,DOUAI,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4771,2021-03,PARIS LYON,LE CREUSOT MONTCEAU MONTCHANIN,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4771,2021-03,PARIS LYON,LE CREUSOT MONTCEAU MONTCHANIN,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4772,2021-03,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4774,2021-03,PARIS MONTPARNASSE,LA ROCHELLE VILLE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4784,2021-03,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+4784,2021-03,PARIS LYON,BARCELONA,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4795,2021-03,PARIS LYON,MARSEILLE ST CHARLES,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4801,2021-03,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4809,2021-03,NANTES,STRASBOURG,National,cause_sum_not_100,0.0
+4809,2021-03,NANTES,STRASBOURG,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4810,2021-03,NICE VILLE,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4812,2021-03,PARIS LYON,BELLEGARDE (AIN),National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4813,2021-03,PARIS LYON,LYON PART DIEU,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4814,2021-03,PARIS LYON,NICE VILLE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4814,2021-03,PARIS LYON,NICE VILLE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4815,2021-03,PARIS LYON,TOULON,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4816,2021-03,PARIS MONTPARNASSE,LE MANS,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4817,2021-03,PARIS MONTPARNASSE,NANTES,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4819,2021-03,PARIS NORD,DUNKERQUE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4819,2021-03,PARIS NORD,DUNKERQUE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4823,2021-03,STRASBOURG,NANTES,National,cause_sum_not_100,0.0
+4823,2021-03,STRASBOURG,NANTES,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4829,2021-03,BESANCON FRANCHE COMTE TGV,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4835,2021-03,MARSEILLE ST CHARLES,TOURCOING,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4864,2021-03,PARIS LYON,PERPIGNAN,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4865,2021-03,PARIS LYON,VALENCE ALIXAN TGV,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4876,2021-04,AIX EN PROVENCE TGV,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4878,2021-04,GRENOBLE,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4879,2021-04,LE CREUSOT MONTCEAU MONTCHANIN,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4882,2021-04,MARSEILLE ST CHARLES,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4887,2021-04,PARIS LYON,BELLEGARDE (AIN),National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4890,2021-04,PARIS MONTPARNASSE,ST PIERRE DES CORPS,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4894,2021-04,PARIS LYON,GENEVE,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4900,2021-04,NICE VILLE,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4905,2021-04,PARIS MONTPARNASSE,BREST,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4909,2021-04,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,cause_sum_not_100,0.0
+4931,2021-04,PARIS LYON,MARSEILLE ST CHARLES,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4933,2021-04,PARIS LYON,VALENCE ALIXAN TGV,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4933,2021-04,PARIS LYON,VALENCE ALIXAN TGV,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4936,2021-04,ST MALO,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4937,2021-04,TOULON,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4942,2021-04,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+4944,2021-04,PARIS LYON,ZURICH,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4945,2021-04,ZURICH,PARIS LYON,International,cause_sum_not_100,0.0
+4945,2021-04,ZURICH,PARIS LYON,International,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4953,2021-04,PARIS LYON,ANNECY,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4957,2021-04,PARIS LYON,PERPIGNAN,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4958,2021-04,PARIS LYON,TOULON,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4958,2021-04,PARIS LYON,TOULON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4961,2021-04,PARIS MONTPARNASSE,LE MANS,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4963,2021-04,PARIS MONTPARNASSE,RENNES,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4964,2021-04,PARIS MONTPARNASSE,ST MALO,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4969,2021-04,PARIS LYON,LAUSANNE,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4971,2021-04,AVIGNON TGV,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4972,2021-04,BELLEGARDE (AIN),PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4981,2021-04,PARIS LYON,MACON LOCHE,National,cause_sum_not_100,0.0
+4981,2021-04,PARIS LYON,MACON LOCHE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4981,2021-04,PARIS LYON,MACON LOCHE,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+4982,2021-04,PARIS LYON,NICE VILLE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+4984,2021-04,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+5000,2021-05,BORDEAUX ST JEAN,TOURCOING,National,cause_sum_not_100,0.0
+5013,2021-05,ST MALO,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+5019,2021-05,PARIS LYON,ZURICH,International,cause_sum_not_100,0.0
+5019,2021-05,PARIS LYON,ZURICH,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+5050,2021-05,PARIS MONTPARNASSE,BREST,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+5051,2021-05,PARIS MONTPARNASSE,LA ROCHELLE VILLE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+5052,2021-05,PARIS MONTPARNASSE,NANTES,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+5053,2021-05,PARIS MONTPARNASSE,ST MALO,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+5060,2021-05,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+5062,2021-05,STUTTGART,PARIS EST,International,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+5076,2021-05,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+5090,2021-05,BESANCON FRANCHE COMTE TGV,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+5102,2021-05,NANTES,STRASBOURG,National,cause_sum_not_100,0.0
+5105,2021-05,PARIS MONTPARNASSE,LE MANS,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+5150,2021-06,BORDEAUX ST JEAN,TOURCOING,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+5178,2021-06,PARIS EST,STUTTGART,International,cause_sum_not_100,0.0
+5179,2021-06,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+5205,2021-06,LAUSANNE,PARIS LYON,International,cause_sum_not_100,0.0
+5205,2021-06,LAUSANNE,PARIS LYON,International,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+5286,2021-07,PARIS EST,STUTTGART,International,cause_sum_not_100,0.0
+5332,2021-07,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+5359,2021-08,ZURICH,PARIS LYON,International,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+5387,2021-08,BORDEAUX ST JEAN,TOURCOING,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+5411,2021-08,MULHOUSE VILLE,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+5413,2021-08,NICE VILLE,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+5433,2021-08,PARIS EST,STUTTGART,International,cause_sum_not_100,0.0
+5434,2021-08,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+5439,2021-08,DUNKERQUE,PARIS NORD,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+5477,2021-08,TOURCOING,BORDEAUX ST JEAN,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+5505,2021-09,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+5506,2021-09,PARIS LYON,GENEVE,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+5507,2021-09,PARIS LYON,LAUSANNE,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+5521,2021-09,PARIS LYON,BELLEGARDE (AIN),National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+5532,2021-09,TOURCOING,BORDEAUX ST JEAN,National,cause_sum_not_100,0.0
+5532,2021-09,TOURCOING,BORDEAUX ST JEAN,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+5577,2021-09,PARIS EST,STUTTGART,International,cause_sum_not_100,0.0
+5671,2021-10,BORDEAUX ST JEAN,TOURCOING,National,cause_sum_not_100,0.0
+5701,2021-10,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+5718,2021-10,PARIS MONTPARNASSE,TOURS,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+5786,2021-11,STRASBOURG,NANTES,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+5813,2021-11,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+5842,2021-12,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+5842,2021-12,PARIS LYON,BARCELONA,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+5902,2021-12,PARIS MONTPARNASSE,LA ROCHELLE VILLE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+5977,2022-01,PARIS LYON,LE CREUSOT MONTCEAU MONTCHANIN,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+5985,2022-01,PARIS MONTPARNASSE,LA ROCHELLE VILLE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+5986,2022-01,PARIS MONTPARNASSE,ST PIERRE DES CORPS,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+6031,2022-01,PARIS MONTPARNASSE,TOURS,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+6057,2022-01,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+6088,2022-02,BORDEAUX ST JEAN,TOURCOING,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+6091,2022-02,GRENOBLE,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+6114,2022-02,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+6115,2022-02,PARIS LYON,LAUSANNE,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+6118,2022-02,AVIGNON TGV,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+6119,2022-02,BESANCON FRANCHE COMTE TGV,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+6130,2022-02,MARSEILLE ST CHARLES,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+6143,2022-02,PARIS MONTPARNASSE,NANTES,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+6157,2022-02,PARIS LYON,AIX EN PROVENCE TGV,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+6158,2022-02,PARIS LYON,AVIGNON TGV,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+6159,2022-02,PARIS LYON,LE CREUSOT MONTCEAU MONTCHANIN,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+6171,2022-02,LAUSANNE,PARIS LYON,International,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+6180,2022-02,PARIS MONTPARNASSE,ANGERS SAINT LAUD,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+6192,2022-02,DIJON VILLE,PARIS LYON,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+6208,2022-03,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+6354,2022-04,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+6419,2022-04,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+6420,2022-04,PARIS LYON,LAUSANNE,International,cause_sum_not_100,0.0
+6508,2022-05,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+6525,2022-05,TOURCOING,BORDEAUX ST JEAN,National,cause_sum_not_100,0.0
+6547,2022-05,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+6572,2022-06,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+6667,2022-06,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,delay_above_operated_proxy,nb_train_depart_retard
+6725,2022-07,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+6916,2022-08,TOURCOING,BORDEAUX ST JEAN,National,cause_sum_not_100,0.0
+6917,2022-08,TOURCOING,MARSEILLE ST CHARLES,National,cause_sum_not_100,0.0
+6917,2022-08,TOURCOING,MARSEILLE ST CHARLES,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+6919,2022-08,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+6943,2022-09,BORDEAUX ST JEAN,TOURCOING,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+6972,2022-09,ST MALO,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+7007,2022-09,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+7104,2022-10,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+7126,2022-10,ST MALO,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+7207,2022-11,PARIS MONTPARNASSE,ST MALO,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+7211,2022-11,ST MALO,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+7283,2022-11,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+7306,2022-12,MADRID,MARSEILLE ST CHARLES,International,cause_sum_not_100,0.0
+7307,2022-12,MARSEILLE ST CHARLES,MADRID,International,cause_sum_not_100,0.0
+7479,2023-01,BORDEAUX ST JEAN,TOURCOING,National,cause_sum_not_100,0.0
+7614,2023-02,PARIS MONTPARNASSE,TOURS,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+7648,2023-02,BORDEAUX ST JEAN,TOURCOING,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+8010,2023-05,TOURCOING,BORDEAUX ST JEAN,National,cause_sum_not_100,0.0
+8010,2023-05,TOURCOING,BORDEAUX ST JEAN,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+8036,2023-06,BORDEAUX ST JEAN,TOURCOING,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+8131,2023-06,TOURCOING,BORDEAUX ST JEAN,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+8275,2023-07,TOURCOING,BORDEAUX ST JEAN,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+8346,2023-08,TOURCOING,BORDEAUX ST JEAN,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+8427,2023-09,PARIS LYON,ITALIE,International,cause_sum_not_100,0.0
+8427,2023-09,PARIS LYON,ITALIE,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+8449,2023-09,ITALIE,PARIS LYON,International,cause_sum_not_100,0.0
+8587,2023-10,BORDEAUX ST JEAN,TOURCOING,National,cause_sum_not_100,0.0
+8876,2024-01,PARIS LYON,ITALIE,International,cause_sum_not_100,0.0
+8949,2024-01,PARIS EST,FRANCFORT,International,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+9066,2024-02,PARIS LYON,ITALIE,International,cause_sum_not_100,0.0
+9086,2024-02,PARIS MONTPARNASSE,TOULOUSE MATABIAU,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+9135,2024-03,PARIS LYON,ITALIE,International,cause_sum_not_100,0.0
+9238,2024-04,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+9324,2024-04,PARIS LYON,ITALIE,International,cause_sum_not_100,0.0
+9344,2024-04,ST MALO,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+9382,2024-05,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+9382,2024-05,PARIS LYON,BARCELONA,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+9428,2024-05,PARIS LYON,ITALIE,International,cause_sum_not_100,0.0
+9458,2024-05,STRASBOURG,NANTES,National,cause_sum_not_100,0.0
+9458,2024-05,STRASBOURG,NANTES,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+9540,2024-06,PARIS LYON,BARCELONA,International,cause_sum_not_100,0.0
+9578,2024-06,ST MALO,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+9626,2024-07,PARIS LYON,ITALIE,International,cause_sum_not_100,0.0
+9742,2024-08,PARIS LYON,ITALIE,International,cause_sum_not_100,0.0
+9765,2024-08,REIMS,PARIS EST,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+9794,2024-08,PARIS EST,FRANCFORT,International,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+9840,2024-08,TOURCOING,BORDEAUX ST JEAN,National,cause_sum_not_100,0.0
+9840,2024-08,TOURCOING,BORDEAUX ST JEAN,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+9869,2024-09,PARIS EST,FRANCFORT,International,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+9871,2024-09,PARIS LYON,ITALIE,International,cause_sum_not_100,0.0
+9986,2024-10,PARIS LYON,ITALIE,International,cause_sum_not_100,0.0
+10081,2024-10,TOURCOING,BORDEAUX ST JEAN,National,cause_sum_not_100,0.0
+10081,2024-10,TOURCOING,BORDEAUX ST JEAN,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+10132,2024-11,PARIS EST,FRANCFORT,International,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+10183,2024-11,PARIS LYON,ITALIE,International,cause_sum_not_100,0.0
+10206,2024-12,PARIS LYON,ITALIE,International,cause_sum_not_100,0.0
+10227,2024-12,TOURCOING,BORDEAUX ST JEAN,National,cause_sum_not_100,0.0
+10227,2024-12,TOURCOING,BORDEAUX ST JEAN,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+10325,2025-01,FRANCFORT,PARIS EST,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10326,2025-01,GENEVE,PARIS LYON,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10327,2025-01,LAUSANNE,PARIS LYON,International,invalid_count,nb_train_retard_sup_30
+10327,2025-01,LAUSANNE,PARIS LYON,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10328,2025-01,ZURICH,PARIS LYON,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10329,2025-01,ANGOULEME,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10330,2025-01,DIJON VILLE,PARIS LYON,National,invalid_count,nb_train_retard_sup_30
+10330,2025-01,DIJON VILLE,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10331,2025-01,DOUAI,PARIS NORD,National,invalid_count,nb_train_retard_sup_30
+10331,2025-01,DOUAI,PARIS NORD,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10332,2025-01,DUNKERQUE,PARIS NORD,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10333,2025-01,GRENOBLE,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10334,2025-01,LAVAL,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10335,2025-01,LILLE,LYON PART DIEU,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10336,2025-01,MARNE LA VALLEE,MARSEILLE ST CHARLES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10337,2025-01,MARSEILLE ST CHARLES,LILLE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10338,2025-01,MARSEILLE ST CHARLES,LYON PART DIEU,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10339,2025-01,MARSEILLE ST CHARLES,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10340,2025-01,NANTES,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10341,2025-01,PARIS EST,NANCY,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10342,2025-01,PARIS LYON,BESANCON FRANCHE COMTE TGV,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10343,2025-01,PARIS LYON,LYON PART DIEU,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10344,2025-01,PARIS LYON,PERPIGNAN,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10345,2025-01,PARIS MONTPARNASSE,LA ROCHELLE VILLE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10346,2025-01,PARIS MONTPARNASSE,LAVAL,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10347,2025-01,PARIS MONTPARNASSE,QUIMPER,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10348,2025-01,PARIS NORD,DOUAI,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10349,2025-01,REIMS,PARIS EST,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10350,2025-01,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10351,2025-01,ST MALO,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10352,2025-01,TOULON,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10353,2025-01,TOURCOING,BORDEAUX ST JEAN,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+10354,2025-01,ITALIE,PARIS LYON,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10355,2025-01,AIX EN PROVENCE TGV,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10356,2025-01,BORDEAUX ST JEAN,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10357,2025-01,LA ROCHELLE VILLE,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10358,2025-01,LE MANS,PARIS MONTPARNASSE,National,invalid_count,nb_train_retard_sup_30
+10358,2025-01,LE MANS,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10359,2025-01,MARSEILLE ST CHARLES,MARNE LA VALLEE,National,invalid_count,nb_train_retard_sup_30
+10359,2025-01,MARSEILLE ST CHARLES,MARNE LA VALLEE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10360,2025-01,METZ,PARIS EST,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10361,2025-01,MULHOUSE VILLE,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10362,2025-01,NIMES,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10363,2025-01,PARIS LYON,CHAMBERY CHALLES LES EAUX,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10364,2025-01,PARIS LYON,DIJON VILLE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10365,2025-01,PARIS LYON,LE CREUSOT MONTCEAU MONTCHANIN,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10366,2025-01,PARIS LYON,TOULON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10367,2025-01,PARIS MONTPARNASSE,ST PIERRE DES CORPS,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10368,2025-01,PARIS NORD,ARRAS,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10369,2025-01,PARIS NORD,LILLE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10370,2025-01,PERPIGNAN,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10371,2025-01,PARIS LYON,ITALIE,International,cause_sum_not_100,0.0
+10372,2025-01,PARIS LYON,LAUSANNE,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10373,2025-01,PARIS LYON,ZURICH,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10374,2025-01,STUTTGART,PARIS EST,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10375,2025-01,ARRAS,PARIS NORD,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10376,2025-01,BESANCON FRANCHE COMTE TGV,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10377,2025-01,BORDEAUX ST JEAN,TOURCOING,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10378,2025-01,LE CREUSOT MONTCEAU MONTCHANIN,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10379,2025-01,LILLE,MARSEILLE ST CHARLES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10380,2025-01,LILLE,PARIS NORD,National,invalid_count,nb_train_retard_sup_30
+10380,2025-01,LILLE,PARIS NORD,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10381,2025-01,LYON PART DIEU,LILLE,National,invalid_count,nb_train_retard_sup_30
+10381,2025-01,LYON PART DIEU,LILLE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10382,2025-01,LYON PART DIEU,MARNE LA VALLEE,National,invalid_count,nb_train_retard_sup_30
+10382,2025-01,LYON PART DIEU,MARNE LA VALLEE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10383,2025-01,LYON PART DIEU,PARIS LYON,National,invalid_count,nb_train_retard_sup_30
+10383,2025-01,LYON PART DIEU,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10384,2025-01,MACON LOCHE,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10385,2025-01,MARNE LA VALLEE,LYON PART DIEU,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10386,2025-01,NANTES,STRASBOURG,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10387,2025-01,PARIS LYON,AIX EN PROVENCE TGV,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10388,2025-01,PARIS LYON,ANNECY,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10389,2025-01,PARIS LYON,MACON LOCHE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10390,2025-01,PARIS MONTPARNASSE,ANGERS SAINT LAUD,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10391,2025-01,PARIS MONTPARNASSE,ST MALO,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10392,2025-01,PARIS MONTPARNASSE,TOURS,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10393,2025-01,QUIMPER,PARIS MONTPARNASSE,National,invalid_count,nb_train_retard_sup_30
+10393,2025-01,QUIMPER,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10394,2025-01,RENNES,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10395,2025-01,ST PIERRE DES CORPS,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10396,2025-01,STRASBOURG,NANTES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10397,2025-01,STRASBOURG,PARIS EST,National,invalid_count,nb_train_retard_sup_30
+10397,2025-01,STRASBOURG,PARIS EST,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10398,2025-01,TOULOUSE MATABIAU,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10399,2025-01,BARCELONA,PARIS LYON,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10400,2025-01,PARIS EST,FRANCFORT,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10401,2025-01,PARIS EST,STUTTGART,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10402,2025-01,PARIS LYON,BARCELONA,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10403,2025-01,BREST,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10404,2025-01,LYON PART DIEU,RENNES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10405,2025-01,MONTPELLIER,LYON PART DIEU,National,invalid_count,nb_train_retard_sup_30
+10405,2025-01,MONTPELLIER,LYON PART DIEU,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10406,2025-01,MONTPELLIER,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10407,2025-01,NICE VILLE,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10408,2025-01,PARIS LYON,MONTPELLIER,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10409,2025-01,PARIS LYON,NICE VILLE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10410,2025-01,PARIS LYON,NIMES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10411,2025-01,PARIS MONTPARNASSE,BREST,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10412,2025-01,PARIS MONTPARNASSE,LE MANS,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10413,2025-01,PARIS MONTPARNASSE,POITIERS,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10414,2025-01,PARIS MONTPARNASSE,RENNES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10415,2025-01,PARIS MONTPARNASSE,TOULOUSE MATABIAU,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10416,2025-01,PARIS MONTPARNASSE,VANNES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10417,2025-01,VALENCE ALIXAN TGV,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10418,2025-01,VANNES,PARIS MONTPARNASSE,National,invalid_count,nb_train_retard_sup_30
+10418,2025-01,VANNES,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10419,2025-01,PARIS LYON,GENEVE,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10420,2025-01,ANGERS SAINT LAUD,PARIS MONTPARNASSE,National,invalid_count,nb_train_retard_sup_30
+10420,2025-01,ANGERS SAINT LAUD,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10421,2025-01,ANNECY,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10422,2025-01,AVIGNON TGV,PARIS LYON,National,invalid_count,nb_train_retard_sup_30
+10422,2025-01,AVIGNON TGV,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10423,2025-01,BELLEGARDE (AIN),PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10424,2025-01,CHAMBERY CHALLES LES EAUX,PARIS LYON,National,invalid_count,nb_train_retard_sup_30
+10424,2025-01,CHAMBERY CHALLES LES EAUX,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10425,2025-01,LYON PART DIEU,MARSEILLE ST CHARLES,National,invalid_count,nb_train_retard_sup_30
+10425,2025-01,LYON PART DIEU,MARSEILLE ST CHARLES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10426,2025-01,LYON PART DIEU,MONTPELLIER,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10427,2025-01,MARSEILLE ST CHARLES,TOURCOING,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10428,2025-01,NANCY,PARIS EST,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10429,2025-01,PARIS EST,METZ,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10430,2025-01,PARIS EST,REIMS,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10431,2025-01,PARIS EST,STRASBOURG,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10432,2025-01,PARIS LYON,AVIGNON TGV,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10433,2025-01,PARIS LYON,BELLEGARDE (AIN),National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10434,2025-01,PARIS LYON,GRENOBLE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10435,2025-01,PARIS LYON,MARSEILLE ST CHARLES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10436,2025-01,PARIS LYON,MULHOUSE VILLE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10437,2025-01,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10438,2025-01,PARIS LYON,VALENCE ALIXAN TGV,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10439,2025-01,PARIS MONTPARNASSE,ANGOULEME,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10440,2025-01,PARIS MONTPARNASSE,BORDEAUX ST JEAN,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10441,2025-01,PARIS MONTPARNASSE,NANTES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10442,2025-01,PARIS NORD,DUNKERQUE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10443,2025-01,POITIERS,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10444,2025-01,RENNES,LYON PART DIEU,National,invalid_count,nb_train_retard_sup_30
+10444,2025-01,RENNES,LYON PART DIEU,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10446,2025-02,PARIS LYON,BARCELONA,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10447,2025-02,PARIS LYON,ITALIE,International,cause_sum_not_100,0.0
+10448,2025-02,PARIS LYON,ZURICH,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10449,2025-02,ARRAS,PARIS NORD,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10450,2025-02,BORDEAUX ST JEAN,TOURCOING,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10451,2025-02,LE CREUSOT MONTCEAU MONTCHANIN,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10452,2025-02,LE MANS,PARIS MONTPARNASSE,National,invalid_count,nb_train_retard_sup_30
+10452,2025-02,LE MANS,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10453,2025-02,LYON PART DIEU,MONTPELLIER,National,invalid_count,nb_train_retard_sup_30
+10453,2025-02,LYON PART DIEU,MONTPELLIER,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10454,2025-02,MARSEILLE ST CHARLES,LILLE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10455,2025-02,MARSEILLE ST CHARLES,MARNE LA VALLEE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10456,2025-02,MULHOUSE VILLE,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10457,2025-02,PARIS EST,STRASBOURG,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10458,2025-02,PARIS LYON,ANNECY,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10459,2025-02,PARIS LYON,BESANCON FRANCHE COMTE TGV,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10460,2025-02,PARIS LYON,LYON PART DIEU,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10461,2025-02,PARIS LYON,PERPIGNAN,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10462,2025-02,PARIS MONTPARNASSE,ANGERS SAINT LAUD,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10463,2025-02,PARIS MONTPARNASSE,LAVAL,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10464,2025-02,PARIS NORD,DOUAI,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10465,2025-02,BARCELONA,PARIS LYON,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10466,2025-02,PARIS EST,FRANCFORT,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10467,2025-02,ANGOULEME,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10468,2025-02,ANNECY,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10469,2025-02,GRENOBLE,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10470,2025-02,LYON PART DIEU,PARIS LYON,National,invalid_count,nb_train_retard_sup_30
+10470,2025-02,LYON PART DIEU,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10471,2025-02,LYON PART DIEU,RENNES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10472,2025-02,MARNE LA VALLEE,LYON PART DIEU,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10473,2025-02,NICE VILLE,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10474,2025-02,NIMES,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10475,2025-02,PARIS LYON,BELLEGARDE (AIN),National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10476,2025-02,PARIS LYON,MARSEILLE ST CHARLES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10477,2025-02,PARIS LYON,MONTPELLIER,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10478,2025-02,PARIS LYON,VALENCE ALIXAN TGV,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10479,2025-02,PARIS MONTPARNASSE,ANGOULEME,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10480,2025-02,PARIS MONTPARNASSE,QUIMPER,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10481,2025-02,PARIS MONTPARNASSE,RENNES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10482,2025-02,PARIS MONTPARNASSE,VANNES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10483,2025-02,PARIS NORD,LILLE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10484,2025-02,RENNES,LYON PART DIEU,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10485,2025-02,RENNES,PARIS MONTPARNASSE,National,invalid_count,nb_train_retard_sup_30
+10485,2025-02,RENNES,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10486,2025-02,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10487,2025-02,STRASBOURG,PARIS EST,National,invalid_count,nb_train_retard_sup_30
+10487,2025-02,STRASBOURG,PARIS EST,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10488,2025-02,TOURS,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10489,2025-02,FRANCFORT,PARIS EST,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10490,2025-02,LAUSANNE,PARIS LYON,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10491,2025-02,PARIS LYON,LAUSANNE,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10492,2025-02,STUTTGART,PARIS EST,International,invalid_count,nb_train_retard_sup_30
+10492,2025-02,STUTTGART,PARIS EST,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10493,2025-02,ANGERS SAINT LAUD,PARIS MONTPARNASSE,National,invalid_count,nb_train_retard_sup_30
+10493,2025-02,ANGERS SAINT LAUD,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10494,2025-02,BREST,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10495,2025-02,DIJON VILLE,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10496,2025-02,DOUAI,PARIS NORD,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10497,2025-02,LA ROCHELLE VILLE,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10498,2025-02,LILLE,MARSEILLE ST CHARLES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10499,2025-02,MARSEILLE ST CHARLES,LYON PART DIEU,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10500,2025-02,MARSEILLE ST CHARLES,TOURCOING,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10501,2025-02,METZ,PARIS EST,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10502,2025-02,PARIS EST,REIMS,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10503,2025-02,PARIS LYON,GRENOBLE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10504,2025-02,PARIS LYON,MULHOUSE VILLE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10505,2025-02,PARIS LYON,NICE VILLE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10506,2025-02,PARIS LYON,NIMES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10507,2025-02,PARIS LYON,TOULON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10508,2025-02,PARIS MONTPARNASSE,BORDEAUX ST JEAN,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10509,2025-02,PARIS MONTPARNASSE,NANTES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10511,2025-02,PARIS MONTPARNASSE,ST PIERRE DES CORPS,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10512,2025-02,PARIS MONTPARNASSE,TOULOUSE MATABIAU,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10513,2025-02,PARIS MONTPARNASSE,TOURS,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10514,2025-02,PARIS NORD,ARRAS,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10515,2025-02,STRASBOURG,NANTES,National,cause_sum_not_100,0.0
+10516,2025-02,TOULOUSE MATABIAU,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10517,2025-02,TOURCOING,BORDEAUX ST JEAN,National,invalid_count,nb_train_retard_sup_30
+10517,2025-02,TOURCOING,BORDEAUX ST JEAN,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10518,2025-02,VANNES,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10519,2025-02,GENEVE,PARIS LYON,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10520,2025-02,ITALIE,PARIS LYON,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10521,2025-02,PARIS EST,STUTTGART,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10522,2025-02,PARIS LYON,GENEVE,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10523,2025-02,BELLEGARDE (AIN),PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10524,2025-02,BORDEAUX ST JEAN,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10525,2025-02,DUNKERQUE,PARIS NORD,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10526,2025-02,LILLE,LYON PART DIEU,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10527,2025-02,LILLE,PARIS NORD,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10528,2025-02,LYON PART DIEU,LILLE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10529,2025-02,LYON PART DIEU,MARNE LA VALLEE,National,invalid_count,nb_train_retard_sup_30
+10529,2025-02,LYON PART DIEU,MARNE LA VALLEE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10530,2025-02,LYON PART DIEU,MARSEILLE ST CHARLES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10531,2025-02,MARNE LA VALLEE,MARSEILLE ST CHARLES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10532,2025-02,MARSEILLE ST CHARLES,PARIS LYON,National,invalid_count,nb_train_retard_sup_30
+10532,2025-02,MARSEILLE ST CHARLES,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10533,2025-02,MONTPELLIER,LYON PART DIEU,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10534,2025-02,NANCY,PARIS EST,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10535,2025-02,NANTES,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10536,2025-02,PARIS EST,METZ,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10537,2025-02,PARIS EST,NANCY,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10538,2025-02,PARIS LYON,AIX EN PROVENCE TGV,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10539,2025-02,PARIS LYON,AVIGNON TGV,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10540,2025-02,PARIS LYON,CHAMBERY CHALLES LES EAUX,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10541,2025-02,PARIS LYON,DIJON VILLE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10542,2025-02,PARIS LYON,LE CREUSOT MONTCEAU MONTCHANIN,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10543,2025-02,PARIS MONTPARNASSE,LE MANS,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10544,2025-02,PARIS NORD,DUNKERQUE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10545,2025-02,PERPIGNAN,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10546,2025-02,ST MALO,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10547,2025-02,VALENCE ALIXAN TGV,PARIS LYON,National,invalid_count,nb_train_retard_sup_30
+10547,2025-02,VALENCE ALIXAN TGV,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10548,2025-02,ZURICH,PARIS LYON,International,invalid_count,nb_train_retard_sup_30
+10548,2025-02,ZURICH,PARIS LYON,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10549,2025-02,AIX EN PROVENCE TGV,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10550,2025-02,AVIGNON TGV,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10551,2025-02,BESANCON FRANCHE COMTE TGV,PARIS LYON,National,invalid_count,nb_train_retard_sup_30
+10551,2025-02,BESANCON FRANCHE COMTE TGV,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10552,2025-02,CHAMBERY CHALLES LES EAUX,PARIS LYON,National,invalid_count,nb_train_retard_sup_30
+10552,2025-02,CHAMBERY CHALLES LES EAUX,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10553,2025-02,LAVAL,PARIS MONTPARNASSE,National,invalid_count,nb_train_retard_sup_30
+10553,2025-02,LAVAL,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10554,2025-02,MACON LOCHE,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10555,2025-02,MONTPELLIER,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10557,2025-02,PARIS LYON,MACON LOCHE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10558,2025-02,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10559,2025-02,PARIS MONTPARNASSE,BREST,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10560,2025-02,PARIS MONTPARNASSE,LA ROCHELLE VILLE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10561,2025-02,PARIS MONTPARNASSE,POITIERS,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10562,2025-02,POITIERS,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10563,2025-02,QUIMPER,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10564,2025-02,REIMS,PARIS EST,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10565,2025-02,ST PIERRE DES CORPS,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10566,2025-02,TOULON,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10567,2025-03,STUTTGART,PARIS EST,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10568,2025-03,ANGERS SAINT LAUD,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10569,2025-03,ANGOULEME,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10570,2025-03,AVIGNON TGV,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10571,2025-03,BREST,PARIS MONTPARNASSE,National,invalid_count,nb_train_retard_sup_30
+10571,2025-03,BREST,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10572,2025-03,LAVAL,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10573,2025-03,LE CREUSOT MONTCEAU MONTCHANIN,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10574,2025-03,LILLE,PARIS NORD,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10575,2025-03,LYON PART DIEU,LILLE,National,invalid_count,nb_train_retard_sup_30
+10575,2025-03,LYON PART DIEU,LILLE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10576,2025-03,LYON PART DIEU,MARSEILLE ST CHARLES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10577,2025-03,LYON PART DIEU,RENNES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10578,2025-03,MARNE LA VALLEE,MARSEILLE ST CHARLES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10579,2025-03,MARSEILLE ST CHARLES,TOURCOING,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10580,2025-03,MONTPELLIER,LYON PART DIEU,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10581,2025-03,MONTPELLIER,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10582,2025-03,PARIS LYON,BESANCON FRANCHE COMTE TGV,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10583,2025-03,PARIS LYON,GRENOBLE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10584,2025-03,PARIS LYON,MACON LOCHE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10585,2025-03,PARIS LYON,MARSEILLE ST CHARLES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10586,2025-03,PARIS LYON,MULHOUSE VILLE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10587,2025-03,PARIS LYON,NIMES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10588,2025-03,PARIS LYON,PERPIGNAN,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10589,2025-03,PARIS LYON,VALENCE ALIXAN TGV,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10590,2025-03,PARIS MONTPARNASSE,ANGERS SAINT LAUD,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10590,2025-03,PARIS MONTPARNASSE,ANGERS SAINT LAUD,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+10591,2025-03,PARIS MONTPARNASSE,BORDEAUX ST JEAN,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10592,2025-03,PARIS MONTPARNASSE,BREST,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10593,2025-03,PARIS MONTPARNASSE,LE MANS,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10594,2025-03,PARIS NORD,DOUAI,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10595,2025-03,PERPIGNAN,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10596,2025-03,POITIERS,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10597,2025-03,RENNES,LYON PART DIEU,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10598,2025-03,TOURCOING,BORDEAUX ST JEAN,National,invalid_count,nb_train_retard_sup_30
+10598,2025-03,TOURCOING,BORDEAUX ST JEAN,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10599,2025-03,VALENCE ALIXAN TGV,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10600,2025-03,PARIS EST,STUTTGART,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10601,2025-03,ZURICH,PARIS LYON,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10602,2025-03,AIX EN PROVENCE TGV,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10603,2025-03,LA ROCHELLE VILLE,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10604,2025-03,LE MANS,PARIS MONTPARNASSE,National,invalid_count,nb_train_retard_sup_30
+10604,2025-03,LE MANS,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10605,2025-03,MACON LOCHE,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10606,2025-03,MARNE LA VALLEE,LYON PART DIEU,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10607,2025-03,MARSEILLE ST CHARLES,LILLE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10608,2025-03,MARSEILLE ST CHARLES,LYON PART DIEU,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10609,2025-03,MULHOUSE VILLE,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10610,2025-03,PARIS EST,NANCY,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10611,2025-03,PARIS MONTPARNASSE,LAVAL,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10612,2025-03,PARIS MONTPARNASSE,RENNES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10613,2025-03,PARIS MONTPARNASSE,ST PIERRE DES CORPS,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10614,2025-03,PARIS MONTPARNASSE,TOURS,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10615,2025-03,PARIS NORD,DUNKERQUE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10616,2025-03,ST PIERRE DES CORPS,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10617,2025-03,TOULOUSE MATABIAU,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10618,2025-03,FRANCFORT,PARIS EST,International,invalid_count,nb_train_retard_sup_30
+10618,2025-03,FRANCFORT,PARIS EST,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10619,2025-03,GENEVE,PARIS LYON,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10620,2025-03,PARIS EST,FRANCFORT,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10621,2025-03,PARIS LYON,BARCELONA,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10622,2025-03,PARIS LYON,GENEVE,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10623,2025-03,PARIS LYON,ITALIE,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10624,2025-03,ARRAS,PARIS NORD,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10625,2025-03,DOUAI,PARIS NORD,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10626,2025-03,LYON PART DIEU,MONTPELLIER,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10627,2025-03,MARSEILLE ST CHARLES,MARNE LA VALLEE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10628,2025-03,METZ,PARIS EST,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10629,2025-03,NANTES,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10630,2025-03,PARIS EST,STRASBOURG,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10631,2025-03,PARIS LYON,AVIGNON TGV,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10632,2025-03,PARIS LYON,BELLEGARDE (AIN),National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10633,2025-03,PARIS LYON,CHAMBERY CHALLES LES EAUX,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10634,2025-03,PARIS LYON,DIJON VILLE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10635,2025-03,PARIS LYON,MONTPELLIER,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10636,2025-03,PARIS LYON,TOULON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10637,2025-03,PARIS MONTPARNASSE,LA ROCHELLE VILLE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10639,2025-03,PARIS LYON,LAUSANNE,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10640,2025-03,PARIS LYON,ZURICH,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10641,2025-03,BELLEGARDE (AIN),PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10642,2025-03,BORDEAUX ST JEAN,TOURCOING,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10643,2025-03,DIJON VILLE,PARIS LYON,National,invalid_count,nb_train_retard_sup_30
+10643,2025-03,DIJON VILLE,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10644,2025-03,DUNKERQUE,PARIS NORD,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10645,2025-03,GRENOBLE,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10646,2025-03,LILLE,LYON PART DIEU,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10647,2025-03,LILLE,MARSEILLE ST CHARLES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10648,2025-03,LYON PART DIEU,MARNE LA VALLEE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10649,2025-03,LYON PART DIEU,PARIS LYON,National,invalid_count,nb_train_retard_sup_30
+10649,2025-03,LYON PART DIEU,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10650,2025-03,NICE VILLE,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10651,2025-03,PARIS EST,METZ,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10652,2025-03,PARIS EST,REIMS,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10653,2025-03,PARIS LYON,AIX EN PROVENCE TGV,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10654,2025-03,PARIS LYON,LYON PART DIEU,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10655,2025-03,PARIS LYON,NICE VILLE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10656,2025-03,PARIS MONTPARNASSE,ANGOULEME,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10657,2025-03,PARIS MONTPARNASSE,POITIERS,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10658,2025-03,PARIS MONTPARNASSE,QUIMPER,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10659,2025-03,PARIS MONTPARNASSE,ST MALO,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10660,2025-03,PARIS MONTPARNASSE,TOULOUSE MATABIAU,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10661,2025-03,PARIS MONTPARNASSE,VANNES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10662,2025-03,PARIS NORD,ARRAS,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10663,2025-03,QUIMPER,PARIS MONTPARNASSE,National,invalid_count,nb_train_retard_sup_30
+10663,2025-03,QUIMPER,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10664,2025-03,REIMS,PARIS EST,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10665,2025-03,RENNES,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10666,2025-03,SAINT ETIENNE CHATEAUCREUX,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10667,2025-03,STRASBOURG,PARIS EST,National,invalid_count,nb_train_retard_sup_30
+10667,2025-03,STRASBOURG,PARIS EST,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10669,2025-03,VANNES,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10670,2025-03,BARCELONA,PARIS LYON,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10671,2025-03,ITALIE,PARIS LYON,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10672,2025-03,LAUSANNE,PARIS LYON,International,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10673,2025-03,ANNECY,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10674,2025-03,BESANCON FRANCHE COMTE TGV,PARIS LYON,National,invalid_count,nb_train_retard_sup_30
+10674,2025-03,BESANCON FRANCHE COMTE TGV,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10675,2025-03,BORDEAUX ST JEAN,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10676,2025-03,CHAMBERY CHALLES LES EAUX,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10677,2025-03,MARSEILLE ST CHARLES,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10678,2025-03,NANCY,PARIS EST,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10679,2025-03,NANTES,STRASBOURG,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10680,2025-03,NIMES,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10681,2025-03,PARIS LYON,ANNECY,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10682,2025-03,PARIS LYON,LE CREUSOT MONTCEAU MONTCHANIN,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10683,2025-03,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10684,2025-03,PARIS MONTPARNASSE,NANTES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10684,2025-03,PARIS MONTPARNASSE,NANTES,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+10685,2025-03,ST MALO,PARIS MONTPARNASSE,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10685,2025-03,ST MALO,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+10686,2025-03,STRASBOURG,NANTES,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10687,2025-03,TOULON,PARIS LYON,National,nested_counts_inconsistent,nb_train_retard_sup_60 > nb_train_retard_sup_30
+10712,2025-04,ST MALO,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+10726,2025-04,PARIS LYON,GRENOBLE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+10809,2025-05,PARIS LYON,ZURICH,International,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+10926,2025-05,ST MALO,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+11047,2025-06,ST MALO,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+11334,2025-09,PARIS LYON,BELLEGARDE (AIN),National,cause_sum_not_100,0.0
+11334,2025-09,PARIS LYON,BELLEGARDE (AIN),National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+11396,2025-09,ST MALO,PARIS MONTPARNASSE,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+11430,2025-09,TOURCOING,BORDEAUX ST JEAN,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+11484,2025-10,TOURCOING,BORDEAUX ST JEAN,National,cause_sum_not_100,0.0
+11484,2025-10,TOURCOING,BORDEAUX ST JEAN,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+11493,2025-10,MARSEILLE ST CHARLES,TOURCOING,National,cause_sum_not_100,0.0
+11659,2025-11,PARIS LYON,LAUSANNE,International,negative_duration_or_mean,retard_moyen_tous_trains_depart
+12086,2026-03,BORDEAUX ST JEAN,TOURCOING,National,cause_sum_not_100,0.0
+12086,2026-03,BORDEAUX ST JEAN,TOURCOING,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+12150,2026-03,PARIS LYON,SAINT ETIENNE CHATEAUCREUX,National,negative_duration_or_mean,retard_moyen_tous_trains_depart
+12300,2026-04,TOURCOING,BORDEAUX ST JEAN,National,negative_duration_or_mean,retard_moyen_tous_trains_arrivee
+12355,2026-05,BORDEAUX ST JEAN,TOURCOING,National,cause_sum_not_100,0.0
+12467,2026-06,PARIS MONTPARNASSE,LAVAL,National,cause_sum_not_100,84.61538461515384
+12482,2026-06,MARSEILLE ST CHARLES,LILLE,National,cause_sum_not_100,98.38709677612903
+12489,2026-06,PARIS MONTPARNASSE,VANNES,National,cause_sum_not_100,87.500000019
+12503,2026-06,LYON PART DIEU,LILLE,National,cause_sum_not_100,99.12280700614035
+12537,2026-06,PARIS MONTPARNASSE,QUIMPER,National,cause_sum_not_100,86.95652173043477

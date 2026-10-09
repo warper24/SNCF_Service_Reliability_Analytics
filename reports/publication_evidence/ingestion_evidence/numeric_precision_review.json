@@ -1,0 +1,54 @@
+{
+  "changed_non_numeric_values": 0,
+  "changed_train_count_values": 0,
+  "current_version_id": "e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6",
+  "fields": {
+    "prct_cause_externe": {
+      "changed_values": 56,
+      "maximum_absolute_decimal_difference": "1E-14"
+    },
+    "prct_cause_gestion_gare": {
+      "changed_values": 51,
+      "maximum_absolute_decimal_difference": "6E-15"
+    },
+    "prct_cause_gestion_trafic": {
+      "changed_values": 31,
+      "maximum_absolute_decimal_difference": "5E-15"
+    },
+    "prct_cause_infra": {
+      "changed_values": 48,
+      "maximum_absolute_decimal_difference": "6E-15"
+    },
+    "prct_cause_materiel_roulant": {
+      "changed_values": 65,
+      "maximum_absolute_decimal_difference": "6E-15"
+    },
+    "prct_cause_prise_en_charge_voyageurs": {
+      "changed_values": 37,
+      "maximum_absolute_decimal_difference": "4E-15"
+    },
+    "retard_moyen_arrivee": {
+      "changed_values": 34,
+      "maximum_absolute_decimal_difference": "6E-15"
+    },
+    "retard_moyen_depart": {
+      "changed_values": 39,
+      "maximum_absolute_decimal_difference": "5E-15"
+    },
+    "retard_moyen_tous_trains_arrivee": {
+      "changed_values": 25,
+      "maximum_absolute_decimal_difference": "4E-15"
+    },
+    "retard_moyen_tous_trains_depart": {
+      "changed_values": 38,
+      "maximum_absolute_decimal_difference": "2E-15"
+    },
+    "retard_moyen_trains_retard_sup15": {
+      "changed_values": 36,
+      "maximum_absolute_decimal_difference": "6E-15"
+    }
+  },
+  "largest_absolute_decimal_difference": "1E-14",
+  "method": "Comparaison Decimal des valeurs JSON originales, sans seuil de tolérance analytique.",
+  "previous_version_id": "e32b513e9d631f48df17345d09bc4cd70179a32a678187f84ad20de004b59732"
+}

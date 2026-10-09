@@ -1,0 +1,76 @@
+10:04:34  Running with dbt=1.12.5
+10:04:36  Registered adapter: bigquery=1.12.1
+10:04:37  Found 3 models, 5 analyses, 20 data tests, 1 source, 561 macros, 2 unit tests
+10:04:37  
+10:04:37  Concurrency: 2 threads (target='dev')
+10:04:37  
+10:04:40  1 of 22 START test accepted_values_int_tgv_quality_flags_cause_profile_status__missing__out_of_bounds__all_zero__sum_warning__available  [RUN]
+10:04:40  2 of 22 START test accepted_values_stg_tgv_reliability_service_type__National__International  [RUN]
+10:04:42  2 of 22 PASS accepted_values_stg_tgv_reliability_service_type__National__International  [PASS in 2.03s]
+10:04:42  3 of 22 START test assert_intermediate_fidelity ................................ [RUN]
+10:04:43  1 of 22 PASS accepted_values_int_tgv_quality_flags_cause_profile_status__missing__out_of_bounds__all_zero__sum_warning__available  [PASS in 3.37s]
+10:04:43  4 of 22 START test assert_monthly_grain ........................................ [RUN]
+10:04:45  4 of 22 PASS assert_monthly_grain .............................................. [PASS in 2.20s]
+10:04:45  5 of 22 START test assert_quality_usability .................................... [RUN]
+10:04:49  5 of 22 PASS assert_quality_usability .......................................... [PASS in 3.71s]
+10:04:49  6 of 22 START test assert_source_integrity ..................................... [RUN]
+10:04:51  3 of 22 PASS assert_intermediate_fidelity ...................................... [PASS in 9.03s]
+10:04:51  7 of 22 START test assert_source_version ....................................... [RUN]
+10:04:52  7 of 22 PASS assert_source_version ............................................. [PASS in 1.30s]
+10:04:52  8 of 22 START test assert_staging_fidelity ..................................... [RUN]
+10:04:53  8 of 22 PASS assert_staging_fidelity ........................................... [PASS in 1.45s]
+10:04:53  9 of 22 START test not_null_stg_tgv_reliability_arrival_station ................ [RUN]
+10:04:55  9 of 22 PASS not_null_stg_tgv_reliability_arrival_station ...................... [PASS in 1.38s]
+10:04:55  10 of 22 START test not_null_stg_tgv_reliability_departure_station ............. [RUN]
+10:04:57  10 of 22 PASS not_null_stg_tgv_reliability_departure_station ................... [PASS in 1.78s]
+10:04:57  11 of 22 START test not_null_stg_tgv_reliability_month ......................... [RUN]
+10:04:57  6 of 22 PASS assert_source_integrity ........................................... [PASS in 7.97s]
+10:04:57  12 of 22 START test not_null_stg_tgv_reliability_row_number .................... [RUN]
+10:04:58  11 of 22 PASS not_null_stg_tgv_reliability_month ............................... [PASS in 1.41s]
+10:04:58  12 of 22 PASS not_null_stg_tgv_reliability_row_number .......................... [PASS in 1.14s]
+10:04:58  13 of 22 START test not_null_stg_tgv_reliability_row_sha256 .................... [RUN]
+10:04:58  14 of 22 START test not_null_stg_tgv_reliability_service_type .................. [RUN]
+10:05:00  13 of 22 PASS not_null_stg_tgv_reliability_row_sha256 .......................... [PASS in 1.57s]
+10:05:00  15 of 22 START test not_null_stg_tgv_reliability_version_id .................... [RUN]
+10:05:00  14 of 22 PASS not_null_stg_tgv_reliability_service_type ........................ [PASS in 1.93s]
+10:05:00  16 of 22 START test unique_stg_tgv_reliability_row_number ...................... [RUN]
+10:05:01  15 of 22 PASS not_null_stg_tgv_reliability_version_id .......................... [PASS in 1.37s]
+10:05:01  17 of 22 START test warn_cause_profiles ........................................ [RUN]
+10:05:02  16 of 22 PASS unique_stg_tgv_reliability_row_number ............................ [PASS in 1.51s]
+10:05:02  18 of 22 START test warn_service_scope ......................................... [RUN]
+10:05:03  18 of 22 WARN 84 warn_service_scope ............................................ [WARN 84 in 1.57s]
+10:05:03  19 of 22 START test warn_signed_means .......................................... [RUN]
+10:05:03  17 of 22 WARN 282 warn_cause_profiles .......................................... [WARN 282 in 2.45s]
+10:05:03  20 of 22 START test warn_source_counts ......................................... [RUN]
+10:05:05  19 of 22 WARN 278 warn_signed_means ............................................ [WARN 278 in 1.75s]
+10:05:05  21 of 22 START unit_test int_tgv_quality_flags::j04_quality_populations_boundaries_and_scope  [RUN]
+10:05:06  20 of 22 WARN 425 warn_source_counts ........................................... [WARN 425 in 2.74s]
+10:05:06  22 of 22 START unit_test stg_tgv_reliability::j04_staging_parsing_and_missing .. [RUN]
+10:05:10  21 of 22 PASS int_tgv_quality_flags::j04_quality_populations_boundaries_and_scope  [PASS in 4.81s]
+10:05:10  22 of 22 PASS stg_tgv_reliability::j04_staging_parsing_and_missing ............. [PASS in 3.76s]
+10:05:10  
+10:05:10  Finished running 20 data tests, 2 unit tests in 0 hours 0 minutes and 33.46 seconds (33.46s).
+10:05:10  
+10:05:10  Completed with 4 warnings:
+10:05:10  
+10:05:10  [WARNING]: in test warn_service_scope (tests\warn_service_scope.sql)
+10:05:10  [WARNING]: Got 84 results, configured to warn if != 0
+10:05:10  
+10:05:10    compiled code at C:\Users\<utilisateur>\AppData\Local\Packages\OpenAI.Codex_2p2nqsd0c76g0\LocalCache\Local\SNCF_Service_Reliability_Analytics\data\quality_runs\20261008T100405Z_b0a4b733\target\compiled\sncf_service_reliability\tests\warn_service_scope.sql
+10:05:10  
+10:05:10  [WARNING]: in test warn_cause_profiles (tests\warn_cause_profiles.sql)
+10:05:10  [WARNING]: Got 282 results, configured to warn if != 0
+10:05:10  
+10:05:10    compiled code at C:\Users\<utilisateur>\AppData\Local\Packages\OpenAI.Codex_2p2nqsd0c76g0\LocalCache\Local\SNCF_Service_Reliability_Analytics\data\quality_runs\20261008T100405Z_b0a4b733\target\compiled\sncf_service_reliability\tests\warn_cause_profiles.sql
+10:05:10  
+10:05:10  [WARNING]: in test warn_signed_means (tests\warn_signed_means.sql)
+10:05:10  [WARNING]: Got 278 results, configured to warn if != 0
+10:05:10  
+10:05:10    compiled code at C:\Users\<utilisateur>\AppData\Local\Packages\OpenAI.Codex_2p2nqsd0c76g0\LocalCache\Local\SNCF_Service_Reliability_Analytics\data\quality_runs\20261008T100405Z_b0a4b733\target\compiled\sncf_service_reliability\tests\warn_signed_means.sql
+10:05:10  
+10:05:10  [WARNING]: in test warn_source_counts (tests\warn_source_counts.sql)
+10:05:10  [WARNING]: Got 425 results, configured to warn if != 0
+10:05:10  
+10:05:10    compiled code at C:\Users\<utilisateur>\AppData\Local\Packages\OpenAI.Codex_2p2nqsd0c76g0\LocalCache\Local\SNCF_Service_Reliability_Analytics\data\quality_runs\20261008T100405Z_b0a4b733\target\compiled\sncf_service_reliability\tests\warn_source_counts.sql
+10:05:10  
+10:05:10  Done. PASS=18 WARN=4 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=22
