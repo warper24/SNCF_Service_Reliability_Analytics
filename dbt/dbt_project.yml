@@ -1,5 +1,5 @@
 name: sncf_service_reliability
-version: "0.4.0"
+version: "0.5.0"
 config-version: 2
 profile: sncf_service_reliability
 model-paths: ["models"]
@@ -15,7 +15,25 @@ models:
       +tags: ["j04"]
     intermediate:
       +tags: ["j04"]
+    marts:
+      +materialized: table
+      +tags: ["j05"]
 
 vars:
   raw_tgv_identifier: raw_tgv_current
   expected_version_id: ""
+  minimum_monthly_operated_proxy: 30
+  deterioration_threshold_pp: 2
+  regularity_target_pct: 90
+  persistence_months: 4
+  comparison_windows:
+    - comparison_id: "2026_h1_vs_2025_h1"
+      current_start: "2026-01-01"
+      current_end: "2026-06-01"
+      expected_months: 6
+      persistence_applicable: true
+    - comparison_id: "2025_vs_2024"
+      current_start: "2025-01-01"
+      current_end: "2025-12-01"
+      expected_months: 12
+      persistence_applicable: false

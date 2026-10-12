@@ -1,5 +1,39 @@
 # Publication progressive du projet
 
+## Clôture J05 — 9 octobre 2026
+
+Reprise de la publication le **12 octobre 2026**, après interruption de la session.
+Les empreintes des 57 fichiers de code qualifiés et les preuves locales concordent
+avec la qualification du 9 octobre ; les 38 copies publiques et leur manifeste
+ont été vérifiés. Aucun test cloud n'est relancé pour cette seule publication.
+La date de qualification reste le 9 octobre, distincte de la clôture Git du 12.
+
+Le jalon J05 a reçu l'accord explicite « Ok tu peux implémenter », après sa
+présentation complète. La branche `codex/j05-model` part du commit réel
+`8766048e2a9c4cd921d4e52470c3ea807921e794` et rassemble huit modèles analytiques,
+leurs tests, la documentation et les preuves de qualification. Résultat : 76 tests
+J05 réussis, 18 contrôles J04 réussis et quatre avertissements conservés, 37 tests
+Python réussis. Qualification : `20261009T142236Z_7e5f8893`.
+
+Le script de préparation inclut maintenant `reports/data_model_evidence/`, ignoré
+par Git comme les trois groupes précédents. Les copies publiques comprennent la
+validation, les logs des cinq étapes, trois résultats CSV ciblés et la revue
+manuelle. Les 28 originaux historiques ont été vérifiés inchangés avant préparation.
+Les contrôles cloud ne sont pas rejoués pour publier leurs copies.
+
+La [revue des fichiers indexés](../reports/publication_evidence/data_model_evidence/git_review.json)
+consigne le contrôle des noms, tailles et contenus, des liens locaux et des motifs
+de secrets/chemins personnels. Son ajout porte le manifeste à 39 copies publiques.
+Les fichiers les plus volumineux restent des fixtures synthétiques, le verrou de
+dépendances et les preuves ciblées ; aucun export source complet n'est indexé.
+
+L'accord du 9 octobre couvre l'envoi de cette clôture contrôlée vers le dépôt
+autorisé. La procédure reste un envoi sans forçage vers `main` et la branche de
+jalon, suivi d'une vérification du SHA distant ; le lien du commit réel est transmis
+dans la conversation. La branche est consultable dans
+[l'historique J05](https://github.com/warper24/SNCF_Service_Reliability_Analytics/commits/codex/j05-model).
+Cette publication ne constitue pas la release finale J10.
+
 Le 9 octobre 2026, le porteur a autorisé un premier commit regroupant l'état validé
 J01–J04 et son envoi vers le dépôt public
 [warper24/SNCF_Service_Reliability_Analytics](https://github.com/warper24/SNCF_Service_Reliability_Analytics).

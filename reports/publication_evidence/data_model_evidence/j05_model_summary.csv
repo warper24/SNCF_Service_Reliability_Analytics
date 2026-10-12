@@ -1,0 +1,9 @@
+model_name,row_count
+dim_date,3287
+dim_route,130
+dim_service,2
+dim_cause,6
+fct_reliability_monthly,12907
+fct_delay_causes_monthly,77442
+mart_route_trends,12907
+mart_route_priorities,232

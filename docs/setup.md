@@ -1,4 +1,66 @@
-# Installation, connexions, ingestion et qualité — J02–J04
+# Installation, connexions, ingestion, qualité et modèle — J02–J05
+
+## Qualification J05
+
+Accord explicite reçu le 9 octobre 2026 : « Ok tu peux implémenter », après la
+présentation complète J05. Réutiliser l'environnement verrouillé et le profil privé.
+Aucun paquet supplémentaire n'est requis. Le projet dbt passe à 0.5.0 ; le paquet
+Python d'ingestion reste 0.3.0. La version de projet dbt n'est pas une release Git.
+
+Depuis la racine du dépôt SNCF, dans PowerShell :
+
+```powershell
+$taskRoot = Join-Path $env:LOCALAPPDATA 'SNCF_Service_Reliability_Analytics'
+$taskPython = Join-Path $taskRoot 'venv-j02\Scripts\python.exe'
+$taskSnapshot = Join-Path $taskRoot 'data\ingestion\20261007T130103249967Z_bce4ef24'
+$env:GOOGLE_CLOUD_PROJECT = 'sncf-reliability-analytics'
+$env:BQ_LOCATION = 'EU'
+$env:BQ_DEV_DATASET = 'sncf_dev'
+$env:BQ_RAW_DATASET = 'sncf_dev'
+$env:DBT_PROFILES_DIR = Join-Path $taskRoot 'dbt-profile'
+& $taskPython scripts/validate_data_model.py --execute --project $env:GOOGLE_CLOUD_PROJECT --snapshot $taskSnapshot
+```
+
+Si `SNCF_DATA_DIR` est configuré, employer le chemin réel de l'archive conservée.
+Le collecteur vérifie export/manifeste et les payloads de la table brute figée.
+Il crée les vues J04, contrôle J04, crée les huit tables J05, contrôle J05, inspecte
+schémas et types d'objets, puis exécute trois requêtes de preuves. L'ordre évite de
+qualifier un modèle dont les prérequis ont échoué. Les tests J04 utilisent désormais
+`--indirect-selection cautious` pour ne pas entraîner les tests de réconciliation
+J05 avant que leurs autres dépendances soient construites. Cette correction est
+aussi appliquée au collecteur autonome J04 ; les anciennes preuves restent intactes.
+
+La table brute et `expected_version_id` sont fixées depuis le manifeste, sans
+extraction ni promotion de la source courante. Les seuils et fenêtres sont dans
+`dbt/dbt_project.yml` ; modifier leur contrat exige une décision tracée. Les sources
+plus récentes ne déplacent pas automatiquement les comparaisons.
+
+Chaque tentative conserve `validation.json`, logs, SQL compilé, manifeste dbt et
+résultats par étape dans `SNCF_DATA_DIR/model_runs/<run_id>`, hors OneDrive. Seule
+une qualification réussie met à jour les preuves ciblées de
+`reports/data_model_evidence/`. Aucune purge ni export complet de l'entrepôt.
+Les tests unitaires sont exécutés par BigQuery sur des données synthétiques ; ils
+ne constituent pas une exécution locale hors cloud. La limite de 100 MB s'applique
+par requête, pas à la somme des requêtes. Consulter les jobs et la consommation.
+
+Tests Python de non-régression :
+
+```powershell
+& $taskPython -m unittest discover -s tests -v
+```
+
+Après contrôle des résultats et de la documentation, préparer les copies publiques :
+
+```powershell
+& $taskPython scripts/prepare_publication.py
+& $taskPython scripts/prepare_publication.py --check
+```
+
+Le script couvre désormais J01, J03, J04 et J05. Il exige les originaux locaux des
+quatre groupes ; sur un nouveau clone, les récupérer pour reproduire les copies
+historiques. Ne pas rejouer une qualification simplement pour les publier.
+Les fichiers publics et leur manifeste sont dans `reports/publication_evidence/`.
+La préparation de copies ne renouvelle pas les preuves de validation.
 
 ## Qualification J04
 

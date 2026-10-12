@@ -105,7 +105,7 @@ def main():
                   "--vars", json.dumps(variables), "--target-path", str(run_dir / "target"),
                   "--log-path", str(run_dir / "logs"), "--no-use-colors"]
         for label, command in (("models", ["run", "--select", "tag:j04"]),
-                               ("tests", ["test", "--select", "tag:j04"]),
+                               ("tests", ["test", "--select", "tag:j04", "--indirect-selection", "cautious"]),
                                ("compile", ["compile", "--select", "j04_quality_summary",
                                             "j04_coverage", "j04_anomaly_examples",
                                             "j04_period_coverage", "j04_manual_cases"])):

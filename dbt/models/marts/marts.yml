@@ -1,0 +1,964 @@
+version: 2
+models:
+- name: dim_date
+  description: Calendrier quotidien continu ; faits au premier jour, sans observations
+    ferroviaires journalières.
+  columns:
+  - name: date_key
+    description: Clé unique non nulle de la dimension.
+    data_tests:
+    - not_null
+    - unique
+  - name: month
+    description: Attribut du calendrier ; month désigne le premier jour du mois.
+    data_tests:
+    - not_null
+  - name: year
+    description: Attribut du calendrier ; month désigne le premier jour du mois.
+    data_tests:
+    - not_null
+  - name: quarter
+    description: Attribut du calendrier ; month désigne le premier jour du mois.
+    data_tests:
+    - not_null
+  - name: month_number
+    description: Attribut du calendrier ; month désigne le premier jour du mois.
+    data_tests:
+    - not_null
+  - name: month_label
+    description: Attribut du calendrier ; month désigne le premier jour du mois.
+    data_tests:
+    - not_null
+  - name: is_month_start
+    description: Attribut du calendrier ; month désigne le premier jour du mois.
+    data_tests:
+    - not_null
+- name: dim_route
+  description: Liaison orientée sur libellés exacts ; clé SHA-256 déterministe, sans
+    rapprochement de gares.
+  columns:
+  - name: route_key
+    description: Clé unique non nulle de la dimension.
+    data_tests:
+    - not_null
+    - unique
+  - name: departure_station
+    description: Libellé SNCF exact de départ.
+    data_tests:
+    - not_null
+  - name: arrival_station
+    description: Libellé SNCF exact d’arrivée.
+    data_tests:
+    - not_null
+  - name: route_label
+    description: Présentation de la direction départ → arrivée.
+    data_tests:
+    - not_null
+- name: dim_service
+  description: Service source distinct ; aucune fusion National/International.
+  columns:
+  - name: service_key
+    description: Clé unique non nulle de la dimension.
+    data_tests:
+    - not_null
+    - unique
+  - name: service_type
+    description: Libellé source, sans reclassification.
+    data_tests:
+    - not_null
+    - unique
+- name: dim_cause
+  description: Six catégories contractuelles et correspondance aux noms SNCF ; aucune
+    population dérivée.
+  columns:
+  - name: cause_key
+    description: Clé unique non nulle de la dimension.
+    data_tests:
+    - not_null
+    - unique
+  - name: cause_label
+    description: Libellé ou correspondance contractuelle de la catégorie.
+    data_tests:
+    - not_null
+    - unique
+  - name: normalized_field
+    description: Libellé ou correspondance contractuelle de la catégorie.
+    data_tests:
+    - not_null
+    - unique
+  - name: source_field
+    description: Libellé ou correspondance contractuelle de la catégorie.
+    data_tests:
+    - not_null
+    - unique
+- name: fct_reliability_monthly
+  description: 'Mois × liaison orientée × service, une seule version. Effectifs source
+    intacts, ratios 0–1 par usage. D01 : P−A non certifié. Sommes temporelles dans
+    la même liaison/service seulement ; aucun total national.'
+  columns:
+  - name: service_type
+    data_type: STRING
+    description: Service source, National ou International, sans reclassification.
+  - name: departure_station
+    data_type: STRING
+    description: Libellé source de départ ; direction préservée.
+  - name: arrival_station
+    data_type: STRING
+    description: Libellé source d’arrivée, sans fusion approximative.
+  - name: scheduled_duration_minutes
+    data_type: INT64
+    description: Durée moyenne prévue ; ne reconstruit pas les seuils individuels.
+  - name: scheduled_trains
+    data_type: INT64
+    description: Effectif prévu publié.
+  - name: cancelled_trains
+    data_type: INT64
+    description: Effectif annulé publié ; convention de préavis non certifiée.
+  - name: cancellation_comment
+    data_type: STRING
+    description: Commentaire facultatif ; null conservé.
+  - name: departure_delayed_trains
+    data_type: INT64
+    description: Effectif publié en retard au départ.
+  - name: mean_departure_delay_late_minutes
+    data_type: FLOAT64
+    description: Moyenne publiée des trains en retard au départ.
+  - name: mean_departure_delay_all_minutes
+    data_type: FLOAT64
+    description: Moyenne tous trains au départ ; signe conservé.
+  - name: departure_delay_comment
+    data_type: STRING
+    description: Commentaire facultatif ; null conservé.
+  - name: arrival_delayed_trains
+    data_type: INT64
+    description: Effectif composite publié ; pas de reconstruction des seuils.
+  - name: mean_arrival_delay_late_minutes
+    data_type: FLOAT64
+    description: Moyenne des trains en retard ; exclusion si négative.
+  - name: mean_arrival_delay_all_minutes
+    data_type: FLOAT64
+    description: Moyenne tous trains à l’arrivée ; signe conservé.
+  - name: arrival_delay_comment
+    data_type: STRING
+    description: Commentaire facultatif, conservé sans NLP.
+  - name: arrival_delayed_over_15_trains
+    data_type: INT64
+    description: 'Périmètre aérien non identifié : aucun KPI générique V1.'
+  - name: mean_arrival_delay_over_15_minutes
+    data_type: FLOAT64
+    description: Moyenne au périmètre restreint >15, exclue des KPI génériques.
+  - name: arrival_delayed_over_30_trains
+    data_type: INT64
+    description: Effectif publié >30 ; valeur brute conservée, quarantaine T1 2025.
+  - name: arrival_delayed_over_60_trains
+    data_type: INT64
+    description: Effectif >60 ; usage du couple soumis au contrat D04.
+  - name: invalid_json
+    data_type: BOOL
+    description: JSON illisible ; erreur bloquante.
+  - name: conversion_error_fields
+    data_type: ARRAY<STRING>
+    description: Champs présents de type inattendu ou non convertibles ; erreur bloquante.
+  - name: missing_schema_fields
+    data_type: ARRAY<STRING>
+    description: Champs absents du schéma source ; distinct de JSON null.
+  - name: scheduled_population_valid
+    data_type: BOOL
+    description: P et A renseignés et 0 ≤ A ≤ P. Ne certifie pas la population officielle.
+  - name: central_counts_compatible
+    data_type: BOOL
+    description: P, A, L renseignés et 0 ≤ A ≤ P, 0 ≤ L ≤ P−A.
+  - name: is_important_delay_quarantined
+    data_type: BOOL
+    description: Tout janvier–mars 2025 ; restriction du couple >30/>60, pas de toute
+      la ligne.
+  - name: cause_present_count
+    data_type: INT64
+    description: Nombre de parts non nulles sur six, sans remplacer les absences.
+  - name: cause_out_of_bounds_count
+    data_type: INT64
+    description: Nombre de parts connues hors de [0,100].
+  - name: cause_sum_pct
+    data_type: FLOAT64
+    description: Somme seulement lorsque les six parts sont présentes ; ne prouve
+      pas la population.
+  - name: services_in_month
+    data_type: INT64
+    description: Nombre de services pour la paire orientée et le mois.
+  - name: services_in_history
+    data_type: INT64
+    description: Nombre de services observés dans l’historique ; signal, pas exclusion
+      globale.
+  - name: operated_trains_proxy
+    data_type: INT64
+    description: P−A si population compatible ; convention analytique D01 non certifiée.
+  - name: important_delay_nesting_valid
+    data_type: BOOL
+    description: 0 ≤ >60 ≤ >30 ≤ retards arrivée ; complété par les effectifs centraux.
+  - name: is_cause_profile_complete
+    data_type: BOOL
+    description: Six parts présentes.
+  - name: is_cause_profile_all_zero
+    data_type: BOOL
+    description: 'Six parts égales à zéro : profil non exploitable.'
+  - name: has_cause_sum_warning
+    data_type: BOOL
+    description: 'Profil complet non nul : écart >0,1 point + garde flottante de 1e-9
+      point.'
+  - name: is_cancellation_count_usable
+    data_type: BOOL
+    description: Compatibilité P/A ; indépendant du retard arrivée.
+  - name: is_cancellation_rate_usable
+    data_type: BOOL
+    description: Compatibilité P/A et P strictement positif.
+  - name: is_arrival_delay_count_usable
+    data_type: BOOL
+    description: Compatibilité des effectifs centraux ; N=0 autorisé pour l’effectif
+      nul.
+  - name: is_arrival_delay_rate_usable
+    data_type: BOOL
+    description: Effectifs centraux compatibles et proxy strictement positif.
+  - name: is_departure_delay_count_usable
+    data_type: BOOL
+    description: Effectif départ entre zéro et proxy compatible.
+  - name: is_important_delay_count_usable
+    data_type: BOOL
+    description: Effectifs centraux et imbrication valides, hors quarantaine.
+  - name: is_important_delay_rate_usable
+    data_type: BOOL
+    description: Couple important utilisable et proxy strictement positif.
+  - name: is_cause_profile_usable
+    data_type: BOOL
+    description: Profil complet, borné, non entièrement nul, éventuellement avec avertissement
+      de somme ; aucun volume ni agrégation permis.
+  - name: is_mean_arrival_delay_late_usable
+    data_type: BOOL
+    description: Population compatible, retards arrivée >0 et moyenne publiée non
+      négative.
+  - name: is_mean_departure_delay_late_usable
+    data_type: BOOL
+    description: Population départ compatible, retards départ >0 et moyenne non négative.
+  - name: is_over_15_generic_usable
+    data_type: BOOL
+    description: 'Toujours faux : périmètre aérien non identifiable.'
+  - name: has_negative_mean_departure_all
+    data_type: BOOL
+    description: Moyenne tous trains négative conservée, sans correction.
+  - name: has_negative_mean_arrival_all
+    data_type: BOOL
+    description: Moyenne tous trains négative conservée, sans correction.
+  - name: has_negative_mean_arrival_late
+    data_type: BOOL
+    description: Moyenne négative des seuls trains en retard exclue de son usage.
+  - name: has_negative_mean_departure_late
+    data_type: BOOL
+    description: Moyenne négative des seuls trains en retard exclue de son usage.
+  - name: has_negative_scheduled_duration
+    data_type: BOOL
+    description: Durée moyenne négative signalée, sans reconstruction des seuils.
+  - name: has_multiple_services_in_month
+    data_type: BOOL
+    description: Plusieurs services simultanés ; à examiner dans les fenêtres de comparaison.
+  - name: has_multiple_services_in_history
+    data_type: BOOL
+    description: Plusieurs services historiques ; aucune fusion implicite.
+  - name: cause_profile_status
+    data_type: STRING
+    description: missing / out_of_bounds / all_zero / sum_warning / available.
+  - name: quality_reasons
+    data_type: ARRAY<STRING>
+    description: Motifs cumulatifs ; ne pas les additionner pour compter des observations
+      distinctes.
+  - name: version_id
+    description: Version brute unique qualifiée ; jamais un axe de somme.
+    data_tests:
+    - not_null
+  - name: route_key
+    description: Clé étrangère vers la dimension partagée.
+    data_tests:
+    - not_null
+    - relationships:
+        arguments:
+          to: ref('dim_route')
+          field: route_key
+  - name: service_key
+    description: Clé étrangère vers la dimension partagée.
+    data_tests:
+    - not_null
+    - relationships:
+        arguments:
+          to: ref('dim_service')
+          field: service_key
+  - name: month
+    description: Premier jour représentant le mois métier.
+    data_tests:
+    - not_null
+    - relationships:
+        arguments:
+          to: ref('dim_date')
+          field: date_key
+  - name: row_number
+    description: Position source, provenance seulement, pas une clé métier stable.
+    data_tests:
+    - not_null
+  - name: row_sha256
+    description: Empreinte de l’observation source.
+    data_tests:
+    - not_null
+  - name: cancellation_rate
+    description: Ratio NUMERIC 0–1 sous masque de validité J04 ; NULL si indisponible.
+      Ne pas moyenner les taux. D01 pour les ratios sur P−A.
+    data_type: NUMERIC
+  - name: arrival_delay_rate
+    description: Ratio NUMERIC 0–1 sous masque de validité J04 ; NULL si indisponible.
+      Ne pas moyenner les taux. D01 pour les ratios sur P−A.
+    data_type: NUMERIC
+  - name: composite_regularity_rate
+    description: Ratio NUMERIC 0–1 sous masque de validité J04 ; NULL si indisponible.
+      Ne pas moyenner les taux. D01 pour les ratios sur P−A.
+    data_type: NUMERIC
+  - name: over_30_delay_rate
+    description: Ratio NUMERIC 0–1 sous masque de validité J04 ; NULL si indisponible.
+      Ne pas moyenner les taux. D01 pour les ratios sur P−A.
+    data_type: NUMERIC
+  - name: over_60_delay_rate
+    description: Ratio NUMERIC 0–1 sous masque de validité J04 ; NULL si indisponible.
+      Ne pas moyenner les taux. D01 pour les ratios sur P−A.
+    data_type: NUMERIC
+  - name: over_30_delay_count
+    description: Effectif analytique seulement si couple important utilisable ; brut
+      séparé intact. Ne pas additionner les seuils.
+    data_type: INT64
+  - name: over_60_delay_count
+    description: Effectif analytique seulement si couple important utilisable ; brut
+      séparé intact. Ne pas additionner les seuils.
+    data_type: INT64
+  - name: denominator_status
+    description: 'Réserve explicite D01 : population déduite non certifiée.'
+    data_tests:
+    - not_null
+- name: fct_delay_causes_monthly
+  description: Mois × liaison × service × cause. Part publiée 0–100, y compris NULL/zéro
+    ; aucune agrégation temporelle ou entre liaisons, aucun effectif estimé.
+  columns:
+  - name: version_id
+    description: Version brute unique qualifiée ; jamais un axe de somme.
+    data_tests:
+    - not_null
+  - name: route_key
+    description: Clé étrangère vers la dimension partagée.
+    data_tests:
+    - not_null
+    - relationships:
+        arguments:
+          to: ref('dim_route')
+          field: route_key
+  - name: service_key
+    description: Clé étrangère vers la dimension partagée.
+    data_tests:
+    - not_null
+    - relationships:
+        arguments:
+          to: ref('dim_service')
+          field: service_key
+  - name: month
+    description: Premier jour représentant le mois métier.
+    data_tests:
+    - not_null
+    - relationships:
+        arguments:
+          to: ref('dim_date')
+          field: date_key
+  - name: row_number
+    description: Position source, provenance seulement, pas une clé métier stable.
+    data_tests:
+    - not_null
+  - name: row_sha256
+    description: Empreinte de l’observation source.
+    data_tests:
+    - not_null
+  - name: cause_key
+    description: Catégorie du profil.
+    data_tests:
+    - not_null
+    - relationships:
+        arguments:
+          to: ref('dim_cause')
+          field: cause_key
+  - name: published_cause_pct
+    description: Part brute publiée sur 0–100, NULL distinct de zéro ; aucune moyenne
+      ni conversion en effectif.
+    data_type: FLOAT64
+  - name: cause_profile_status
+    data_type: STRING
+    description: missing / out_of_bounds / all_zero / sum_warning / available.
+  - name: is_cause_profile_usable
+    data_type: BOOL
+    description: Profil complet, borné, non entièrement nul, éventuellement avec avertissement
+      de somme ; aucun volume ni agrégation permis.
+  - name: cause_sum_pct
+    data_type: FLOAT64
+    description: Somme seulement lorsque les six parts sont présentes ; ne prouve
+      pas la population.
+  - name: has_cause_sum_warning
+    data_type: BOOL
+    description: 'Profil complet non nul : écart >0,1 point + garde flottante de 1e-9
+      point.'
+- name: mart_route_trends
+  description: Même grain que le fait principal ; comparaison au mois exact N−1. Le
+    contrôle de volume mensuel ne remplace pas le contrôle du service sur toute la
+    fenêtre.
+  columns:
+  - name: service_type
+    data_type: STRING
+    description: Service source, National ou International, sans reclassification.
+  - name: departure_station
+    data_type: STRING
+    description: Libellé source de départ ; direction préservée.
+  - name: arrival_station
+    data_type: STRING
+    description: Libellé source d’arrivée, sans fusion approximative.
+  - name: scheduled_duration_minutes
+    data_type: INT64
+    description: Durée moyenne prévue ; ne reconstruit pas les seuils individuels.
+  - name: scheduled_trains
+    data_type: INT64
+    description: Effectif prévu publié.
+  - name: cancelled_trains
+    data_type: INT64
+    description: Effectif annulé publié ; convention de préavis non certifiée.
+  - name: cancellation_comment
+    data_type: STRING
+    description: Commentaire facultatif ; null conservé.
+  - name: departure_delayed_trains
+    data_type: INT64
+    description: Effectif publié en retard au départ.
+  - name: mean_departure_delay_late_minutes
+    data_type: FLOAT64
+    description: Moyenne publiée des trains en retard au départ.
+  - name: mean_departure_delay_all_minutes
+    data_type: FLOAT64
+    description: Moyenne tous trains au départ ; signe conservé.
+  - name: departure_delay_comment
+    data_type: STRING
+    description: Commentaire facultatif ; null conservé.
+  - name: arrival_delayed_trains
+    data_type: INT64
+    description: Effectif composite publié ; pas de reconstruction des seuils.
+  - name: mean_arrival_delay_late_minutes
+    data_type: FLOAT64
+    description: Moyenne des trains en retard ; exclusion si négative.
+  - name: mean_arrival_delay_all_minutes
+    data_type: FLOAT64
+    description: Moyenne tous trains à l’arrivée ; signe conservé.
+  - name: arrival_delay_comment
+    data_type: STRING
+    description: Commentaire facultatif, conservé sans NLP.
+  - name: arrival_delayed_over_15_trains
+    data_type: INT64
+    description: 'Périmètre aérien non identifié : aucun KPI générique V1.'
+  - name: mean_arrival_delay_over_15_minutes
+    data_type: FLOAT64
+    description: Moyenne au périmètre restreint >15, exclue des KPI génériques.
+  - name: arrival_delayed_over_30_trains
+    data_type: INT64
+    description: Effectif publié >30 ; valeur brute conservée, quarantaine T1 2025.
+  - name: arrival_delayed_over_60_trains
+    data_type: INT64
+    description: Effectif >60 ; usage du couple soumis au contrat D04.
+  - name: invalid_json
+    data_type: BOOL
+    description: JSON illisible ; erreur bloquante.
+  - name: conversion_error_fields
+    data_type: ARRAY<STRING>
+    description: Champs présents de type inattendu ou non convertibles ; erreur bloquante.
+  - name: missing_schema_fields
+    data_type: ARRAY<STRING>
+    description: Champs absents du schéma source ; distinct de JSON null.
+  - name: scheduled_population_valid
+    data_type: BOOL
+    description: P et A renseignés et 0 ≤ A ≤ P. Ne certifie pas la population officielle.
+  - name: central_counts_compatible
+    data_type: BOOL
+    description: P, A, L renseignés et 0 ≤ A ≤ P, 0 ≤ L ≤ P−A.
+  - name: is_important_delay_quarantined
+    data_type: BOOL
+    description: Tout janvier–mars 2025 ; restriction du couple >30/>60, pas de toute
+      la ligne.
+  - name: cause_present_count
+    data_type: INT64
+    description: Nombre de parts non nulles sur six, sans remplacer les absences.
+  - name: cause_out_of_bounds_count
+    data_type: INT64
+    description: Nombre de parts connues hors de [0,100].
+  - name: cause_sum_pct
+    data_type: FLOAT64
+    description: Somme seulement lorsque les six parts sont présentes ; ne prouve
+      pas la population.
+  - name: services_in_month
+    data_type: INT64
+    description: Nombre de services pour la paire orientée et le mois.
+  - name: services_in_history
+    data_type: INT64
+    description: Nombre de services observés dans l’historique ; signal, pas exclusion
+      globale.
+  - name: operated_trains_proxy
+    data_type: INT64
+    description: P−A si population compatible ; convention analytique D01 non certifiée.
+  - name: important_delay_nesting_valid
+    data_type: BOOL
+    description: 0 ≤ >60 ≤ >30 ≤ retards arrivée ; complété par les effectifs centraux.
+  - name: is_cause_profile_complete
+    data_type: BOOL
+    description: Six parts présentes.
+  - name: is_cause_profile_all_zero
+    data_type: BOOL
+    description: 'Six parts égales à zéro : profil non exploitable.'
+  - name: has_cause_sum_warning
+    data_type: BOOL
+    description: 'Profil complet non nul : écart >0,1 point + garde flottante de 1e-9
+      point.'
+  - name: is_cancellation_count_usable
+    data_type: BOOL
+    description: Compatibilité P/A ; indépendant du retard arrivée.
+  - name: is_cancellation_rate_usable
+    data_type: BOOL
+    description: Compatibilité P/A et P strictement positif.
+  - name: is_arrival_delay_count_usable
+    data_type: BOOL
+    description: Compatibilité des effectifs centraux ; N=0 autorisé pour l’effectif
+      nul.
+  - name: is_arrival_delay_rate_usable
+    data_type: BOOL
+    description: Effectifs centraux compatibles et proxy strictement positif.
+  - name: is_departure_delay_count_usable
+    data_type: BOOL
+    description: Effectif départ entre zéro et proxy compatible.
+  - name: is_important_delay_count_usable
+    data_type: BOOL
+    description: Effectifs centraux et imbrication valides, hors quarantaine.
+  - name: is_important_delay_rate_usable
+    data_type: BOOL
+    description: Couple important utilisable et proxy strictement positif.
+  - name: is_cause_profile_usable
+    data_type: BOOL
+    description: Profil complet, borné, non entièrement nul, éventuellement avec avertissement
+      de somme ; aucun volume ni agrégation permis.
+  - name: is_mean_arrival_delay_late_usable
+    data_type: BOOL
+    description: Population compatible, retards arrivée >0 et moyenne publiée non
+      négative.
+  - name: is_mean_departure_delay_late_usable
+    data_type: BOOL
+    description: Population départ compatible, retards départ >0 et moyenne non négative.
+  - name: is_over_15_generic_usable
+    data_type: BOOL
+    description: 'Toujours faux : périmètre aérien non identifiable.'
+  - name: has_negative_mean_departure_all
+    data_type: BOOL
+    description: Moyenne tous trains négative conservée, sans correction.
+  - name: has_negative_mean_arrival_all
+    data_type: BOOL
+    description: Moyenne tous trains négative conservée, sans correction.
+  - name: has_negative_mean_arrival_late
+    data_type: BOOL
+    description: Moyenne négative des seuls trains en retard exclue de son usage.
+  - name: has_negative_mean_departure_late
+    data_type: BOOL
+    description: Moyenne négative des seuls trains en retard exclue de son usage.
+  - name: has_negative_scheduled_duration
+    data_type: BOOL
+    description: Durée moyenne négative signalée, sans reconstruction des seuils.
+  - name: has_multiple_services_in_month
+    data_type: BOOL
+    description: Plusieurs services simultanés ; à examiner dans les fenêtres de comparaison.
+  - name: has_multiple_services_in_history
+    data_type: BOOL
+    description: Plusieurs services historiques ; aucune fusion implicite.
+  - name: cause_profile_status
+    data_type: STRING
+    description: missing / out_of_bounds / all_zero / sum_warning / available.
+  - name: quality_reasons
+    data_type: ARRAY<STRING>
+    description: Motifs cumulatifs ; ne pas les additionner pour compter des observations
+      distinctes.
+  - name: version_id
+    description: Version brute unique qualifiée ; jamais un axe de somme.
+    data_tests:
+    - not_null
+  - name: route_key
+    description: Clé étrangère vers la dimension partagée.
+    data_tests:
+    - not_null
+    - relationships:
+        arguments:
+          to: ref('dim_route')
+          field: route_key
+  - name: service_key
+    description: Clé étrangère vers la dimension partagée.
+    data_tests:
+    - not_null
+    - relationships:
+        arguments:
+          to: ref('dim_service')
+          field: service_key
+  - name: month
+    description: Premier jour représentant le mois métier.
+    data_tests:
+    - not_null
+    - relationships:
+        arguments:
+          to: ref('dim_date')
+          field: date_key
+  - name: row_number
+    description: Position source, provenance seulement, pas une clé métier stable.
+    data_tests:
+    - not_null
+  - name: row_sha256
+    description: Empreinte de l’observation source.
+    data_tests:
+    - not_null
+  - name: cancellation_rate
+    description: Ratio NUMERIC 0–1 sous masque de validité J04 ; NULL si indisponible.
+      Ne pas moyenner les taux. D01 pour les ratios sur P−A.
+    data_type: NUMERIC
+  - name: arrival_delay_rate
+    description: Ratio NUMERIC 0–1 sous masque de validité J04 ; NULL si indisponible.
+      Ne pas moyenner les taux. D01 pour les ratios sur P−A.
+    data_type: NUMERIC
+  - name: composite_regularity_rate
+    description: Ratio NUMERIC 0–1 sous masque de validité J04 ; NULL si indisponible.
+      Ne pas moyenner les taux. D01 pour les ratios sur P−A.
+    data_type: NUMERIC
+  - name: over_30_delay_rate
+    description: Ratio NUMERIC 0–1 sous masque de validité J04 ; NULL si indisponible.
+      Ne pas moyenner les taux. D01 pour les ratios sur P−A.
+    data_type: NUMERIC
+  - name: over_60_delay_rate
+    description: Ratio NUMERIC 0–1 sous masque de validité J04 ; NULL si indisponible.
+      Ne pas moyenner les taux. D01 pour les ratios sur P−A.
+    data_type: NUMERIC
+  - name: over_30_delay_count
+    description: Effectif analytique seulement si couple important utilisable ; brut
+      séparé intact. Ne pas additionner les seuils.
+    data_type: INT64
+  - name: over_60_delay_count
+    description: Effectif analytique seulement si couple important utilisable ; brut
+      séparé intact. Ne pas additionner les seuils.
+    data_type: INT64
+  - name: denominator_status
+    description: 'Réserve explicite D01 : population déduite non certifiée.'
+    data_tests:
+    - not_null
+  - name: previous_month
+    description: Comparaison au même mois N−1 ; booléens de signal NULL si population
+      non admissible. Seuils du projet, sans engagement SNCF.
+  - name: previous_arrival_delayed_trains
+    description: Comparaison au même mois N−1 ; booléens de signal NULL si population
+      non admissible. Seuils du projet, sans engagement SNCF.
+  - name: previous_operated_trains_proxy
+    description: Comparaison au même mois N−1 ; booléens de signal NULL si population
+      non admissible. Seuils du projet, sans engagement SNCF.
+  - name: previous_arrival_delay_rate
+    description: Comparaison au même mois N−1 ; booléens de signal NULL si population
+      non admissible. Seuils du projet, sans engagement SNCF.
+  - name: is_year_pair_usable
+    description: Comparaison au même mois N−1 ; booléens de signal NULL si population
+      non admissible. Seuils du projet, sans engagement SNCF.
+  - name: passes_pair_volume_screen
+    description: Comparaison au même mois N−1 ; booléens de signal NULL si population
+      non admissible. Seuils du projet, sans engagement SNCF.
+  - name: arrival_delay_change_pp
+    description: Comparaison au même mois N−1 ; booléens de signal NULL si population
+      non admissible. Seuils du projet, sans engagement SNCF.
+  - name: is_monthly_deterioration
+    description: Comparaison au même mois N−1 ; booléens de signal NULL si population
+      non admissible. Seuils du projet, sans engagement SNCF.
+  - name: is_monthly_underperformance
+    description: Comparaison au même mois N−1 ; booléens de signal NULL si population
+      non admissible. Seuils du projet, sans engagement SNCF.
+- name: mart_route_priorities
+  description: Version × liaison × service National × comparaison contractuelle. Candidats
+    inéligibles conservés. Ratios de sommes, couvertures par indicateur, aucun score/classement.
+    Persistance seulement sur le semestre autorisé.
+  columns:
+  - name: version_id
+    description: Version brute unique qualifiée ; jamais un axe de somme.
+    data_tests:
+    - not_null
+  - name: route_key
+    description: Clé étrangère vers la dimension partagée.
+    data_tests:
+    - not_null
+    - relationships:
+        arguments:
+          to: ref('dim_route')
+          field: route_key
+  - name: service_key
+    description: Clé étrangère vers la dimension partagée.
+    data_tests:
+    - not_null
+    - relationships:
+        arguments:
+          to: ref('dim_service')
+          field: service_key
+  - name: comparison_id
+    description: Paramètre, couverture ou diagnostic contractuel. Écart NULL hors
+      éligibilité ; persistance NULL hors semestre éligible. Motifs cumulables, non
+      additionnables.
+  - name: current_start
+    description: Paramètre, couverture ou diagnostic contractuel. Écart NULL hors
+      éligibilité ; persistance NULL hors semestre éligible. Motifs cumulables, non
+      additionnables.
+  - name: current_end
+    description: Paramètre, couverture ou diagnostic contractuel. Écart NULL hors
+      éligibilité ; persistance NULL hors semestre éligible. Motifs cumulables, non
+      additionnables.
+  - name: previous_start
+    description: Paramètre, couverture ou diagnostic contractuel. Écart NULL hors
+      éligibilité ; persistance NULL hors semestre éligible. Motifs cumulables, non
+      additionnables.
+  - name: previous_end
+    description: Paramètre, couverture ou diagnostic contractuel. Écart NULL hors
+      éligibilité ; persistance NULL hors semestre éligible. Motifs cumulables, non
+      additionnables.
+  - name: expected_months
+    description: Paramètre, couverture ou diagnostic contractuel. Écart NULL hors
+      éligibilité ; persistance NULL hors semestre éligible. Motifs cumulables, non
+      additionnables.
+  - name: persistence_applicable
+    description: Paramètre, couverture ou diagnostic contractuel. Écart NULL hors
+      éligibilité ; persistance NULL hors semestre éligible. Motifs cumulables, non
+      additionnables.
+  - name: services_in_comparison
+    description: Paramètre, couverture ou diagnostic contractuel. Écart NULL hors
+      éligibilité ; persistance NULL hors semestre éligible. Motifs cumulables, non
+      additionnables.
+  - name: is_comparison_eligible
+    description: Paramètre, couverture ou diagnostic contractuel. Écart NULL hors
+      éligibilité ; persistance NULL hors semestre éligible. Motifs cumulables, non
+      additionnables.
+  - name: exclusion_reasons
+    description: Paramètre, couverture ou diagnostic contractuel. Écart NULL hors
+      éligibilité ; persistance NULL hors semestre éligible. Motifs cumulables, non
+      additionnables.
+  - name: eligible_month_pairs
+    description: Paramètre, couverture ou diagnostic contractuel. Écart NULL hors
+      éligibilité ; persistance NULL hors semestre éligible. Motifs cumulables, non
+      additionnables.
+  - name: deterioration_months
+    description: Paramètre, couverture ou diagnostic contractuel. Écart NULL hors
+      éligibilité ; persistance NULL hors semestre éligible. Motifs cumulables, non
+      additionnables.
+  - name: underperformance_months
+    description: Paramètre, couverture ou diagnostic contractuel. Écart NULL hors
+      éligibilité ; persistance NULL hors semestre éligible. Motifs cumulables, non
+      additionnables.
+  - name: arrival_delay_change_pp
+    description: Paramètre, couverture ou diagnostic contractuel. Écart NULL hors
+      éligibilité ; persistance NULL hors semestre éligible. Motifs cumulables, non
+      additionnables.
+  - name: change_signal
+    description: Paramètre, couverture ou diagnostic contractuel. Écart NULL hors
+      éligibilité ; persistance NULL hors semestre éligible. Motifs cumulables, non
+      additionnables.
+  - name: deterioration_persistence
+    description: Paramètre, couverture ou diagnostic contractuel. Écart NULL hors
+      éligibilité ; persistance NULL hors semestre éligible. Motifs cumulables, non
+      additionnables.
+  - name: underperformance_persistence
+    description: Paramètre, couverture ou diagnostic contractuel. Écart NULL hors
+      éligibilité ; persistance NULL hors semestre éligible. Motifs cumulables, non
+      additionnables.
+  - name: is_deterioration_persistent
+    description: Paramètre, couverture ou diagnostic contractuel. Écart NULL hors
+      éligibilité ; persistance NULL hors semestre éligible. Motifs cumulables, non
+      additionnables.
+  - name: is_underperformance_persistent
+    description: Paramètre, couverture ou diagnostic contractuel. Écart NULL hors
+      éligibilité ; persistance NULL hors semestre éligible. Motifs cumulables, non
+      additionnables.
+  - name: minimum_monthly_operated_proxy
+    description: Paramètre, couverture ou diagnostic contractuel. Écart NULL hors
+      éligibilité ; persistance NULL hors semestre éligible. Motifs cumulables, non
+      additionnables.
+  - name: deterioration_threshold_pp
+    description: Paramètre, couverture ou diagnostic contractuel. Écart NULL hors
+      éligibilité ; persistance NULL hors semestre éligible. Motifs cumulables, non
+      additionnables.
+  - name: regularity_target_pct
+    description: Paramètre, couverture ou diagnostic contractuel. Écart NULL hors
+      éligibilité ; persistance NULL hors semestre éligible. Motifs cumulables, non
+      additionnables.
+  - name: denominator_status
+    description: Paramètre, couverture ou diagnostic contractuel. Écart NULL hors
+      éligibilité ; persistance NULL hors semestre éligible. Motifs cumulables, non
+      additionnables.
+  - name: current_observed_months
+    description: 'Période current : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: current_eligible_months
+    description: 'Période current : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: current_cancellation_valid_months
+    description: 'Période current : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: current_arrival_valid_months
+    description: 'Période current : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: current_important_valid_months
+    description: 'Période current : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: current_important_count_valid_months
+    description: 'Période current : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: current_cancellation_numerator
+    description: 'Période current : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: current_cancellation_denominator
+    description: 'Période current : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: current_arrival_numerator
+    description: 'Période current : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: current_arrival_denominator
+    description: 'Période current : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: current_over_30_numerator
+    description: 'Période current : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: current_over_60_numerator
+    description: 'Période current : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: current_important_denominator
+    description: 'Période current : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: current_over_30_valid_count_sum
+    description: 'Période current : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: current_over_60_valid_count_sum
+    description: 'Période current : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: current_observation_coverage
+    description: 'Période current : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: current_cancellation_rate
+    description: 'Période current : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: current_arrival_delay_rate
+    description: 'Période current : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: current_composite_regularity_rate
+    description: 'Période current : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: current_over_30_delay_rate
+    description: 'Période current : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: current_over_60_delay_rate
+    description: 'Période current : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: previous_observed_months
+    description: 'Période previous : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: previous_eligible_months
+    description: 'Période previous : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: previous_cancellation_valid_months
+    description: 'Période previous : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: previous_arrival_valid_months
+    description: 'Période previous : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: previous_important_valid_months
+    description: 'Période previous : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: previous_important_count_valid_months
+    description: 'Période previous : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: previous_cancellation_numerator
+    description: 'Période previous : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: previous_cancellation_denominator
+    description: 'Période previous : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: previous_arrival_numerator
+    description: 'Période previous : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: previous_arrival_denominator
+    description: 'Période previous : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: previous_over_30_numerator
+    description: 'Période previous : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: previous_over_60_numerator
+    description: 'Période previous : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: previous_important_denominator
+    description: 'Période previous : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: previous_over_30_valid_count_sum
+    description: 'Période previous : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: previous_over_60_valid_count_sum
+    description: 'Période previous : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: previous_observation_coverage
+    description: 'Période previous : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: previous_cancellation_rate
+    description: 'Période previous : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: previous_arrival_delay_rate
+    description: 'Période previous : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: previous_composite_regularity_rate
+    description: 'Période previous : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: previous_over_30_delay_rate
+    description: 'Période previous : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'
+  - name: previous_over_60_delay_rate
+    description: 'Période previous : numérateur/dénominateur sur les mêmes mois valides
+      de cet indicateur. Sommes partielles identifiées par couverture ; taux NULL
+      si période incomplète pour son usage.'

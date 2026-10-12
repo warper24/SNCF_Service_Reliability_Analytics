@@ -2,7 +2,7 @@
 
 Date du plan : 9 septembre 2026.
 
-Dernière révision : 9 octobre 2026 — publication de l’état validé J01–J04. Révision pédagogique et du stockage discutée le 28 septembre 2026 et intégrée le 1er octobre 2026 après validation du porteur du projet.
+Dernière révision : 12 octobre 2026 — clôture Git de J05, qualifié le 9 octobre, après publication de l’état validé J01–J04. Révision pédagogique et du stockage discutée le 28 septembre 2026 et intégrée le 1er octobre 2026 après validation du porteur du projet.
 
 Ce document sert de référence aux prochaines conversations adossées au dépôt. **Une conversation = un jalon.** Il décrit le travail à réaliser ; sa présence ne signifie pas que les jalons sont implémentés ou validés.
 
@@ -148,7 +148,7 @@ flowchart LR
 
     MARTS -->|Import et actualisation| PBI
 
-    REPO -->|Publication prévue à J10| GH
+    REPO -->|Publication progressive et livraison finale J10| GH
 
 ```
 
@@ -364,7 +364,7 @@ Le dictionnaire des KPI devra préciser, pour chacun : question métier, formule
 
 | J04 | Normalisation et qualité avec dbt | J03 | Terminé le 8 octobre 2026 — deux vues sur 12 907 observations, 18 tests réussis et quatre avertissements documentés ; limites dans le bilan |
 
-| J05 | Modèle en étoile et calculs de référence | J04 | À réaliser |
+| J05 | Modèle en étoile et calculs de référence | J04 | Terminé le 9 octobre 2026 — huit tables, 76 tests J05 réussis, couverture centrale 102/116 au semestre et 88/116 à l'année ; limites dans le bilan |
 
 | J06 | Diagnostic SQL et priorisation | J05 | À réaliser |
 
@@ -681,6 +681,8 @@ Les chemins des sections suivantes sont relatifs à la racine du dépôt. Ils d�
 **Risques et erreurs à éviter.** Remplacement systématique des valeurs manquantes par zéro, suppression arbitraire des extrêmes, fusion approximative des gares ou règles excessivement générales. Par exemple, ne pas imposer la positivité de tous les retards moyens sans vérifier si la source peut représenter des arrivées en avance.
 
 ### J05 — Modèle analytique en étoile et calculs de référence
+
+**État au 9 octobre 2026 : terminé avec limites explicites.** Après présentation détaillée et accord « Ok tu peux implémenter », huit tables dbt BigQuery EU structurent la version J03 figée : quatre dimensions, deux faits et deux marts. Le fait principal conserve 12 907 observations et le fait des causes 77 442 parts, sans effectifs dérivés. Les 76 tests J05 réussissent ; J04 rejoué conserve 18 réussites et quatre avertissements, et les 37 tests Python passent. Les huit cas source sont réconciliés. Les fenêtres J01 retrouvent 102/116 candidats National éligibles au semestre et 88/116 à l'année ; la persistance annuelle reste indisponible. Les comparaisons >30/>60 impliquant le T1 2025 restent indisponibles. Voir [le bilan J05](docs/milestones/J05_handoff.md), [le modèle](docs/data_model.md) et [la validation](reports/data_model_validation.md). Aucun classement J06, mesure DAX ou actualisation Power BI engagé.
 
 **Objectif.** Construire des tables de référence communes à l'analyse SQL et à Power BI.
 

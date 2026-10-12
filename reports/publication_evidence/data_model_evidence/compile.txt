@@ -1,0 +1,32 @@
+14:25:58  Running with dbt=1.12.5
+14:26:00  Registered adapter: bigquery=1.12.1
+14:26:03  Found 11 models, 8 analyses, 89 data tests, 1 source, 567 macros, 9 unit tests
+14:26:03  
+14:26:03  Concurrency: 2 threads (target='dev')
+14:26:03  
+Compiled node 'j05_model_summary' is:
+
+select 'dim_date' as model_name, count(*) as row_count from `sncf-reliability-analytics`.`sncf_dev`.`dim_date`
+union all
+
+select 'dim_route' as model_name, count(*) as row_count from `sncf-reliability-analytics`.`sncf_dev`.`dim_route`
+union all
+
+select 'dim_service' as model_name, count(*) as row_count from `sncf-reliability-analytics`.`sncf_dev`.`dim_service`
+union all
+
+select 'dim_cause' as model_name, count(*) as row_count from `sncf-reliability-analytics`.`sncf_dev`.`dim_cause`
+union all
+
+select 'fct_reliability_monthly' as model_name, count(*) as row_count from `sncf-reliability-analytics`.`sncf_dev`.`fct_reliability_monthly`
+union all
+
+select 'fct_delay_causes_monthly' as model_name, count(*) as row_count from `sncf-reliability-analytics`.`sncf_dev`.`fct_delay_causes_monthly`
+union all
+
+select 'mart_route_trends' as model_name, count(*) as row_count from `sncf-reliability-analytics`.`sncf_dev`.`mart_route_trends`
+union all
+
+select 'mart_route_priorities' as model_name, count(*) as row_count from `sncf-reliability-analytics`.`sncf_dev`.`mart_route_priorities`
+
+

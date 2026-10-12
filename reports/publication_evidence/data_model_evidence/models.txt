@@ -1,0 +1,28 @@
+14:23:53  Running with dbt=1.12.5
+14:23:56  Registered adapter: bigquery=1.12.1
+14:23:59  Found 11 models, 8 analyses, 89 data tests, 1 source, 567 macros, 9 unit tests
+14:23:59  
+14:23:59  Concurrency: 2 threads (target='dev')
+14:23:59  
+14:24:03  1 of 8 START sql table model sncf_dev.dim_cause ................................ [RUN]
+14:24:03  2 of 8 START sql table model sncf_dev.dim_date ................................. [RUN]
+14:24:06  1 of 8 OK created sql table model sncf_dev.dim_cause ........................... [CREATE TABLE (6.0 rows, 0 processed) in 2.82s]
+14:24:06  3 of 8 START sql table model sncf_dev.dim_route ................................ [RUN]
+14:24:07  2 of 8 OK created sql table model sncf_dev.dim_date ............................ [CREATE TABLE (3.3k rows, 10.6 MiB processed) in 3.44s]
+14:24:07  4 of 8 START sql table model sncf_dev.dim_service .............................. [RUN]
+14:24:10  4 of 8 OK created sql table model sncf_dev.dim_service ......................... [CREATE TABLE (2.0 rows, 10.6 MiB processed) in 2.90s]
+14:24:10  3 of 8 OK created sql table model sncf_dev.dim_route ........................... [CREATE TABLE (130.0 rows, 10.6 MiB processed) in 3.61s]
+14:24:10  5 of 8 START sql table model sncf_dev.fct_delay_causes_monthly ................. [RUN]
+14:24:10  6 of 8 START sql table model sncf_dev.fct_reliability_monthly .................. [RUN]
+14:24:16  5 of 8 OK created sql table model sncf_dev.fct_delay_causes_monthly ............ [CREATE TABLE (77.4k rows, 12.4 MiB processed) in 6.22s]
+14:24:18  6 of 8 OK created sql table model sncf_dev.fct_reliability_monthly ............. [CREATE TABLE (12.9k rows, 12.4 MiB processed) in 8.47s]
+14:24:18  7 of 8 START sql table model sncf_dev.mart_route_trends ........................ [RUN]
+14:24:21  7 of 8 OK created sql table model sncf_dev.mart_route_trends ................... [CREATE TABLE (12.9k rows, 8.3 MiB processed) in 3.17s]
+14:24:21  8 of 8 START sql table model sncf_dev.mart_route_priorities .................... [RUN]
+14:24:25  8 of 8 OK created sql table model sncf_dev.mart_route_priorities ............... [CREATE TABLE (232.0 rows, 6.9 MiB processed) in 3.50s]
+14:24:25  
+14:24:25  Finished running 8 table models in 0 hours 0 minutes and 26.11 seconds (26.11s).
+14:24:25  
+14:24:25  Completed successfully
+14:24:25  
+14:24:25  Done. PASS=8 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=8

@@ -7,7 +7,7 @@ from pathlib import Path
 import re
 
 REPO = Path(__file__).resolve().parents[1]
-GROUPS = ("audit_evidence", "ingestion_evidence", "data_quality_evidence")
+GROUPS = ("audit_evidence", "ingestion_evidence", "data_quality_evidence", "data_model_evidence")
 USER_PATH = re.compile(r"([A-Za-z]:[\\/]+Users[\\/]+)([^\\/\r\n\"<>]+)")
 SECRET = re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|"
                     r"\bgh[pousr]_[A-Za-z0-9]{20,}\b|\bgithub_pat_[A-Za-z0-9_]{20,}\b|"

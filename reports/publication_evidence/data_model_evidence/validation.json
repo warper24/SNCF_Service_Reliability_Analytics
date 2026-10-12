@@ -1,0 +1,3701 @@
+{
+  "code_sha256": {
+    "config/datasets.yaml": "c6ecff9aff11cbdcbbd4c3165713a1392ed281e5ce13e85a7868c0d8c451d4ba",
+    "dbt/analyses/j04_anomaly_examples.sql": "0bf04d3671b3c6546ebcbb9e33f2f9164daf2247ef8ebae6a2cb75e1ef2677de",
+    "dbt/analyses/j04_coverage.sql": "3a3d073e05e128d1824ab1b9eda092c1b73750f49ebc619ddea9c43f2990c9a0",
+    "dbt/analyses/j04_manual_cases.sql": "d69bf8d4f9270998351a24f3cee08d3c35b506110549a8a840a1a083b5f9f344",
+    "dbt/analyses/j04_period_coverage.sql": "c6c290a10bb52206c386bc59e7eda9497d43a7cf047428e99b36ea5f166c1c21",
+    "dbt/analyses/j04_quality_summary.sql": "ddfbd51ddc821adb0c7f383577be80273496757aa8936e39b56d95a3219f9ffe",
+    "dbt/analyses/j05_model_summary.sql": "79eadd2e5643a830d28f95f43adf58f510045bfe63c65716be34290aa0d60048",
+    "dbt/analyses/j05_period_coverage.sql": "a668b7c2106b5eebdde6aaaa99ad3ffa8f193a1b6dcc1f0bea426f7301217467",
+    "dbt/analyses/j05_reconciliation.sql": "0c1c694f48584b4ed6f350fd4cce63a58ab74ad68c811ed05d347327779ed237",
+    "dbt/dbt_project.yml": "976cf48b19a4d54a2de9700bfd5388e1bff53f9679c988eac51432feae5ea157",
+    "dbt/macros/j05_contract.sql": "57978b3aa5551b00dae31792fccbc3d2db81bbd726bd8831072b45fff1a0ac50",
+    "dbt/models/intermediate/int_tgv_quality_flags.sql": "3c7216bf60d3564793245a7575de51f8080c648bd738b73efe48c2df12a2f573",
+    "dbt/models/intermediate/int_tgv_quality_flags.yml": "d96ea1276b0942b2462d113a4402ec1bb2c3af5f6f36aaceb7bbc478ed2b4762",
+    "dbt/models/intermediate/j04_unit_tests.yml": "2d720dfd2fe42f64340bf791b68a0ff9a6984c449c276242ce4790688691b783",
+    "dbt/models/j02_connection_check.sql": "b04971e049a4611058cf1cf95442d218b5e2f0d2c6b3f057764429d2942ab9bb",
+    "dbt/models/marts/dim_cause.sql": "1ab7d4c5b551b6ea756062ee495b8fedfd827d093d18a1094da2797519ecf215",
+    "dbt/models/marts/dim_date.sql": "e02603cd49ecbf452d7916ed617e1eff60410fcf100bef2428ccb4b6cd29894c",
+    "dbt/models/marts/dim_route.sql": "7c5aea02a41c21c555eea3c12b6c6e3ddb049a38e337c87ce6f5b59a66e4ac24",
+    "dbt/models/marts/dim_service.sql": "9647b299ab212c21a863e9f8e796c4289b40c7644600864105627daaebbbdcbb",
+    "dbt/models/marts/fct_delay_causes_monthly.sql": "ba83a9023cd4272b4cb383ac663fbb1bf012a1d71bc7e62a9c80d63ff1c6bef3",
+    "dbt/models/marts/fct_reliability_monthly.sql": "3c5a225ed1f6038f5ba9310c36cfddefb8fbf9180455a4d585be819f9f784722",
+    "dbt/models/marts/j05_unit_tests.yml": "31942f49b8fc66b9a22f160a3c315350a6e3ef934f52f5bd5488f11df5a059f4",
+    "dbt/models/marts/mart_route_priorities.sql": "950a8f987dadca83afe2404bd534daf40ae47d07b42e6473422ba22d89bda024",
+    "dbt/models/marts/mart_route_trends.sql": "b929e620d4cf6417bb456f8dc880cb1b37dd9e1f24520cbea88a898decafa05b",
+    "dbt/models/marts/marts.yml": "57b82414102934fea4d1a16f6d4fc5da96ee72236d892d0bf3402cff4d350d67",
+    "dbt/models/staging/sources.yml": "5968ca0cd6fc884b0a18098b19e0f0d7b3990b416f5157ff8f60fc259e340bec",
+    "dbt/models/staging/stg_tgv_reliability.sql": "78839d4e56a042a3903b475859a685265730791c30a053bf55b7d334aefb3e80",
+    "dbt/models/staging/stg_tgv_reliability.yml": "65f1f07b4c521dedeee83893e7bc4edebcdbc37f770b3ac4f391261c45721695",
+    "dbt/profiles.yml.example": "fa8fcd826d3016134eb15d745f289e702f541e0121aa514b380b678ea6dd154f",
+    "dbt/tests/assert_intermediate_fidelity.sql": "7d55a7895b9692378a40f703aa87475457a7c6c3d4d280cab3ef7ce77c9a04f2",
+    "dbt/tests/assert_j05_calendar_and_keys.sql": "94f92774640279ff930a4e2fc303a711c16b04d48d0277ac082f3a4ea9e4e1f6",
+    "dbt/tests/assert_j05_causes.sql": "dc775520534864193033a03187458673251527dcc08def7e0cf54ca7184be661",
+    "dbt/tests/assert_j05_fidelity.sql": "146030c69cb69e88ac7488fd16b8f76086fb5783ff6720ddf6c3a1ed4782f694",
+    "dbt/tests/assert_j05_grains.sql": "356dcf824358ff804f1d0eff75a7406a6930e3e0a268869c4cd61ec025a9e1bd",
+    "dbt/tests/assert_j05_kpis.sql": "824fef59378db4098102708dc4d6c74e5fe9d438675e7982e735a795b04c34b0",
+    "dbt/tests/assert_j05_periods.sql": "4967d9d87ccab43c8a3c602d2fd63b03daaeed5cf7bcb3e4aec98c4ad33f2305",
+    "dbt/tests/assert_j05_trends.sql": "d8b55cae911edb2405a4de872db553ce07ef6495e0cd7dd318ed1afce5718eb4",
+    "dbt/tests/assert_j05_version.sql": "a661cd546fc0a3aa54d79a081af3c475137c1b19d0e6eff662f93e0253b1e86c",
+    "dbt/tests/assert_monthly_grain.sql": "41f38465a2c6a897de5a948d728604d0b16ed7a5ebb26204f3eca035b22e9982",
+    "dbt/tests/assert_quality_usability.sql": "a81c0abd4c652f6312f52fe808b56dc89b7b457a3a20c943d7c4f19ad2ba481c",
+    "dbt/tests/assert_source_integrity.sql": "12b58e9714ec8c08d4025b092c8422955f5e86e0dfb3eb6a404116b4f36601b2",
+    "dbt/tests/assert_source_version.sql": "db0f50a6453e2bae1b398251176e7ee04cf5f87c33e79b75c27f8d587545c33b",
+    "dbt/tests/assert_staging_fidelity.sql": "8e049076458f03617a90a3b172ec3248d7211e41a1812a289d453bdf7ef52b6f",
+    "dbt/tests/warn_cause_profiles.sql": "6491097a2ff745a056ae58e289d1ce18b929dfe813699079839a39d07e868815",
+    "dbt/tests/warn_service_scope.sql": "c488814a4f021ba0510794477ccc938f88c449bc20396849c3ab8298f509cf4a",
+    "dbt/tests/warn_signed_means.sql": "654eb52e8f01581dfb2a5228a825de7a28e85ee852456209e8be4ccdcbd63c46",
+    "dbt/tests/warn_source_counts.sql": "ebda6de276a84805257f4304a4fd1428ea624a60d53d8aaee4eda1f6704026bf",
+    "pyproject.toml": "69e720314f62ddffe4e0698594d1fe6b73cfb45d9915e2d1ca18eddd435b510c",
+    "scripts/run_dbt.py": "6b9f091157145ff24e77eb01950709761fb260a1bffa4c1e856475f6b6d3e0b2",
+    "scripts/validate_data_model.py": "2a2dbc883a88c2f705d75bf8e30974e976a795f5add40603067849a2e4534adf",
+    "scripts/validate_data_quality.py": "637ae31cb955db09dcaedac850032631bba88229ce9092b69f23d73fcd2d3591",
+    "src/sncf_reliability/__init__.py": "e9d97ec647ea77420293f77389d0f73d2009ac432ba8e0dceaaab6ea8e2081d5",
+    "src/sncf_reliability/api_client.py": "3274ca595b537c186ba31af5c4967736538544219f936d855b4dc6a1bdfb0552",
+    "src/sncf_reliability/cli.py": "734290572343a6f46e01d54734a522a655e37fd4d53322406e2b279909157897",
+    "src/sncf_reliability/ingest.py": "63d2d2414945f809eece86e11694783fffffd3037e3695d0c57e1a2d04ef36fc",
+    "src/sncf_reliability/warehouse.py": "38dc61d3cfd61a67ad61cd96f8747c27e467cc68169b9961fe038d93835462c1",
+    "uv.lock": "457eddb590af0419554482a6c1ad72d842ab8a00efe878e01c3b2af21cc8bede"
+  },
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\<utilisateur>\\AppData\\Local\\SNCF_Service_Reliability_Analytics\\venv-j02\\Scripts\\python.exe",
+        "scripts/run_dbt.py",
+        "run",
+        "--select",
+        "tag:j04",
+        "--project-dir",
+        "dbt",
+        "--profiles-dir",
+        "C:\\Users\\<utilisateur>\\AppData\\Local\\SNCF_Service_Reliability_Analytics\\dbt-profile",
+        "--vars",
+        "{\"raw_tgv_identifier\": \"raw_tgv_v_e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6\", \"expected_version_id\": \"e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6\"}",
+        "--target-path",
+        "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\model_runs\\20261009T142236Z_7e5f8893\\target",
+        "--log-path",
+        "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\model_runs\\20261009T142236Z_7e5f8893\\logs",
+        "--no-use-colors"
+      ],
+      "label": "upstream_models",
+      "log_sha256": "32a5c64657c1091cb55a701deb2d5c9295b063a85e478fdc1e758cca25891416",
+      "return_code": 0
+    },
+    {
+      "argv": [
+        "C:\\Users\\<utilisateur>\\AppData\\Local\\SNCF_Service_Reliability_Analytics\\venv-j02\\Scripts\\python.exe",
+        "scripts/run_dbt.py",
+        "test",
+        "--select",
+        "tag:j04",
+        "--indirect-selection",
+        "cautious",
+        "--project-dir",
+        "dbt",
+        "--profiles-dir",
+        "C:\\Users\\<utilisateur>\\AppData\\Local\\SNCF_Service_Reliability_Analytics\\dbt-profile",
+        "--vars",
+        "{\"raw_tgv_identifier\": \"raw_tgv_v_e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6\", \"expected_version_id\": \"e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6\"}",
+        "--target-path",
+        "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\model_runs\\20261009T142236Z_7e5f8893\\target",
+        "--log-path",
+        "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\model_runs\\20261009T142236Z_7e5f8893\\logs",
+        "--no-use-colors"
+      ],
+      "label": "upstream_tests",
+      "log_sha256": "a5f57ffea5db0e98529e2aa0bf2485e5eece39feb252e4a7969342f1b5efe95f",
+      "return_code": 0
+    },
+    {
+      "argv": [
+        "C:\\Users\\<utilisateur>\\AppData\\Local\\SNCF_Service_Reliability_Analytics\\venv-j02\\Scripts\\python.exe",
+        "scripts/run_dbt.py",
+        "run",
+        "--select",
+        "tag:j05",
+        "--project-dir",
+        "dbt",
+        "--profiles-dir",
+        "C:\\Users\\<utilisateur>\\AppData\\Local\\SNCF_Service_Reliability_Analytics\\dbt-profile",
+        "--vars",
+        "{\"raw_tgv_identifier\": \"raw_tgv_v_e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6\", \"expected_version_id\": \"e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6\"}",
+        "--target-path",
+        "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\model_runs\\20261009T142236Z_7e5f8893\\target",
+        "--log-path",
+        "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\model_runs\\20261009T142236Z_7e5f8893\\logs",
+        "--no-use-colors"
+      ],
+      "label": "models",
+      "log_sha256": "ccb2189ada5398ff223043bae75cb4bda4445ce201bdd4e53a2a1eff8f030b54",
+      "return_code": 0
+    },
+    {
+      "argv": [
+        "C:\\Users\\<utilisateur>\\AppData\\Local\\SNCF_Service_Reliability_Analytics\\venv-j02\\Scripts\\python.exe",
+        "scripts/run_dbt.py",
+        "test",
+        "--select",
+        "tag:j05",
+        "--project-dir",
+        "dbt",
+        "--profiles-dir",
+        "C:\\Users\\<utilisateur>\\AppData\\Local\\SNCF_Service_Reliability_Analytics\\dbt-profile",
+        "--vars",
+        "{\"raw_tgv_identifier\": \"raw_tgv_v_e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6\", \"expected_version_id\": \"e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6\"}",
+        "--target-path",
+        "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\model_runs\\20261009T142236Z_7e5f8893\\target",
+        "--log-path",
+        "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\model_runs\\20261009T142236Z_7e5f8893\\logs",
+        "--no-use-colors"
+      ],
+      "label": "tests",
+      "log_sha256": "63a45d4812a136d2a5dabf8321428fe056f50ba69e0592b6b09c571d26a27e4d",
+      "return_code": 0
+    },
+    {
+      "argv": [
+        "C:\\Users\\<utilisateur>\\AppData\\Local\\SNCF_Service_Reliability_Analytics\\venv-j02\\Scripts\\python.exe",
+        "scripts/run_dbt.py",
+        "compile",
+        "--select",
+        "j05_model_summary",
+        "j05_reconciliation",
+        "j05_period_coverage",
+        "--project-dir",
+        "dbt",
+        "--profiles-dir",
+        "C:\\Users\\<utilisateur>\\AppData\\Local\\SNCF_Service_Reliability_Analytics\\dbt-profile",
+        "--vars",
+        "{\"raw_tgv_identifier\": \"raw_tgv_v_e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6\", \"expected_version_id\": \"e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6\"}",
+        "--target-path",
+        "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\model_runs\\20261009T142236Z_7e5f8893\\target",
+        "--log-path",
+        "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\model_runs\\20261009T142236Z_7e5f8893\\logs",
+        "--no-use-colors"
+      ],
+      "label": "compile",
+      "log_sha256": "4a765fbe0dc4eeff280b067306e0012370321fa419fd7e54d1cfc2f3583a54b8",
+      "return_code": 0
+    }
+  ],
+  "completed_at_utc": "2026-10-09T14:26:14.084545+00:00",
+  "dbt_vars": {
+    "expected_version_id": "e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6",
+    "raw_tgv_identifier": "raw_tgv_v_e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6"
+  },
+  "evidence_sha256": {
+    "compile.txt": "4a765fbe0dc4eeff280b067306e0012370321fa419fd7e54d1cfc2f3583a54b8",
+    "compile_run_results.json": "f67df8f79185317b8b44c636c344fb64129d32ac00d52f88a2b37c3d279c0244",
+    "j05_model_summary.csv": "1bbb536b7a573a7c6138a8b4dede4d1ec68877a9583f7debf6e26fdc23a076ab",
+    "j05_model_summary.sql": "ca6042898d84deebdce0ea3fdb85962087c615585423f71385c4a1fb3c3aa08c",
+    "j05_period_coverage.csv": "c4d6ace706f6827b1366522b1c70fccceae48e50760392cc61137f2da26ba544",
+    "j05_period_coverage.sql": "366f76fe9e142d9827d9984f7c1572a5182c25d2c93d3b40f739a7fa1954f71d",
+    "j05_reconciliation.csv": "599dbce7652cfe2e581b13a8a31280bc8da27d0bea0d73b3c90676934d6cb8bc",
+    "j05_reconciliation.sql": "66fede22dc9bf6a4e8f5e0e1ff5fca14b086695a96658142c1bcd315a2143d7c",
+    "models.txt": "ccb2189ada5398ff223043bae75cb4bda4445ce201bdd4e53a2a1eff8f030b54",
+    "models_run_results.json": "6e8f3998b113274a3a9de4cf33aaa77add051b2d7b7f58c37bc2c401c3baeb0d",
+    "tests.txt": "63a45d4812a136d2a5dabf8321428fe056f50ba69e0592b6b09c571d26a27e4d",
+    "tests_run_results.json": "39e7eb7cc266ffabe6eede6a6db9f42f6d9943c5c1b7fec5d46be9d1deabb87d",
+    "upstream_models.txt": "32a5c64657c1091cb55a701deb2d5c9295b063a85e478fdc1e758cca25891416",
+    "upstream_models_run_results.json": "4e0f92151b29b5f54ee7f63aef56c9f7365413dd5415bc0e279695107b21e0fa",
+    "upstream_tests.txt": "a5f57ffea5db0e98529e2aa0bf2485e5eece39feb252e4a7969342f1b5efe95f",
+    "upstream_tests_run_results.json": "a016c66c0849f0d23d7e068b0cd91e4209e526a6ceb3294ebc379f52c848e7ed"
+  },
+  "model_invocation_id": "cb98c616-8ac2-46ef-ad1e-af365083238b",
+  "objects": {
+    "dim_cause": {
+      "rows": 6,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "cause_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_label",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "normalized_field",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "source_field",
+          "type": "STRING"
+        }
+      ],
+      "type": "TABLE"
+    },
+    "dim_date": {
+      "rows": 3287,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "date_key",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "year",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "quarter",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month_number",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month_label",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_month_start",
+          "type": "BOOLEAN"
+        }
+      ],
+      "type": "TABLE"
+    },
+    "dim_route": {
+      "rows": 130,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "route_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "route_label",
+          "type": "STRING"
+        }
+      ],
+      "type": "TABLE"
+    },
+    "dim_service": {
+      "rows": 2,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "service_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_type",
+          "type": "STRING"
+        }
+      ],
+      "type": "TABLE"
+    },
+    "fct_delay_causes_monthly": {
+      "rows": 77442,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "version_id",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_number",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_sha256",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "route_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "published_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_profile_status",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_sum_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_cause_sum_warning",
+          "type": "BOOLEAN"
+        }
+      ],
+      "type": "TABLE"
+    },
+    "fct_reliability_monthly": {
+      "rows": 12907,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "version_id",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_number",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_sha256",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "invalid_json",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_type",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_duration_minutes",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancelled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancellation_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_15_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_over_15_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_30_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_60_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "conversion_error_fields",
+          "type": "STRING"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "missing_schema_fields",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_population_valid",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "central_counts_compatible",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_quarantined",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_present_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_out_of_bounds_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_sum_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "services_in_month",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "services_in_history",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "operated_trains_proxy",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "important_delay_nesting_valid",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_complete",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_all_zero",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_cause_sum_warning",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cancellation_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cancellation_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_arrival_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_arrival_delay_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_departure_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_mean_arrival_delay_late_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_mean_departure_delay_late_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_over_15_generic_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_departure_all",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_arrival_all",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_arrival_late",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_departure_late",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_scheduled_duration",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_multiple_services_in_month",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_multiple_services_in_history",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_profile_status",
+          "type": "STRING"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "quality_reasons",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "route_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancellation_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "composite_regularity_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_30_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_60_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_30_delay_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_60_delay_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "denominator_status",
+          "type": "STRING"
+        }
+      ],
+      "type": "TABLE"
+    },
+    "int_tgv_quality_flags": {
+      "rows": 0,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "version_id",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_number",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_sha256",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "raw_payload",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "invalid_json",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_type",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_duration_minutes",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancelled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancellation_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_15_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_over_15_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_30_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_60_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "external_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "infrastructure_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "traffic_management_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "rolling_stock_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "station_management_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "passenger_handling_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "conversion_error_fields",
+          "type": "STRING"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "missing_schema_fields",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_population_valid",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "central_counts_compatible",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_quarantined",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_present_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_out_of_bounds_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_sum_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "services_in_month",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "services_in_history",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "operated_trains_proxy",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "important_delay_nesting_valid",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_complete",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_all_zero",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_cause_sum_warning",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cancellation_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cancellation_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_arrival_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_arrival_delay_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_departure_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_mean_arrival_delay_late_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_mean_departure_delay_late_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_over_15_generic_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_departure_all",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_arrival_all",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_arrival_late",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_departure_late",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_scheduled_duration",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_multiple_services_in_month",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_multiple_services_in_history",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_profile_status",
+          "type": "STRING"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "quality_reasons",
+          "type": "STRING"
+        }
+      ],
+      "type": "VIEW"
+    },
+    "mart_route_priorities": {
+      "rows": 232,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "version_id",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "route_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "comparison_id",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_start",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_end",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "expected_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "persistence_applicable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "services_in_comparison",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_observed_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_eligible_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_cancellation_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_arrival_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_important_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_important_count_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_cancellation_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_cancellation_denominator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_arrival_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_arrival_denominator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_over_30_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_over_60_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_important_denominator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_over_30_valid_count_sum",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_over_60_valid_count_sum",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_observed_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_eligible_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_cancellation_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_arrival_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_important_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_important_count_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_cancellation_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_cancellation_denominator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_arrival_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_arrival_denominator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_over_30_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_over_60_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_important_denominator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_over_30_valid_count_sum",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_over_60_valid_count_sum",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "eligible_month_pairs",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "deterioration_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "underperformance_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_start",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_end",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_comparison_eligible",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_observation_coverage",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_cancellation_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_arrival_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_composite_regularity_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_over_30_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_over_60_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_observation_coverage",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_cancellation_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_arrival_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_composite_regularity_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_over_30_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_over_60_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "exclusion_reasons",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_change_pp",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "change_signal",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "deterioration_persistence",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "underperformance_persistence",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_deterioration_persistent",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_underperformance_persistent",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "minimum_monthly_operated_proxy",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "deterioration_threshold_pp",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "regularity_target_pct",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "denominator_status",
+          "type": "STRING"
+        }
+      ],
+      "type": "TABLE"
+    },
+    "mart_route_trends": {
+      "rows": 12907,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "version_id",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_number",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_sha256",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "invalid_json",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_type",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_duration_minutes",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancelled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancellation_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_15_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_over_15_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_30_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_60_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "conversion_error_fields",
+          "type": "STRING"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "missing_schema_fields",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_population_valid",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "central_counts_compatible",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_quarantined",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_present_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_out_of_bounds_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_sum_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "services_in_month",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "services_in_history",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "operated_trains_proxy",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "important_delay_nesting_valid",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_complete",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_all_zero",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_cause_sum_warning",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cancellation_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cancellation_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_arrival_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_arrival_delay_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_departure_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_mean_arrival_delay_late_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_mean_departure_delay_late_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_over_15_generic_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_departure_all",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_arrival_all",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_arrival_late",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_departure_late",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_scheduled_duration",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_multiple_services_in_month",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_multiple_services_in_history",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_profile_status",
+          "type": "STRING"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "quality_reasons",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "route_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancellation_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "composite_regularity_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_30_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_60_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_30_delay_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_60_delay_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "denominator_status",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_month",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_arrival_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_operated_trains_proxy",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_arrival_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_year_pair_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "passes_pair_volume_screen",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_change_pp",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_monthly_deterioration",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_monthly_underperformance",
+          "type": "BOOLEAN"
+        }
+      ],
+      "type": "TABLE"
+    },
+    "stg_tgv_reliability": {
+      "rows": 0,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "version_id",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_number",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_sha256",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "raw_payload",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "invalid_json",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_type",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_duration_minutes",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancelled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancellation_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_15_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_over_15_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_30_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_60_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "external_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "infrastructure_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "traffic_management_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "rolling_stock_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "station_management_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "passenger_handling_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "conversion_error_fields",
+          "type": "STRING"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "missing_schema_fields",
+          "type": "STRING"
+        }
+      ],
+      "type": "VIEW"
+    }
+  },
+  "queries": [
+    {
+      "analysis": "j05_model_summary",
+      "cache_hit": false,
+      "job_id": "sncf_j05_96499ad6609c421a9d8ecbef81b5c6df",
+      "rows": 8,
+      "total_bytes_billed": 0,
+      "total_bytes_processed": 0
+    },
+    {
+      "analysis": "j05_reconciliation",
+      "cache_hit": false,
+      "job_id": "sncf_j05_7720d19766fe40dcaa481ee88a0d967a",
+      "rows": 8,
+      "total_bytes_billed": 20971520,
+      "total_bytes_processed": 15273456
+    },
+    {
+      "analysis": "j05_period_coverage",
+      "cache_hit": false,
+      "job_id": "sncf_j05_3d0af3c044d541e8bd9c6d9d6cf9262d",
+      "rows": 2,
+      "total_bytes_billed": 10485760,
+      "total_bytes_processed": 31440
+    }
+  ],
+  "raw_verification": {
+    "rows_verified": 12907,
+    "total_bytes_billed": 0,
+    "total_bytes_processed": 0,
+    "verification_job_id": "sncf_j05_raw_c1b62d3e6cfd4cb0afdc79c6702892e8"
+  },
+  "run_directory": "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\model_runs\\20261009T142236Z_7e5f8893",
+  "run_id": "20261009T142236Z_7e5f8893",
+  "schema_types_verified": true,
+  "source": {
+    "dataset_id": "regularite-mensuelle-tgv-aqst",
+    "expected_count": 12907,
+    "first_business_month": "2018-01",
+    "last_business_month": "2026-09",
+    "manifest_sha256": "1cca3fcbf6e4a94343866eedec4badf35d1ef2961cac75550cc0d666ea03b5cd",
+    "missing_or_invalid_months": 0,
+    "received_count": 12907,
+    "schema_sha256": "50735f50c533e44d2aa0fc5bf1e1f3e081d04ef5823c67ed57cd60fd8cde05ec",
+    "snapshot_id": "20261007T130103249967Z_bce4ef24",
+    "snapshot_path": "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\ingestion\\20261007T130103249967Z_bce4ef24",
+    "source_data_processed": "2026-10-02T10:10:31+00:00",
+    "source_modified": "2026-10-02T10:10:31+00:00",
+    "source_sha256": "8dc2b0a9a3707306c3087f899163465e34b20ed44b4dfc4ad46d5af4686334b2",
+    "version_id": "e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6"
+  },
+  "started_at_utc": "2026-10-09T14:22:36.825051+00:00",
+  "status": "passed_with_documented_warnings",
+  "tests": [
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 10.6 MiB processed)",
+        "bytes_billed": 11534336,
+        "bytes_processed": 11156465,
+        "code": "SELECT",
+        "job_id": "a0d4a270-61ba-4e4d-9c05-f7b5b0d800bb",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 239
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.accepted_values_stg_tgv_reliability_service_type__National__International.f1f68a0c05"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 10.6 MiB processed)",
+        "bytes_billed": 11534336,
+        "bytes_processed": 11156465,
+        "code": "SELECT",
+        "job_id": "abc98807-3043-4f27-a99c-3e79a0a0b4ad",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 1697
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.accepted_values_int_tgv_quality_flags_cause_profile_status__missing__out_of_bounds__all_zero__sum_warning__available.3e70b716fb"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 10.6 MiB processed)",
+        "bytes_billed": 11534336,
+        "bytes_processed": 11156465,
+        "code": "SELECT",
+        "job_id": "af0f4dbe-5f12-4b5a-ad8f-cbde1a7dfbec",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 236
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_monthly_grain"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 10.6 MiB processed)",
+        "bytes_billed": 11534336,
+        "bytes_processed": 11156465,
+        "code": "SELECT",
+        "job_id": "89d77001-ea99-4a47-b605-69e59d4df193",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 10570
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_quality_usability"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 12.4 MiB processed)",
+        "bytes_billed": 13631488,
+        "bytes_processed": 12963445,
+        "code": "SELECT",
+        "job_id": "afca411c-e244-4598-a4ea-7257519c346a",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 29159
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_intermediate_fidelity"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 831.9 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 851862,
+        "code": "SELECT",
+        "job_id": "0ad11883-34d0-499a-9635-dc1127cc08b7",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 7
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_source_version"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 12.4 MiB processed)",
+        "bytes_billed": 13631488,
+        "bytes_processed": 12963445,
+        "code": "SELECT",
+        "job_id": "96023dde-a067-41f5-a275-ad259ee412e0",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 11354
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_source_integrity"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 12.4 MiB processed)",
+        "bytes_billed": 13631488,
+        "bytes_processed": 12963445,
+        "code": "SELECT",
+        "job_id": "99119305-56ef-4e56-a040-e21a625ae239",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 151
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_staging_fidelity"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 10.6 MiB processed)",
+        "bytes_billed": 11534336,
+        "bytes_processed": 11156465,
+        "code": "SELECT",
+        "job_id": "086d859f-8d96-487e-ab94-b3696cb1f85c",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 105
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_stg_tgv_reliability_arrival_station.c22fe89766"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 10.6 MiB processed)",
+        "bytes_billed": 11534336,
+        "bytes_processed": 11156465,
+        "code": "SELECT",
+        "job_id": "9b401140-435a-4b84-a57e-1e2b3044cfbb",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 143
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_stg_tgv_reliability_departure_station.b26d2e647c"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 10.6 MiB processed)",
+        "bytes_billed": 11534336,
+        "bytes_processed": 11156465,
+        "code": "SELECT",
+        "job_id": "a569d1f7-b322-4190-ac0d-e15bcece9c60",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 94
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_stg_tgv_reliability_month.c826e60c36"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 100.8 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 103256,
+        "code": "SELECT",
+        "job_id": "e5ef3ce3-2366-4e8d-be81-735e29173fb1",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 3
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_stg_tgv_reliability_row_number.0d0364c273"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 831.9 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 851862,
+        "code": "SELECT",
+        "job_id": "4ea4f8fc-7f04-49d5-87e2-8582223a55e8",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 2
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_stg_tgv_reliability_row_sha256.ebc43ca3ac"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 10.6 MiB processed)",
+        "bytes_billed": 11534336,
+        "bytes_processed": 11156465,
+        "code": "SELECT",
+        "job_id": "6f598a24-d48a-465a-be2c-d26a354bb497",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 209
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_stg_tgv_reliability_service_type.c9dfa36d99"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 831.9 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 851862,
+        "code": "SELECT",
+        "job_id": "3ae474bf-8a28-420a-bbc6-cb1bd9620b1c",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 4
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_stg_tgv_reliability_version_id.f7ad3a0d02"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 100.8 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 103256,
+        "code": "SELECT",
+        "job_id": "81ba155e-7978-4c18-a9d2-a08365013f87",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 8
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.unique_stg_tgv_reliability_row_number.b80a8c1c99"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 10.6 MiB processed)",
+        "bytes_billed": 11534336,
+        "bytes_processed": 11156465,
+        "code": "SELECT",
+        "job_id": "2164e23b-1d00-4310-aeac-13afa2798ce1",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 417
+      },
+      "failures": 84,
+      "message": "Got 84 results, configured to warn if != 0",
+      "status": "warn",
+      "unique_id": "test.sncf_service_reliability.warn_service_scope"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 10.6 MiB processed)",
+        "bytes_billed": 11534336,
+        "bytes_processed": 11156465,
+        "code": "SELECT",
+        "job_id": "03016e48-7ea1-4edd-a117-4250e5264e80",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 3183
+      },
+      "failures": 282,
+      "message": "Got 282 results, configured to warn if != 0",
+      "status": "warn",
+      "unique_id": "test.sncf_service_reliability.warn_cause_profiles"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 10.6 MiB processed)",
+        "bytes_billed": 11534336,
+        "bytes_processed": 11156465,
+        "code": "SELECT",
+        "job_id": "a3178388-64ba-41a1-967f-e13d01b7b9cd",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 515
+      },
+      "failures": 278,
+      "message": "Got 278 results, configured to warn if != 0",
+      "status": "warn",
+      "unique_id": "test.sncf_service_reliability.warn_signed_means"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 10.6 MiB processed)",
+        "bytes_billed": 11534336,
+        "bytes_processed": 11156465,
+        "code": "SELECT",
+        "job_id": "3635ebe7-7d55-44ac-9386-b6940806db32",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 4201
+      },
+      "failures": 425,
+      "message": "Got 425 results, configured to warn if != 0",
+      "status": "warn",
+      "unique_id": "test.sncf_service_reliability.warn_source_counts"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (54.0 rows, 0 processed)",
+        "bytes_billed": 0,
+        "bytes_processed": 0,
+        "code": "SELECT",
+        "job_id": "12913010-38c1-417f-8461-7735d3af34b7",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 54
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "unit_test.sncf_service_reliability.int_tgv_quality_flags.j04_quality_populations_boundaries_and_scope"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (24.0 rows, 0 processed)",
+        "bytes_billed": 0,
+        "bytes_processed": 0,
+        "code": "SELECT",
+        "job_id": "9026740b-f709-4090-b859-301ec3962678",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 24
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "unit_test.sncf_service_reliability.stg_tgv_reliability.j04_staging_parsing_and_missing"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 218.8 KiB processed)",
+        "bytes_billed": 41943040,
+        "bytes_processed": 224068,
+        "code": "SELECT",
+        "job_id": "e94e403f-a40d-41a9-a515-cd741339deb4",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 148
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_j05_calendar_and_keys"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 36.4 MiB processed)",
+        "bytes_billed": 52428800,
+        "bytes_processed": 38207560,
+        "code": "SELECT",
+        "job_id": "d88059a9-ead5-463c-b542-e46fb91b0792",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 5860
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_j05_causes"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 15.1 MiB processed)",
+        "bytes_billed": 41943040,
+        "bytes_processed": 15794015,
+        "code": "SELECT",
+        "job_id": "37263d14-b1ab-4efe-83f0-361fc6669a7e",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 49
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_j05_grains"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 2.2 MiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 2337373,
+        "code": "SELECT",
+        "job_id": "d93671c0-2ac5-46e2-93ba-3a47e738ba4d",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 40
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_j05_kpis"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 11.6 MiB processed)",
+        "bytes_billed": 41943040,
+        "bytes_processed": 12149270,
+        "code": "SELECT",
+        "job_id": "1f87ed47-d735-47eb-bd63-8f5426d73d95",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 8345
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_j05_periods"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 17.4 MiB processed)",
+        "bytes_billed": 20971520,
+        "bytes_processed": 18248253,
+        "code": "SELECT",
+        "job_id": "aafac9c4-507c-4447-a831-93f4a672eae5",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 18079
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_j05_fidelity"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 6.5 MiB processed)",
+        "bytes_billed": 41943040,
+        "bytes_processed": 6830208,
+        "code": "SELECT",
+        "job_id": "8dfa6fd4-7b84-41b5-bebc-940838b4bfa0",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 46
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_j05_version"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 4.6 MiB processed)",
+        "bytes_billed": 20971520,
+        "bytes_processed": 4829676,
+        "code": "SELECT",
+        "job_id": "1d152234-1b16-42ff-ba11-ab18b9a566b8",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 96
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_j05_trends"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 101.0 Bytes processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 101,
+        "code": "SELECT",
+        "job_id": "88c7af4d-5e44-44ae-9a84-c05af9726f28",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 10
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_cause_cause_key.dada0d8fb5"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 115.0 Bytes processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 115,
+        "code": "SELECT",
+        "job_id": "af57dff2-97dc-4aab-8c47-893fa78d11cf",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 6
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_cause_cause_label.00688b010d"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 157.0 Bytes processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 157,
+        "code": "SELECT",
+        "job_id": "a54d3f3c-b200-42e5-99b7-f3ff21c16998",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 10
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_cause_source_field.3fcbc83299"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 161.0 Bytes processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 161,
+        "code": "SELECT",
+        "job_id": "4d46bbb7-0b87-4f69-b688-01bc1bae631d",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 8
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_cause_normalized_field.42bd12d718"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 3.2 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 3287,
+        "code": "SELECT",
+        "job_id": "3212089b-f7f3-462a-882f-e5eeaf1c859b",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 15
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_date_is_month_start.a94cf11a2f"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 25.7 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 26296,
+        "code": "SELECT",
+        "job_id": "3e1aa2aa-e961-41c2-8742-6bffb4234f69",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 6
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_date_date_key.881d0a31b6"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 28.9 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 29583,
+        "code": "SELECT",
+        "job_id": "dc5ce3ae-f901-4e73-adae-0271548822bd",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 6
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_date_month_label.0204b8d079"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 25.7 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 26296,
+        "code": "SELECT",
+        "job_id": "fc94146d-959d-42ca-9097-34480de4e4a5",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 5
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_date_month.180a460136"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 25.7 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 26296,
+        "code": "SELECT",
+        "job_id": "905e8a26-06ad-4920-be4b-14dea411402f",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 5
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_date_month_number.cd129a2e7a"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 25.7 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 26296,
+        "code": "SELECT",
+        "job_id": "3ecbaa76-c485-4cc1-b41a-19d9d696b19a",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 7
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_date_quarter.4d9e627f51"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 25.7 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 26296,
+        "code": "SELECT",
+        "job_id": "63b4217f-6797-4c67-8aa0-02214c56acb9",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 3
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_date_year.aac8e263ab"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 1.8 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 1802,
+        "code": "SELECT",
+        "job_id": "d5cf3b72-7f55-49c9-a8b6-1a7fbd8dceb9",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 20
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_route_arrival_station.3af360c325"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 1.8 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 1802,
+        "code": "SELECT",
+        "job_id": "34b3f4cc-4e5c-42bb-929c-7539d9774e97",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 8
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_route_departure_station.e3bf780ec3"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 8.4 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 8580,
+        "code": "SELECT",
+        "job_id": "2c1886a2-6515-4382-ae6e-d0d131ea67cf",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 6
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_route_route_key.100ea7aa1d"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 3.9 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 3994,
+        "code": "SELECT",
+        "job_id": "765b9e95-45e5-4566-a3d3-7a5b3a36bc43",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 7
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_route_route_label.7f26a49ae6"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 132.0 Bytes processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 132,
+        "code": "SELECT",
+        "job_id": "fe109c60-1fcb-4d86-a71a-e305973875aa",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 4
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_service_service_key.df6d170253"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 25.0 Bytes processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 25,
+        "code": "SELECT",
+        "job_id": "12b73bc8-3ddd-4eba-a5be-b750988d1735",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 9
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_service_service_type.e00232db1f"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 1.2 MiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 1303607,
+        "code": "SELECT",
+        "job_id": "06afb7d4-532c-47b8-bf80-032b20abd66b",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 24
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_delay_causes_monthly_cause_key.334efe58ef"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 605.0 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 619536,
+        "code": "SELECT",
+        "job_id": "8f7d622f-ebee-4488-bf51-ba90b84e908c",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 4
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_delay_causes_monthly_month.9363639498"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 4.9 MiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 5111172,
+        "code": "SELECT",
+        "job_id": "a2b8ae52-d46e-4925-b62a-a18516fd62ac",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 11
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_delay_causes_monthly_route_key.afbafea84c"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 605.0 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 619536,
+        "code": "SELECT",
+        "job_id": "60f0aed2-a873-4f8f-91bc-0cf343ef181c",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 17
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_delay_causes_monthly_row_number.8bb410607f"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 4.9 MiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 5111172,
+        "code": "SELECT",
+        "job_id": "9b11b02d-bc6f-4551-b74c-4b4b4bd191a4",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 24
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_delay_causes_monthly_row_sha256.d8b9286214"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 4.9 MiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 5111172,
+        "code": "SELECT",
+        "job_id": "c3e45931-7fa7-480b-b0f0-5f2eae989f05",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 3
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_delay_causes_monthly_service_key.3ea5ac9296"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 4.9 MiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 5111172,
+        "code": "SELECT",
+        "job_id": "4375e3db-39fa-4274-90ce-a17225753637",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 6
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_delay_causes_monthly_version_id.bdfa9b2edd"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 479.0 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 490466,
+        "code": "SELECT",
+        "job_id": "bf37cb46-5513-4c54-9dba-ba902447c75c",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 7
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_reliability_monthly_denominator_status.c4b86d5bd0"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 100.8 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 103256,
+        "code": "SELECT",
+        "job_id": "a80b8635-b29a-4ec2-92aa-962a36dad453",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 58
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_reliability_monthly_month.2fcbb61638"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 100.8 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 103256,
+        "code": "SELECT",
+        "job_id": "323404e1-f9cf-4a4a-9484-159f46dc024d",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 7
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_reliability_monthly_row_number.9e681ce737"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 831.9 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 851862,
+        "code": "SELECT",
+        "job_id": "08804eb6-16d9-4d74-88da-fe65441614b3",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 4
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_reliability_monthly_route_key.669b1ecb13"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 831.9 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 851862,
+        "code": "SELECT",
+        "job_id": "28af7aa6-8267-4bb2-a29b-4e9fbb3c3a7b",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 8
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_reliability_monthly_row_sha256.510743fdf6"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 831.9 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 851862,
+        "code": "SELECT",
+        "job_id": "9e796a81-e003-43af-af06-f4fdf50201b4",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 9
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_reliability_monthly_service_key.0f07d2ef18"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 831.9 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 851862,
+        "code": "SELECT",
+        "job_id": "4caab073-c76f-4146-b4f3-928f9f499c63",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 7
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_reliability_monthly_version_id.b72e4cb45b"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 15.0 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 15312,
+        "code": "SELECT",
+        "job_id": "8366aea0-d017-4f8d-a5cd-58aa787aa3fb",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 10
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_mart_route_priorities_route_key.cb5414bec9"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 15.0 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 15312,
+        "code": "SELECT",
+        "job_id": "329aff79-4f84-40dc-96d3-bcef301dc201",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 10
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_mart_route_priorities_service_key.b136863e39"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 15.0 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 15312,
+        "code": "SELECT",
+        "job_id": "3e2d070a-3547-4402-ad8b-534191b68fc9",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 6
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_mart_route_priorities_version_id.ae137f9f92"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 479.0 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 490466,
+        "code": "SELECT",
+        "job_id": "0e0412c0-5005-4dc1-8d46-58750827e1fc",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 6
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_mart_route_trends_denominator_status.b57ec6823c"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 100.8 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 103256,
+        "code": "SELECT",
+        "job_id": "a1a95a38-a660-4a28-be28-bde3fd4b6d01",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 6
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_mart_route_trends_month.3640699d6d"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 831.9 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 851862,
+        "code": "SELECT",
+        "job_id": "8e807079-1f0a-4678-997f-260d1cfb4009",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 6
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_mart_route_trends_route_key.9146c5f60c"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 100.8 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 103256,
+        "code": "SELECT",
+        "job_id": "325890fe-56ba-4db5-88f4-b32bdd3421a4",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 7
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_mart_route_trends_row_number.c12c6bb44a"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 831.9 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 851862,
+        "code": "SELECT",
+        "job_id": "094684cf-06f0-4f9c-89a2-1855a3923022",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 5
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_mart_route_trends_row_sha256.2ff00f99ca"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 831.9 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 851862,
+        "code": "SELECT",
+        "job_id": "4079eec6-a04f-4bc2-8e43-37c88ce6ad63",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 5
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_mart_route_trends_service_key.388e07a130"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 831.9 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 851862,
+        "code": "SELECT",
+        "job_id": "bab64931-8185-4fd5-b3bf-beecef18d5ec",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 3
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_mart_route_trends_version_id.b16d26ec0e"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 1.2 MiB processed)",
+        "bytes_billed": 20971520,
+        "bytes_processed": 1303708,
+        "code": "SELECT",
+        "job_id": "38971d93-438a-4230-98c4-4d60f6817ab3",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 14
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_fct_delay_causes_monthly_cause_key__cause_key__ref_dim_cause_.724c276f5c"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 630.7 KiB processed)",
+        "bytes_billed": 20971520,
+        "bytes_processed": 645832,
+        "code": "SELECT",
+        "job_id": "4fc6a022-3069-4b81-82e0-0b316278f406",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 14
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_fct_delay_causes_monthly_month__date_key__ref_dim_date_.323fe15eec"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 4.9 MiB processed)",
+        "bytes_billed": 20971520,
+        "bytes_processed": 5119752,
+        "code": "SELECT",
+        "job_id": "d7ee9851-ebd6-426e-8192-e35c1270bbcb",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 15
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_fct_delay_causes_monthly_route_key__route_key__ref_dim_route_.ce74d2824d"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 4.9 MiB processed)",
+        "bytes_billed": 20971520,
+        "bytes_processed": 5111304,
+        "code": "SELECT",
+        "job_id": "94b72769-173c-45f7-8bc6-757071e2f530",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 11
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_fct_delay_causes_monthly_service_key__service_key__ref_dim_service_.2eff1f1ebb"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 126.5 KiB processed)",
+        "bytes_billed": 20971520,
+        "bytes_processed": 129552,
+        "code": "SELECT",
+        "job_id": "0d1a55b5-740b-4162-9678-8158c9631fda",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 14
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_fct_reliability_monthly_month__date_key__ref_dim_date_.54dc922c71"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 840.3 KiB processed)",
+        "bytes_billed": 20971520,
+        "bytes_processed": 860442,
+        "code": "SELECT",
+        "job_id": "a71be1f1-924e-4bdb-b585-98f50fc204b2",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 12
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_fct_reliability_monthly_route_key__route_key__ref_dim_route_.da65b09722"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 832.0 KiB processed)",
+        "bytes_billed": 20971520,
+        "bytes_processed": 851994,
+        "code": "SELECT",
+        "job_id": "7e9352bc-55ac-409f-ac79-75f123626735",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 10
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_fct_reliability_monthly_service_key__service_key__ref_dim_service_.1e773eea73"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 15.1 KiB processed)",
+        "bytes_billed": 20971520,
+        "bytes_processed": 15444,
+        "code": "SELECT",
+        "job_id": "dd340b55-e07e-413b-a421-7aabbbd0bcdb",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 21
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_mart_route_priorities_service_key__service_key__ref_dim_service_.ae5f2ed12c"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 23.3 KiB processed)",
+        "bytes_billed": 20971520,
+        "bytes_processed": 23892,
+        "code": "SELECT",
+        "job_id": "4709fd4c-923c-407d-8712-8b018cfde728",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 13
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_mart_route_priorities_route_key__route_key__ref_dim_route_.abaea746a3"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 126.5 KiB processed)",
+        "bytes_billed": 20971520,
+        "bytes_processed": 129552,
+        "code": "SELECT",
+        "job_id": "e23a4f63-d6ec-454b-bf30-3b8303c94022",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 16
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_mart_route_trends_month__date_key__ref_dim_date_.752e34de1f"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 840.3 KiB processed)",
+        "bytes_billed": 20971520,
+        "bytes_processed": 860442,
+        "code": "SELECT",
+        "job_id": "253165a2-4661-44de-af5c-fa98543013f3",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 18
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_mart_route_trends_route_key__route_key__ref_dim_route_.6b047ba086"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 101.0 Bytes processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 101,
+        "code": "SELECT",
+        "job_id": "b4636d34-5411-4b7f-909c-c8123210f874",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 7
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.unique_dim_cause_cause_key.23d1de6d91"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 832.0 KiB processed)",
+        "bytes_billed": 20971520,
+        "bytes_processed": 851994,
+        "code": "SELECT",
+        "job_id": "74524796-9bee-4913-b655-88fe0bb96bbc",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 13
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_mart_route_trends_service_key__service_key__ref_dim_service_.4fb23bee08"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 115.0 Bytes processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 115,
+        "code": "SELECT",
+        "job_id": "4d3d7a40-91bd-41e2-8465-b3781c65fd72",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 9
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.unique_dim_cause_cause_label.f9762b15c6"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 161.0 Bytes processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 161,
+        "code": "SELECT",
+        "job_id": "61d462b7-3698-4e0f-b746-6c0ce8beb064",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 4
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.unique_dim_cause_normalized_field.bfe361e973"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 157.0 Bytes processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 157,
+        "code": "SELECT",
+        "job_id": "9749fb0b-9a3c-4010-b0f0-7d5164b06d96",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 5
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.unique_dim_cause_source_field.976a0469b4"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 25.7 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 26296,
+        "code": "SELECT",
+        "job_id": "70ef0e0d-2f77-49aa-9643-9776c12644dd",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 8
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.unique_dim_date_date_key.0869fd48f9"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 8.4 KiB processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 8580,
+        "code": "SELECT",
+        "job_id": "567997fe-5596-4812-a9f5-691bc4600520",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 8
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.unique_dim_route_route_key.3ef0a63b5d"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 132.0 Bytes processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 132,
+        "code": "SELECT",
+        "job_id": "5d9ad7b4-9849-4801-9cd9-ce03b4d9958b",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 8
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.unique_dim_service_service_key.cdd90a9292"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (1.0 rows, 25.0 Bytes processed)",
+        "bytes_billed": 10485760,
+        "bytes_processed": 25,
+        "code": "SELECT",
+        "job_id": "c33b41ef-ccb0-4c44-a4c6-e7603ba760b9",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 1,
+        "slot_ms": 8
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.unique_dim_service_service_type.7af65fcc58"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (8.0 rows, 0 processed)",
+        "bytes_billed": 0,
+        "bytes_processed": 0,
+        "code": "SELECT",
+        "job_id": "3e5bd3d0-56d7-4acd-9484-ca703e61dea5",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 8
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "unit_test.sncf_service_reliability.dim_route.j05_oriented_stable_keys"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (12.0 rows, 0 processed)",
+        "bytes_billed": 0,
+        "bytes_processed": 0,
+        "code": "SELECT",
+        "job_id": "0783a5cc-01ef-4b27-9c1d-6b602da1e68f",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 12
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "unit_test.sncf_service_reliability.fct_delay_causes_monthly.j05_causes_keep_null_and_zero"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (10.0 rows, 0 processed)",
+        "bytes_billed": 0,
+        "bytes_processed": 0,
+        "code": "SELECT",
+        "job_id": "612507b1-eef9-4f69-8be2-6930cd643649",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 10
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "unit_test.sncf_service_reliability.fct_reliability_monthly.j05_monthly_ratios_and_unavailable"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (2.0 rows, 0 processed)",
+        "bytes_billed": 0,
+        "bytes_processed": 0,
+        "code": "SELECT",
+        "job_id": "d27b955d-9254-44bb-8988-3188a250a203",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 2
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "unit_test.sncf_service_reliability.mart_route_priorities.j05_annual_has_no_semester_persistence"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (2.0 rows, 0 processed)",
+        "bytes_billed": 0,
+        "bytes_processed": 0,
+        "code": "SELECT",
+        "job_id": "98ea6ec3-88d1-42f2-a197-648c412180dc",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 2
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "unit_test.sncf_service_reliability.mart_route_priorities.j05_ratio_of_sums_and_nonsemester"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (18.0 rows, 0 processed)",
+        "bytes_billed": 0,
+        "bytes_processed": 0,
+        "code": "SELECT",
+        "job_id": "998f59c8-df7d-4460-82fa-be291a2e9afa",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 18
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "unit_test.sncf_service_reliability.mart_route_priorities.j05_period_eligibility_and_persistence"
+    },
+    {
+      "adapter_response": {
+        "_message": "SELECT (16.0 rows, 0 processed)",
+        "bytes_billed": 0,
+        "bytes_processed": 0,
+        "code": "SELECT",
+        "job_id": "095179d0-1f38-479a-8372-7ba674d0da07",
+        "location": "EU",
+        "project_id": "sncf-reliability-analytics",
+        "rows_affected": 16
+      },
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "unit_test.sncf_service_reliability.mart_route_trends.j05_exact_year_pairs_and_thresholds"
+    }
+  ],
+  "versions": {
+    "dbt-bigquery": "1.12.1",
+    "dbt-core": "1.12.5",
+    "google-cloud-bigquery": "3.45.2",
+    "python": "3.13.15"
+  }
+}

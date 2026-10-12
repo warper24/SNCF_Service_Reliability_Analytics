@@ -1,4 +1,32 @@
-# Architecture technique et emplacements — J02–J04
+# Architecture technique et emplacements — J02–J05
+
+## Mise en œuvre J05
+
+Huit tables dans `sncf_dev` complètent les deux vues J04 : quatre dimensions
+(`dim_date`, `dim_route`, `dim_service`, `dim_cause`), deux faits
+(`fct_reliability_monthly`, `fct_delay_causes_monthly`) et deux marts
+(`mart_route_trends`, `mart_route_priorities`). BigQuery EU les reconstruit depuis
+la version brute J03 figée ; dbt est piloté depuis le PC. Aucun nouveau stockage
+cloud, environnement ou paquet n'est ajouté. `sncf_publish` reste inchangé.
+
+Les faits partagent Date/Liaison/Service ; Cause appartient au fait des profils.
+Les deux faits ne sont pas joints pour agréger des effectifs. Le calendrier est
+quotidien, les observations restent mensuelles au premier jour. Les marts calculent
+des ratios de sommes dans la même liaison/service, des comparaisons calendaires
+exactes et les variables d'éligibilité/persistance du contrat. Ils ne produisent
+ni taux national de trains distincts ni effectifs estimés par cause.
+
+Les résultats sont stockés comme tables, donc changent après reconstruction.
+Les vues de préparation conservent leurs définitions SQL. Les journaux, artefacts
+dbt et erreurs de chaque qualification sont externes sous
+`SNCF_DATA_DIR/model_runs/<run_id>`. Les preuves ciblées locales sont ignorées par
+Git et copiées sous forme anonymisée dans `reports/publication_evidence/`.
+Aucun export local systématique de ces tables ni actualisation Power BI.
+
+Voir [le modèle](data_model.md), [la reproduction J05](setup.md#qualification-j05)
+et [le rapport de validation](../reports/data_model_validation.md). La sûreté d'une
+publication de plusieurs tables après échec reste à J09 ; une tentative partielle
+ne devient pas une version qualifiée.
 
 ## Mise en œuvre J04
 

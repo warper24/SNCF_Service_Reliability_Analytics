@@ -1,6 +1,6 @@
 # SNCF Service Reliability Analytics
 
-**Projet de portfolio en cours — J01 à J04 validés.**
+**Projet de portfolio en cours — J01 à J05 validés.**
 
 L'objectif est de comprendre l'évolution de la fiabilité des liaisons TGV et de
 fournir un outil d'aide à la priorisation des investigations. Le projet utilise
@@ -14,7 +14,7 @@ les données publiques SNCF, Python, BigQuery, dbt et Power BI.
 | J02 — Environnement | Préparer les outils et vérifier les connexions à BigQuery et Power BI. | Validé |
 | J03 — Ingestion | Extraire et charger les données en conservant leurs versions et les traces de contrôle. | Validé |
 | J04 — Normalisation et qualité | Structurer les champs et identifier les anomalies ainsi que les usages autorisés. | Validé |
-| J05 — Modèle analytique | Construire les tables de référence et les calculs communs à l'analyse et au rapport. | À réaliser |
+| J05 — Modèle analytique | Huit tables de référence, ratios pondérés, comparaisons et éligibilité vérifiés ; 76 tests J05 réussis. | Validé |
 | J06 — Diagnostic | Comparer les évolutions des liaisons et justifier les investigations prioritaires. | À réaliser |
 | J07 — Modèle Power BI | Connecter les tables et créer les relations et mesures du rapport. | À réaliser |
 | J08 — Rapport | Concevoir les pages et le parcours de lecture pour faciliter la décision. | À réaliser |
@@ -28,9 +28,12 @@ Le premier commit regroupe l'état J01–J04, sans inventer un historique antér
 ## Résultat actuel
 
 L'ingestion et la préparation portent sur **12 907 observations mensuelles**, de
-janvier 2018 à septembre 2026. J04 a été vérifié par 18 tests dbt réussis, avec quatre
-avertissements documentés, et 37 tests Python réussis. Aucun classement de performance
-ou rapport métier Power BI n'est encore livré.
+janvier 2018 à septembre 2026. J05 ajoute quatre dimensions, deux faits et deux marts
+BigQuery, vérifiés par 76 tests dbt réussis. Les 18 contrôles J04 et 37 tests Python
+réussissent également ; quatre avertissements source restent documentés.
+Les comparaisons centrales retrouvent 102 liaisons National éligibles au semestre
+et 88 à l'année, selon les fenêtres et critères arrêtés avant diagnostic.
+Aucun classement de performance ou rapport métier Power BI n'est encore livré.
 
 Les analyses restent au niveau d'une liaison orientée et d'un service. Les données
 ne permettent pas de reconstruire un taux national, de convertir les causes en
@@ -41,6 +44,7 @@ effectifs ou de démontrer une causalité. Les anomalies et exclusions sont cons
 - [Plan détaillé](PLAN.md) et [bilans des jalons](docs/milestones/).
 - [Contrat de données](docs/data_contract.md) et [définitions des indicateurs](docs/kpi_dictionary.md).
 - [Audit de la source](reports/source_audit.md) et [rapport de qualité J04](reports/data_quality.md).
+- [Modèle analytique J05](docs/data_model.md) et [validation des calculs](reports/data_model_validation.md).
 - [Installation et reproduction](docs/setup.md).
 - [Preuves publiques anonymisées](reports/publication_evidence/) et [journal de publication](docs/publication.md).
 

@@ -1,0 +1,17 @@
+14:22:48  Running with dbt=1.12.5
+14:22:51  Registered adapter: bigquery=1.12.1
+14:22:52  Unable to do partial parsing because saved manifest not found. Starting full parse.
+14:22:56  Found 11 models, 8 analyses, 89 data tests, 1 source, 567 macros, 9 unit tests
+14:22:56  
+14:22:56  Concurrency: 2 threads (target='dev')
+14:22:56  
+14:23:02  1 of 2 START sql view model sncf_dev.stg_tgv_reliability ....................... [RUN]
+14:23:03  1 of 2 OK created sql view model sncf_dev.stg_tgv_reliability .................. [CREATE VIEW (0 processed) in 1.74s]
+14:23:03  2 of 2 START sql view model sncf_dev.int_tgv_quality_flags ..................... [RUN]
+14:23:05  2 of 2 OK created sql view model sncf_dev.int_tgv_quality_flags ................ [CREATE VIEW (0 processed) in 1.62s]
+14:23:05  
+14:23:05  Finished running 2 view models in 0 hours 0 minutes and 8.66 seconds (8.66s).
+14:23:05  
+14:23:05  Completed successfully
+14:23:05  
+14:23:05  Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=2
