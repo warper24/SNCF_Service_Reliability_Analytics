@@ -1,0 +1,11 @@
+check_name,failures
+volume_eligibility_monotonic,0
+scenario_coverage,0
+degradation_rank_order,0
+unique_scenario_grain,0
+decomposition_identity,0
+reference_equals_j05,0
+underperformance_rank_order,0
+variation_does_not_change_underperformance_rank,0
+exclusions_and_unavailable_ranks,0
+target_does_not_change_degradation_rank,0

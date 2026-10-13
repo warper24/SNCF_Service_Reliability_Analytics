@@ -1,4 +1,63 @@
-# Installation, connexions, ingestion, qualité et modèle — J02–J05
+# Installation, connexions, ingestion, qualité, modèle et diagnostic — J02–J06
+
+## Qualification J06
+
+Accord explicite du 13 octobre 2026 après présentation complète. Réutiliser
+l'environnement verrouillé et le profil privé. Aucun paquet supplémentaire requis.
+Le projet dbt passe à 0.6.0 ; la version du paquet Python d'ingestion reste inchangée.
+
+```powershell
+$taskRoot = Join-Path $env:LOCALAPPDATA 'SNCF_Service_Reliability_Analytics'
+$taskPython = Join-Path $taskRoot 'venv-j02\Scripts\python.exe'
+$env:GOOGLE_CLOUD_PROJECT = 'sncf-reliability-analytics'
+$env:BQ_LOCATION = 'EU'
+$env:BQ_DEV_DATASET = 'sncf_dev'
+$env:BQ_RAW_DATASET = 'sncf_dev'
+$env:DBT_PROFILES_DIR = Join-Path $taskRoot 'dbt-profile'
+# Choisir l'archive réelle si SNCF_DATA_DIR diffère du dossier par défaut.
+$taskSnapshot = Join-Path $taskRoot 'data\ingestion\20261007T130103249967Z_bce4ef24'
+& $taskPython scripts/validate_diagnostic.py --execute --project $env:GOOGLE_CLOUD_PROJECT --snapshot $taskSnapshot
+```
+
+Le collecteur vérifie l'archive et la qualification J05 locale, contrôle le brut
+et les objets existants, compile les analyses et vérifie leur syntaxe et leur
+estimation de lecture par dry run (sans calcul des résultats), puis rejoue les
+tests J04/J05 sans reconstruire les tables et exécute les contrôles et diagnostics.
+Les analyses dbt ne sont pas exécutées par `dbt compile` : le collecteur soumet
+explicitement leurs requêtes. Les scénarios sont calculés en SQL depuis les faits.
+Les cas synthétiques sont eux aussi exécutés dans BigQuery.
+
+Les originaux détaillés (SQL compilé, résultats, manifestes, journaux, identifiants
+de jobs) vont dans `SNCF_DATA_DIR/diagnostic_runs/<run_id>`, hors OneDrive. Les
+fichiers sélectionnés d'une tentative réussie sont copiés dans
+`reports/diagnostic_evidence/`, ignoré par Git ; la préparation de publication
+en produit les copies publiques. Les tentatives échouées restent conservées.
+Une analyse sans priorités peut donner un CSV avec seulement ses en-têtes.
+
+Le collecteur refuse une version différente de J05, un changement du code amont
+(sauf le raccordement documenté du projet dbt), des contrôles manquants/échoués,
+une modification des entrées pendant l'exécution ou une modification de sa méthode
+et de son code pendant la qualification. Une modification détectée impose une
+nouvelle qualification, sans écraser l'historique. Cette vérification avant/après
+n'est pas une transaction multi-table ; la reprise complète reste à J09.
+
+La limite de 100 MB est appliquée à chaque requête, sans plafond cumulé. Les
+versions installées et les octets traités/facturés des requêtes de diagnostic sont
+consignés dans la validation. La facture finale n'est pas vérifiée par ce script.
+Les principes de publication existants s'appliquent également à J06.
+
+Après une correction limitée à J06, `--reuse-upstream-run <dossier_de_tentative>`
+permet de réutiliser les tests amont d'une tentative J06 réussie. Le collecteur
+vérifie leur couverture, leurs empreintes, le code J05, les versions installées,
+la source et les métadonnées des objets. Les preuves restent datées de leur
+exécution réelle et la nouvelle validation référence la tentative utilisée.
+La compilation, les dry runs et les contrôles/analyses J06 sont toujours rejoués.
+Sans cette option, les tests amont sont exécutés à nouveau.
+
+Sur un nouveau clone, récupérer les preuves locales J05 ou fournir
+`--upstream-evidence reports/publication_evidence/data_model_evidence/validation.json`,
+avec l'archive source séparée. Les tables J05 doivent déjà être reconstruites et
+qualifiées selon la procédure suivante ; J06 ne les reconstruit pas implicitement.
 
 ## Qualification J05
 

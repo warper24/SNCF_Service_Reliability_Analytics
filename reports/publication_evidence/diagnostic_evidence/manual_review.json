@@ -1,0 +1,132 @@
+{
+  "reviewed_at_utc": "2026-10-13T10:29:50.855268+00:00",
+  "qualification_run_id": "20261013T102259Z_d1ed8f73",
+  "checks": [
+    {
+      "check": "qualified_code_unchanged",
+      "status": "passed",
+      "detail": "69 fichiers"
+    },
+    {
+      "check": "run_evidence_hashes",
+      "status": "passed",
+      "detail": "23 fichiers"
+    },
+    {
+      "check": "historical_originals_unchanged",
+      "status": "passed",
+      "detail": "39 originaux historiques"
+    },
+    {
+      "check": "route_degradation_single_version",
+      "status": "passed",
+      "detail": "Version source identique"
+    },
+    {
+      "check": "persistent_underperformance_single_version",
+      "status": "passed",
+      "detail": "Version source identique"
+    },
+    {
+      "check": "volume_rate_decomposition_single_version",
+      "status": "passed",
+      "detail": "Version source identique"
+    },
+    {
+      "check": "cause_profiles_single_version",
+      "status": "passed",
+      "detail": "Version source identique"
+    },
+    {
+      "check": "priority_sensitivity_single_version",
+      "status": "passed",
+      "detail": "Version source identique"
+    },
+    {
+      "check": "diagnostic_summary_single_version",
+      "status": "passed",
+      "detail": "Version source identique"
+    },
+    {
+      "check": "period_sensitivity_single_version",
+      "status": "passed",
+      "detail": "Version source identique"
+    },
+    {
+      "check": "diagnostic_fixtures",
+      "status": "passed",
+      "detail": "26 contrôles"
+    },
+    {
+      "check": "diagnostic_validation",
+      "status": "passed",
+      "detail": "10 contrôles"
+    },
+    {
+      "check": "summary_reconciled_to_scenarios",
+      "status": "passed",
+      "detail": "54 synthèses réconciliées avec 6264 lignes"
+    },
+    {
+      "check": "annual_unavailable_is_not_zero",
+      "status": "passed",
+      "detail": "NULL conservés dans les synthèses annuelles"
+    },
+    {
+      "check": "common_period_population",
+      "status": "passed",
+      "detail": "Population commune vérifiée depuis les 116 candidats"
+    },
+    {
+      "check": "cause_shares_against_raw_archive",
+      "status": "passed",
+      "detail": "720 parts comparées aux champs SNCF originaux, tolérance 1e-10 point ; aucune agrégation"
+    },
+    {
+      "check": "cause_selection_matches_both_lists",
+      "status": "passed",
+      "detail": "Union des deux listes : 10 liaisons"
+    },
+    {
+      "check": "decomposition_export_identity",
+      "status": "passed",
+      "detail": "190 identités réconciliées"
+    }
+  ],
+  "python_tests": {
+    "passed": 37,
+    "log_sha256": "45e41362bf3dbe4c6599948a8e129be61692b8ed9b2fb3e18d6e83afa3747b9b"
+  },
+  "failed_attempts": [
+    {
+      "run_id": "20261013T101226Z_4e9ddc7c",
+      "error": "'NoneType' object is not iterable",
+      "validation_sha256": "5e9736f2b52fde063917ce7b38fde9db051d7c06309326fa45b0ded15607613e"
+    },
+    {
+      "run_id": "20261013T101522Z_9d338763",
+      "error": "400 No matching signature for operator != for argument types: INT64, STRUCT<version_id STRING, comparison_id STRING, route_key STRING, ...>\n  Signature: T1 != T1\n    Unable to find common supertype for templated argument <T1>\n      Input types for <T1>: {INT64, STRUCT<version_id STRING, comparison_id STRING, route_key STRING, ...>} at [207:51]; reason: invalidQuery, location: query, message: No matching signature for operator != for argument types: INT64, STRUCT<version_id STRING, comparison_id STRING, route_key STRING, ...>\n  Signature: T1 != T1\n    Unable to find common supertype for templated argument <T1>\n      Input types for <T1>: {INT64, STRUCT<version_id STRING, comparison_id STRING, route_key STRING, ...>} at [207:51]\n\nLocation: EU\nJob ID: sncf_j06_f3b83deb7dd546b9b2d0d99de62640c4\n",
+      "validation_sha256": "cb2717e3eedc0ea0c2f21514a670a59c6f80f33053410263d5ab7a10e2c988f5"
+    }
+  ],
+  "bootstrap_incident": "Premier lancement : AttributeError pandas.core pendant import BigQuery, avant création de tentative ; imports ensuite réussis, versions verrouillées inchangées, aucune installation.",
+  "manual_interpretation_review": [
+    "F01–F07 : version, périodes, unités et requêtes explicites ; arrondis comparés aux CSV.",
+    "Deux listes distinctes ; aucune somme de trains entre liaisons.",
+    "Sensibilité volume 15/30/60, variation 1/2/3, cible 85/90/95 ; fréquence des scénarios non probabiliste.",
+    "Profils de juin illustratifs ; les 12 mois par liaison restent accessibles.",
+    "R01–R06 : constat, hypothèse, investigation, interlocuteur pressenti et indicateurs présents.",
+    "D01–D07 maintenues ; aucune causalité ni gain attribué."
+  ],
+  "unexecuted": [
+    "Réconciliation SQL/DAX et actualisation Power BI",
+    "Validation sur machine neuve",
+    "Transaction/reprise multi-table",
+    "Vérification de la facture finale",
+    "Confirmation documentaire de D01 ou de la population des causes"
+  ],
+  "upstream_tests_reuse": {
+    "run_id": "20261013T101816Z_2ce63253",
+    "validation_sha256": "c3e141e553f226829ec14618170eaa570183a7ad722d6ee200c69ccb0b85f684"
+  }
+}

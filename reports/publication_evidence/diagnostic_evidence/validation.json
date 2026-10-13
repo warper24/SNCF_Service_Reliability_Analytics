@@ -1,0 +1,4622 @@
+{
+  "checks": [
+    {
+      "check_name": "decomposition_example",
+      "failures": 0
+    },
+    {
+      "check_name": "tie_six_rows_in_top_five",
+      "failures": 0
+    },
+    {
+      "check_name": "tie_rank_skip",
+      "failures": 0
+    },
+    {
+      "check_name": "tie_boundary_rank_five",
+      "failures": 0
+    },
+    {
+      "check_name": "annual_persistence_null",
+      "failures": 0
+    },
+    {
+      "check_name": "missing_not_zero",
+      "failures": 0
+    },
+    {
+      "check_name": "weighted_ratio",
+      "failures": 0
+    },
+    {
+      "check_name": "volume_threshold_boundaries",
+      "failures": 0
+    },
+    {
+      "check_name": "underperformance_four_of_six",
+      "failures": 0
+    },
+    {
+      "check_name": "zero_not_zero_rate",
+      "failures": 0
+    },
+    {
+      "check_name": "exact_two_points",
+      "failures": 0
+    },
+    {
+      "check_name": "case_up_exact",
+      "failures": 0
+    },
+    {
+      "check_name": "case_down_exact",
+      "failures": 0
+    },
+    {
+      "check_name": "case_target_equal",
+      "failures": 0
+    },
+    {
+      "check_name": "case_persistent_3",
+      "failures": 0
+    },
+    {
+      "check_name": "case_persistent_4",
+      "failures": 0
+    },
+    {
+      "check_name": "case_zero",
+      "failures": 0
+    },
+    {
+      "check_name": "case_null_delay",
+      "failures": 0
+    },
+    {
+      "check_name": "case_missing",
+      "failures": 0
+    },
+    {
+      "check_name": "case_low15",
+      "failures": 0
+    },
+    {
+      "check_name": "case_low30",
+      "failures": 0
+    },
+    {
+      "check_name": "case_low60",
+      "failures": 0
+    },
+    {
+      "check_name": "case_scope",
+      "failures": 0
+    },
+    {
+      "check_name": "case_weighted",
+      "failures": 0
+    },
+    {
+      "check_name": "strict_target_90",
+      "failures": 0
+    },
+    {
+      "check_name": "null_not_zero_rate",
+      "failures": 0
+    },
+    {
+      "check_name": "volume_eligibility_monotonic",
+      "failures": 0
+    },
+    {
+      "check_name": "scenario_coverage",
+      "failures": 0
+    },
+    {
+      "check_name": "degradation_rank_order",
+      "failures": 0
+    },
+    {
+      "check_name": "unique_scenario_grain",
+      "failures": 0
+    },
+    {
+      "check_name": "decomposition_identity",
+      "failures": 0
+    },
+    {
+      "check_name": "reference_equals_j05",
+      "failures": 0
+    },
+    {
+      "check_name": "underperformance_rank_order",
+      "failures": 0
+    },
+    {
+      "check_name": "variation_does_not_change_underperformance_rank",
+      "failures": 0
+    },
+    {
+      "check_name": "exclusions_and_unavailable_ranks",
+      "failures": 0
+    },
+    {
+      "check_name": "target_does_not_change_degradation_rank",
+      "failures": 0
+    }
+  ],
+  "code_sha256": {
+    "analyses/sql/cause_profiles.sql": "fe385586924d736e3960d8a1010aee3b951f8eabbaed61d1e65ef1309ad052c9",
+    "analyses/sql/diagnostic_fixtures.sql": "fb3e421e47dcfc1cc8e28c3f3a10e6c95e0b9a9035a63173e77688e74af3825a",
+    "analyses/sql/diagnostic_summary.sql": "8c5e70b6e4e30b32a61522f6a3194a3ab8b6486b46f05184ce02b3d4e6ee53b3",
+    "analyses/sql/diagnostic_validation.sql": "66f7a940dc3679e396c55c9f9aca8f7123bb1a8b7700102b940d0c5af8aa72e9",
+    "analyses/sql/period_sensitivity.sql": "a3e66d4926635301be2f82d618c1b6f6eb60b2fcc7cd2ec595b68ec4007fb6cd",
+    "analyses/sql/persistent_underperformance.sql": "2dd764d313ddb65da3ab5270f0ddab36c16249ca06769155cabe23e6c3fe869a",
+    "analyses/sql/priority_sensitivity.sql": "726b1df8fce6dc892a711c0043353e2f8d16be02891f9fb657c0542109176570",
+    "analyses/sql/route_degradation.sql": "fcbb68b4a62d75f535354253c981515b8b570f7692036d795f8c2233afb153a1",
+    "analyses/sql/volume_rate_decomposition.sql": "9369bd89d4559671ef52ff297715eb0d5a26ab7bfd4fafa65f17d2eaf2bb24e8",
+    "config/datasets.yaml": "c6ecff9aff11cbdcbbd4c3165713a1392ed281e5ce13e85a7868c0d8c451d4ba",
+    "dbt/analyses/j04_anomaly_examples.sql": "0bf04d3671b3c6546ebcbb9e33f2f9164daf2247ef8ebae6a2cb75e1ef2677de",
+    "dbt/analyses/j04_coverage.sql": "3a3d073e05e128d1824ab1b9eda092c1b73750f49ebc619ddea9c43f2990c9a0",
+    "dbt/analyses/j04_manual_cases.sql": "d69bf8d4f9270998351a24f3cee08d3c35b506110549a8a840a1a083b5f9f344",
+    "dbt/analyses/j04_period_coverage.sql": "c6c290a10bb52206c386bc59e7eda9497d43a7cf047428e99b36ea5f166c1c21",
+    "dbt/analyses/j04_quality_summary.sql": "ddfbd51ddc821adb0c7f383577be80273496757aa8936e39b56d95a3219f9ffe",
+    "dbt/analyses/j05_model_summary.sql": "79eadd2e5643a830d28f95f43adf58f510045bfe63c65716be34290aa0d60048",
+    "dbt/analyses/j05_period_coverage.sql": "a668b7c2106b5eebdde6aaaa99ad3ffa8f193a1b6dcc1f0bea426f7301217467",
+    "dbt/analyses/j05_reconciliation.sql": "0c1c694f48584b4ed6f350fd4cce63a58ab74ad68c811ed05d347327779ed237",
+    "dbt/dbt_project.yml": "80f00b90a722bdaaae1bb7f31351895f93c6b65c241ffcdd717c4c53337edb9f",
+    "dbt/macros/j05_contract.sql": "57978b3aa5551b00dae31792fccbc3d2db81bbd726bd8831072b45fff1a0ac50",
+    "dbt/macros/j06_diagnostic.sql": "4b3645e7de8f2e9c1d875f9e7216913e504ed3ace71651793c1fecd0c1cee880",
+    "dbt/models/intermediate/int_tgv_quality_flags.sql": "3c7216bf60d3564793245a7575de51f8080c648bd738b73efe48c2df12a2f573",
+    "dbt/models/intermediate/int_tgv_quality_flags.yml": "d96ea1276b0942b2462d113a4402ec1bb2c3af5f6f36aaceb7bbc478ed2b4762",
+    "dbt/models/intermediate/j04_unit_tests.yml": "2d720dfd2fe42f64340bf791b68a0ff9a6984c449c276242ce4790688691b783",
+    "dbt/models/j02_connection_check.sql": "b04971e049a4611058cf1cf95442d218b5e2f0d2c6b3f057764429d2942ab9bb",
+    "dbt/models/marts/dim_cause.sql": "1ab7d4c5b551b6ea756062ee495b8fedfd827d093d18a1094da2797519ecf215",
+    "dbt/models/marts/dim_date.sql": "e02603cd49ecbf452d7916ed617e1eff60410fcf100bef2428ccb4b6cd29894c",
+    "dbt/models/marts/dim_route.sql": "7c5aea02a41c21c555eea3c12b6c6e3ddb049a38e337c87ce6f5b59a66e4ac24",
+    "dbt/models/marts/dim_service.sql": "9647b299ab212c21a863e9f8e796c4289b40c7644600864105627daaebbbdcbb",
+    "dbt/models/marts/fct_delay_causes_monthly.sql": "ba83a9023cd4272b4cb383ac663fbb1bf012a1d71bc7e62a9c80d63ff1c6bef3",
+    "dbt/models/marts/fct_reliability_monthly.sql": "3c5a225ed1f6038f5ba9310c36cfddefb8fbf9180455a4d585be819f9f784722",
+    "dbt/models/marts/j05_unit_tests.yml": "31942f49b8fc66b9a22f160a3c315350a6e3ef934f52f5bd5488f11df5a059f4",
+    "dbt/models/marts/mart_route_priorities.sql": "950a8f987dadca83afe2404bd534daf40ae47d07b42e6473422ba22d89bda024",
+    "dbt/models/marts/mart_route_trends.sql": "b929e620d4cf6417bb456f8dc880cb1b37dd9e1f24520cbea88a898decafa05b",
+    "dbt/models/marts/marts.yml": "57b82414102934fea4d1a16f6d4fc5da96ee72236d892d0bf3402cff4d350d67",
+    "dbt/models/staging/sources.yml": "5968ca0cd6fc884b0a18098b19e0f0d7b3990b416f5157ff8f60fc259e340bec",
+    "dbt/models/staging/stg_tgv_reliability.sql": "78839d4e56a042a3903b475859a685265730791c30a053bf55b7d334aefb3e80",
+    "dbt/models/staging/stg_tgv_reliability.yml": "65f1f07b4c521dedeee83893e7bc4edebcdbc37f770b3ac4f391261c45721695",
+    "dbt/profiles.yml.example": "fa8fcd826d3016134eb15d745f289e702f541e0121aa514b380b678ea6dd154f",
+    "dbt/tests/assert_intermediate_fidelity.sql": "7d55a7895b9692378a40f703aa87475457a7c6c3d4d280cab3ef7ce77c9a04f2",
+    "dbt/tests/assert_j05_calendar_and_keys.sql": "94f92774640279ff930a4e2fc303a711c16b04d48d0277ac082f3a4ea9e4e1f6",
+    "dbt/tests/assert_j05_causes.sql": "dc775520534864193033a03187458673251527dcc08def7e0cf54ca7184be661",
+    "dbt/tests/assert_j05_fidelity.sql": "146030c69cb69e88ac7488fd16b8f76086fb5783ff6720ddf6c3a1ed4782f694",
+    "dbt/tests/assert_j05_grains.sql": "356dcf824358ff804f1d0eff75a7406a6930e3e0a268869c4cd61ec025a9e1bd",
+    "dbt/tests/assert_j05_kpis.sql": "824fef59378db4098102708dc4d6c74e5fe9d438675e7982e735a795b04c34b0",
+    "dbt/tests/assert_j05_periods.sql": "4967d9d87ccab43c8a3c602d2fd63b03daaeed5cf7bcb3e4aec98c4ad33f2305",
+    "dbt/tests/assert_j05_trends.sql": "d8b55cae911edb2405a4de872db553ce07ef6495e0cd7dd318ed1afce5718eb4",
+    "dbt/tests/assert_j05_version.sql": "a661cd546fc0a3aa54d79a081af3c475137c1b19d0e6eff662f93e0253b1e86c",
+    "dbt/tests/assert_monthly_grain.sql": "41f38465a2c6a897de5a948d728604d0b16ed7a5ebb26204f3eca035b22e9982",
+    "dbt/tests/assert_quality_usability.sql": "a81c0abd4c652f6312f52fe808b56dc89b7b457a3a20c943d7c4f19ad2ba481c",
+    "dbt/tests/assert_source_integrity.sql": "12b58e9714ec8c08d4025b092c8422955f5e86e0dfb3eb6a404116b4f36601b2",
+    "dbt/tests/assert_source_version.sql": "db0f50a6453e2bae1b398251176e7ee04cf5f87c33e79b75c27f8d587545c33b",
+    "dbt/tests/assert_staging_fidelity.sql": "8e049076458f03617a90a3b172ec3248d7211e41a1812a289d453bdf7ef52b6f",
+    "dbt/tests/warn_cause_profiles.sql": "6491097a2ff745a056ae58e289d1ce18b929dfe813699079839a39d07e868815",
+    "dbt/tests/warn_service_scope.sql": "c488814a4f021ba0510794477ccc938f88c449bc20396849c3ab8298f509cf4a",
+    "dbt/tests/warn_signed_means.sql": "654eb52e8f01581dfb2a5228a825de7a28e85ee852456209e8be4ccdcbd63c46",
+    "dbt/tests/warn_source_counts.sql": "ebda6de276a84805257f4304a4fd1428ea624a60d53d8aaee4eda1f6704026bf",
+    "docs/prioritization_method.md": "3ee9b12e95449e0863ff3c9d0ab4ac8587dbe595e40367345876b18b3941fbc2",
+    "pyproject.toml": "69e720314f62ddffe4e0698594d1fe6b73cfb45d9915e2d1ca18eddd435b510c",
+    "scripts/run_dbt.py": "6b9f091157145ff24e77eb01950709761fb260a1bffa4c1e856475f6b6d3e0b2",
+    "scripts/validate_data_model.py": "2a2dbc883a88c2f705d75bf8e30974e976a795f5add40603067849a2e4534adf",
+    "scripts/validate_data_quality.py": "637ae31cb955db09dcaedac850032631bba88229ce9092b69f23d73fcd2d3591",
+    "scripts/validate_diagnostic.py": "60014239884a2ff4dd13660eab1c13777002ac899fd6f18a73f863194874ac7a",
+    "src/sncf_reliability/__init__.py": "e9d97ec647ea77420293f77389d0f73d2009ac432ba8e0dceaaab6ea8e2081d5",
+    "src/sncf_reliability/api_client.py": "3274ca595b537c186ba31af5c4967736538544219f936d855b4dc6a1bdfb0552",
+    "src/sncf_reliability/cli.py": "734290572343a6f46e01d54734a522a655e37fd4d53322406e2b279909157897",
+    "src/sncf_reliability/ingest.py": "63d2d2414945f809eece86e11694783fffffd3037e3695d0c57e1a2d04ef36fc",
+    "src/sncf_reliability/warehouse.py": "38dc61d3cfd61a67ad61cd96f8747c27e467cc68169b9961fe038d93835462c1",
+    "uv.lock": "457eddb590af0419554482a6c1ad72d842ab8a00efe878e01c3b2af21cc8bede"
+  },
+  "commands": [
+    {
+      "label": "compile",
+      "log_sha256": "0c5dbd9844703f4b5eb0cd6af4f64f65c99729bfffe7a83e7db6e0583d1455cb",
+      "return_code": 0
+    },
+    {
+      "label": "upstream_tests",
+      "log_sha256": "9b50bc6ea88c61e52a3d393f05ac3ce89ac15a4c856a99fdb89b7d20ef49a909",
+      "reused": true
+    }
+  ],
+  "completed_at_utc": "2026-10-13T10:23:47.104170+00:00",
+  "dbt_vars": {
+    "expected_version_id": "e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6",
+    "raw_tgv_identifier": "raw_tgv_v_e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6"
+  },
+  "evidence_sha256": {
+    "cause_profiles.csv": "0b5554897870a428b402b32d1403147895c08995873e4116cfc9c8ed2e23663b",
+    "cause_profiles.sql": "9c91bce41784b85bd64cebe6e3de8882648d40928cd320cc7473125939463bd0",
+    "compile.txt": "0c5dbd9844703f4b5eb0cd6af4f64f65c99729bfffe7a83e7db6e0583d1455cb",
+    "compile_run_results.json": "97a1612d69622417a814f2a6dea545d511d4530587c07d4e664963980bcb1f7b",
+    "compiled_manifest.json": "bf7d3697fd3e423cad04f6ed0c5b81125406c15640480b79e632e5f4911018da",
+    "diagnostic_fixtures.csv": "1be1c9541d9354e03697a503d680892d2c9ba68d7eb6ae74b491d9ca19b72678",
+    "diagnostic_fixtures.sql": "59eb3be1481d07f882b63f876a8e61ea87d9504efdaba7ff431fb5c8bbc45417",
+    "diagnostic_summary.csv": "40c9a3aa07c1b55c1dd66274a12b02517620ed49da9c5671c3672bfb2db42cdd",
+    "diagnostic_summary.sql": "73561817fec297e047c6f02f1eb963f50ec93108ddf51b99a6be2bb270e32cb6",
+    "diagnostic_validation.csv": "153a730624256f63bb800d64a43651eab8b3379edc5b1ae712e2c3cf70fac493",
+    "diagnostic_validation.sql": "c205652af1305893f505494c8a7772930eb3e16927c3ab5a4d7550eef99b0e92",
+    "period_sensitivity.csv": "a411d0b617eaf188698546d8d564fde06504ef6fc330ffb1ff811960048d941b",
+    "period_sensitivity.sql": "137e2214d6df9b21c469ad19ca10ad867fab56de9905533e13bea66b916705fd",
+    "persistent_underperformance.csv": "6cb58f7d051b4779a21b8a65ab2c6c1999dda2cf360423cd431a8318970a1e00",
+    "persistent_underperformance.sql": "25c436a069b21cabd97720bc8d7de40e85c644124050a5f6f9554783e9d01b18",
+    "priority_sensitivity.csv": "9901ed5d6dac874a0e230d2f19d04ad794121dfe11840604088ceebbfcc7b937",
+    "priority_sensitivity.sql": "23086dc977ec4f6016dbe15ca5f17a06ce5ab5a298b3924e6d5f7878cf7d688a",
+    "route_degradation.csv": "77e167b189c51ac3e260258dc2646b1d7d6ee596841d44c306f597335819498e",
+    "route_degradation.sql": "353dc4c70c586a3cdf7d830f68a716fbc682c897938181018bd0a2a744a0d830",
+    "upstream_tests.txt": "9b50bc6ea88c61e52a3d393f05ac3ce89ac15a4c856a99fdb89b7d20ef49a909",
+    "upstream_tests_run_results.json": "e5e7ab8a8d9c237a35728ec99c52aaae8186f3f05aa4f7dda7d8d0d6a63ee03b",
+    "volume_rate_decomposition.csv": "3ee886416f1a92d9039cdaf1a8aacc6f7f5320a771f73b26fa7957b84b20a06c",
+    "volume_rate_decomposition.sql": "38999d04a601a8d058814660e555834363b855475702df77646427d1c90df369"
+  },
+  "objects_after": {
+    "dim_cause": {
+      "modified": "2026-10-09T14:24:06.335000+00:00",
+      "rows": 6,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "cause_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_label",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "normalized_field",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "source_field",
+          "type": "STRING"
+        }
+      ],
+      "type": "TABLE",
+      "view_query": null
+    },
+    "dim_date": {
+      "modified": "2026-10-09T14:24:07.116000+00:00",
+      "rows": 3287,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "date_key",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "year",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "quarter",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month_number",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month_label",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_month_start",
+          "type": "BOOLEAN"
+        }
+      ],
+      "type": "TABLE",
+      "view_query": null
+    },
+    "dim_route": {
+      "modified": "2026-10-09T14:24:10.172000+00:00",
+      "rows": 130,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "route_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "route_label",
+          "type": "STRING"
+        }
+      ],
+      "type": "TABLE",
+      "view_query": null
+    },
+    "dim_service": {
+      "modified": "2026-10-09T14:24:10.157000+00:00",
+      "rows": 2,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "service_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_type",
+          "type": "STRING"
+        }
+      ],
+      "type": "TABLE",
+      "view_query": null
+    },
+    "fct_delay_causes_monthly": {
+      "modified": "2026-10-09T14:24:16.459000+00:00",
+      "rows": 77442,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "version_id",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_number",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_sha256",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "route_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "published_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_profile_status",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_sum_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_cause_sum_warning",
+          "type": "BOOLEAN"
+        }
+      ],
+      "type": "TABLE",
+      "view_query": null
+    },
+    "fct_reliability_monthly": {
+      "modified": "2026-10-09T14:24:18.598000+00:00",
+      "rows": 12907,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "version_id",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_number",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_sha256",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "invalid_json",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_type",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_duration_minutes",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancelled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancellation_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_15_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_over_15_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_30_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_60_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "conversion_error_fields",
+          "type": "STRING"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "missing_schema_fields",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_population_valid",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "central_counts_compatible",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_quarantined",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_present_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_out_of_bounds_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_sum_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "services_in_month",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "services_in_history",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "operated_trains_proxy",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "important_delay_nesting_valid",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_complete",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_all_zero",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_cause_sum_warning",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cancellation_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cancellation_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_arrival_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_arrival_delay_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_departure_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_mean_arrival_delay_late_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_mean_departure_delay_late_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_over_15_generic_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_departure_all",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_arrival_all",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_arrival_late",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_departure_late",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_scheduled_duration",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_multiple_services_in_month",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_multiple_services_in_history",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_profile_status",
+          "type": "STRING"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "quality_reasons",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "route_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancellation_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "composite_regularity_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_30_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_60_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_30_delay_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_60_delay_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "denominator_status",
+          "type": "STRING"
+        }
+      ],
+      "type": "TABLE",
+      "view_query": null
+    },
+    "int_tgv_quality_flags": {
+      "modified": "2026-10-09T14:23:05.616000+00:00",
+      "rows": 0,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "version_id",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_number",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_sha256",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "raw_payload",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "invalid_json",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_type",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_duration_minutes",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancelled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancellation_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_15_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_over_15_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_30_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_60_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "external_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "infrastructure_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "traffic_management_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "rolling_stock_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "station_management_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "passenger_handling_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "conversion_error_fields",
+          "type": "STRING"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "missing_schema_fields",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_population_valid",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "central_counts_compatible",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_quarantined",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_present_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_out_of_bounds_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_sum_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "services_in_month",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "services_in_history",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "operated_trains_proxy",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "important_delay_nesting_valid",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_complete",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_all_zero",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_cause_sum_warning",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cancellation_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cancellation_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_arrival_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_arrival_delay_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_departure_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_mean_arrival_delay_late_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_mean_departure_delay_late_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_over_15_generic_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_departure_all",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_arrival_all",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_arrival_late",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_departure_late",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_scheduled_duration",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_multiple_services_in_month",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_multiple_services_in_history",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_profile_status",
+          "type": "STRING"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "quality_reasons",
+          "type": "STRING"
+        }
+      ],
+      "type": "VIEW",
+      "view_query": "with base as (\n    select\n        *,\n        coalesce(scheduled_trains >= 0 and cancelled_trains >= 0\n            and cancelled_trains <= scheduled_trains, false) as scheduled_population_valid,\n        coalesce(scheduled_trains >= 0 and cancelled_trains >= 0\n            and cancelled_trains <= scheduled_trains and arrival_delayed_trains >= 0\n            and arrival_delayed_trains <= scheduled_trains - cancelled_trains,\n            false) as central_counts_compatible,\n        coalesce(month >= date '2025-01-01' and month < date '2025-04-01', false)\n            as is_important_delay_quarantined,\n        (select countif(value is not null) from unnest([\n            external_cause_pct, infrastructure_cause_pct, traffic_management_cause_pct,\n            rolling_stock_cause_pct, station_management_cause_pct, passenger_handling_cause_pct\n        ]) value) as cause_present_count,\n        (select countif(value < 0 or value > 100) from unnest([\n            external_cause_pct, infrastructure_cause_pct, traffic_management_cause_pct,\n            rolling_stock_cause_pct, station_management_cause_pct, passenger_handling_cause_pct\n        ]) value) as cause_out_of_bounds_count,\n        external_cause_pct + infrastructure_cause_pct + traffic_management_cause_pct\n            + rolling_stock_cause_pct + station_management_cause_pct\n            + passenger_handling_cause_pct as cause_sum_pct,\n        count(distinct service_type) over (\n            partition by month, departure_station, arrival_station\n        ) as services_in_month,\n        count(distinct service_type) over (\n            partition by departure_station, arrival_station\n        ) as services_in_history\n    from `sncf-reliability-analytics`.`sncf_dev`.`stg_tgv_reliability`\n), populations as (\n    select\n        *,\n        case when scheduled_population_valid\n            then scheduled_trains - cancelled_trains end as operated_trains_proxy,\n        coalesce(arrival_delayed_over_60_trains >= 0\n            and arrival_delayed_over_30_trains >= arrival_delayed_over_60_trains\n            and arrival_delayed_trains >= arrival_delayed_over_30_trains,\n            false) as important_delay_nesting_valid,\n        cause_present_count = 6 as is_cause_profile_complete,\n        coalesce(cause_present_count = 6 and cause_sum_pct = 0\n            and cause_out_of_bounds_count = 0, false) as is_cause_profile_all_zero,\n        -- 0,1 point métier ; 1e-9 point absorbe uniquement l'erreur flottante de frontière.\n        coalesce(cause_present_count = 6 and cause_sum_pct > 0\n            and abs(cause_sum_pct - 100) > 0.1 + 1e-9, false) as has_cause_sum_warning\n    from base\n), usability as (\n    select\n        *,\n        scheduled_population_valid as is_cancellation_count_usable,\n        scheduled_population_valid and coalesce(scheduled_trains > 0, false)\n            as is_cancellation_rate_usable,\n        central_counts_compatible as is_arrival_delay_count_usable,\n        central_counts_compatible and coalesce(operated_trains_proxy > 0, false)\n            as is_arrival_delay_rate_usable,\n        scheduled_population_valid and coalesce(departure_delayed_trains >= 0\n            and departure_delayed_trains <= operated_trains_proxy, false)\n            as is_departure_delay_count_usable,\n        central_counts_compatible and important_delay_nesting_valid\n            and not is_important_delay_quarantined as is_important_delay_count_usable,\n        central_counts_compatible and important_delay_nesting_valid\n            and not is_important_delay_quarantined and coalesce(operated_trains_proxy > 0, false)\n            as is_important_delay_rate_usable,\n        -- D03 : un profil hors tolérance reste visible avec avertissement ; pas de renormalisation.\n        is_cause_profile_complete and cause_out_of_bounds_count = 0\n            and not is_cause_profile_all_zero as is_cause_profile_usable,\n        central_counts_compatible and coalesce(arrival_delayed_trains > 0\n            and mean_arrival_delay_late_minutes >= 0, false) as is_mean_arrival_delay_late_usable,\n        scheduled_population_valid and coalesce(departure_delayed_trains > 0\n            and departure_delayed_trains <= operated_trains_proxy\n            and mean_departure_delay_late_minutes >= 0, false) as is_mean_departure_delay_late_usable,\n        false as is_over_15_generic_usable,\n        coalesce(mean_departure_delay_all_minutes < 0, false)\n            as has_negative_mean_departure_all,\n        coalesce(mean_arrival_delay_all_minutes < 0, false)\n            as has_negative_mean_arrival_all,\n        coalesce(mean_arrival_delay_late_minutes < 0, false)\n            as has_negative_mean_arrival_late,\n        coalesce(mean_departure_delay_late_minutes < 0, false)\n            as has_negative_mean_departure_late,\n        coalesce(scheduled_duration_minutes < 0, false) as has_negative_scheduled_duration,\n        services_in_month > 1 as has_multiple_services_in_month,\n        services_in_history > 1 as has_multiple_services_in_history\n    from populations\n)\nselect\n    *,\n    case\n        when not is_cause_profile_complete then 'missing'\n        when cause_out_of_bounds_count > 0 then 'out_of_bounds'\n        when is_cause_profile_all_zero then 'all_zero'\n        when has_cause_sum_warning then 'sum_warning'\n        else 'available'\n    end as cause_profile_status,\n    array(\n        select reason from unnest([\n            if(not scheduled_population_valid, 'incompatible_scheduled_population', null),\n            if(not central_counts_compatible, 'incompatible_central_counts', null),\n            if(scheduled_population_valid and scheduled_trains = 0, 'zero_scheduled_population', null),\n            if(operated_trains_proxy = 0, 'zero_operated_proxy', null),\n            if(is_important_delay_quarantined, 'important_delay_quarantine_2025_q1', null),\n            if(not important_delay_nesting_valid, 'important_delay_nesting', null),\n            if(not is_cause_profile_complete, 'missing_cause_values', null),\n            if(cause_out_of_bounds_count > 0, 'cause_out_of_bounds', null),\n            if(is_cause_profile_all_zero, 'all_zero_cause_profile', null),\n            if(has_cause_sum_warning, 'cause_sum_outside_tolerance', null),\n            if(has_negative_mean_arrival_late, 'negative_mean_arrival_late', null),\n            if(has_negative_mean_departure_late, 'negative_mean_departure_late', null),\n            if(has_negative_mean_arrival_all, 'negative_mean_arrival_all', null),\n            if(has_negative_mean_departure_all, 'negative_mean_departure_all', null),\n            if(has_negative_scheduled_duration, 'negative_scheduled_duration', null),\n            if(has_multiple_services_in_month, 'multiple_services_in_month', null)\n        ]) reason where reason is not null\n    ) as quality_reasons\nfrom usability"
+    },
+    "mart_route_priorities": {
+      "modified": "2026-10-09T14:24:25.338000+00:00",
+      "rows": 232,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "version_id",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "route_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "comparison_id",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_start",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_end",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "expected_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "persistence_applicable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "services_in_comparison",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_observed_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_eligible_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_cancellation_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_arrival_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_important_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_important_count_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_cancellation_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_cancellation_denominator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_arrival_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_arrival_denominator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_over_30_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_over_60_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_important_denominator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_over_30_valid_count_sum",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_over_60_valid_count_sum",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_observed_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_eligible_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_cancellation_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_arrival_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_important_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_important_count_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_cancellation_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_cancellation_denominator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_arrival_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_arrival_denominator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_over_30_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_over_60_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_important_denominator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_over_30_valid_count_sum",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_over_60_valid_count_sum",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "eligible_month_pairs",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "deterioration_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "underperformance_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_start",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_end",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_comparison_eligible",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_observation_coverage",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_cancellation_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_arrival_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_composite_regularity_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_over_30_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_over_60_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_observation_coverage",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_cancellation_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_arrival_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_composite_regularity_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_over_30_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_over_60_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "exclusion_reasons",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_change_pp",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "change_signal",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "deterioration_persistence",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "underperformance_persistence",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_deterioration_persistent",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_underperformance_persistent",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "minimum_monthly_operated_proxy",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "deterioration_threshold_pp",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "regularity_target_pct",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "denominator_status",
+          "type": "STRING"
+        }
+      ],
+      "type": "TABLE",
+      "view_query": null
+    },
+    "mart_route_trends": {
+      "modified": "2026-10-09T14:24:21.786000+00:00",
+      "rows": 12907,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "version_id",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_number",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_sha256",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "invalid_json",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_type",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_duration_minutes",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancelled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancellation_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_15_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_over_15_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_30_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_60_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "conversion_error_fields",
+          "type": "STRING"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "missing_schema_fields",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_population_valid",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "central_counts_compatible",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_quarantined",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_present_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_out_of_bounds_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_sum_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "services_in_month",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "services_in_history",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "operated_trains_proxy",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "important_delay_nesting_valid",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_complete",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_all_zero",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_cause_sum_warning",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cancellation_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cancellation_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_arrival_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_arrival_delay_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_departure_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_mean_arrival_delay_late_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_mean_departure_delay_late_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_over_15_generic_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_departure_all",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_arrival_all",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_arrival_late",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_departure_late",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_scheduled_duration",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_multiple_services_in_month",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_multiple_services_in_history",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_profile_status",
+          "type": "STRING"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "quality_reasons",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "route_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancellation_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "composite_regularity_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_30_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_60_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_30_delay_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_60_delay_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "denominator_status",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_month",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_arrival_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_operated_trains_proxy",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_arrival_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_year_pair_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "passes_pair_volume_screen",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_change_pp",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_monthly_deterioration",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_monthly_underperformance",
+          "type": "BOOLEAN"
+        }
+      ],
+      "type": "TABLE",
+      "view_query": null
+    },
+    "stg_tgv_reliability": {
+      "modified": "2026-10-09T14:23:03.524000+00:00",
+      "rows": 0,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "version_id",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_number",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_sha256",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "raw_payload",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "invalid_json",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_type",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_duration_minutes",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancelled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancellation_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_15_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_over_15_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_30_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_60_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "external_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "infrastructure_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "traffic_management_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "rolling_stock_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "station_management_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "passenger_handling_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "conversion_error_fields",
+          "type": "STRING"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "missing_schema_fields",
+          "type": "STRING"
+        }
+      ],
+      "type": "VIEW",
+      "view_query": "with parsed as (\n    select *, safe.parse_json(payload, wide_number_mode => 'round') as doc\n    from `sncf-reliability-analytics`.`sncf_dev`.`raw_tgv_v_e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6`\n), extracted as (\n    select *,\n        json_value(payload, '$.date') as v_date,\n        json_value(payload, '$.service') as v_service,\n        json_value(payload, '$.gare_depart') as v_gare_depart,\n        json_value(payload, '$.gare_arrivee') as v_gare_arrivee,\n        json_value(payload, '$.duree_moyenne') as v_duree_moyenne,\n        json_value(payload, '$.nb_train_prevu') as v_nb_train_prevu,\n        json_value(payload, '$.nb_annulation') as v_nb_annulation,\n        json_value(payload, '$.commentaire_annulation') as v_commentaire_annulation,\n        json_value(payload, '$.nb_train_depart_retard') as v_nb_train_depart_retard,\n        json_value(payload, '$.retard_moyen_depart') as v_retard_moyen_depart,\n        json_value(payload, '$.retard_moyen_tous_trains_depart') as v_retard_moyen_tous_trains_depart,\n        json_value(payload, '$.commentaire_retards_depart') as v_commentaire_retards_depart,\n        json_value(payload, '$.nb_train_retard_arrivee') as v_nb_train_retard_arrivee,\n        json_value(payload, '$.retard_moyen_arrivee') as v_retard_moyen_arrivee,\n        json_value(payload, '$.retard_moyen_tous_trains_arrivee') as v_retard_moyen_tous_trains_arrivee,\n        json_value(payload, '$.commentaires_retard_arrivee') as v_commentaires_retard_arrivee,\n        json_value(payload, '$.nb_train_retard_sup_15') as v_nb_train_retard_sup_15,\n        json_value(payload, '$.retard_moyen_trains_retard_sup15') as v_retard_moyen_trains_retard_sup15,\n        json_value(payload, '$.nb_train_retard_sup_30') as v_nb_train_retard_sup_30,\n        json_value(payload, '$.nb_train_retard_sup_60') as v_nb_train_retard_sup_60,\n        json_value(payload, '$.prct_cause_externe') as v_prct_cause_externe,\n        json_value(payload, '$.prct_cause_infra') as v_prct_cause_infra,\n        json_value(payload, '$.prct_cause_gestion_trafic') as v_prct_cause_gestion_trafic,\n        json_value(payload, '$.prct_cause_materiel_roulant') as v_prct_cause_materiel_roulant,\n        json_value(payload, '$.prct_cause_gestion_gare') as v_prct_cause_gestion_gare,\n        json_value(payload, '$.prct_cause_prise_en_charge_voyageurs') as v_prct_cause_prise_en_charge_voyageurs\n    from parsed\n)\nselect\n    version_id, row_number, row_sha256, payload as raw_payload,\n    doc is null as invalid_json,\n    if(regexp_contains(v_date, r'^[0-9]{4}-[0-9]{2}$'), safe.parse_date('%Y-%m-%d', concat(v_date, '-01')), null) as month,\n    v_service as service_type,\n    v_gare_depart as departure_station,\n    v_gare_arrivee as arrival_station,\n    safe_cast(v_duree_moyenne as INT64) as scheduled_duration_minutes,\n    safe_cast(v_nb_train_prevu as INT64) as scheduled_trains,\n    safe_cast(v_nb_annulation as INT64) as cancelled_trains,\n    v_commentaire_annulation as cancellation_comment,\n    safe_cast(v_nb_train_depart_retard as INT64) as departure_delayed_trains,\n    if(is_nan(safe_cast(v_retard_moyen_depart as FLOAT64)) or is_inf(safe_cast(v_retard_moyen_depart as FLOAT64)), null, safe_cast(v_retard_moyen_depart as FLOAT64)) as mean_departure_delay_late_minutes,\n    if(is_nan(safe_cast(v_retard_moyen_tous_trains_depart as FLOAT64)) or is_inf(safe_cast(v_retard_moyen_tous_trains_depart as FLOAT64)), null, safe_cast(v_retard_moyen_tous_trains_depart as FLOAT64)) as mean_departure_delay_all_minutes,\n    v_commentaire_retards_depart as departure_delay_comment,\n    safe_cast(v_nb_train_retard_arrivee as INT64) as arrival_delayed_trains,\n    if(is_nan(safe_cast(v_retard_moyen_arrivee as FLOAT64)) or is_inf(safe_cast(v_retard_moyen_arrivee as FLOAT64)), null, safe_cast(v_retard_moyen_arrivee as FLOAT64)) as mean_arrival_delay_late_minutes,\n    if(is_nan(safe_cast(v_retard_moyen_tous_trains_arrivee as FLOAT64)) or is_inf(safe_cast(v_retard_moyen_tous_trains_arrivee as FLOAT64)), null, safe_cast(v_retard_moyen_tous_trains_arrivee as FLOAT64)) as mean_arrival_delay_all_minutes,\n    v_commentaires_retard_arrivee as arrival_delay_comment,\n    safe_cast(v_nb_train_retard_sup_15 as INT64) as arrival_delayed_over_15_trains,\n    if(is_nan(safe_cast(v_retard_moyen_trains_retard_sup15 as FLOAT64)) or is_inf(safe_cast(v_retard_moyen_trains_retard_sup15 as FLOAT64)), null, safe_cast(v_retard_moyen_trains_retard_sup15 as FLOAT64)) as mean_arrival_delay_over_15_minutes,\n    safe_cast(v_nb_train_retard_sup_30 as INT64) as arrival_delayed_over_30_trains,\n    safe_cast(v_nb_train_retard_sup_60 as INT64) as arrival_delayed_over_60_trains,\n    if(is_nan(safe_cast(v_prct_cause_externe as FLOAT64)) or is_inf(safe_cast(v_prct_cause_externe as FLOAT64)), null, safe_cast(v_prct_cause_externe as FLOAT64)) as external_cause_pct,\n    if(is_nan(safe_cast(v_prct_cause_infra as FLOAT64)) or is_inf(safe_cast(v_prct_cause_infra as FLOAT64)), null, safe_cast(v_prct_cause_infra as FLOAT64)) as infrastructure_cause_pct,\n    if(is_nan(safe_cast(v_prct_cause_gestion_trafic as FLOAT64)) or is_inf(safe_cast(v_prct_cause_gestion_trafic as FLOAT64)), null, safe_cast(v_prct_cause_gestion_trafic as FLOAT64)) as traffic_management_cause_pct,\n    if(is_nan(safe_cast(v_prct_cause_materiel_roulant as FLOAT64)) or is_inf(safe_cast(v_prct_cause_materiel_roulant as FLOAT64)), null, safe_cast(v_prct_cause_materiel_roulant as FLOAT64)) as rolling_stock_cause_pct,\n    if(is_nan(safe_cast(v_prct_cause_gestion_gare as FLOAT64)) or is_inf(safe_cast(v_prct_cause_gestion_gare as FLOAT64)), null, safe_cast(v_prct_cause_gestion_gare as FLOAT64)) as station_management_cause_pct,\n    if(is_nan(safe_cast(v_prct_cause_prise_en_charge_voyageurs as FLOAT64)) or is_inf(safe_cast(v_prct_cause_prise_en_charge_voyageurs as FLOAT64)), null, safe_cast(v_prct_cause_prise_en_charge_voyageurs as FLOAT64)) as passenger_handling_cause_pct,\n    array(select field from unnest([\n        if((json_type(json_query(doc, '$.date')) not in ('null', 'string')) or (v_date is not null and (if(regexp_contains(v_date, r'^[0-9]{4}-[0-9]{2}$'), safe.parse_date('%Y-%m-%d', concat(v_date, '-01')), null)) is null), 'date', null),\n        if((json_type(json_query(doc, '$.service')) not in ('null', 'string')) or (v_service is not null and (v_service) is null), 'service', null),\n        if((json_type(json_query(doc, '$.gare_depart')) not in ('null', 'string')) or (v_gare_depart is not null and (v_gare_depart) is null), 'gare_depart', null),\n        if((json_type(json_query(doc, '$.gare_arrivee')) not in ('null', 'string')) or (v_gare_arrivee is not null and (v_gare_arrivee) is null), 'gare_arrivee', null),\n        if((json_type(json_query(doc, '$.duree_moyenne')) not in ('null', 'number')) or (v_duree_moyenne is not null and (safe_cast(v_duree_moyenne as INT64)) is null), 'duree_moyenne', null),\n        if((json_type(json_query(doc, '$.nb_train_prevu')) not in ('null', 'number')) or (v_nb_train_prevu is not null and (safe_cast(v_nb_train_prevu as INT64)) is null), 'nb_train_prevu', null),\n        if((json_type(json_query(doc, '$.nb_annulation')) not in ('null', 'number')) or (v_nb_annulation is not null and (safe_cast(v_nb_annulation as INT64)) is null), 'nb_annulation', null),\n        if((json_type(json_query(doc, '$.commentaire_annulation')) not in ('null', 'string')) or (v_commentaire_annulation is not null and (v_commentaire_annulation) is null), 'commentaire_annulation', null),\n        if((json_type(json_query(doc, '$.nb_train_depart_retard')) not in ('null', 'number')) or (v_nb_train_depart_retard is not null and (safe_cast(v_nb_train_depart_retard as INT64)) is null), 'nb_train_depart_retard', null),\n        if((json_type(json_query(doc, '$.retard_moyen_depart')) not in ('null', 'number')) or (v_retard_moyen_depart is not null and (if(is_nan(safe_cast(v_retard_moyen_depart as FLOAT64)) or is_inf(safe_cast(v_retard_moyen_depart as FLOAT64)), null, safe_cast(v_retard_moyen_depart as FLOAT64))) is null), 'retard_moyen_depart', null),\n        if((json_type(json_query(doc, '$.retard_moyen_tous_trains_depart')) not in ('null', 'number')) or (v_retard_moyen_tous_trains_depart is not null and (if(is_nan(safe_cast(v_retard_moyen_tous_trains_depart as FLOAT64)) or is_inf(safe_cast(v_retard_moyen_tous_trains_depart as FLOAT64)), null, safe_cast(v_retard_moyen_tous_trains_depart as FLOAT64))) is null), 'retard_moyen_tous_trains_depart', null),\n        if((json_type(json_query(doc, '$.commentaire_retards_depart')) not in ('null', 'string')) or (v_commentaire_retards_depart is not null and (v_commentaire_retards_depart) is null), 'commentaire_retards_depart', null),\n        if((json_type(json_query(doc, '$.nb_train_retard_arrivee')) not in ('null', 'number')) or (v_nb_train_retard_arrivee is not null and (safe_cast(v_nb_train_retard_arrivee as INT64)) is null), 'nb_train_retard_arrivee', null),\n        if((json_type(json_query(doc, '$.retard_moyen_arrivee')) not in ('null', 'number')) or (v_retard_moyen_arrivee is not null and (if(is_nan(safe_cast(v_retard_moyen_arrivee as FLOAT64)) or is_inf(safe_cast(v_retard_moyen_arrivee as FLOAT64)), null, safe_cast(v_retard_moyen_arrivee as FLOAT64))) is null), 'retard_moyen_arrivee', null),\n        if((json_type(json_query(doc, '$.retard_moyen_tous_trains_arrivee')) not in ('null', 'number')) or (v_retard_moyen_tous_trains_arrivee is not null and (if(is_nan(safe_cast(v_retard_moyen_tous_trains_arrivee as FLOAT64)) or is_inf(safe_cast(v_retard_moyen_tous_trains_arrivee as FLOAT64)), null, safe_cast(v_retard_moyen_tous_trains_arrivee as FLOAT64))) is null), 'retard_moyen_tous_trains_arrivee', null),\n        if((json_type(json_query(doc, '$.commentaires_retard_arrivee')) not in ('null', 'string')) or (v_commentaires_retard_arrivee is not null and (v_commentaires_retard_arrivee) is null), 'commentaires_retard_arrivee', null),\n        if((json_type(json_query(doc, '$.nb_train_retard_sup_15')) not in ('null', 'number')) or (v_nb_train_retard_sup_15 is not null and (safe_cast(v_nb_train_retard_sup_15 as INT64)) is null), 'nb_train_retard_sup_15', null),\n        if((json_type(json_query(doc, '$.retard_moyen_trains_retard_sup15')) not in ('null', 'number')) or (v_retard_moyen_trains_retard_sup15 is not null and (if(is_nan(safe_cast(v_retard_moyen_trains_retard_sup15 as FLOAT64)) or is_inf(safe_cast(v_retard_moyen_trains_retard_sup15 as FLOAT64)), null, safe_cast(v_retard_moyen_trains_retard_sup15 as FLOAT64))) is null), 'retard_moyen_trains_retard_sup15', null),\n        if((json_type(json_query(doc, '$.nb_train_retard_sup_30')) not in ('null', 'number')) or (v_nb_train_retard_sup_30 is not null and (safe_cast(v_nb_train_retard_sup_30 as INT64)) is null), 'nb_train_retard_sup_30', null),\n        if((json_type(json_query(doc, '$.nb_train_retard_sup_60')) not in ('null', 'number')) or (v_nb_train_retard_sup_60 is not null and (safe_cast(v_nb_train_retard_sup_60 as INT64)) is null), 'nb_train_retard_sup_60', null),\n        if((json_type(json_query(doc, '$.prct_cause_externe')) not in ('null', 'number')) or (v_prct_cause_externe is not null and (if(is_nan(safe_cast(v_prct_cause_externe as FLOAT64)) or is_inf(safe_cast(v_prct_cause_externe as FLOAT64)), null, safe_cast(v_prct_cause_externe as FLOAT64))) is null), 'prct_cause_externe', null),\n        if((json_type(json_query(doc, '$.prct_cause_infra')) not in ('null', 'number')) or (v_prct_cause_infra is not null and (if(is_nan(safe_cast(v_prct_cause_infra as FLOAT64)) or is_inf(safe_cast(v_prct_cause_infra as FLOAT64)), null, safe_cast(v_prct_cause_infra as FLOAT64))) is null), 'prct_cause_infra', null),\n        if((json_type(json_query(doc, '$.prct_cause_gestion_trafic')) not in ('null', 'number')) or (v_prct_cause_gestion_trafic is not null and (if(is_nan(safe_cast(v_prct_cause_gestion_trafic as FLOAT64)) or is_inf(safe_cast(v_prct_cause_gestion_trafic as FLOAT64)), null, safe_cast(v_prct_cause_gestion_trafic as FLOAT64))) is null), 'prct_cause_gestion_trafic', null),\n        if((json_type(json_query(doc, '$.prct_cause_materiel_roulant')) not in ('null', 'number')) or (v_prct_cause_materiel_roulant is not null and (if(is_nan(safe_cast(v_prct_cause_materiel_roulant as FLOAT64)) or is_inf(safe_cast(v_prct_cause_materiel_roulant as FLOAT64)), null, safe_cast(v_prct_cause_materiel_roulant as FLOAT64))) is null), 'prct_cause_materiel_roulant', null),\n        if((json_type(json_query(doc, '$.prct_cause_gestion_gare')) not in ('null', 'number')) or (v_prct_cause_gestion_gare is not null and (if(is_nan(safe_cast(v_prct_cause_gestion_gare as FLOAT64)) or is_inf(safe_cast(v_prct_cause_gestion_gare as FLOAT64)), null, safe_cast(v_prct_cause_gestion_gare as FLOAT64))) is null), 'prct_cause_gestion_gare', null),\n        if((json_type(json_query(doc, '$.prct_cause_prise_en_charge_voyageurs')) not in ('null', 'number')) or (v_prct_cause_prise_en_charge_voyageurs is not null and (if(is_nan(safe_cast(v_prct_cause_prise_en_charge_voyageurs as FLOAT64)) or is_inf(safe_cast(v_prct_cause_prise_en_charge_voyageurs as FLOAT64)), null, safe_cast(v_prct_cause_prise_en_charge_voyageurs as FLOAT64))) is null), 'prct_cause_prise_en_charge_voyageurs', null)\n    ]) field where field is not null) as conversion_error_fields,\n    array(select field from unnest([\n        if(json_query(doc, '$.date') is null, 'date', null),\n        if(json_query(doc, '$.service') is null, 'service', null),\n        if(json_query(doc, '$.gare_depart') is null, 'gare_depart', null),\n        if(json_query(doc, '$.gare_arrivee') is null, 'gare_arrivee', null),\n        if(json_query(doc, '$.duree_moyenne') is null, 'duree_moyenne', null),\n        if(json_query(doc, '$.nb_train_prevu') is null, 'nb_train_prevu', null),\n        if(json_query(doc, '$.nb_annulation') is null, 'nb_annulation', null),\n        if(json_query(doc, '$.commentaire_annulation') is null, 'commentaire_annulation', null),\n        if(json_query(doc, '$.nb_train_depart_retard') is null, 'nb_train_depart_retard', null),\n        if(json_query(doc, '$.retard_moyen_depart') is null, 'retard_moyen_depart', null),\n        if(json_query(doc, '$.retard_moyen_tous_trains_depart') is null, 'retard_moyen_tous_trains_depart', null),\n        if(json_query(doc, '$.commentaire_retards_depart') is null, 'commentaire_retards_depart', null),\n        if(json_query(doc, '$.nb_train_retard_arrivee') is null, 'nb_train_retard_arrivee', null),\n        if(json_query(doc, '$.retard_moyen_arrivee') is null, 'retard_moyen_arrivee', null),\n        if(json_query(doc, '$.retard_moyen_tous_trains_arrivee') is null, 'retard_moyen_tous_trains_arrivee', null),\n        if(json_query(doc, '$.commentaires_retard_arrivee') is null, 'commentaires_retard_arrivee', null),\n        if(json_query(doc, '$.nb_train_retard_sup_15') is null, 'nb_train_retard_sup_15', null),\n        if(json_query(doc, '$.retard_moyen_trains_retard_sup15') is null, 'retard_moyen_trains_retard_sup15', null),\n        if(json_query(doc, '$.nb_train_retard_sup_30') is null, 'nb_train_retard_sup_30', null),\n        if(json_query(doc, '$.nb_train_retard_sup_60') is null, 'nb_train_retard_sup_60', null),\n        if(json_query(doc, '$.prct_cause_externe') is null, 'prct_cause_externe', null),\n        if(json_query(doc, '$.prct_cause_infra') is null, 'prct_cause_infra', null),\n        if(json_query(doc, '$.prct_cause_gestion_trafic') is null, 'prct_cause_gestion_trafic', null),\n        if(json_query(doc, '$.prct_cause_materiel_roulant') is null, 'prct_cause_materiel_roulant', null),\n        if(json_query(doc, '$.prct_cause_gestion_gare') is null, 'prct_cause_gestion_gare', null),\n        if(json_query(doc, '$.prct_cause_prise_en_charge_voyageurs') is null, 'prct_cause_prise_en_charge_voyageurs', null)\n    ]) field where field is not null) as missing_schema_fields\nfrom extracted"
+    }
+  },
+  "objects_before": {
+    "dim_cause": {
+      "modified": "2026-10-09T14:24:06.335000+00:00",
+      "rows": 6,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "cause_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_label",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "normalized_field",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "source_field",
+          "type": "STRING"
+        }
+      ],
+      "type": "TABLE",
+      "view_query": null
+    },
+    "dim_date": {
+      "modified": "2026-10-09T14:24:07.116000+00:00",
+      "rows": 3287,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "date_key",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "year",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "quarter",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month_number",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month_label",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_month_start",
+          "type": "BOOLEAN"
+        }
+      ],
+      "type": "TABLE",
+      "view_query": null
+    },
+    "dim_route": {
+      "modified": "2026-10-09T14:24:10.172000+00:00",
+      "rows": 130,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "route_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "route_label",
+          "type": "STRING"
+        }
+      ],
+      "type": "TABLE",
+      "view_query": null
+    },
+    "dim_service": {
+      "modified": "2026-10-09T14:24:10.157000+00:00",
+      "rows": 2,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "service_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_type",
+          "type": "STRING"
+        }
+      ],
+      "type": "TABLE",
+      "view_query": null
+    },
+    "fct_delay_causes_monthly": {
+      "modified": "2026-10-09T14:24:16.459000+00:00",
+      "rows": 77442,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "version_id",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_number",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_sha256",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "route_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "published_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_profile_status",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_sum_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_cause_sum_warning",
+          "type": "BOOLEAN"
+        }
+      ],
+      "type": "TABLE",
+      "view_query": null
+    },
+    "fct_reliability_monthly": {
+      "modified": "2026-10-09T14:24:18.598000+00:00",
+      "rows": 12907,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "version_id",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_number",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_sha256",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "invalid_json",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_type",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_duration_minutes",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancelled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancellation_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_15_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_over_15_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_30_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_60_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "conversion_error_fields",
+          "type": "STRING"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "missing_schema_fields",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_population_valid",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "central_counts_compatible",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_quarantined",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_present_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_out_of_bounds_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_sum_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "services_in_month",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "services_in_history",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "operated_trains_proxy",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "important_delay_nesting_valid",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_complete",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_all_zero",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_cause_sum_warning",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cancellation_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cancellation_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_arrival_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_arrival_delay_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_departure_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_mean_arrival_delay_late_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_mean_departure_delay_late_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_over_15_generic_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_departure_all",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_arrival_all",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_arrival_late",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_departure_late",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_scheduled_duration",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_multiple_services_in_month",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_multiple_services_in_history",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_profile_status",
+          "type": "STRING"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "quality_reasons",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "route_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancellation_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "composite_regularity_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_30_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_60_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_30_delay_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_60_delay_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "denominator_status",
+          "type": "STRING"
+        }
+      ],
+      "type": "TABLE",
+      "view_query": null
+    },
+    "int_tgv_quality_flags": {
+      "modified": "2026-10-09T14:23:05.616000+00:00",
+      "rows": 0,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "version_id",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_number",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_sha256",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "raw_payload",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "invalid_json",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_type",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_duration_minutes",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancelled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancellation_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_15_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_over_15_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_30_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_60_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "external_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "infrastructure_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "traffic_management_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "rolling_stock_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "station_management_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "passenger_handling_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "conversion_error_fields",
+          "type": "STRING"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "missing_schema_fields",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_population_valid",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "central_counts_compatible",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_quarantined",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_present_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_out_of_bounds_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_sum_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "services_in_month",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "services_in_history",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "operated_trains_proxy",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "important_delay_nesting_valid",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_complete",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_all_zero",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_cause_sum_warning",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cancellation_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cancellation_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_arrival_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_arrival_delay_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_departure_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_mean_arrival_delay_late_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_mean_departure_delay_late_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_over_15_generic_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_departure_all",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_arrival_all",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_arrival_late",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_departure_late",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_scheduled_duration",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_multiple_services_in_month",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_multiple_services_in_history",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_profile_status",
+          "type": "STRING"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "quality_reasons",
+          "type": "STRING"
+        }
+      ],
+      "type": "VIEW",
+      "view_query": "with base as (\n    select\n        *,\n        coalesce(scheduled_trains >= 0 and cancelled_trains >= 0\n            and cancelled_trains <= scheduled_trains, false) as scheduled_population_valid,\n        coalesce(scheduled_trains >= 0 and cancelled_trains >= 0\n            and cancelled_trains <= scheduled_trains and arrival_delayed_trains >= 0\n            and arrival_delayed_trains <= scheduled_trains - cancelled_trains,\n            false) as central_counts_compatible,\n        coalesce(month >= date '2025-01-01' and month < date '2025-04-01', false)\n            as is_important_delay_quarantined,\n        (select countif(value is not null) from unnest([\n            external_cause_pct, infrastructure_cause_pct, traffic_management_cause_pct,\n            rolling_stock_cause_pct, station_management_cause_pct, passenger_handling_cause_pct\n        ]) value) as cause_present_count,\n        (select countif(value < 0 or value > 100) from unnest([\n            external_cause_pct, infrastructure_cause_pct, traffic_management_cause_pct,\n            rolling_stock_cause_pct, station_management_cause_pct, passenger_handling_cause_pct\n        ]) value) as cause_out_of_bounds_count,\n        external_cause_pct + infrastructure_cause_pct + traffic_management_cause_pct\n            + rolling_stock_cause_pct + station_management_cause_pct\n            + passenger_handling_cause_pct as cause_sum_pct,\n        count(distinct service_type) over (\n            partition by month, departure_station, arrival_station\n        ) as services_in_month,\n        count(distinct service_type) over (\n            partition by departure_station, arrival_station\n        ) as services_in_history\n    from `sncf-reliability-analytics`.`sncf_dev`.`stg_tgv_reliability`\n), populations as (\n    select\n        *,\n        case when scheduled_population_valid\n            then scheduled_trains - cancelled_trains end as operated_trains_proxy,\n        coalesce(arrival_delayed_over_60_trains >= 0\n            and arrival_delayed_over_30_trains >= arrival_delayed_over_60_trains\n            and arrival_delayed_trains >= arrival_delayed_over_30_trains,\n            false) as important_delay_nesting_valid,\n        cause_present_count = 6 as is_cause_profile_complete,\n        coalesce(cause_present_count = 6 and cause_sum_pct = 0\n            and cause_out_of_bounds_count = 0, false) as is_cause_profile_all_zero,\n        -- 0,1 point métier ; 1e-9 point absorbe uniquement l'erreur flottante de frontière.\n        coalesce(cause_present_count = 6 and cause_sum_pct > 0\n            and abs(cause_sum_pct - 100) > 0.1 + 1e-9, false) as has_cause_sum_warning\n    from base\n), usability as (\n    select\n        *,\n        scheduled_population_valid as is_cancellation_count_usable,\n        scheduled_population_valid and coalesce(scheduled_trains > 0, false)\n            as is_cancellation_rate_usable,\n        central_counts_compatible as is_arrival_delay_count_usable,\n        central_counts_compatible and coalesce(operated_trains_proxy > 0, false)\n            as is_arrival_delay_rate_usable,\n        scheduled_population_valid and coalesce(departure_delayed_trains >= 0\n            and departure_delayed_trains <= operated_trains_proxy, false)\n            as is_departure_delay_count_usable,\n        central_counts_compatible and important_delay_nesting_valid\n            and not is_important_delay_quarantined as is_important_delay_count_usable,\n        central_counts_compatible and important_delay_nesting_valid\n            and not is_important_delay_quarantined and coalesce(operated_trains_proxy > 0, false)\n            as is_important_delay_rate_usable,\n        -- D03 : un profil hors tolérance reste visible avec avertissement ; pas de renormalisation.\n        is_cause_profile_complete and cause_out_of_bounds_count = 0\n            and not is_cause_profile_all_zero as is_cause_profile_usable,\n        central_counts_compatible and coalesce(arrival_delayed_trains > 0\n            and mean_arrival_delay_late_minutes >= 0, false) as is_mean_arrival_delay_late_usable,\n        scheduled_population_valid and coalesce(departure_delayed_trains > 0\n            and departure_delayed_trains <= operated_trains_proxy\n            and mean_departure_delay_late_minutes >= 0, false) as is_mean_departure_delay_late_usable,\n        false as is_over_15_generic_usable,\n        coalesce(mean_departure_delay_all_minutes < 0, false)\n            as has_negative_mean_departure_all,\n        coalesce(mean_arrival_delay_all_minutes < 0, false)\n            as has_negative_mean_arrival_all,\n        coalesce(mean_arrival_delay_late_minutes < 0, false)\n            as has_negative_mean_arrival_late,\n        coalesce(mean_departure_delay_late_minutes < 0, false)\n            as has_negative_mean_departure_late,\n        coalesce(scheduled_duration_minutes < 0, false) as has_negative_scheduled_duration,\n        services_in_month > 1 as has_multiple_services_in_month,\n        services_in_history > 1 as has_multiple_services_in_history\n    from populations\n)\nselect\n    *,\n    case\n        when not is_cause_profile_complete then 'missing'\n        when cause_out_of_bounds_count > 0 then 'out_of_bounds'\n        when is_cause_profile_all_zero then 'all_zero'\n        when has_cause_sum_warning then 'sum_warning'\n        else 'available'\n    end as cause_profile_status,\n    array(\n        select reason from unnest([\n            if(not scheduled_population_valid, 'incompatible_scheduled_population', null),\n            if(not central_counts_compatible, 'incompatible_central_counts', null),\n            if(scheduled_population_valid and scheduled_trains = 0, 'zero_scheduled_population', null),\n            if(operated_trains_proxy = 0, 'zero_operated_proxy', null),\n            if(is_important_delay_quarantined, 'important_delay_quarantine_2025_q1', null),\n            if(not important_delay_nesting_valid, 'important_delay_nesting', null),\n            if(not is_cause_profile_complete, 'missing_cause_values', null),\n            if(cause_out_of_bounds_count > 0, 'cause_out_of_bounds', null),\n            if(is_cause_profile_all_zero, 'all_zero_cause_profile', null),\n            if(has_cause_sum_warning, 'cause_sum_outside_tolerance', null),\n            if(has_negative_mean_arrival_late, 'negative_mean_arrival_late', null),\n            if(has_negative_mean_departure_late, 'negative_mean_departure_late', null),\n            if(has_negative_mean_arrival_all, 'negative_mean_arrival_all', null),\n            if(has_negative_mean_departure_all, 'negative_mean_departure_all', null),\n            if(has_negative_scheduled_duration, 'negative_scheduled_duration', null),\n            if(has_multiple_services_in_month, 'multiple_services_in_month', null)\n        ]) reason where reason is not null\n    ) as quality_reasons\nfrom usability"
+    },
+    "mart_route_priorities": {
+      "modified": "2026-10-09T14:24:25.338000+00:00",
+      "rows": 232,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "version_id",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "route_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "comparison_id",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_start",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_end",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "expected_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "persistence_applicable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "services_in_comparison",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_observed_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_eligible_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_cancellation_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_arrival_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_important_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_important_count_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_cancellation_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_cancellation_denominator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_arrival_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_arrival_denominator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_over_30_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_over_60_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_important_denominator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_over_30_valid_count_sum",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_over_60_valid_count_sum",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_observed_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_eligible_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_cancellation_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_arrival_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_important_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_important_count_valid_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_cancellation_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_cancellation_denominator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_arrival_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_arrival_denominator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_over_30_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_over_60_numerator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_important_denominator",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_over_30_valid_count_sum",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_over_60_valid_count_sum",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "eligible_month_pairs",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "deterioration_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "underperformance_months",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_start",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_end",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_comparison_eligible",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_observation_coverage",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_cancellation_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_arrival_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_composite_regularity_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_over_30_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "current_over_60_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_observation_coverage",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_cancellation_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_arrival_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_composite_regularity_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_over_30_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_over_60_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "exclusion_reasons",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_change_pp",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "change_signal",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "deterioration_persistence",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "underperformance_persistence",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_deterioration_persistent",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_underperformance_persistent",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "minimum_monthly_operated_proxy",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "deterioration_threshold_pp",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "regularity_target_pct",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "denominator_status",
+          "type": "STRING"
+        }
+      ],
+      "type": "TABLE",
+      "view_query": null
+    },
+    "mart_route_trends": {
+      "modified": "2026-10-09T14:24:21.786000+00:00",
+      "rows": 12907,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "version_id",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_number",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_sha256",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "invalid_json",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_type",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_duration_minutes",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancelled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancellation_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_15_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_over_15_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_30_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_60_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "conversion_error_fields",
+          "type": "STRING"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "missing_schema_fields",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_population_valid",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "central_counts_compatible",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_quarantined",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_present_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_out_of_bounds_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_sum_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "services_in_month",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "services_in_history",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "operated_trains_proxy",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "important_delay_nesting_valid",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_complete",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_all_zero",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_cause_sum_warning",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cancellation_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cancellation_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_arrival_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_arrival_delay_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_departure_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_count_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_important_delay_rate_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_cause_profile_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_mean_arrival_delay_late_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_mean_departure_delay_late_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_over_15_generic_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_departure_all",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_arrival_all",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_arrival_late",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_mean_departure_late",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_negative_scheduled_duration",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_multiple_services_in_month",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "has_multiple_services_in_history",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cause_profile_status",
+          "type": "STRING"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "quality_reasons",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "route_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_key",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancellation_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "composite_regularity_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_30_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_60_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_30_delay_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "over_60_delay_count",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "denominator_status",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_month",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_arrival_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_operated_trains_proxy",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "previous_arrival_delay_rate",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_year_pair_usable",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "passes_pair_volume_screen",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_change_pp",
+          "type": "NUMERIC"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_monthly_deterioration",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "is_monthly_underperformance",
+          "type": "BOOLEAN"
+        }
+      ],
+      "type": "TABLE",
+      "view_query": null
+    },
+    "stg_tgv_reliability": {
+      "modified": "2026-10-09T14:23:03.524000+00:00",
+      "rows": 0,
+      "schema": [
+        {
+          "mode": "NULLABLE",
+          "name": "version_id",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_number",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "row_sha256",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "raw_payload",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "invalid_json",
+          "type": "BOOLEAN"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "month",
+          "type": "DATE"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "service_type",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_station",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_duration_minutes",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "scheduled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancelled_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "cancellation_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_departure_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "departure_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_late_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_all_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delay_comment",
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_15_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "mean_arrival_delay_over_15_minutes",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_30_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "arrival_delayed_over_60_trains",
+          "type": "INTEGER"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "external_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "infrastructure_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "traffic_management_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "rolling_stock_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "station_management_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "NULLABLE",
+          "name": "passenger_handling_cause_pct",
+          "type": "FLOAT"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "conversion_error_fields",
+          "type": "STRING"
+        },
+        {
+          "mode": "REPEATED",
+          "name": "missing_schema_fields",
+          "type": "STRING"
+        }
+      ],
+      "type": "VIEW",
+      "view_query": "with parsed as (\n    select *, safe.parse_json(payload, wide_number_mode => 'round') as doc\n    from `sncf-reliability-analytics`.`sncf_dev`.`raw_tgv_v_e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6`\n), extracted as (\n    select *,\n        json_value(payload, '$.date') as v_date,\n        json_value(payload, '$.service') as v_service,\n        json_value(payload, '$.gare_depart') as v_gare_depart,\n        json_value(payload, '$.gare_arrivee') as v_gare_arrivee,\n        json_value(payload, '$.duree_moyenne') as v_duree_moyenne,\n        json_value(payload, '$.nb_train_prevu') as v_nb_train_prevu,\n        json_value(payload, '$.nb_annulation') as v_nb_annulation,\n        json_value(payload, '$.commentaire_annulation') as v_commentaire_annulation,\n        json_value(payload, '$.nb_train_depart_retard') as v_nb_train_depart_retard,\n        json_value(payload, '$.retard_moyen_depart') as v_retard_moyen_depart,\n        json_value(payload, '$.retard_moyen_tous_trains_depart') as v_retard_moyen_tous_trains_depart,\n        json_value(payload, '$.commentaire_retards_depart') as v_commentaire_retards_depart,\n        json_value(payload, '$.nb_train_retard_arrivee') as v_nb_train_retard_arrivee,\n        json_value(payload, '$.retard_moyen_arrivee') as v_retard_moyen_arrivee,\n        json_value(payload, '$.retard_moyen_tous_trains_arrivee') as v_retard_moyen_tous_trains_arrivee,\n        json_value(payload, '$.commentaires_retard_arrivee') as v_commentaires_retard_arrivee,\n        json_value(payload, '$.nb_train_retard_sup_15') as v_nb_train_retard_sup_15,\n        json_value(payload, '$.retard_moyen_trains_retard_sup15') as v_retard_moyen_trains_retard_sup15,\n        json_value(payload, '$.nb_train_retard_sup_30') as v_nb_train_retard_sup_30,\n        json_value(payload, '$.nb_train_retard_sup_60') as v_nb_train_retard_sup_60,\n        json_value(payload, '$.prct_cause_externe') as v_prct_cause_externe,\n        json_value(payload, '$.prct_cause_infra') as v_prct_cause_infra,\n        json_value(payload, '$.prct_cause_gestion_trafic') as v_prct_cause_gestion_trafic,\n        json_value(payload, '$.prct_cause_materiel_roulant') as v_prct_cause_materiel_roulant,\n        json_value(payload, '$.prct_cause_gestion_gare') as v_prct_cause_gestion_gare,\n        json_value(payload, '$.prct_cause_prise_en_charge_voyageurs') as v_prct_cause_prise_en_charge_voyageurs\n    from parsed\n)\nselect\n    version_id, row_number, row_sha256, payload as raw_payload,\n    doc is null as invalid_json,\n    if(regexp_contains(v_date, r'^[0-9]{4}-[0-9]{2}$'), safe.parse_date('%Y-%m-%d', concat(v_date, '-01')), null) as month,\n    v_service as service_type,\n    v_gare_depart as departure_station,\n    v_gare_arrivee as arrival_station,\n    safe_cast(v_duree_moyenne as INT64) as scheduled_duration_minutes,\n    safe_cast(v_nb_train_prevu as INT64) as scheduled_trains,\n    safe_cast(v_nb_annulation as INT64) as cancelled_trains,\n    v_commentaire_annulation as cancellation_comment,\n    safe_cast(v_nb_train_depart_retard as INT64) as departure_delayed_trains,\n    if(is_nan(safe_cast(v_retard_moyen_depart as FLOAT64)) or is_inf(safe_cast(v_retard_moyen_depart as FLOAT64)), null, safe_cast(v_retard_moyen_depart as FLOAT64)) as mean_departure_delay_late_minutes,\n    if(is_nan(safe_cast(v_retard_moyen_tous_trains_depart as FLOAT64)) or is_inf(safe_cast(v_retard_moyen_tous_trains_depart as FLOAT64)), null, safe_cast(v_retard_moyen_tous_trains_depart as FLOAT64)) as mean_departure_delay_all_minutes,\n    v_commentaire_retards_depart as departure_delay_comment,\n    safe_cast(v_nb_train_retard_arrivee as INT64) as arrival_delayed_trains,\n    if(is_nan(safe_cast(v_retard_moyen_arrivee as FLOAT64)) or is_inf(safe_cast(v_retard_moyen_arrivee as FLOAT64)), null, safe_cast(v_retard_moyen_arrivee as FLOAT64)) as mean_arrival_delay_late_minutes,\n    if(is_nan(safe_cast(v_retard_moyen_tous_trains_arrivee as FLOAT64)) or is_inf(safe_cast(v_retard_moyen_tous_trains_arrivee as FLOAT64)), null, safe_cast(v_retard_moyen_tous_trains_arrivee as FLOAT64)) as mean_arrival_delay_all_minutes,\n    v_commentaires_retard_arrivee as arrival_delay_comment,\n    safe_cast(v_nb_train_retard_sup_15 as INT64) as arrival_delayed_over_15_trains,\n    if(is_nan(safe_cast(v_retard_moyen_trains_retard_sup15 as FLOAT64)) or is_inf(safe_cast(v_retard_moyen_trains_retard_sup15 as FLOAT64)), null, safe_cast(v_retard_moyen_trains_retard_sup15 as FLOAT64)) as mean_arrival_delay_over_15_minutes,\n    safe_cast(v_nb_train_retard_sup_30 as INT64) as arrival_delayed_over_30_trains,\n    safe_cast(v_nb_train_retard_sup_60 as INT64) as arrival_delayed_over_60_trains,\n    if(is_nan(safe_cast(v_prct_cause_externe as FLOAT64)) or is_inf(safe_cast(v_prct_cause_externe as FLOAT64)), null, safe_cast(v_prct_cause_externe as FLOAT64)) as external_cause_pct,\n    if(is_nan(safe_cast(v_prct_cause_infra as FLOAT64)) or is_inf(safe_cast(v_prct_cause_infra as FLOAT64)), null, safe_cast(v_prct_cause_infra as FLOAT64)) as infrastructure_cause_pct,\n    if(is_nan(safe_cast(v_prct_cause_gestion_trafic as FLOAT64)) or is_inf(safe_cast(v_prct_cause_gestion_trafic as FLOAT64)), null, safe_cast(v_prct_cause_gestion_trafic as FLOAT64)) as traffic_management_cause_pct,\n    if(is_nan(safe_cast(v_prct_cause_materiel_roulant as FLOAT64)) or is_inf(safe_cast(v_prct_cause_materiel_roulant as FLOAT64)), null, safe_cast(v_prct_cause_materiel_roulant as FLOAT64)) as rolling_stock_cause_pct,\n    if(is_nan(safe_cast(v_prct_cause_gestion_gare as FLOAT64)) or is_inf(safe_cast(v_prct_cause_gestion_gare as FLOAT64)), null, safe_cast(v_prct_cause_gestion_gare as FLOAT64)) as station_management_cause_pct,\n    if(is_nan(safe_cast(v_prct_cause_prise_en_charge_voyageurs as FLOAT64)) or is_inf(safe_cast(v_prct_cause_prise_en_charge_voyageurs as FLOAT64)), null, safe_cast(v_prct_cause_prise_en_charge_voyageurs as FLOAT64)) as passenger_handling_cause_pct,\n    array(select field from unnest([\n        if((json_type(json_query(doc, '$.date')) not in ('null', 'string')) or (v_date is not null and (if(regexp_contains(v_date, r'^[0-9]{4}-[0-9]{2}$'), safe.parse_date('%Y-%m-%d', concat(v_date, '-01')), null)) is null), 'date', null),\n        if((json_type(json_query(doc, '$.service')) not in ('null', 'string')) or (v_service is not null and (v_service) is null), 'service', null),\n        if((json_type(json_query(doc, '$.gare_depart')) not in ('null', 'string')) or (v_gare_depart is not null and (v_gare_depart) is null), 'gare_depart', null),\n        if((json_type(json_query(doc, '$.gare_arrivee')) not in ('null', 'string')) or (v_gare_arrivee is not null and (v_gare_arrivee) is null), 'gare_arrivee', null),\n        if((json_type(json_query(doc, '$.duree_moyenne')) not in ('null', 'number')) or (v_duree_moyenne is not null and (safe_cast(v_duree_moyenne as INT64)) is null), 'duree_moyenne', null),\n        if((json_type(json_query(doc, '$.nb_train_prevu')) not in ('null', 'number')) or (v_nb_train_prevu is not null and (safe_cast(v_nb_train_prevu as INT64)) is null), 'nb_train_prevu', null),\n        if((json_type(json_query(doc, '$.nb_annulation')) not in ('null', 'number')) or (v_nb_annulation is not null and (safe_cast(v_nb_annulation as INT64)) is null), 'nb_annulation', null),\n        if((json_type(json_query(doc, '$.commentaire_annulation')) not in ('null', 'string')) or (v_commentaire_annulation is not null and (v_commentaire_annulation) is null), 'commentaire_annulation', null),\n        if((json_type(json_query(doc, '$.nb_train_depart_retard')) not in ('null', 'number')) or (v_nb_train_depart_retard is not null and (safe_cast(v_nb_train_depart_retard as INT64)) is null), 'nb_train_depart_retard', null),\n        if((json_type(json_query(doc, '$.retard_moyen_depart')) not in ('null', 'number')) or (v_retard_moyen_depart is not null and (if(is_nan(safe_cast(v_retard_moyen_depart as FLOAT64)) or is_inf(safe_cast(v_retard_moyen_depart as FLOAT64)), null, safe_cast(v_retard_moyen_depart as FLOAT64))) is null), 'retard_moyen_depart', null),\n        if((json_type(json_query(doc, '$.retard_moyen_tous_trains_depart')) not in ('null', 'number')) or (v_retard_moyen_tous_trains_depart is not null and (if(is_nan(safe_cast(v_retard_moyen_tous_trains_depart as FLOAT64)) or is_inf(safe_cast(v_retard_moyen_tous_trains_depart as FLOAT64)), null, safe_cast(v_retard_moyen_tous_trains_depart as FLOAT64))) is null), 'retard_moyen_tous_trains_depart', null),\n        if((json_type(json_query(doc, '$.commentaire_retards_depart')) not in ('null', 'string')) or (v_commentaire_retards_depart is not null and (v_commentaire_retards_depart) is null), 'commentaire_retards_depart', null),\n        if((json_type(json_query(doc, '$.nb_train_retard_arrivee')) not in ('null', 'number')) or (v_nb_train_retard_arrivee is not null and (safe_cast(v_nb_train_retard_arrivee as INT64)) is null), 'nb_train_retard_arrivee', null),\n        if((json_type(json_query(doc, '$.retard_moyen_arrivee')) not in ('null', 'number')) or (v_retard_moyen_arrivee is not null and (if(is_nan(safe_cast(v_retard_moyen_arrivee as FLOAT64)) or is_inf(safe_cast(v_retard_moyen_arrivee as FLOAT64)), null, safe_cast(v_retard_moyen_arrivee as FLOAT64))) is null), 'retard_moyen_arrivee', null),\n        if((json_type(json_query(doc, '$.retard_moyen_tous_trains_arrivee')) not in ('null', 'number')) or (v_retard_moyen_tous_trains_arrivee is not null and (if(is_nan(safe_cast(v_retard_moyen_tous_trains_arrivee as FLOAT64)) or is_inf(safe_cast(v_retard_moyen_tous_trains_arrivee as FLOAT64)), null, safe_cast(v_retard_moyen_tous_trains_arrivee as FLOAT64))) is null), 'retard_moyen_tous_trains_arrivee', null),\n        if((json_type(json_query(doc, '$.commentaires_retard_arrivee')) not in ('null', 'string')) or (v_commentaires_retard_arrivee is not null and (v_commentaires_retard_arrivee) is null), 'commentaires_retard_arrivee', null),\n        if((json_type(json_query(doc, '$.nb_train_retard_sup_15')) not in ('null', 'number')) or (v_nb_train_retard_sup_15 is not null and (safe_cast(v_nb_train_retard_sup_15 as INT64)) is null), 'nb_train_retard_sup_15', null),\n        if((json_type(json_query(doc, '$.retard_moyen_trains_retard_sup15')) not in ('null', 'number')) or (v_retard_moyen_trains_retard_sup15 is not null and (if(is_nan(safe_cast(v_retard_moyen_trains_retard_sup15 as FLOAT64)) or is_inf(safe_cast(v_retard_moyen_trains_retard_sup15 as FLOAT64)), null, safe_cast(v_retard_moyen_trains_retard_sup15 as FLOAT64))) is null), 'retard_moyen_trains_retard_sup15', null),\n        if((json_type(json_query(doc, '$.nb_train_retard_sup_30')) not in ('null', 'number')) or (v_nb_train_retard_sup_30 is not null and (safe_cast(v_nb_train_retard_sup_30 as INT64)) is null), 'nb_train_retard_sup_30', null),\n        if((json_type(json_query(doc, '$.nb_train_retard_sup_60')) not in ('null', 'number')) or (v_nb_train_retard_sup_60 is not null and (safe_cast(v_nb_train_retard_sup_60 as INT64)) is null), 'nb_train_retard_sup_60', null),\n        if((json_type(json_query(doc, '$.prct_cause_externe')) not in ('null', 'number')) or (v_prct_cause_externe is not null and (if(is_nan(safe_cast(v_prct_cause_externe as FLOAT64)) or is_inf(safe_cast(v_prct_cause_externe as FLOAT64)), null, safe_cast(v_prct_cause_externe as FLOAT64))) is null), 'prct_cause_externe', null),\n        if((json_type(json_query(doc, '$.prct_cause_infra')) not in ('null', 'number')) or (v_prct_cause_infra is not null and (if(is_nan(safe_cast(v_prct_cause_infra as FLOAT64)) or is_inf(safe_cast(v_prct_cause_infra as FLOAT64)), null, safe_cast(v_prct_cause_infra as FLOAT64))) is null), 'prct_cause_infra', null),\n        if((json_type(json_query(doc, '$.prct_cause_gestion_trafic')) not in ('null', 'number')) or (v_prct_cause_gestion_trafic is not null and (if(is_nan(safe_cast(v_prct_cause_gestion_trafic as FLOAT64)) or is_inf(safe_cast(v_prct_cause_gestion_trafic as FLOAT64)), null, safe_cast(v_prct_cause_gestion_trafic as FLOAT64))) is null), 'prct_cause_gestion_trafic', null),\n        if((json_type(json_query(doc, '$.prct_cause_materiel_roulant')) not in ('null', 'number')) or (v_prct_cause_materiel_roulant is not null and (if(is_nan(safe_cast(v_prct_cause_materiel_roulant as FLOAT64)) or is_inf(safe_cast(v_prct_cause_materiel_roulant as FLOAT64)), null, safe_cast(v_prct_cause_materiel_roulant as FLOAT64))) is null), 'prct_cause_materiel_roulant', null),\n        if((json_type(json_query(doc, '$.prct_cause_gestion_gare')) not in ('null', 'number')) or (v_prct_cause_gestion_gare is not null and (if(is_nan(safe_cast(v_prct_cause_gestion_gare as FLOAT64)) or is_inf(safe_cast(v_prct_cause_gestion_gare as FLOAT64)), null, safe_cast(v_prct_cause_gestion_gare as FLOAT64))) is null), 'prct_cause_gestion_gare', null),\n        if((json_type(json_query(doc, '$.prct_cause_prise_en_charge_voyageurs')) not in ('null', 'number')) or (v_prct_cause_prise_en_charge_voyageurs is not null and (if(is_nan(safe_cast(v_prct_cause_prise_en_charge_voyageurs as FLOAT64)) or is_inf(safe_cast(v_prct_cause_prise_en_charge_voyageurs as FLOAT64)), null, safe_cast(v_prct_cause_prise_en_charge_voyageurs as FLOAT64))) is null), 'prct_cause_prise_en_charge_voyageurs', null)\n    ]) field where field is not null) as conversion_error_fields,\n    array(select field from unnest([\n        if(json_query(doc, '$.date') is null, 'date', null),\n        if(json_query(doc, '$.service') is null, 'service', null),\n        if(json_query(doc, '$.gare_depart') is null, 'gare_depart', null),\n        if(json_query(doc, '$.gare_arrivee') is null, 'gare_arrivee', null),\n        if(json_query(doc, '$.duree_moyenne') is null, 'duree_moyenne', null),\n        if(json_query(doc, '$.nb_train_prevu') is null, 'nb_train_prevu', null),\n        if(json_query(doc, '$.nb_annulation') is null, 'nb_annulation', null),\n        if(json_query(doc, '$.commentaire_annulation') is null, 'commentaire_annulation', null),\n        if(json_query(doc, '$.nb_train_depart_retard') is null, 'nb_train_depart_retard', null),\n        if(json_query(doc, '$.retard_moyen_depart') is null, 'retard_moyen_depart', null),\n        if(json_query(doc, '$.retard_moyen_tous_trains_depart') is null, 'retard_moyen_tous_trains_depart', null),\n        if(json_query(doc, '$.commentaire_retards_depart') is null, 'commentaire_retards_depart', null),\n        if(json_query(doc, '$.nb_train_retard_arrivee') is null, 'nb_train_retard_arrivee', null),\n        if(json_query(doc, '$.retard_moyen_arrivee') is null, 'retard_moyen_arrivee', null),\n        if(json_query(doc, '$.retard_moyen_tous_trains_arrivee') is null, 'retard_moyen_tous_trains_arrivee', null),\n        if(json_query(doc, '$.commentaires_retard_arrivee') is null, 'commentaires_retard_arrivee', null),\n        if(json_query(doc, '$.nb_train_retard_sup_15') is null, 'nb_train_retard_sup_15', null),\n        if(json_query(doc, '$.retard_moyen_trains_retard_sup15') is null, 'retard_moyen_trains_retard_sup15', null),\n        if(json_query(doc, '$.nb_train_retard_sup_30') is null, 'nb_train_retard_sup_30', null),\n        if(json_query(doc, '$.nb_train_retard_sup_60') is null, 'nb_train_retard_sup_60', null),\n        if(json_query(doc, '$.prct_cause_externe') is null, 'prct_cause_externe', null),\n        if(json_query(doc, '$.prct_cause_infra') is null, 'prct_cause_infra', null),\n        if(json_query(doc, '$.prct_cause_gestion_trafic') is null, 'prct_cause_gestion_trafic', null),\n        if(json_query(doc, '$.prct_cause_materiel_roulant') is null, 'prct_cause_materiel_roulant', null),\n        if(json_query(doc, '$.prct_cause_gestion_gare') is null, 'prct_cause_gestion_gare', null),\n        if(json_query(doc, '$.prct_cause_prise_en_charge_voyageurs') is null, 'prct_cause_prise_en_charge_voyageurs', null)\n    ]) field where field is not null) as missing_schema_fields\nfrom extracted"
+    }
+  },
+  "preflight": [
+    {
+      "analysis": "diagnostic_fixtures",
+      "estimated_bytes": 0,
+      "statement_type": "SELECT"
+    },
+    {
+      "analysis": "diagnostic_validation",
+      "estimated_bytes": 3694884,
+      "statement_type": "SELECT"
+    },
+    {
+      "analysis": "route_degradation",
+      "estimated_bytes": 3603866,
+      "statement_type": "SELECT"
+    },
+    {
+      "analysis": "persistent_underperformance",
+      "estimated_bytes": 3603866,
+      "statement_type": "SELECT"
+    },
+    {
+      "analysis": "volume_rate_decomposition",
+      "estimated_bytes": 3384447,
+      "statement_type": "SELECT"
+    },
+    {
+      "analysis": "cause_profiles",
+      "estimated_bytes": 29014560,
+      "statement_type": "SELECT"
+    },
+    {
+      "analysis": "priority_sensitivity",
+      "estimated_bytes": 3384447,
+      "statement_type": "SELECT"
+    },
+    {
+      "analysis": "diagnostic_summary",
+      "estimated_bytes": 3384447,
+      "statement_type": "SELECT"
+    },
+    {
+      "analysis": "period_sensitivity",
+      "estimated_bytes": 3384447,
+      "statement_type": "SELECT"
+    }
+  ],
+  "queries": [
+    {
+      "analysis": "diagnostic_fixtures",
+      "cache_hit": true,
+      "job_id": "sncf_j06_111bb4ed069644e4abe9b3dd2d605771",
+      "rows": 26,
+      "sql_sha256": "22fefcfaf366b23f6b9ffebed4c840b83efbbfb3074bf16bf90bb845968c3ac7",
+      "status": "complete",
+      "total_bytes_billed": 0,
+      "total_bytes_processed": 0
+    },
+    {
+      "analysis": "diagnostic_validation",
+      "cache_hit": true,
+      "job_id": "sncf_j06_162dd7ee2861478bbc6288e82c2acc96",
+      "rows": 10,
+      "sql_sha256": "6c5c80143551423cef76e04ad57d727cce4a9ce3c8204a513455e3303b015686",
+      "status": "complete",
+      "total_bytes_billed": 0,
+      "total_bytes_processed": 0
+    },
+    {
+      "analysis": "route_degradation",
+      "cache_hit": true,
+      "job_id": "sncf_j06_dcb0fa120ce84cc7a2564c61b2c17543",
+      "rows": 232,
+      "sql_sha256": "656ce66d51511bed41aebf1678251288d564108b39afb1cabdc2ee24a82fa3cd",
+      "status": "complete",
+      "total_bytes_billed": 0,
+      "total_bytes_processed": 0
+    },
+    {
+      "analysis": "persistent_underperformance",
+      "cache_hit": true,
+      "job_id": "sncf_j06_e34e6e9562fa483bb97750d1e5d9eadb",
+      "rows": 232,
+      "sql_sha256": "ff9a8df924e86297975fbaa5d3980c9936dc4ae0f230c8490dc1a3a06cd40d7d",
+      "status": "complete",
+      "total_bytes_billed": 0,
+      "total_bytes_processed": 0
+    },
+    {
+      "analysis": "volume_rate_decomposition",
+      "cache_hit": true,
+      "job_id": "sncf_j06_384491ac8aae4ad8a25f046321e2f5a5",
+      "rows": 190,
+      "sql_sha256": "d43ab081c4fe7ef1ff724535c0804bca7dd41da4b2134470ded816915a83fb35",
+      "status": "complete",
+      "total_bytes_billed": 0,
+      "total_bytes_processed": 0
+    },
+    {
+      "analysis": "cause_profiles",
+      "cache_hit": true,
+      "job_id": "sncf_j06_7085512178f04451ba42f47ac3875d0a",
+      "rows": 720,
+      "sql_sha256": "9322e78d6509ee8fb1c910eb37e8cd3602962e7f99eb3ad2afb16fe0c421336a",
+      "status": "complete",
+      "total_bytes_billed": 0,
+      "total_bytes_processed": 0
+    },
+    {
+      "analysis": "priority_sensitivity",
+      "cache_hit": false,
+      "job_id": "sncf_j06_fff164e9ffa3448fad46d17a1cf5fbfa",
+      "rows": 6264,
+      "sql_sha256": "75f15ed7f5799331217b093e81f986eb3f69472bacd03b81dfd34d776e59f759",
+      "status": "complete",
+      "total_bytes_billed": 10485760,
+      "total_bytes_processed": 3384447
+    },
+    {
+      "analysis": "diagnostic_summary",
+      "cache_hit": false,
+      "job_id": "sncf_j06_fd51378201804d44ae849727d3e8fb16",
+      "rows": 54,
+      "sql_sha256": "4014fc84a0aa2be747de734e8cef9a01f5551f9d5837c346032b135cc034425f",
+      "status": "complete",
+      "total_bytes_billed": 10485760,
+      "total_bytes_processed": 3384447
+    },
+    {
+      "analysis": "period_sensitivity",
+      "cache_hit": false,
+      "job_id": "sncf_j06_1a1f690af2174e9aa9de4b9b5e4e0c79",
+      "rows": 116,
+      "sql_sha256": "eb5eac240c3976c8159c91db65b811a5abf2c2d20341172841806f24b639e072",
+      "status": "complete",
+      "total_bytes_billed": 10485760,
+      "total_bytes_processed": 3384447
+    }
+  ],
+  "raw_verification": {
+    "rows_verified": 12907,
+    "total_bytes_billed": 0,
+    "total_bytes_processed": 0,
+    "verification_job_id": "sncf_j06_raw_e896d8b403ec411b8ea256ff36fc0073"
+  },
+  "run_directory": "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\diagnostic_runs\\20261013T102259Z_d1ed8f73",
+  "run_id": "20261013T102259Z_d1ed8f73",
+  "source": {
+    "dataset_id": "regularite-mensuelle-tgv-aqst",
+    "expected_count": 12907,
+    "first_business_month": "2018-01",
+    "last_business_month": "2026-09",
+    "manifest_sha256": "1cca3fcbf6e4a94343866eedec4badf35d1ef2961cac75550cc0d666ea03b5cd",
+    "missing_or_invalid_months": 0,
+    "received_count": 12907,
+    "schema_sha256": "50735f50c533e44d2aa0fc5bf1e1f3e081d04ef5823c67ed57cd60fd8cde05ec",
+    "snapshot_id": "20261007T130103249967Z_bce4ef24",
+    "snapshot_path": "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\data\\ingestion\\20261007T130103249967Z_bce4ef24",
+    "source_data_processed": "2026-10-02T10:10:31+00:00",
+    "source_modified": "2026-10-02T10:10:31+00:00",
+    "source_sha256": "8dc2b0a9a3707306c3087f899163465e34b20ed44b4dfc4ad46d5af4686334b2",
+    "version_id": "e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6"
+  },
+  "started_at_utc": "2026-10-13T10:22:59.890180+00:00",
+  "status": "passed_with_documented_warnings",
+  "tests": [
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.accepted_values_stg_tgv_reliability_service_type__National__International.f1f68a0c05"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.accepted_values_int_tgv_quality_flags_cause_profile_status__missing__out_of_bounds__all_zero__sum_warning__available.3e70b716fb"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_intermediate_fidelity"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_j05_calendar_and_keys"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_j05_causes"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_j05_fidelity"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_j05_grains"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_j05_kpis"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_j05_trends"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_j05_periods"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_j05_version"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_monthly_grain"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_quality_usability"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_source_integrity"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_source_version"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.assert_staging_fidelity"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_cause_cause_key.dada0d8fb5"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_cause_cause_label.00688b010d"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_cause_normalized_field.42bd12d718"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_cause_source_field.3fcbc83299"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_date_date_key.881d0a31b6"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_date_is_month_start.a94cf11a2f"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_date_month_label.0204b8d079"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_date_month.180a460136"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_date_quarter.4d9e627f51"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_date_month_number.cd129a2e7a"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_date_year.aac8e263ab"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_route_arrival_station.3af360c325"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_route_departure_station.e3bf780ec3"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_route_route_key.100ea7aa1d"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_route_route_label.7f26a49ae6"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_service_service_key.df6d170253"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_dim_service_service_type.e00232db1f"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_delay_causes_monthly_cause_key.334efe58ef"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_delay_causes_monthly_month.9363639498"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_delay_causes_monthly_route_key.afbafea84c"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_delay_causes_monthly_row_number.8bb410607f"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_delay_causes_monthly_row_sha256.d8b9286214"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_delay_causes_monthly_service_key.3ea5ac9296"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_delay_causes_monthly_version_id.bdfa9b2edd"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_reliability_monthly_denominator_status.c4b86d5bd0"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_reliability_monthly_route_key.669b1ecb13"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_reliability_monthly_month.2fcbb61638"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_reliability_monthly_row_sha256.510743fdf6"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_reliability_monthly_row_number.9e681ce737"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_reliability_monthly_version_id.b72e4cb45b"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_fct_reliability_monthly_service_key.0f07d2ef18"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_mart_route_priorities_service_key.b136863e39"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_mart_route_priorities_route_key.cb5414bec9"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_mart_route_priorities_version_id.ae137f9f92"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_mart_route_trends_denominator_status.b57ec6823c"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_mart_route_trends_route_key.9146c5f60c"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_mart_route_trends_month.3640699d6d"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_mart_route_trends_row_number.c12c6bb44a"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_mart_route_trends_row_sha256.2ff00f99ca"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_mart_route_trends_service_key.388e07a130"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_mart_route_trends_version_id.b16d26ec0e"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_stg_tgv_reliability_departure_station.b26d2e647c"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_stg_tgv_reliability_arrival_station.c22fe89766"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_stg_tgv_reliability_month.c826e60c36"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_stg_tgv_reliability_row_number.0d0364c273"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_stg_tgv_reliability_service_type.c9dfa36d99"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_stg_tgv_reliability_row_sha256.ebc43ca3ac"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_fct_delay_causes_monthly_cause_key__cause_key__ref_dim_cause_.724c276f5c"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.not_null_stg_tgv_reliability_version_id.f7ad3a0d02"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_fct_delay_causes_monthly_month__date_key__ref_dim_date_.323fe15eec"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_fct_delay_causes_monthly_route_key__route_key__ref_dim_route_.ce74d2824d"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_fct_delay_causes_monthly_service_key__service_key__ref_dim_service_.2eff1f1ebb"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_fct_reliability_monthly_month__date_key__ref_dim_date_.54dc922c71"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_fct_reliability_monthly_route_key__route_key__ref_dim_route_.da65b09722"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_fct_reliability_monthly_service_key__service_key__ref_dim_service_.1e773eea73"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_mart_route_priorities_route_key__route_key__ref_dim_route_.abaea746a3"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_mart_route_priorities_service_key__service_key__ref_dim_service_.ae5f2ed12c"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_mart_route_trends_month__date_key__ref_dim_date_.752e34de1f"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_mart_route_trends_route_key__route_key__ref_dim_route_.6b047ba086"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.relationships_mart_route_trends_service_key__service_key__ref_dim_service_.4fb23bee08"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.unique_dim_cause_cause_key.23d1de6d91"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.unique_dim_cause_cause_label.f9762b15c6"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.unique_dim_cause_normalized_field.bfe361e973"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.unique_dim_cause_source_field.976a0469b4"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.unique_dim_date_date_key.0869fd48f9"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.unique_dim_route_route_key.3ef0a63b5d"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.unique_dim_service_service_key.cdd90a9292"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.unique_dim_service_service_type.7af65fcc58"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "test.sncf_service_reliability.unique_stg_tgv_reliability_row_number.b80a8c1c99"
+    },
+    {
+      "failures": 282,
+      "message": "Got 282 results, configured to warn if != 0",
+      "status": "warn",
+      "unique_id": "test.sncf_service_reliability.warn_cause_profiles"
+    },
+    {
+      "failures": 84,
+      "message": "Got 84 results, configured to warn if != 0",
+      "status": "warn",
+      "unique_id": "test.sncf_service_reliability.warn_service_scope"
+    },
+    {
+      "failures": 278,
+      "message": "Got 278 results, configured to warn if != 0",
+      "status": "warn",
+      "unique_id": "test.sncf_service_reliability.warn_signed_means"
+    },
+    {
+      "failures": 425,
+      "message": "Got 425 results, configured to warn if != 0",
+      "status": "warn",
+      "unique_id": "test.sncf_service_reliability.warn_source_counts"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "unit_test.sncf_service_reliability.dim_route.j05_oriented_stable_keys"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "unit_test.sncf_service_reliability.fct_delay_causes_monthly.j05_causes_keep_null_and_zero"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "unit_test.sncf_service_reliability.fct_reliability_monthly.j05_monthly_ratios_and_unavailable"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "unit_test.sncf_service_reliability.int_tgv_quality_flags.j04_quality_populations_boundaries_and_scope"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "unit_test.sncf_service_reliability.mart_route_priorities.j05_annual_has_no_semester_persistence"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "unit_test.sncf_service_reliability.mart_route_priorities.j05_ratio_of_sums_and_nonsemester"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "unit_test.sncf_service_reliability.mart_route_priorities.j05_period_eligibility_and_persistence"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "unit_test.sncf_service_reliability.mart_route_trends.j05_exact_year_pairs_and_thresholds"
+    },
+    {
+      "failures": 0,
+      "message": null,
+      "status": "pass",
+      "unique_id": "unit_test.sncf_service_reliability.stg_tgv_reliability.j04_staging_parsing_and_missing"
+    }
+  ],
+  "upstream_run_id": "20261009T142236Z_7e5f8893",
+  "upstream_tests_reused_from": {
+    "run_id": "20261013T101816Z_2ce63253",
+    "validation_sha256": "c3e141e553f226829ec14618170eaa570183a7ad722d6ee200c69ccb0b85f684"
+  },
+  "upstream_validation_sha256": "6a3c10dd931b853ab6f501ca3e514fe3c53b491058008732172dc692e1561b47",
+  "versions": {
+    "dbt-bigquery": "1.12.1",
+    "dbt-core": "1.12.5",
+    "google-cloud-bigquery": "3.45.2",
+    "python": "3.13.15"
+  }
+}

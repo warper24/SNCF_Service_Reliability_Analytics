@@ -1,6 +1,6 @@
 {
   "purpose": "Copies publiques de preuves historiques ; aucune nouvelle validation revendiquée.",
-  "transformation": "Remplacement du nom de profil Windows par <utilisateur> ; valeurs métier inchangées.",
+  "transformation": "Remplacement du nom de profil Windows par <utilisateur> ; conversion explicite vers UTF-8 des journaux Windows déclarés ; valeurs métier inchangées.",
   "hash_policy": "Les empreintes internes des validations restent celles des originaux. Utiliser ce manifeste pour vérifier les octets publics.",
   "entries": [
     {
@@ -236,6 +236,98 @@
       "original_sha256": "6a3c10dd931b853ab6f501ca3e514fe3c53b491058008732172dc692e1561b47",
       "public_sha256": "47634fac78f8dbcd2be2e5848e1fb1aa40c8a39dd3d827da93ad02378d78a413",
       "anonymized": true
+    },
+    {
+      "path": "diagnostic_evidence/cause_profiles.csv",
+      "original_sha256": "0b5554897870a428b402b32d1403147895c08995873e4116cfc9c8ed2e23663b",
+      "public_sha256": "0b5554897870a428b402b32d1403147895c08995873e4116cfc9c8ed2e23663b",
+      "anonymized": false
+    },
+    {
+      "path": "diagnostic_evidence/compile.txt",
+      "original_sha256": "0c5dbd9844703f4b5eb0cd6af4f64f65c99729bfffe7a83e7db6e0583d1455cb",
+      "public_sha256": "e08e90a19cb351d2457e2b518159813987b0a05e488221ba222556a4b2b4651b",
+      "anonymized": true,
+      "source_encoding": "cp1252",
+      "public_encoding": "utf-8"
+    },
+    {
+      "path": "diagnostic_evidence/diagnostic_fixtures.csv",
+      "original_sha256": "1be1c9541d9354e03697a503d680892d2c9ba68d7eb6ae74b491d9ca19b72678",
+      "public_sha256": "1be1c9541d9354e03697a503d680892d2c9ba68d7eb6ae74b491d9ca19b72678",
+      "anonymized": false
+    },
+    {
+      "path": "diagnostic_evidence/diagnostic_summary.csv",
+      "original_sha256": "40c9a3aa07c1b55c1dd66274a12b02517620ed49da9c5671c3672bfb2db42cdd",
+      "public_sha256": "40c9a3aa07c1b55c1dd66274a12b02517620ed49da9c5671c3672bfb2db42cdd",
+      "anonymized": false
+    },
+    {
+      "path": "diagnostic_evidence/diagnostic_validation.csv",
+      "original_sha256": "153a730624256f63bb800d64a43651eab8b3379edc5b1ae712e2c3cf70fac493",
+      "public_sha256": "153a730624256f63bb800d64a43651eab8b3379edc5b1ae712e2c3cf70fac493",
+      "anonymized": false
+    },
+    {
+      "path": "diagnostic_evidence/git_review.json",
+      "original_sha256": "d0db2fb13d0c36a9e4119d91990926994f9e0ca34f14616622c09da8f09d5f8a",
+      "public_sha256": "d0db2fb13d0c36a9e4119d91990926994f9e0ca34f14616622c09da8f09d5f8a",
+      "anonymized": false
+    },
+    {
+      "path": "diagnostic_evidence/manual_review.json",
+      "original_sha256": "a29dd93932cdaa5d55136f5eefff201fb909d97bddeb9b41c79c5b35ea9090cf",
+      "public_sha256": "a29dd93932cdaa5d55136f5eefff201fb909d97bddeb9b41c79c5b35ea9090cf",
+      "anonymized": false
+    },
+    {
+      "path": "diagnostic_evidence/period_sensitivity.csv",
+      "original_sha256": "a411d0b617eaf188698546d8d564fde06504ef6fc330ffb1ff811960048d941b",
+      "public_sha256": "a411d0b617eaf188698546d8d564fde06504ef6fc330ffb1ff811960048d941b",
+      "anonymized": false
+    },
+    {
+      "path": "diagnostic_evidence/persistent_underperformance.csv",
+      "original_sha256": "6cb58f7d051b4779a21b8a65ab2c6c1999dda2cf360423cd431a8318970a1e00",
+      "public_sha256": "6cb58f7d051b4779a21b8a65ab2c6c1999dda2cf360423cd431a8318970a1e00",
+      "anonymized": false
+    },
+    {
+      "path": "diagnostic_evidence/priority_sensitivity.csv",
+      "original_sha256": "9901ed5d6dac874a0e230d2f19d04ad794121dfe11840604088ceebbfcc7b937",
+      "public_sha256": "9901ed5d6dac874a0e230d2f19d04ad794121dfe11840604088ceebbfcc7b937",
+      "anonymized": false
+    },
+    {
+      "path": "diagnostic_evidence/python_tests.txt",
+      "original_sha256": "45e41362bf3dbe4c6599948a8e129be61692b8ed9b2fb3e18d6e83afa3747b9b",
+      "public_sha256": "45e41362bf3dbe4c6599948a8e129be61692b8ed9b2fb3e18d6e83afa3747b9b",
+      "anonymized": false
+    },
+    {
+      "path": "diagnostic_evidence/route_degradation.csv",
+      "original_sha256": "77e167b189c51ac3e260258dc2646b1d7d6ee596841d44c306f597335819498e",
+      "public_sha256": "77e167b189c51ac3e260258dc2646b1d7d6ee596841d44c306f597335819498e",
+      "anonymized": false
+    },
+    {
+      "path": "diagnostic_evidence/upstream_tests.txt",
+      "original_sha256": "9b50bc6ea88c61e52a3d393f05ac3ce89ac15a4c856a99fdb89b7d20ef49a909",
+      "public_sha256": "6bbdb6e20ec91bc33da35eb4cc14ad02dcc45c107fd6f320e3c98f0f1d242548",
+      "anonymized": true
+    },
+    {
+      "path": "diagnostic_evidence/validation.json",
+      "original_sha256": "b9e1a0b820746bc47f76c06e5623d55e07f946e9df2864d08b7a40b844f64621",
+      "public_sha256": "d8d49746bbc440ad0d645b794a8ffe79271498819b311c1e8a3eecff75c10987",
+      "anonymized": true
+    },
+    {
+      "path": "diagnostic_evidence/volume_rate_decomposition.csv",
+      "original_sha256": "3ee886416f1a92d9039cdaf1a8aacc6f7f5320a771f73b26fa7957b84b20a06c",
+      "public_sha256": "3ee886416f1a92d9039cdaf1a8aacc6f7f5320a771f73b26fa7957b84b20a06c",
+      "anonymized": false
     }
   ]
 }

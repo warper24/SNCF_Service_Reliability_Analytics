@@ -1,9 +1,9 @@
 name: sncf_service_reliability
-version: "0.5.0"
+version: "0.6.0"
 config-version: 2
 profile: sncf_service_reliability
 model-paths: ["models"]
-analysis-paths: ["analyses"]
+analysis-paths: ["analyses", "../analyses/sql"]
 test-paths: ["tests"]
 target-path: "target"
 clean-targets: ["target", "dbt_packages"]

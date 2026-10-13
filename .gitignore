@@ -21,6 +21,7 @@ dbt/logs/
 /reports/ingestion_evidence/
 /reports/data_quality_evidence/
 /reports/data_model_evidence/
+/reports/diagnostic_evidence/
 # Local BI files may contain imported data.
 *.pbix
 *.pbit

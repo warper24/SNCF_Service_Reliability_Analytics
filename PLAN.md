@@ -2,7 +2,7 @@
 
 Date du plan : 9 septembre 2026.
 
-Dernière révision : 12 octobre 2026 — clôture Git de J05, qualifié le 9 octobre, après publication de l’état validé J01–J04. Révision pédagogique et du stockage discutée le 28 septembre 2026 et intégrée le 1er octobre 2026 après validation du porteur du projet.
+Dernière révision : 13 octobre 2026 — clôture analytique de J06 : diagnostic, deux listes de priorités, sensibilité et recommandations qualifiés. Révision pédagogique et du stockage discutée le 28 septembre 2026 et intégrée le 1er octobre 2026 après validation du porteur du projet.
 
 Ce document sert de référence aux prochaines conversations adossées au dépôt. **Une conversation = un jalon.** Il décrit le travail à réaliser ; sa présence ne signifie pas que les jalons sont implémentés ou validés.
 
@@ -366,7 +366,7 @@ Le dictionnaire des KPI devra préciser, pour chacun : question métier, formule
 
 | J05 | Modèle en étoile et calculs de référence | J04 | Terminé le 9 octobre 2026 — huit tables, 76 tests J05 réussis, couverture centrale 102/116 au semestre et 88/116 à l'année ; limites dans le bilan |
 
-| J06 | Diagnostic SQL et priorisation | J05 | À réaliser |
+| J06 | Diagnostic SQL et priorisation | J05 | Terminé le 13 octobre 2026 — 36 contrôles J06 réussis, deux listes sans score, 27 scénarios par fenêtre, constats et investigations tracés ; limites dans le bilan |
 
 | J07 | Modèle Power BI, Power Query et DAX | J06 | À réaliser |
 
@@ -725,6 +725,8 @@ Les chemins des sections suivantes sont relatifs à la racine du dépôt. Ils d�
 **Risques et erreurs à éviter.** Mélange de grains, confusion des directions, moyenne non pondérée de taux, multiplication par le nombre de causes et comparaison temporelle ignorant les mois manquants.
 
 ### J06 — Diagnostic SQL et priorisation opérationnelle
+
+**État au 13 octobre 2026 : terminé avec limites explicites.** Présentation puis accord explicite « Oui, tu as mon accord pour exécuter l'implémentation du jalon 06. ». La méthode a été écrite avant le classement. Neuf analyses SQL sur les tables J05 inchangées produisent deux listes sans score, 190 décompositions, 27 scénarios par fenêtre et 720 parts de causes mensuelles sélectionnées. Au semestre : 102/116 liaisons éligibles, 91 dégradations ≥2 points, une amélioration, dix variations sous seuil. Les 36 contrôles J06 réussissent ; 94 tests amont réussis et quatre avertissements conservés, avec réutilisation contrôlée de leurs preuves lors de la qualification finale ; 37 tests Python réussis. Les réserves D01–D07 demeurent, la persistance annuelle reste indisponible. Voir [les constats](reports/findings.md), [les recommandations](reports/recommendations.md) et [le bilan J06](docs/milestones/J06_handoff.md). Aucun travail J07 engagé.
 
 **Objectif.** Répondre à la question métier avant la conception des visuels et justifier les investigations prioritaires.
 

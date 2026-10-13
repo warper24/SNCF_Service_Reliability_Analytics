@@ -7,7 +7,9 @@ from pathlib import Path
 import re
 
 REPO = Path(__file__).resolve().parents[1]
-GROUPS = ("audit_evidence", "ingestion_evidence", "data_quality_evidence", "data_model_evidence")
+GROUPS = ("audit_evidence", "ingestion_evidence", "data_quality_evidence", "data_model_evidence", "diagnostic_evidence")
+# Journal Windows identifié à J06 : conversion de la copie, original intact.
+LEGACY_ENCODINGS = {("diagnostic_evidence", "compile.txt"): "cp1252"}
 USER_PATH = re.compile(r"([A-Za-z]:[\\/]+Users[\\/]+)([^\\/\r\n\"<>]+)")
 SECRET = re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|"
                     r"\bgh[pousr]_[A-Za-z0-9]{20,}\b|\bgithub_pat_[A-Za-z0-9_]{20,}\b|"
@@ -39,7 +41,14 @@ def main():
             if source.suffix not in (".json", ".csv", ".txt"):
                 raise ValueError(f"Format de preuve inattendu : {source.name}")
             original = source.read_bytes()
-            text = original.decode("utf-8")
+            source_encoding = "utf-8"
+            try:
+                text = original.decode(source_encoding)
+            except UnicodeDecodeError:
+                source_encoding = LEGACY_ENCODINGS.get((group, source.name))
+                if source_encoding is None:
+                    raise
+                text = original.decode(source_encoding)
             if SECRET.search(text):
                 raise ValueError(f"Secret potentiel : {group}/{source.name}. Ne pas publier.")
             public = anonymize(text).encode("utf-8")
@@ -52,11 +61,14 @@ def main():
             else:
                 target.parent.mkdir(parents=True, exist_ok=True)
                 target.write_bytes(public)
-            entries.append({"path": f"{group}/{source.name}", "original_sha256": digest(original),
-                            "public_sha256": digest(public), "anonymized": original != public})
+            entry = {"path": f"{group}/{source.name}", "original_sha256": digest(original),
+                     "public_sha256": digest(public), "anonymized": original != public}
+            if source_encoding != "utf-8":
+                entry.update(source_encoding=source_encoding, public_encoding="utf-8")
+            entries.append(entry)
     manifest = {
         "purpose": "Copies publiques de preuves historiques ; aucune nouvelle validation revendiquée.",
-        "transformation": "Remplacement du nom de profil Windows par <utilisateur> ; valeurs métier inchangées.",
+        "transformation": "Remplacement du nom de profil Windows par <utilisateur> ; conversion explicite vers UTF-8 des journaux Windows déclarés ; valeurs métier inchangées.",
         "hash_policy": "Les empreintes internes des validations restent celles des originaux. Utiliser ce manifeste pour vérifier les octets publics.",
         "entries": entries,
     }

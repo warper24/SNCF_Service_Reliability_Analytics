@@ -1,5 +1,32 @@
 # Publication progressive du projet
 
+## Clôture J06 — 13 octobre 2026
+
+Accord explicite reçu après présentation. La branche `codex/j06-diagnostic`
+part du commit réel J05 `2f94df2fb6f8471e32c400225038785e431b8296`.
+Elle livre diagnostic SQL, méthode préspécifiée, deux listes sans score,
+sensibilité, constats, recommandations, collecteur et preuves. Qualification
+finale : `20261013T102259Z_d1ed8f73`, avec 36 contrôles J06 réussis.
+Les tests amont (94 réussites, quatre avertissements) proviennent de l'exécution
+J06 `20261013T101816Z_2ce63253` et sont réutilisés après vérification des entrées,
+du code, des versions et des empreintes. Les 37 tests Python ont aussi réussi.
+
+Les 39 preuves historiques originales restent intactes. Le cinquième groupe
+`reports/diagnostic_evidence/` contient les originaux sélectionnés de J06, ignorés
+par Git. Les copies publiques préservent les chiffres, les périodes et les versions ;
+les profils Windows sont anonymisés et le journal de compilation cp1252 est
+converti en UTF-8 dans sa copie, avec encodages déclarés au manifeste et original
+inchangé. Le résultat de sensibilité contient
+des candidats/scénarios dérivés, pas l'export complet de la source. Les validations
+cloud ne sont pas renouvelées pour préparer leur publication.
+
+La [revue des fichiers indexés J06](../reports/publication_evidence/diagnostic_evidence/git_review.json)
+consigne les contrôles du contenu à publier. Le commit est créé après cette revue,
+puis envoyé sans forçage sur `main` et la branche de jalon ; son SHA distant est
+vérifié avant d'annoncer l'envoi. La référence exacte est transmise dans la
+conversation ; l'[historique J06](https://github.com/warper24/SNCF_Service_Reliability_Analytics/commits/codex/j06-diagnostic)
+permet de retrouver la livraison. Aucune release finale J10 n'est créée ici.
+
 ## Clôture J05 — 9 octobre 2026
 
 Reprise de la publication le **12 octobre 2026**, après interruption de la session.
