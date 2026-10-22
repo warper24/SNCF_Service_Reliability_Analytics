@@ -1,0 +1,146 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "6d9c2afbbb502973bf30",
+  "position": {
+    "x": 30,
+    "y": 30,
+    "z": 30,
+    "height": 500,
+    "width": 1500,
+    "tabOrder": 30
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_cause"
+                    }
+                  },
+                  "Property": "cause_label"
+                }
+              },
+              "queryRef": "dim_cause.cause_label",
+              "nativeQueryRef": "Cause publiée",
+              "displayName": "Cause publiée"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_measures"
+                    }
+                  },
+                  "Property": "published_cause_raw_pct"
+                }
+              },
+              "queryRef": "kpi_measures.published_cause_raw_pct",
+              "nativeQueryRef": "Valeur source (0–100)",
+              "displayName": "Valeur source (0–100)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_measures"
+                    }
+                  },
+                  "Property": "published_cause_share"
+                }
+              },
+              "queryRef": "kpi_measures.published_cause_share",
+              "nativeQueryRef": "Part utilisable",
+              "displayName": "Part utilisable"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_measures"
+                    }
+                  },
+                  "Property": "cause_profile_status"
+                }
+              },
+              "queryRef": "kpi_measures.cause_profile_status",
+              "nativeQueryRef": "Statut SQL",
+              "displayName": "Statut SQL"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dijon Ville → Paris Lyon · National · janvier 2025 — aucune conversion en effectifs'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

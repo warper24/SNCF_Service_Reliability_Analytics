@@ -1,0 +1,117 @@
+/// J07 — fct_delay_causes_monthly ; voir docs/powerbi_model.md.
+table fct_delay_causes_monthly
+	lineageTag: 8e107640-a0a0-4c5b-9ec6-a6ea35540e15
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column version_id
+		dataType: string
+		isHidden
+		lineageTag: 8dc1bf83-8858-4986-9f75-87aadc4b1b72
+		summarizeBy: none
+		sourceColumn: version_id
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column row_number
+		dataType: int64
+		isHidden
+		lineageTag: 21596fd5-d029-4c71-82a5-2ffcb56b7dad
+		summarizeBy: none
+		sourceColumn: row_number
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column row_sha256
+		dataType: string
+		isHidden
+		lineageTag: 011c2239-3d8c-4979-844b-580cc5a7d84e
+		summarizeBy: none
+		sourceColumn: row_sha256
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column month
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-MM-dd
+		lineageTag: 65cef04c-5c59-4e07-8d33-e04e52c9611d
+		summarizeBy: none
+		sourceColumn: month
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column route_key
+		dataType: string
+		isHidden
+		lineageTag: 1216792a-806e-4188-9fd7-4c6f07be7632
+		summarizeBy: none
+		sourceColumn: route_key
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column service_key
+		dataType: string
+		isHidden
+		lineageTag: 6eb8cb8a-a445-4fee-9760-a12a9a13af07
+		summarizeBy: none
+		sourceColumn: service_key
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column cause_key
+		dataType: string
+		isHidden
+		lineageTag: 3d6b105c-3f95-411f-b514-6bd4c723c203
+		summarizeBy: none
+		sourceColumn: cause_key
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column published_cause_pct
+		dataType: double
+		isHidden
+		lineageTag: 1a7ca78e-d2ec-4054-966d-318d3892e7ce
+		summarizeBy: none
+		sourceColumn: published_cause_pct
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column cause_profile_status
+		dataType: string
+		isHidden
+		lineageTag: cef4139b-cdb7-4d95-986a-86f10ef701da
+		summarizeBy: none
+		sourceColumn: cause_profile_status
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column is_cause_profile_usable
+		dataType: boolean
+		isHidden
+		lineageTag: dd9d66fc-8003-492f-b912-46523aab28d6
+		summarizeBy: none
+		sourceColumn: is_cause_profile_usable
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column cause_sum_pct
+		dataType: double
+		isHidden
+		lineageTag: 0e0e0b7a-e98f-41ee-8d3a-87dd209fceba
+		summarizeBy: none
+		sourceColumn: cause_sum_pct
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column has_cause_sum_warning
+		dataType: boolean
+		isHidden
+		lineageTag: 85d0cc03-5136-4dfd-ae49-f25e1a53ce54
+		summarizeBy: none
+		sourceColumn: has_cause_sum_warning
+
+	partition fct_delay_causes_monthly = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([BillingProject=pBillingProject, UseStorageApi=false]),
+				    Project = Source{[Name=pProjectId]}[Data],
+				    Dataset = Project{[Name=pDataset, Kind="Schema"]}[Data],
+				    Data = Dataset{[Name="fct_delay_causes_monthly", Kind="Table"]}[Data],
+				    Result = Data,
+				    Versions = List.Distinct(Result[version_id]),
+				    Checked = if List.Count(Versions) = 1 and Versions{0} = pExpectedVersion then Result else error "Version source inattendue ou multiple"
+				in
+				    Checked
+

@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "reviewer": "Codex — inspection visuelle et lecture TOM/ADOMD",
+  "desktop_version": "2.159.883.0",
+  "visual_review_date": "2026-10-21",
+  "reopened_on": "2026-10-22",
+  "reopened_without_refresh": true,
+  "pages": [
+    "J07 · Comparaisons fixes",
+    "J07 · Contrôle mensuel",
+    "J07 · Causes publiées"
+  ],
+  "observations": [
+    "Synthèses : 116 candidates, 102 éligibles au semestre et 88 à l’année ; persistance annuelle vide.",
+    "Dijon Ville → Paris Lyon, National, janvier 2025 : 60/422, 14,22 %, couverture importante 0 %, taux >30/>60 vides.",
+    "Six causes mensuelles présentées avec valeur brute, part utilisable et statut ; aucun total.",
+    "Version source, dernier mois et date de lecture des métadonnées visibles.",
+    "Noms de colonnes français et titres lisibles ; pages techniques, rapport métier réservé à J08.",
+    "Fichiers de récupération préexistants conservés lors de la fermeture."
+  ],
+  "screenshots_private": {
+    "causes.png": "6db02227aa26ccb2f6be8cf4071be46d7e50e99cf72316654fecb15ad95e380b",
+    "comparisons.png": "48e2caedb5445e583756cce70d1e0a359da312569d3ffc89df5bb910c8b4b390",
+    "monthly.png": "556209e750d8d358e423d6f4433a4530de087288b9f54aa8899c0ddbee023e93"
+  },
+  "screenshot_location": "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\powerbi-j07\\screenshots",
+  "screenshots_not_published_reason": "Interface du compte local visible ; conserver uniquement les empreintes publiques.",
+  "local_python_regression": {
+    "command": "python -m unittest discover -s tests -v",
+    "run_on": "2026-10-22",
+    "tests": 37,
+    "duration_seconds": 14.871,
+    "status": "passed"
+  },
+  "heuristic_review_limit": "Le plugin inclut les brouillons et ne détecte pas les 57 mesures TMDL ; sa notation ne constitue pas une qualification."
+}

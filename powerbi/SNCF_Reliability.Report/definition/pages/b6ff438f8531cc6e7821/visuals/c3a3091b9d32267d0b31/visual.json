@@ -1,0 +1,176 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "c3a3091b9d32267d0b31",
+  "position": {
+    "x": 30,
+    "y": 230,
+    "z": 230,
+    "height": 180,
+    "width": 1500,
+    "tabOrder": 230
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_measures"
+                    }
+                  },
+                  "Property": "expected_months"
+                }
+              },
+              "queryRef": "kpi_measures.expected_months",
+              "nativeQueryRef": "Mois attendus",
+              "displayName": "Mois attendus"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_measures"
+                    }
+                  },
+                  "Property": "observed_months"
+                }
+              },
+              "queryRef": "kpi_measures.observed_months",
+              "nativeQueryRef": "Mois observés",
+              "displayName": "Mois observés"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_measures"
+                    }
+                  },
+                  "Property": "arrival_coverage"
+                }
+              },
+              "queryRef": "kpi_measures.arrival_coverage",
+              "nativeQueryRef": "Couverture retards",
+              "displayName": "Couverture retards"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_measures"
+                    }
+                  },
+                  "Property": "important_coverage"
+                }
+              },
+              "queryRef": "kpi_measures.important_coverage",
+              "nativeQueryRef": "Couverture >30/>60",
+              "displayName": "Couverture >30/>60"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_measures"
+                    }
+                  },
+                  "Property": "over_30_delay_rate"
+                }
+              },
+              "queryRef": "kpi_measures.over_30_delay_rate",
+              "nativeQueryRef": "Taux >30",
+              "displayName": "Taux >30"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_measures"
+                    }
+                  },
+                  "Property": "over_60_delay_rate"
+                }
+              },
+              "queryRef": "kpi_measures.over_60_delay_rate",
+              "nativeQueryRef": "Taux >60",
+              "displayName": "Taux >60"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Présence et validité sont distinctes — un taux indisponible n’est pas zéro'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

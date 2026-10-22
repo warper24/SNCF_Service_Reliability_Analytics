@@ -1,0 +1,17 @@
+{
+  "status": "failed",
+  "run_directory": "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\powerbi-j07\\validation_20261021T142147Z",
+  "checked_at_utc": "2026-10-21T14:22:10.392593+00:00",
+  "checks": 5967,
+  "failed": 1,
+  "limitations": [
+    "Test Import avant/après et revue Desktop à consigner séparément.",
+    "Les hypothèses métier D01–D07 ne sont pas certifiées par la réconciliation."
+  ],
+  "code_sha256": {
+    "scripts\\validate_powerbi.py": "a72e281573c67c93dd5cadc12a930fc46ad8c00639595941796822f6224d0005",
+    "scripts\\build_powerbi_project.py": "5614e5710801f68492db21f7c76836ac3ac5b6d969a974664a1435f6e96ca90f",
+    "scripts\\powerbi_model_tools.ps1": "36e96095f5463eb72891bca34fdd39f3c7fd57d0172dc9a811495f05ee51ed62",
+    "analyses\\sql\\j07_reconciliation.sql": "38e0408f5be55fdf1ca50d1c1ea10a4d5be3568a352ad2dc3841245ced780c4e"
+  }
+}

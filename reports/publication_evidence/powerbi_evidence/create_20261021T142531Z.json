@@ -1,0 +1,19 @@
+{
+  "stage": "create",
+  "completed_at_utc": "2026-10-21T14:25:31.260458+00:00",
+  "values": {
+    "sql_initial": 1
+  },
+  "jobs": [
+    {
+      "job_id": "ea27ca4d-5b5f-454a-91e7-44f818a4d933",
+      "sql": "-- Expérience Import isolée. Remplacer sncf-reliability-analytics ; exécuter une seule étape à la fois.\n-- Le dataset sncf_test expire ses tables de test. Aucun fait SNCF n'est modifié.\nCREATE TABLE IF NOT EXISTS `sncf-reliability-analytics.sncf_test.j07_import_probe`\nOPTIONS(expiration_timestamp=TIMESTAMP_ADD(CURRENT_TIMESTAMP(), INTERVAL 7 DAY))\nAS SELECT 1 AS probe_value, CURRENT_TIMESTAMP() AS changed_at_utc;\n\n-- Après import de la valeur 1 et conservation de la preuve :\n-- UPDATE `sncf-reliability-analytics.sncf_test.j07_import_probe`\n-- SET probe_value = 2, changed_at_utc = CURRENT_TIMESTAMP() WHERE probe_value = 1;\n-- Observer 1 dans Desktop avant actualisation, puis 2 après actualisation.\n",
+      "bytes_processed": 0
+    },
+    {
+      "job_id": "29cccc9e-41bd-42d6-b1ba-b3ffeecbda35",
+      "sql": "SELECT probe_value FROM `sncf-reliability-analytics.sncf_test.j07_import_probe`",
+      "bytes_processed": 8
+    }
+  ]
+}

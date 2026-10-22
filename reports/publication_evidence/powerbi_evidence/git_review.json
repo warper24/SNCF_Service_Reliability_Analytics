@@ -1,0 +1,450 @@
+{
+  "status": "passed",
+  "reviewed_on": "2026-10-22",
+  "scope": "Fichiers indexés J07 avant ajout de cette preuve ; le manifeste final inclut ensuite la revue elle-même.",
+  "files_reviewed": 87,
+  "issues": [],
+  "historical_public_entries_unchanged": 54,
+  "no_full_source_export": true,
+  "large_files_reviewed": {
+    "cultures/fr-FR.tmdl": "Métadonnées linguistiques générées : noms, synonymes, relations ; pas de lignes source.",
+    "checks.json": "Assertions et résultats ciblés de qualification ; pas un export des 12 907 observations."
+  },
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 423,
+      "sha256": "544148deb20c42a9093deaabb2d81df9c3299a795e8710364f98a9bc5ef981ce"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 752,
+      "sha256": "008683b4d5697e7056d295eeb3a37d3810a0ab4dbf4f48a638f291ec5060eeb1"
+    },
+    {
+      "path": "PLAN.md",
+      "bytes": 71267,
+      "sha256": "9bed6d15072b4c1d0684a8dff8858fdb9620a9096653a1ccbd26d40d0fc36414"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5325,
+      "sha256": "2725ef8305f630edb9cc9c80ef42a722cc6dd6a51660e426e2c97e333831f049"
+    },
+    {
+      "path": "analyses/dax/j07_reconciliation.dax",
+      "bytes": 837,
+      "sha256": "78cd4802fae7ac278620582b1ed28ced519dd7c7ebd188108fc6466841a7fb5c"
+    },
+    {
+      "path": "analyses/sql/j07_import_probe.sql",
+      "bytes": 666,
+      "sha256": "5fa3c2578cd7d6e3445f0b8d2ab7a6a2c77fc30deec85c72aa84a66d31165e4d"
+    },
+    {
+      "path": "analyses/sql/j07_reconciliation.sql",
+      "bytes": 2059,
+      "sha256": "38e0408f5be55fdf1ca50d1c1ea10a4d5be3568a352ad2dc3841245ced780c4e"
+    },
+    {
+      "path": "docs/measure_catalog.md",
+      "bytes": 21037,
+      "sha256": "eac5b8037936d35451ca44bd78827d14124ffc69bd3f3511a24c80292d635e7d"
+    },
+    {
+      "path": "docs/milestones/J07_handoff.md",
+      "bytes": 12563,
+      "sha256": "058da5df7b201b2e3efae904f9c807c657cbc303dafcaec428d3db8c38c8b129"
+    },
+    {
+      "path": "docs/powerbi_model.md",
+      "bytes": 12855,
+      "sha256": "5f70e5b766aacc261c999cc735fe8ff6f2bb02e59c80b11933dbb74ee13e382c"
+    },
+    {
+      "path": "docs/publication.md",
+      "bytes": 9305,
+      "sha256": "04fc1f795066b6928b7dccdcf4f0fa830a9756d0be93b4149068ddddd8e170a3"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.Report/.platform",
+      "bytes": 310,
+      "sha256": "8048975cdab83cb6dde16c71bf3e5de10bb9b8f9679a2e7a323584afc02ba5c7"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.Report/StaticResources/SharedResources/BaseThemes/Fluent2-CY26SU09.json",
+      "bytes": 99684,
+      "sha256": "eb556359c12fe93c43047b494aa086e6f832a6bac211e6375b742c35ee784c78"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.Report/definition.pbir",
+      "bytes": 250,
+      "sha256": "1ab300dbe3df8cc825ffed98632eac562ec6aa1d05a5fad16e3d1a2ed197dd70"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.Report/definition/pages/95123be04912a2df40e9/page.json",
+      "bytes": 269,
+      "sha256": "67a308f531691e583e1603d261aa6be2fb1b9caee9a9644ea1b9c2ae4515fa76"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.Report/definition/pages/95123be04912a2df40e9/visuals/4a44c3bb8861ec962bc5/visual.json",
+      "bytes": 4917,
+      "sha256": "2130657f1231ad2d9c134cf501ab097c4e37cf099d8593f4f1b2cd830b44964c"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.Report/definition/pages/95123be04912a2df40e9/visuals/805797cb6d8801d44b5c/visual.json",
+      "bytes": 3333,
+      "sha256": "db540d7f6e551ccb4395c37fc345e39ce14362ea06435f3071ec9ac499b5fcc4"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.Report/definition/pages/95123be04912a2df40e9/visuals/9c0211c51d04574fdaee/visual.json",
+      "bytes": 6314,
+      "sha256": "22ce9407fa75b6c88caa376f880221ab88555f1d4aecb57f28cc98b74bf8604d"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.Report/definition/pages/b5c8d67521f3cffe1a74/page.json",
+      "bytes": 5782,
+      "sha256": "876ba5f79a7503acb2cc320b336d4e89d5c7adc11eb20e034e49af2810cc262f"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.Report/definition/pages/b5c8d67521f3cffe1a74/visuals/6d9c2afbbb502973bf30/visual.json",
+      "bytes": 3830,
+      "sha256": "045866aeafa8ee7848f1e9da2abf61739de083b6ea8e7caf903b75d4506fc815"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.Report/definition/pages/b5c8d67521f3cffe1a74/visuals/cd14ed93747f43ed5a2e/visual.json",
+      "bytes": 3333,
+      "sha256": "d2a1fd8456981f3ad8a8f823cf3f2dd4287baf743da8e261b1ac60c1b0db60d4"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.Report/definition/pages/b6ff438f8531cc6e7821/page.json",
+      "bytes": 5783,
+      "sha256": "0e41c9bdd242f5350e1a87b517de5ccd6f02b3eaee9bc89049cb1e607ca75fe1"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.Report/definition/pages/b6ff438f8531cc6e7821/visuals/073c1634c496cdb649d1/visual.json",
+      "bytes": 2226,
+      "sha256": "ce649adf2b5e3e97800b8b0c73a776d04387c6061dd824fbc2a308c9bbc8b605"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.Report/definition/pages/b6ff438f8531cc6e7821/visuals/8925ecb0dbb30b450fb5/visual.json",
+      "bytes": 3333,
+      "sha256": "e25486a8e9492377a1cc15e857ee8bdd42083b34b3b26e2240775792b0e60c66"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.Report/definition/pages/b6ff438f8531cc6e7821/visuals/9169e3ca73eeb47d29e9/visual.json",
+      "bytes": 4825,
+      "sha256": "f68f70220deb5b1814493e2faed7874da5e17a0e9e3981b1f838ad7493d70619"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.Report/definition/pages/b6ff438f8531cc6e7821/visuals/c3a3091b9d32267d0b31/visual.json",
+      "bytes": 4788,
+      "sha256": "cebea1d2a901a9c3827c337ad24e1218f39042671905ce560245cf41259f7444"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.Report/definition/pages/pages.json",
+      "bytes": 282,
+      "sha256": "6966f086226307e5f2b64fb1d28a0993cef7f605861d40cb757c4138bd262794"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.Report/definition/report.json",
+      "bytes": 1195,
+      "sha256": "e6557ff452b09d332580911ba81fe6881ef6f05c44d1641a41655d54f72d488c"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.Report/definition/version.json",
+      "bytes": 152,
+      "sha256": "c8bdd966a85f1eaab4312d2096b6d7b508243e4d7bc5a4d25af3cfcb1056a4e7"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.SemanticModel/.platform",
+      "bytes": 317,
+      "sha256": "3867b3ac9c7e77f46c2cc23230d187d698485f185edc01c4c98cba4d3cb1a3a7"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.SemanticModel/definition.pbism",
+      "bytes": 170,
+      "sha256": "73a1ae4c89d7488f553788adc772a04c805d1c9e0d7333e2b2b5476aad8e5a5f"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.SemanticModel/definition/cultures/fr-FR.tmdl",
+      "bytes": 1256927,
+      "sha256": "1a304c03522f6f2d3c18fe39f5b624c7ef4fd28e4f8a3f1f88b4e1803566da43"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.SemanticModel/definition/database.tmdl",
+      "bytes": 39,
+      "sha256": "822c914b643bca32bb20abd8a762df8204a1b9ef02acc2bc7348727f6699cb96"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.SemanticModel/definition/expressions.tmdl",
+      "bytes": 1169,
+      "sha256": "06878bdb1e94cedf24f136bd59e38881268f126da71046c5c303eaec716496c5"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.SemanticModel/definition/model.tmdl",
+      "bytes": 972,
+      "sha256": "83d0f8f2e9db4c5441973ede137339e30700f3687583274b3eaa9e947a521927"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.SemanticModel/definition/relationships.tmdl",
+      "bytes": 2034,
+      "sha256": "290d4d689c02bf4aaa07caf1c02f32236b76fbc761ad85625f9b00ada89fcf7d"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.SemanticModel/definition/tables/dim_cause.tmdl",
+      "bytes": 1368,
+      "sha256": "e5afdfbc8f48826bb2595d3631bd32b23c30279d73982bb015477a950762d34b"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.SemanticModel/definition/tables/dim_comparison.tmdl",
+      "bytes": 2332,
+      "sha256": "4ff357ba2b7b6c0c1ad863885f59ab1fa178486235136a6613d9090bd1d33f78"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.SemanticModel/definition/tables/dim_date.tmdl",
+      "bytes": 2226,
+      "sha256": "732f2f41bd0f61c0c57d5f469748c1b11e29f3ab0700f2683445f3ca1bf1ef7f"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.SemanticModel/definition/tables/dim_route.tmdl",
+      "bytes": 1352,
+      "sha256": "31da66c44b94957b61cbac48df4bedcfefacd1c143d3efe174ece5347242ae87"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.SemanticModel/definition/tables/dim_service.tmdl",
+      "bytes": 942,
+      "sha256": "d976c497ab558078baeefc5e614ed32b1621a575e3665cfa688b355b20bfba8c"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.SemanticModel/definition/tables/fct_delay_causes_monthly.tmdl",
+      "bytes": 3483,
+      "sha256": "d3b390786a31f0b4002ed64bf14d80e0deb8389d62cd59177f3ea3d9af7f2eca"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.SemanticModel/definition/tables/fct_reliability_monthly.tmdl",
+      "bytes": 17740,
+      "sha256": "e920ec8708989d6bff2366734b0fba94bde3c112f039181f3015220a632b8924"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.SemanticModel/definition/tables/kpi_measures.tmdl",
+      "bytes": 22101,
+      "sha256": "7492d9234b77987f20e884a9b9f8be557c2d4ba47bdb773649599edc576a302f"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.SemanticModel/definition/tables/mart_route_priorities.tmdl",
+      "bytes": 20159,
+      "sha256": "7b2d75b66c83d61415abb69f218f0dfe926049e38ea95a552ff96f78c0d03e53"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.SemanticModel/definition/tables/mart_route_trends.tmdl",
+      "bytes": 21403,
+      "sha256": "e546352186e2bd2449a75f87b70d2b7e07938ba9253323cd0196bcd4ef437d44"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.SemanticModel/definition/tables/refresh_metadata.tmdl",
+      "bytes": 1750,
+      "sha256": "41f2b745554285ca9be51372221909d83bbaa18d9a7677a0cb5d9f81b38a329d"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.SemanticModel/definition/tables/route_diagnostic.tmdl",
+      "bytes": 24016,
+      "sha256": "ee91c39f0650d61793f23842d45c40bc5b8bffd0398113acaeb9b7d6c85f0745"
+    },
+    {
+      "path": "powerbi/SNCF_Reliability.pbip",
+      "bytes": 295,
+      "sha256": "a5defd8c170c26e3b5548831d1424485cb31ec039aeb26b33cc18470b0c9d0dd"
+    },
+    {
+      "path": "reports/publication_evidence/manifest.json",
+      "bytes": 23788,
+      "sha256": "4af77d21b2451be60e9aeff31b965f301d6361534036dccc50f7199268c994df"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/cases.json",
+      "bytes": 10782,
+      "sha256": "0c0752aac05159ade54ef5ec60b1f78f9ca575bcf7e7de0b3b3698ce13cd800d"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/causes_dax.json",
+      "bytes": 288506,
+      "sha256": "59c3ee240f78b1f74380d1509e59889486fb6b4d40bd33e3277b616e5e1334e2"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/causes_sql.json",
+      "bytes": 258740,
+      "sha256": "b863c24488920cfff5326c2c2b4035315dc1030019a21d7404222d9e4a878fce"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/change_20261021T142716Z.json",
+      "bytes": 663,
+      "sha256": "626cf335d7d935e31e950b05a5bc1d39a72d24c44accd63f54c166a25c4810f4"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/checks.json",
+      "bytes": 2299540,
+      "sha256": "8fde93448ee80141bd0da0582c26d748483cf6e9c8f2c67cbadc41b0fbc04580"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/comparison_dax.json",
+      "bytes": 220198,
+      "sha256": "73ae6b941ec93b743c19d6e25e24925d196bab04366c76bf840e46b41347b75e"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/comparison_sql.json",
+      "bytes": 206934,
+      "sha256": "a9babfb86f99eabeec023735f23221096c7652a36f9605a4615a876b0e7bcc40"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/create_20261021T142531Z.json",
+      "bytes": 1186,
+      "sha256": "51a2966ee5b2679dca8ab87811edc05dd0721ad5d0b7c1090815506d06d8d2fa"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/delivery_manifest.json",
+      "bytes": 6093,
+      "sha256": "5fa4fd104957787e23fb924246a2040e7589a6206ce0a3bdef7ca63a2f751994"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/edge_cases_sql.json",
+      "bytes": 991,
+      "sha256": "e67fde877f81837516331496381316476444cb5d989ed26cb9bd1edae58519f2"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/execution_manifest.json",
+      "bytes": 3872,
+      "sha256": "f3f678e3b4096f9f20d5a29c24f5df040a8458c47b06bc670a933a3fb7b2ee9f"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/first_attempt_validation.json",
+      "bytes": 974,
+      "sha256": "b8a3c72cf1fe6beac9645bd4e20e5147d0382e10a33b7ac9d52b771d0b336a50"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/guards_dax.json",
+      "bytes": 552,
+      "sha256": "6db3c95a2fd2c1eb77194c3c665d946e7f31b45dd939f63dea36a976873fc276"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/heuristic_review.json",
+      "bytes": 769,
+      "sha256": "03f757c7a4c68844a5623e20f70adb547faa72240e4641353f25c57eba00ca09"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/jobs.json",
+      "bytes": 1186,
+      "sha256": "09110690497685918b22322cbe64e1aa92490253c74bf33e2e1b6e32b0e7041a"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/manual_review.json",
+      "bytes": 1969,
+      "sha256": "e1ff8b15357f71e53dce4eed896f0bff816245c33b98580bf2f860c03d593b3e"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/metadata_dax.json",
+      "bytes": 237,
+      "sha256": "3ac651c9998b0fc48b39fbc1f9f91020b627e043b27ef26fca5c0b229401999d"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/metadata_sql.json",
+      "bytes": 180,
+      "sha256": "f5ff61e8da47e46fdf18dacacf65a484531a4faf2524faf38f82b7bfbf149481"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/model_audit.json",
+      "bytes": 15143,
+      "sha256": "f96c86d35f1a22a9bd3471743e151ca4f95fea83afc09ac9cbd9ac6abcc41e6b"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/monthly_dax.json",
+      "bytes": 15221,
+      "sha256": "96a5dce3f7c57dd0b4141fc099539580dfaf52f86091eaa57e03ecbb803f7d3c"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/monthly_sql.json",
+      "bytes": 14409,
+      "sha256": "913fc59714ec70875a6c4cdfa96999203d51628b8fc57c38af61d7c858005c5d"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/ranks_dax.json",
+      "bytes": 42033,
+      "sha256": "d77267b76664507623fe9a430ded828be0cdbc872641a15500d15d5980bf2421"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/reopened_audit.json",
+      "bytes": 15143,
+      "sha256": "f96c86d35f1a22a9bd3471743e151ca4f95fea83afc09ac9cbd9ac6abcc41e6b"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/reopened_example.json",
+      "bytes": 344,
+      "sha256": "3cd8da00f191478f1d47b9e8d72c0ce3c10b2b18c94154966d72b37b1147ceb4"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/reopened_metadata.json",
+      "bytes": 237,
+      "sha256": "3ac651c9998b0fc48b39fbc1f9f91020b627e043b27ef26fca5c0b229401999d"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/routes_sql.json",
+      "bytes": 1479,
+      "sha256": "e3f811d72f3a5c1dbd74e4832d17a2f886496c6a240c7e4f6d31dcd9b4d72853"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/summary_dax.json",
+      "bytes": 648,
+      "sha256": "742d4a7ed8ae2de5c7e57566618a944cc2b9d012199e496689afdf71f1cd7014"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/summary_sql.json",
+      "bytes": 592,
+      "sha256": "d50053d2e0670ad997e1bac7acd309fd59ff442a8b42899e34536614ab8aad9b"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/validation.json",
+      "bytes": 974,
+      "sha256": "83d57892276cdb3dcacb39bca00733df95a9bc15c254f5e8b97e3b546367c535"
+    },
+    {
+      "path": "reports/publication_evidence/powerbi_evidence/verify_20261021T143002Z.json",
+      "bytes": 379,
+      "sha256": "031ba082a5479d2faf2dc52f1a08427198baa428b23d1b64e2964a05312e7b40"
+    },
+    {
+      "path": "reports/sql_powerbi_reconciliation.md",
+      "bytes": 7515,
+      "sha256": "72dfd36a38c46a77fd6c9d613da60316ba9d122e0a0ba916b50ff2be5e498db1"
+    },
+    {
+      "path": "scripts/build_powerbi_control_pages.py",
+      "bytes": 7169,
+      "sha256": "796f286302cd41817de0cce5d0d705b423c08925f6f7e3c7f24e4ee99767901d"
+    },
+    {
+      "path": "scripts/build_powerbi_project.py",
+      "bytes": 20064,
+      "sha256": "184752c4bb107b353c18b73e9594000b54a0c17265e7bf4262f9d5c3064be0c8"
+    },
+    {
+      "path": "scripts/powerbi_model_tools.ps1",
+      "bytes": 4167,
+      "sha256": "af138caab01daf68c82a6bf9121602faa008b0536ca4720012ec070391b3b176"
+    },
+    {
+      "path": "scripts/prepare_publication.py",
+      "bytes": 4407,
+      "sha256": "1ec0c44d71e8e575e09edc06790db7946d2e15fc861357d7f5c776120e9ef1c5"
+    },
+    {
+      "path": "scripts/probe_powerbi_import.py",
+      "bytes": 4670,
+      "sha256": "469b2b551c7a733cf357b417594bc6fef766573d1afeb1381cfa8ef27fa13ae7"
+    },
+    {
+      "path": "scripts/validate_powerbi.py",
+      "bytes": 17296,
+      "sha256": "7b6118d3430762b51e24acba7836cba1f4e6d12652e08e38901fcf0b15f80377"
+    }
+  ]
+}

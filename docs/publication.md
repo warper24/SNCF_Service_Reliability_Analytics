@@ -1,5 +1,29 @@
 # Publication progressive du projet
 
+## Clôture J07 — 22 octobre 2026
+
+Implémentation autorisée le 16 octobre après la présentation du 13 octobre.
+La branche `codex/j07-powerbi` part du commit J06 réel `a937b83`.
+La qualification du 21 octobre, `validation_20261021T143228Z`, conserve sa date :
+6 286 contrôles réussis sur le modèle Import réel. L'expérience de cache a réussi
+le même jour ; réouverture et 37 tests Python locaux ont été vérifiés le 22 octobre.
+
+La livraison rassemble 38 fichiers de définition PBIP/TMDL/PBIR, les scripts de
+construction/contrôle, le catalogue DAX, la documentation et les preuves ciblées.
+Les caches, DLL, captures de l'interface locale, PBIX historique et exports complets
+restent hors Git. Les copies publiques du sixième groupe `powerbi_evidence`
+conservent les valeurs métier et anonymisent les profils Windows. Les cinq groupes
+historiques ne sont pas revalidés pour la publication.
+
+La [revue des fichiers indexés J07](../reports/publication_evidence/powerbi_evidence/git_review.json)
+consigne les contrôles. Le manifeste lie les originaux et copies publiques ;
+`delivery_manifest.json` lie les définitions livrées au projet Desktop vérifié.
+La procédure autorisée reste un commit puis un push sans forçage vers `main` et
+la branche du jalon, avec contrôle du SHA distant et lien dans la conversation.
+L'[historique J07](https://github.com/warper24/SNCF_Service_Reliability_Analytics/commits/codex/j07-powerbi)
+permet de retrouver la livraison après l'envoi. J08 n'est pas engagé ; J10 reste
+la livraison finale.
+
 ## Clôture J06 — 13 octobre 2026
 
 Accord explicite reçu après présentation. La branche `codex/j06-diagnostic`

@@ -1,0 +1,12 @@
+[
+  {
+    "[observed_months]": 1,
+    "[expected_months]": 1,
+    "[arrival_delay_count]": 60,
+    "[operated_proxy_count]": 422,
+    "[arrival_delay_rate]": 0.14218009478672985,
+    "[important_coverage]": 0.0,
+    "[over_30_delay_rate]": null,
+    "[monthly_status]": "Disponible — population déduite non certifiée D01"
+  }
+]

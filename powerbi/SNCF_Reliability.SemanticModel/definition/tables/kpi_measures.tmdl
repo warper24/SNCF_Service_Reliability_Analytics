@@ -1,0 +1,353 @@
+/// J07 — kpi_measures ; voir docs/powerbi_model.md.
+table kpi_measures
+	lineageTag: 7d2e4295-5045-4de8-b77e-5381715e048a
+
+	/// Contexte restreint à une liaison orientée et un service.
+	measure single_route_service = HASONEVALUE(dim_route[route_key]) && HASONEVALUE(dim_service[service_key])
+		isHidden
+		displayFolder: Contrôles
+		lineageTag: 387c2ccf-b5ef-4275-a85f-10ad610a455c
+
+	/// Refuse les jours partiels ; les sélections doivent contenir tous les jours de chaque mois.
+	measure complete_month_selection = COUNTROWS(dim_date) > 0 && COUNTROWS(dim_date) = SUMX(VALUES(dim_date[month]), DAY(EOMONTH(dim_date[month], 0)))
+		isHidden
+		displayFolder: Contrôles
+		lineageTag: ee47fd23-bee6-46a8-9b43-1808f2c98e7a
+
+	/// Protège les faits mensuels des agrégations interliaisons/services et de la lecture par cause.
+	measure monthly_context_allowed = [single_route_service] && [complete_month_selection] && NOT ISFILTERED(dim_cause)
+		isHidden
+		displayFolder: Contrôles
+		lineageTag: ef4c4e78-459c-4deb-9a52-42ad1ad0aa84
+
+	/// Nombre de mois sélectionnés dans le calendrier, même absents des faits.
+	measure expected_months = IF([monthly_context_allowed], COUNTROWS(VALUES(dim_date[month])))
+		formatString: 0
+		displayFolder: Couverture
+		lineageTag: b0eb5a7f-a49d-4d63-ab13-0504932497d7
+
+	/// Mois réellement présents ; zéro signifie ici aucune observation.
+	measure observed_months = IF([monthly_context_allowed], COALESCE(DISTINCTCOUNT(fct_reliability_monthly[month]), 0))
+		formatString: 0
+		displayFolder: Couverture
+		lineageTag: 6fcda4a5-3bc3-4e90-a16a-4dbbe1dbec15
+
+	/// Couverture de présence, distincte de la validité propre à chaque indicateur.
+	measure observation_coverage = DIVIDE([observed_months], [expected_months])
+		formatString: 0.0%
+		displayFolder: Couverture
+		lineageTag: eb0bd616-a8c0-47b7-bba0-abd36f70dee7
+
+	/// Mois utilisables selon le masque dbt is_arrival_delay_rate_usable.
+	measure arrival_valid_months = IF([monthly_context_allowed], COALESCE(CALCULATE(DISTINCTCOUNT(fct_reliability_monthly[month]), KEEPFILTERS(fct_reliability_monthly[is_arrival_delay_rate_usable] = TRUE())), 0))
+		formatString: 0
+		displayFolder: Couverture
+		lineageTag: c8a97cc1-59d3-4e9b-adc0-132ace1d9d0c
+
+	/// Couverture valide de l’indicateur, sans suppression des mois attendus.
+	measure arrival_coverage = DIVIDE([arrival_valid_months], [expected_months])
+		formatString: 0.0%
+		displayFolder: Couverture
+		lineageTag: ed697269-b68e-4264-a586-5cb2973e9b28
+
+	/// Mois utilisables selon le masque dbt is_cancellation_rate_usable.
+	measure cancellation_valid_months = IF([monthly_context_allowed], COALESCE(CALCULATE(DISTINCTCOUNT(fct_reliability_monthly[month]), KEEPFILTERS(fct_reliability_monthly[is_cancellation_rate_usable] = TRUE())), 0))
+		formatString: 0
+		displayFolder: Couverture
+		lineageTag: b606f8de-86e6-4fe7-99e5-7903a175b8ab
+
+	/// Couverture valide de l’indicateur, sans suppression des mois attendus.
+	measure cancellation_coverage = DIVIDE([cancellation_valid_months], [expected_months])
+		formatString: 0.0%
+		displayFolder: Couverture
+		lineageTag: 93b8093e-abf6-4bd4-9fd7-3c01d56ee86a
+
+	/// Mois utilisables selon le masque dbt is_important_delay_rate_usable.
+	measure important_valid_months = IF([monthly_context_allowed], COALESCE(CALCULATE(DISTINCTCOUNT(fct_reliability_monthly[month]), KEEPFILTERS(fct_reliability_monthly[is_important_delay_rate_usable] = TRUE())), 0))
+		formatString: 0
+		displayFolder: Couverture
+		lineageTag: dbde1039-5051-4267-b29d-d69603106cee
+
+	/// Couverture valide de l’indicateur, sans suppression des mois attendus.
+	measure important_coverage = DIVIDE([important_valid_months], [expected_months])
+		formatString: 0.0%
+		displayFolder: Couverture
+		lineageTag: ed10a987-0cb9-4574-9f52-bf6e4cc100d6
+
+	/// Mois utilisables selon le masque dbt is_important_delay_count_usable.
+	measure important_count_valid_months = IF([monthly_context_allowed], COALESCE(CALCULATE(DISTINCTCOUNT(fct_reliability_monthly[month]), KEEPFILTERS(fct_reliability_monthly[is_important_delay_count_usable] = TRUE())), 0))
+		formatString: 0
+		displayFolder: Couverture
+		lineageTag: c76f1a38-14f6-4aa0-8a85-ec6c5ece9fc3
+
+	/// Couverture valide de l’indicateur, sans suppression des mois attendus.
+	measure important_count_coverage = DIVIDE([important_count_valid_months], [expected_months])
+		formatString: 0.0%
+		displayFolder: Couverture
+		lineageTag: c5f6e77d-5f93-4398-95e5-ce36c6107021
+
+	/// Somme temporelle sur une liaison/service ; indisponible si couverture incomplète. N=P−A non certifié (D01).
+	measure arrival_delay_count = IF([monthly_context_allowed] && [arrival_valid_months] = [expected_months], CALCULATE(SUM(fct_reliability_monthly[arrival_delayed_trains]), KEEPFILTERS(fct_reliability_monthly[is_arrival_delay_rate_usable] = TRUE())))
+		formatString: #,0
+		displayFolder: Effectifs
+		lineageTag: 6b426d43-c64e-4eb1-af20-425ede40689c
+
+	/// Somme temporelle sur une liaison/service ; indisponible si couverture incomplète. N=P−A non certifié (D01).
+	measure operated_proxy_count = IF([monthly_context_allowed] && [arrival_valid_months] = [expected_months], CALCULATE(SUM(fct_reliability_monthly[operated_trains_proxy]), KEEPFILTERS(fct_reliability_monthly[is_arrival_delay_rate_usable] = TRUE())))
+		formatString: #,0
+		displayFolder: Effectifs
+		lineageTag: ed754748-12ac-4471-acbd-ed16df0ac7bc
+
+	/// Somme temporelle sur une liaison/service ; indisponible si couverture incomplète. N=P−A non certifié (D01).
+	measure cancelled_count = IF([monthly_context_allowed] && [cancellation_valid_months] = [expected_months], CALCULATE(SUM(fct_reliability_monthly[cancelled_trains]), KEEPFILTERS(fct_reliability_monthly[is_cancellation_rate_usable] = TRUE())))
+		formatString: #,0
+		displayFolder: Effectifs
+		lineageTag: cd42d671-cc69-4d6e-b46f-d26749f2c85e
+
+	/// Somme temporelle sur une liaison/service ; indisponible si couverture incomplète. N=P−A non certifié (D01).
+	measure scheduled_count = IF([monthly_context_allowed] && [cancellation_valid_months] = [expected_months], CALCULATE(SUM(fct_reliability_monthly[scheduled_trains]), KEEPFILTERS(fct_reliability_monthly[is_cancellation_rate_usable] = TRUE())))
+		formatString: #,0
+		displayFolder: Effectifs
+		lineageTag: 7bbf1705-4788-42a2-8496-2371548c60ff
+
+	/// Σ retards composites publiés / Σ circulations déduites ; D01, population non certifiée.
+	measure arrival_delay_rate = DIVIDE([arrival_delay_count], [operated_proxy_count])
+		formatString: 0.00%
+		displayFolder: Fiabilité
+		lineageTag: 2309bc0a-eb40-401d-a4c3-479d844ecc85
+
+	/// Σ annulations publiées / Σ prévus ; convention historique des annulations non certifiée.
+	measure cancellation_rate = DIVIDE([cancelled_count], [scheduled_count])
+		formatString: 0.00%
+		displayFolder: Fiabilité
+		lineageTag: 1ec5358d-22cd-4a5e-bd72-cd8682c2fb3e
+
+	/// Complément du taux composite ; ne mesure ni les annulations ni une arrivée sans aucune minute de retard.
+	measure composite_regularity_rate = VAR Rate = [arrival_delay_rate] RETURN IF(NOT ISBLANK(Rate), 1 - Rate)
+		formatString: 0.00%
+		displayFolder: Fiabilité
+		lineageTag: 26459521-83e0-406c-963c-2ddf811273b8
+
+	/// Somme disponible des mois valides, à lire avec important_count_coverage. Seuils imbriqués non additifs.
+	measure over_30_delay_count = IF([monthly_context_allowed], CALCULATE(SUM(fct_reliability_monthly[over_30_delay_count]), KEEPFILTERS(fct_reliability_monthly[is_important_delay_count_usable] = TRUE())))
+		formatString: #,0
+		displayFolder: Retards importants
+		lineageTag: e7c2ad13-f2f8-47c8-bd60-dc9fffcfca4d
+
+	/// Ratio des sommes ; indisponible si un mois invalide, notamment T1 2025. D01.
+	measure over_30_delay_rate = IF([monthly_context_allowed] && [important_valid_months] = [expected_months], DIVIDE(CALCULATE(SUM(fct_reliability_monthly[arrival_delayed_over_30_trains]), KEEPFILTERS(fct_reliability_monthly[is_important_delay_rate_usable] = TRUE())), CALCULATE(SUM(fct_reliability_monthly[operated_trains_proxy]), KEEPFILTERS(fct_reliability_monthly[is_important_delay_rate_usable] = TRUE()))))
+		formatString: 0.00%
+		displayFolder: Retards importants
+		lineageTag: 0bad4a97-2fe0-4b91-87dc-d871bc7a27fa
+
+	/// Somme disponible des mois valides, à lire avec important_count_coverage. Seuils imbriqués non additifs.
+	measure over_60_delay_count = IF([monthly_context_allowed], CALCULATE(SUM(fct_reliability_monthly[over_60_delay_count]), KEEPFILTERS(fct_reliability_monthly[is_important_delay_count_usable] = TRUE())))
+		formatString: #,0
+		displayFolder: Retards importants
+		lineageTag: 0e1e8787-f220-4b3f-a6a7-0557670d8c91
+
+	/// Ratio des sommes ; indisponible si un mois invalide, notamment T1 2025. D01.
+	measure over_60_delay_rate = IF([monthly_context_allowed] && [important_valid_months] = [expected_months], DIVIDE(CALCULATE(SUM(fct_reliability_monthly[arrival_delayed_over_60_trains]), KEEPFILTERS(fct_reliability_monthly[is_important_delay_rate_usable] = TRUE())), CALCULATE(SUM(fct_reliability_monthly[operated_trains_proxy]), KEEPFILTERS(fct_reliability_monthly[is_important_delay_rate_usable] = TRUE()))))
+		formatString: 0.00%
+		displayFolder: Retards importants
+		lineageTag: 862e245b-22cd-465e-b9b8-80cfb4d397ba
+
+	/// Mois compatibles sous le minimum de classement de 30 ; consultation descriptive permise.
+	measure low_volume_months = IF([monthly_context_allowed], COALESCE(CALCULATE(COUNTROWS(fct_reliability_monthly), KEEPFILTERS(fct_reliability_monthly[central_counts_compatible] = TRUE()), KEEPFILTERS(fct_reliability_monthly[operated_trains_proxy] < 30)), 0))
+		formatString: 0
+		displayFolder: Couverture
+		lineageTag: 1d355bdf-cc4b-4191-889e-54a21472cc41
+
+	/// Explique l’indisponibilité ou la réserve métier ; distinct d’un zéro.
+	measure monthly_status = SWITCH(TRUE(), NOT [single_route_service], "Sélectionner une liaison et un service", NOT [complete_month_selection], "Sélectionner des mois complets", ISFILTERED(dim_cause), "Taux par cause non défini", [observed_months] < [expected_months], "Mois absents", [arrival_valid_months] < [expected_months], "Taux indisponible : population nulle ou effectifs invalides", [low_volume_months] > 0, "Descriptif disponible ; faible volume", "Disponible — population déduite non certifiée D01")
+		displayFolder: Qualité
+		lineageTag: 419e3ee0-7ed8-4e1c-85a5-66e42471fa3c
+
+	/// Fenêtres fixées par le contrat ; tout filtre direct du calendrier ou des causes invalide leur lecture.
+	measure comparison_context_allowed = HASONEVALUE(dim_comparison[comparison_id]) && NOT ISFILTERED(dim_date) && NOT ISFILTERED(dim_cause)
+		isHidden
+		displayFolder: Contrôles
+		lineageTag: b88f9b4b-b492-4d4e-9c67-c5b0234ad3fd
+
+	/// Nombre de liaisons/service pour une comparaison unique ; jamais un nombre de trains. Persistance annuelle non définie.
+	measure candidate_route_count = IF([comparison_context_allowed], COALESCE(CALCULATE(COUNTROWS(mart_route_priorities)), 0))
+		formatString: 0
+		displayFolder: Comparaisons
+		lineageTag: 1ff65636-1cd1-418b-94be-ca64315ebf78
+
+	/// Nombre de liaisons/service pour une comparaison unique ; jamais un nombre de trains. Persistance annuelle non définie.
+	measure eligible_route_count = IF([comparison_context_allowed], COALESCE(CALCULATE(COUNTROWS(mart_route_priorities), KEEPFILTERS(mart_route_priorities[is_comparison_eligible] = TRUE())), 0))
+		formatString: 0
+		displayFolder: Comparaisons
+		lineageTag: e2f6920e-6c51-402d-a71f-b13af98386ce
+
+	/// Nombre de liaisons/service pour une comparaison unique ; jamais un nombre de trains. Persistance annuelle non définie.
+	measure deteriorating_route_count = IF([comparison_context_allowed], COALESCE(CALCULATE(COUNTROWS(mart_route_priorities), KEEPFILTERS(mart_route_priorities[change_signal] = "deterioration")), 0))
+		formatString: 0
+		displayFolder: Comparaisons
+		lineageTag: ee8c08ad-c8f5-4e57-9dec-733e61058f48
+
+	/// Nombre de liaisons/service pour une comparaison unique ; jamais un nombre de trains. Persistance annuelle non définie.
+	measure improving_route_count = IF([comparison_context_allowed], COALESCE(CALCULATE(COUNTROWS(mart_route_priorities), KEEPFILTERS(mart_route_priorities[change_signal] = "improvement")), 0))
+		formatString: 0
+		displayFolder: Comparaisons
+		lineageTag: 0a35abc6-e2fc-4907-b96d-23643f0a2d5c
+
+	/// Nombre de liaisons/service pour une comparaison unique ; jamais un nombre de trains. Persistance annuelle non définie.
+	measure persistent_underperformance_route_count = IF([comparison_context_allowed] && SELECTEDVALUE(dim_comparison[persistence_applicable], FALSE()), COALESCE(CALCULATE(COUNTROWS(mart_route_priorities), KEEPFILTERS(mart_route_priorities[is_underperformance_persistent] = TRUE())), 0))
+		formatString: 0
+		displayFolder: Comparaisons
+		lineageTag: 63d13ecd-e9d6-4594-9ede-ffd68806bd37
+
+	/// Nombre de liaisons/service pour une comparaison unique ; jamais un nombre de trains. Persistance annuelle non définie.
+	measure persistent_deterioration_route_count = IF([comparison_context_allowed] && SELECTEDVALUE(dim_comparison[persistence_applicable], FALSE()), COALESCE(CALCULATE(COUNTROWS(mart_route_priorities), KEEPFILTERS(mart_route_priorities[is_deterioration_persistent] = TRUE())), 0))
+		formatString: 0
+		displayFolder: Comparaisons
+		lineageTag: 83c95cc3-2e38-463d-9d11-23e1486861ee
+
+	/// Valeur SQL de la fenêtre fixe current ; couverture propre à l’indicateur.
+	measure current_arrival_delay_rate = IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[current_arrival_delay_rate]))
+		formatString: 0.00%
+		displayFolder: Comparaisons
+		lineageTag: 6f45c4e7-cacd-4368-8765-752c802b59f7
+
+	/// Valeur SQL de la fenêtre fixe current ; couverture propre à l’indicateur.
+	measure current_cancellation_rate = IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[current_cancellation_rate]))
+		formatString: 0.00%
+		displayFolder: Comparaisons
+		lineageTag: 2bbe507d-54cf-443b-8758-4ffe0a7f6b3a
+
+	/// Valeur SQL de la fenêtre fixe current ; couverture propre à l’indicateur.
+	measure current_composite_regularity_rate = IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[current_composite_regularity_rate]))
+		formatString: 0.00%
+		displayFolder: Comparaisons
+		lineageTag: 693da604-6a6c-4d38-84d8-dd3fe3df9835
+
+	/// Valeur SQL de la fenêtre fixe current ; couverture propre à l’indicateur.
+	measure current_over_30_delay_rate = IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[current_over_30_delay_rate]))
+		formatString: 0.00%
+		displayFolder: Comparaisons
+		lineageTag: d3e7c9ff-ab12-4827-8f54-a8b0709bf8e1
+
+	/// Valeur SQL de la fenêtre fixe current ; couverture propre à l’indicateur.
+	measure current_over_60_delay_rate = IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[current_over_60_delay_rate]))
+		formatString: 0.00%
+		displayFolder: Comparaisons
+		lineageTag: ce7885d8-48b5-4dda-b758-2c6034d69bea
+
+	/// Valeur SQL de la fenêtre fixe previous ; couverture propre à l’indicateur.
+	measure previous_arrival_delay_rate = IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[previous_arrival_delay_rate]))
+		formatString: 0.00%
+		displayFolder: Comparaisons
+		lineageTag: 26617cf6-103d-4ee7-b3d6-a807520c5fef
+
+	/// Valeur SQL de la fenêtre fixe previous ; couverture propre à l’indicateur.
+	measure previous_cancellation_rate = IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[previous_cancellation_rate]))
+		formatString: 0.00%
+		displayFolder: Comparaisons
+		lineageTag: 5efa0f15-4294-4c75-b40d-ad2e87af452f
+
+	/// Valeur SQL de la fenêtre fixe previous ; couverture propre à l’indicateur.
+	measure previous_composite_regularity_rate = IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[previous_composite_regularity_rate]))
+		formatString: 0.00%
+		displayFolder: Comparaisons
+		lineageTag: dfd71165-e9ca-4488-b241-a57a248ef1e9
+
+	/// Valeur SQL de la fenêtre fixe previous ; couverture propre à l’indicateur.
+	measure previous_over_30_delay_rate = IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[previous_over_30_delay_rate]))
+		formatString: 0.00%
+		displayFolder: Comparaisons
+		lineageTag: b2b3cfee-ddeb-4402-841e-8198f81f25f2
+
+	/// Valeur SQL de la fenêtre fixe previous ; couverture propre à l’indicateur.
+	measure previous_over_60_delay_rate = IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[previous_over_60_delay_rate]))
+		formatString: 0.00%
+		displayFolder: Comparaisons
+		lineageTag: 324b1a5b-5bc9-4cf6-bdfa-c0f7fce9d64a
+
+	/// Écart DAX en points entre les ratios de fenêtres ; éligibilité SQL obligatoire.
+	measure arrival_delay_change_pp = IF([comparison_context_allowed] && [single_route_service] && SELECTEDVALUE(mart_route_priorities[is_comparison_eligible], FALSE()), 100 * ([current_arrival_delay_rate] - [previous_arrival_delay_rate]))
+		formatString: 0.00 "points"
+		displayFolder: Comparaisons
+		lineageTag: bd3109a1-3052-4f78-a3ba-5679e288c6c8
+
+	/// Part de mois selon la règle 4/6 ; valeur SQL, annuelle indisponible.
+	measure deterioration_persistence = IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[deterioration_persistence]))
+		formatString: 0.0%
+		displayFolder: Comparaisons
+		lineageTag: 6d134cbc-2a66-4ab0-ae1b-7f1721d09748
+
+	/// Part de mois selon la règle 4/6 ; valeur SQL, annuelle indisponible.
+	measure underperformance_persistence = IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[underperformance_persistence]))
+		formatString: 0.0%
+		displayFolder: Comparaisons
+		lineageTag: e1a8c639-7b71-4466-af31-a454d6434f0f
+
+	/// Signal SQL comparé avant arrondi ; ±2 points, seuil du portfolio.
+	measure change_signal = IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[change_signal]))
+		displayFolder: Comparaisons
+		lineageTag: c0bc8e7c-2631-4dfc-9073-c45de088f7e0
+
+	/// Rappelle que les fenêtres et critères ne suivent pas le calendrier libre.
+	measure comparison_status = IF(NOT [comparison_context_allowed], "Choisir une comparaison fixe sans filtre de calendrier ni de cause", "Fenêtres fixes ; minimum 30/mois, seuil 2 points, cible fictive 90 %")
+		displayFolder: Qualité
+		lineageTag: bbf09394-e2cd-4a08-b07e-1121624fd2c4
+
+	/// Rang J06 sur la population initiale ; filtrer une liaison ne reclasse pas les autres. Ex æquo conservés.
+	measure deterioration_rank = IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(route_diagnostic[deterioration_rank]))
+		formatString: 0
+		displayFolder: Priorités
+		lineageTag: c267e6dd-695d-4236-92be-28f17ea89b7c
+
+	/// Rang J06 sur la population initiale ; filtrer une liaison ne reclasse pas les autres. Ex æquo conservés.
+	measure underperformance_rank = IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(route_diagnostic[underperformance_rank]))
+		formatString: 0
+		displayFolder: Priorités
+		lineageTag: b225e17e-2def-46e5-9ce0-6e5964abff34
+
+	/// Part source convertie de 0–100 à 0–1 pour affichage ; aucun effectif déduit, aucune agrégation.
+	measure published_cause_share = IF([single_route_service] && [complete_month_selection] && HASONEVALUE(dim_date[month]) && HASONEVALUE(dim_cause[cause_key]) && SELECTEDVALUE(fct_delay_causes_monthly[is_cause_profile_usable], FALSE()), DIVIDE(SELECTEDVALUE(fct_delay_causes_monthly[published_cause_pct]), 100))
+		formatString: 0.00%
+		displayFolder: Causes
+		lineageTag: 1c449600-1642-40f7-9071-1824a435382a
+
+	/// Valeur source 0–100, y compris profil non exploitable ; à lire avec le statut.
+	measure published_cause_raw_pct = IF([single_route_service] && [complete_month_selection] && HASONEVALUE(dim_date[month]) && HASONEVALUE(dim_cause[cause_key]), SELECTEDVALUE(fct_delay_causes_monthly[published_cause_pct]))
+		formatString: 0.00
+		displayFolder: Causes
+		lineageTag: 8da0fcab-2155-464a-ad83-d96b5f239029
+
+	/// Statut SQL du profil ; les anomalies restent consultables.
+	measure cause_profile_status = IF([single_route_service] && [complete_month_selection] && HASONEVALUE(dim_date[month]) && HASONEVALUE(dim_cause[cause_key]), SELECTEDVALUE(fct_delay_causes_monthly[cause_profile_status]), "Choisir une liaison, un service, un mois et une cause")
+		displayFolder: Causes
+		lineageTag: 7fd8e6e9-92a5-480f-9d7e-1a5cbced2377
+
+	/// Provenance de la copie importée ; indépendante des sélections métier.
+	measure source_version = SELECTEDVALUE(refresh_metadata[version_id])
+		displayFolder: Provenance
+		lineageTag: 4b6da325-eab9-4b7b-a1d8-d32a0af2a756
+
+	/// Provenance de la copie importée ; indépendante des sélections métier.
+	measure last_business_month = SELECTEDVALUE(refresh_metadata[last_business_month])
+		formatString: yyyy-MM
+		displayFolder: Provenance
+		lineageTag: 64cebd76-9664-4569-9248-25872e9bfee9
+
+	/// Provenance de la copie importée ; indépendante des sélections métier.
+	measure last_import_utc = SELECTEDVALUE(refresh_metadata[imported_at_utc])
+		formatString: yyyy-MM-dd HH:mm:ss
+		displayFolder: Provenance
+		lineageTag: 57132e28-58c4-4641-bbee-2138f4d75727
+
+	/// Champ repris du modèle SQL qualifié.
+	column _anchor
+		dataType: int64
+		isHidden
+		lineageTag: 10fd00ea-5983-4eaf-8d5a-c7e2e66efc00
+		summarizeBy: none
+		sourceColumn: _anchor
+
+	partition kpi_measures = m
+		mode: import
+		source = #table(type table [_anchor=Int64.Type], {{1}})
+

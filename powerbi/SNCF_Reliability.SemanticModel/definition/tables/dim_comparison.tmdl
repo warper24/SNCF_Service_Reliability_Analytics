@@ -1,0 +1,81 @@
+/// J07 — dim_comparison ; voir docs/powerbi_model.md.
+table dim_comparison
+	lineageTag: 5de41a20-928a-4f15-bb00-d1754b4c3121
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column comparison_id
+		dataType: string
+		lineageTag: aaa7b38c-88cb-4f36-9221-01fca1768e3d
+		summarizeBy: none
+		sourceColumn: comparison_id
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_start
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-MM-dd
+		lineageTag: 1657d912-5ce7-47bc-94e4-f6d17affbf92
+		summarizeBy: none
+		sourceColumn: current_start
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_end
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-MM-dd
+		lineageTag: ce064a8b-7632-4d0e-b313-a39c1da8ecd9
+		summarizeBy: none
+		sourceColumn: current_end
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column expected_months
+		dataType: int64
+		isHidden
+		lineageTag: 0fa318fb-ccba-488a-addc-d78cb1a62d02
+		summarizeBy: sum
+		sourceColumn: expected_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column persistence_applicable
+		dataType: boolean
+		isHidden
+		lineageTag: 3692e23e-3028-4bf1-a441-b627e0f7e30a
+		summarizeBy: none
+		sourceColumn: persistence_applicable
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_start
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-MM-dd
+		lineageTag: 362d8e1d-4674-430e-90e5-c1f9fdd7a6f5
+		summarizeBy: none
+		sourceColumn: previous_start
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_end
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-MM-dd
+		lineageTag: ba1436a1-f7bb-4a2f-aaa3-d5b758883b97
+		summarizeBy: none
+		sourceColumn: previous_end
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition dim_comparison = m
+		mode: import
+		source =
+				let
+				    Result = Table.Distinct(Table.SelectColumns(mart_route_priorities, {"comparison_id", "current_start", "current_end", "previous_start", "previous_end", "expected_months", "persistence_applicable"}))
+				in
+				    Result
+

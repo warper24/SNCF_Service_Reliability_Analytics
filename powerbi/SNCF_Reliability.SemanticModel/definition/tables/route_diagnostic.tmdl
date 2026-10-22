@@ -1,0 +1,528 @@
+/// J07 — route_diagnostic ; voir docs/powerbi_model.md.
+table route_diagnostic
+	isHidden
+	lineageTag: 0144ff26-8c99-42ea-a06b-18159c26a688
+
+	/// Champ repris du modèle SQL qualifié.
+	column version_id
+		dataType: string
+		isHidden
+		lineageTag: 19f100cb-536c-4654-a198-b4f7b459bef3
+		summarizeBy: none
+		sourceColumn: version_id
+
+	/// Champ repris du modèle SQL qualifié.
+	column route_key
+		dataType: string
+		isHidden
+		lineageTag: 3844111b-9f3e-4904-b8a6-fde4603f19e3
+		summarizeBy: none
+		sourceColumn: route_key
+
+	/// Champ repris du modèle SQL qualifié.
+	column service_key
+		dataType: string
+		isHidden
+		lineageTag: 7252bfaa-5045-4399-a760-530aec0ff9f0
+		summarizeBy: none
+		sourceColumn: service_key
+
+	/// Champ repris du modèle SQL qualifié.
+	column departure_station
+		dataType: string
+		isHidden
+		lineageTag: 9434ab22-0d20-4be3-9258-b025016a2bd9
+		summarizeBy: none
+		sourceColumn: departure_station
+
+	/// Champ repris du modèle SQL qualifié.
+	column arrival_station
+		dataType: string
+		isHidden
+		lineageTag: 9a9dc9c2-ce62-4965-8c6d-6e1a69a8f03a
+		summarizeBy: none
+		sourceColumn: arrival_station
+
+	/// Champ repris du modèle SQL qualifié.
+	column service_type
+		dataType: string
+		isHidden
+		lineageTag: 7d20b4a6-7e42-4d7c-9cf8-c24108dd983f
+		summarizeBy: none
+		sourceColumn: service_type
+
+	/// Champ repris du modèle SQL qualifié.
+	column comparison_id
+		dataType: string
+		isHidden
+		lineageTag: dd1e4190-62e8-4d52-ae27-cc299c5c63fe
+		summarizeBy: none
+		sourceColumn: comparison_id
+
+	/// Champ repris du modèle SQL qualifié.
+	column current_start
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-MM-dd
+		lineageTag: d7a24cfc-df01-4a5d-b882-ba4dccf5f8b5
+		summarizeBy: none
+		sourceColumn: current_start
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Champ repris du modèle SQL qualifié.
+	column current_end
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-MM-dd
+		lineageTag: 4d9bda44-8037-49f6-9ef3-64932aaae66b
+		summarizeBy: none
+		sourceColumn: current_end
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Champ repris du modèle SQL qualifié.
+	column expected_months
+		dataType: int64
+		isHidden
+		lineageTag: 70f5cc78-4947-4536-8a07-8d8e20d90f90
+		summarizeBy: sum
+		sourceColumn: expected_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column persistence_applicable
+		dataType: boolean
+		isHidden
+		lineageTag: c7646032-3237-40b1-b378-a1e1875fbe8c
+		summarizeBy: none
+		sourceColumn: persistence_applicable
+
+	/// Champ repris du modèle SQL qualifié.
+	column services_in_comparison
+		dataType: int64
+		isHidden
+		lineageTag: ce96d863-8ec3-419c-b015-b8a558860a63
+		summarizeBy: sum
+		sourceColumn: services_in_comparison
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column scenario_id
+		dataType: string
+		isHidden
+		lineageTag: 8c39b315-8c84-4b33-8b46-3790acf2d85e
+		summarizeBy: none
+		sourceColumn: scenario_id
+
+	/// Champ repris du modèle SQL qualifié.
+	column is_reference
+		dataType: boolean
+		isHidden
+		lineageTag: 3aaa9364-6ffe-4018-b9e0-99e94620f045
+		summarizeBy: none
+		sourceColumn: is_reference
+
+	/// Champ repris du modèle SQL qualifié.
+	column minimum_volume
+		dataType: int64
+		isHidden
+		lineageTag: f41448eb-1921-4d24-91ff-34f7869b6676
+		summarizeBy: sum
+		sourceColumn: minimum_volume
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column change_threshold_pp
+		dataType: int64
+		isHidden
+		lineageTag: 0dd305f7-b04a-4d41-9999-4e37555d3c7e
+		summarizeBy: sum
+		sourceColumn: change_threshold_pp
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column target_pct
+		dataType: int64
+		isHidden
+		lineageTag: 2dfc5f51-64a9-418c-b61e-b905f84661bf
+		summarizeBy: sum
+		sourceColumn: target_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column current_observed_months
+		dataType: int64
+		isHidden
+		lineageTag: 0e18f63e-4dea-4241-8bd5-3f4c3e48c147
+		summarizeBy: sum
+		sourceColumn: current_observed_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column current_eligible_months
+		dataType: int64
+		isHidden
+		lineageTag: 558e0e20-82bc-45dc-b6e5-e95479316909
+		summarizeBy: sum
+		sourceColumn: current_eligible_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column current_invalid_months
+		dataType: int64
+		isHidden
+		lineageTag: 01161e37-0dbd-4f3a-aa03-360f9cd14922
+		summarizeBy: sum
+		sourceColumn: current_invalid_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column current_low_volume_months
+		dataType: int64
+		isHidden
+		lineageTag: c9230c87-7aaa-497f-881f-34cb5a68122b
+		summarizeBy: sum
+		sourceColumn: current_low_volume_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column current_arrival_valid_months
+		dataType: int64
+		isHidden
+		lineageTag: 419aed70-c9e6-4576-9076-5771fa913d97
+		summarizeBy: sum
+		sourceColumn: current_arrival_valid_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column current_cancellation_valid_months
+		dataType: int64
+		isHidden
+		lineageTag: 048c2fd1-255a-40d7-8c74-fc97f35f9df5
+		summarizeBy: sum
+		sourceColumn: current_cancellation_valid_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column current_n
+		dataType: int64
+		isHidden
+		lineageTag: abe0fc87-9a61-46c9-9a43-2cbe70ab3ee9
+		summarizeBy: sum
+		sourceColumn: current_n
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column current_l
+		dataType: int64
+		isHidden
+		lineageTag: 4fac7f4e-61b8-452d-9d95-967aedf66710
+		summarizeBy: sum
+		sourceColumn: current_l
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column current_p
+		dataType: int64
+		isHidden
+		lineageTag: 28a1c25c-14a3-43e7-bfe2-5db2a2f6ca48
+		summarizeBy: sum
+		sourceColumn: current_p
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column current_a
+		dataType: int64
+		isHidden
+		lineageTag: 1bbb6540-2df6-4c18-a969-c382555f7bfe
+		summarizeBy: sum
+		sourceColumn: current_a
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column previous_observed_months
+		dataType: int64
+		isHidden
+		lineageTag: c4ad1a79-d0d1-4208-adc4-5d82dbf1efff
+		summarizeBy: sum
+		sourceColumn: previous_observed_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column previous_eligible_months
+		dataType: int64
+		isHidden
+		lineageTag: 8d20d547-f7f9-45b2-83d8-df8fc9ef16e3
+		summarizeBy: sum
+		sourceColumn: previous_eligible_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column previous_invalid_months
+		dataType: int64
+		isHidden
+		lineageTag: a2cce7f4-f5e9-4433-b539-f0258a1c0a62
+		summarizeBy: sum
+		sourceColumn: previous_invalid_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column previous_low_volume_months
+		dataType: int64
+		isHidden
+		lineageTag: 61aba4ac-67b9-4c81-8517-db65420d47d0
+		summarizeBy: sum
+		sourceColumn: previous_low_volume_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column previous_arrival_valid_months
+		dataType: int64
+		isHidden
+		lineageTag: a86ecf6c-ba5f-48f8-b112-da86ec155e7b
+		summarizeBy: sum
+		sourceColumn: previous_arrival_valid_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column previous_cancellation_valid_months
+		dataType: int64
+		isHidden
+		lineageTag: 32558fdf-b34f-41b9-b9b5-cee7d0c49008
+		summarizeBy: sum
+		sourceColumn: previous_cancellation_valid_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column previous_n
+		dataType: int64
+		isHidden
+		lineageTag: 11f31bd4-57ac-40a9-8827-b27e4263b579
+		summarizeBy: sum
+		sourceColumn: previous_n
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column previous_l
+		dataType: int64
+		isHidden
+		lineageTag: 4431dc9e-b5ce-4da6-b2a7-cefff2bbb7e5
+		summarizeBy: sum
+		sourceColumn: previous_l
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column previous_p
+		dataType: int64
+		isHidden
+		lineageTag: 79ca4a10-adc7-4975-8407-d3e99ebc9eba
+		summarizeBy: sum
+		sourceColumn: previous_p
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column previous_a
+		dataType: int64
+		isHidden
+		lineageTag: fa3446a5-41ba-438d-9495-32e537881fa9
+		summarizeBy: sum
+		sourceColumn: previous_a
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column deterioration_months
+		dataType: int64
+		isHidden
+		lineageTag: c61e95eb-393c-4ad2-ac99-5eca1ca73180
+		summarizeBy: sum
+		sourceColumn: deterioration_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column underperformance_months
+		dataType: int64
+		isHidden
+		lineageTag: 7a7c808f-ce13-459a-be81-1f956bfedd35
+		summarizeBy: sum
+		sourceColumn: underperformance_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column previous_start
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-MM-dd
+		lineageTag: 6fcdc5c7-8069-4ccb-ba5c-1e47ffaa75ba
+		summarizeBy: none
+		sourceColumn: previous_start
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Champ repris du modèle SQL qualifié.
+	column previous_end
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-MM-dd
+		lineageTag: 57432bf5-8d15-42e6-b335-30f159be37e3
+		summarizeBy: none
+		sourceColumn: previous_end
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Champ repris du modèle SQL qualifié.
+	column is_eligible
+		dataType: boolean
+		isHidden
+		lineageTag: e69cc3aa-8348-4dac-b068-3c5cbba8856f
+		summarizeBy: none
+		sourceColumn: is_eligible
+
+	/// Champ repris du modèle SQL qualifié.
+	column current_rate
+		dataType: double
+		isHidden
+		lineageTag: b66d609e-a727-4c2f-9828-fe09163abafd
+		summarizeBy: sum
+		sourceColumn: current_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column current_cancellation_rate
+		dataType: double
+		isHidden
+		lineageTag: 4a45d29c-e2f7-4de5-8828-273851b02fba
+		summarizeBy: sum
+		sourceColumn: current_cancellation_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column previous_rate
+		dataType: double
+		isHidden
+		lineageTag: 1146662e-d020-41b7-b38a-4dcf896a7d92
+		summarizeBy: sum
+		sourceColumn: previous_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column previous_cancellation_rate
+		dataType: double
+		isHidden
+		lineageTag: a0de92e4-e3d4-4a40-a1ef-05930219cc82
+		summarizeBy: sum
+		sourceColumn: previous_cancellation_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column exclusion_reasons
+		dataType: string
+		isHidden
+		lineageTag: da1d6d95-403c-498c-8fae-a48016d5381e
+		summarizeBy: none
+		sourceColumn: exclusion_reasons
+
+	/// Champ repris du modèle SQL qualifié.
+	column change_pp
+		dataType: double
+		isHidden
+		lineageTag: ab8e49de-ca85-406f-a5c0-fb365979fb0e
+		summarizeBy: sum
+		sourceColumn: change_pp
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column change_signal
+		dataType: string
+		isHidden
+		lineageTag: 4e197905-d8f0-4e72-87f5-73308f6a6671
+		summarizeBy: none
+		sourceColumn: change_signal
+
+	/// Champ repris du modèle SQL qualifié.
+	column is_deterioration_persistent
+		dataType: boolean
+		isHidden
+		lineageTag: 27969548-9ac5-435a-b4d0-2e4acfbbc621
+		summarizeBy: none
+		sourceColumn: is_deterioration_persistent
+
+	/// Champ repris du modèle SQL qualifié.
+	column is_underperformance_persistent
+		dataType: boolean
+		isHidden
+		lineageTag: e1d26559-cba4-47ab-9b1d-331f5481da32
+		summarizeBy: none
+		sourceColumn: is_underperformance_persistent
+
+	/// Champ repris du modèle SQL qualifié.
+	column denominator_status
+		dataType: string
+		isHidden
+		lineageTag: e2609ed8-d18b-40f4-a20c-8a1b11c2487a
+		summarizeBy: none
+		sourceColumn: denominator_status
+
+	/// Champ repris du modèle SQL qualifié.
+	column deterioration_rank
+		dataType: int64
+		isHidden
+		lineageTag: 48ecf281-ad64-4779-97ea-b24d9018292d
+		summarizeBy: sum
+		sourceColumn: deterioration_rank
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ repris du modèle SQL qualifié.
+	column underperformance_rank
+		dataType: int64
+		isHidden
+		lineageTag: 5f1206a1-c1bd-4d5a-87b6-c844f151b210
+		summarizeBy: sum
+		sourceColumn: underperformance_rank
+
+		annotation SummarizationSetBy = Automatic
+
+	partition route_diagnostic = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([BillingProject=pBillingProject, UseStorageApi=false]),
+				    Project = Source{[Name=pProjectId]}[Data],
+				    Sql = Text.Replace("SELECT * EXCEPT(exclusion_reasons), ARRAY_TO_STRING(exclusion_reasons, '; ') AS exclusion_reasons FROM (#(lf)-- Tous les candidats : les exclusions demeurent visibles, jamais classées.#(lf)with diagnostic as (-- Une grille explicite rend les mois absents visibles. Les seuils des scénarios#(lf)-- sont appliqués aux effectifs, jamais aux drapeaux J05 précalculés à N≥30.#(lf)with source_rows as (#(lf)    select * from `sncf-reliability-analytics`.`sncf_dev`.`fct_reliability_monthly`#(lf)), windows as (#(lf)select '2026_h1_vs_2025_h1' as comparison_id,#(lf)    date '2026-01-01' as current_start, date '2026-06-01' as current_end,#(lf)    6 as expected_months,#(lf)    true as persistence_applicable#(lf)union all#(lf)#(lf)select '2025_vs_2024' as comparison_id,#(lf)    date '2025-01-01' as current_start, date '2025-12-01' as current_end,#(lf)    12 as expected_months,#(lf)    false as persistence_applicable#(lf)#(lf)), scenarios as (select n as minimum_volume, d as change_threshold_pp, t as target_pct,#(lf)    format('n%d_d%d_t%d', n, d, t) as scenario_id,#(lf)    n = 30 and d = 2 and t = 90 as is_reference#(lf)from unnest([30]) n#(lf)cross join unnest([2]) d#(lf)cross join unnest([90]) t),#(lf)candidates as (#(lf)    select distinct version_id, route_key, service_key, departure_station, arrival_station, service_type#(lf)    from source_rows where service_type = 'National'#(lf)), scope as (#(lf)    select f.version_id, f.route_key, w.comparison_id, count(distinct f.service_type) as services_in_comparison#(lf)    from source_rows f join windows w on f.month between w.current_start and w.current_end#(lf)        or f.month between date_sub(w.current_start, interval 1 year) and date_sub(w.current_end, interval 1 year)#(lf)    group by 1,2,3#(lf)), pairs as (#(lf)    select k.*, w.*, m as current_month, coalesce(s.services_in_comparison,0) as services_in_comparison,#(lf)        #(lf)        c.month as current_observed_month,#(lf)        c.central_counts_compatible as current_compatible,#(lf)        c.operated_trains_proxy as current_n,#(lf)        c.arrival_delayed_trains as current_l,#(lf)        c.scheduled_trains as current_p,#(lf)        c.cancelled_trains as current_a,#(lf)        c.is_cancellation_rate_usable as current_cancellation_usable,#(lf)        c.is_arrival_delay_rate_usable as current_arrival_usable,#(lf)        #(lf)        p.month as previous_observed_month,#(lf)        p.central_counts_compatible as previous_compatible,#(lf)        p.operated_trains_proxy as previous_n,#(lf)        p.arrival_delayed_trains as previous_l,#(lf)        p.scheduled_trains as previous_p,#(lf)        p.cancelled_trains as previous_a,#(lf)        p.is_cancellation_rate_usable as previous_cancellation_usable,#(lf)        p.is_arrival_delay_rate_usable as previous_arrival_usable,#(lf)        #(lf)        c.month is not null and p.month is not null as has_pair#(lf)    from candidates k cross join windows w#(lf)    cross join unnest(generate_date_array(w.current_start,w.current_end,interval 1 month)) m#(lf)    left join source_rows c on c.version_id=k.version_id and c.route_key=k.route_key#(lf)        and c.service_key=k.service_key and c.month=m#(lf)    left join source_rows p on p.version_id=k.version_id and p.route_key=k.route_key#(lf)        and p.service_key=k.service_key and p.month=date_sub(m,interval 1 year)#(lf)    left join scope s on s.version_id=k.version_id and s.route_key=k.route_key and s.comparison_id=w.comparison_id#(lf)), aggregated as (#(lf)    select version_id, route_key, service_key, departure_station, arrival_station, service_type,#(lf)        comparison_id,current_start,current_end,expected_months,persistence_applicable,services_in_comparison,#(lf)        scenario_id,is_reference,minimum_volume,change_threshold_pp,target_pct,#(lf)        #(lf)        count(current_observed_month) as current_observed_months,#(lf)        countif(current_compatible and current_n >= minimum_volume) as current_eligible_months,#(lf)        countif(current_observed_month is not null and not coalesce(current_compatible,false)) as current_invalid_months,#(lf)        countif(current_compatible and current_n < minimum_volume) as current_low_volume_months,#(lf)        countif(current_arrival_usable) as current_arrival_valid_months,#(lf)        countif(current_cancellation_usable) as current_cancellation_valid_months,#(lf)        sum(if(current_arrival_usable,current_n,null)) as current_n,#(lf)        sum(if(current_arrival_usable,current_l,null)) as current_l,#(lf)        sum(if(current_cancellation_usable,current_p,null)) as current_p,#(lf)        sum(if(current_cancellation_usable,current_a,null)) as current_a,#(lf)        #(lf)        count(previous_observed_month) as previous_observed_months,#(lf)        countif(previous_compatible and previous_n >= minimum_volume) as previous_eligible_months,#(lf)        countif(previous_observed_month is not null and not coalesce(previous_compatible,false)) as previous_invalid_months,#(lf)        countif(previous_compatible and previous_n < minimum_volume) as previous_low_volume_months,#(lf)        countif(previous_arrival_usable) as previous_arrival_valid_months,#(lf)        countif(previous_cancellation_usable) as previous_cancellation_valid_months,#(lf)        sum(if(previous_arrival_usable,previous_n,null)) as previous_n,#(lf)        sum(if(previous_arrival_usable,previous_l,null)) as previous_l,#(lf)        sum(if(previous_cancellation_usable,previous_p,null)) as previous_p,#(lf)        sum(if(previous_cancellation_usable,previous_a,null)) as previous_a,#(lf)        #(lf)        countif(current_compatible and previous_compatible and current_n >= minimum_volume and previous_n >= minimum_volume#(lf)            and 100 * (cast(current_l as numeric)*previous_n-cast(previous_l as numeric)*current_n)#(lf)                >= change_threshold_pp * cast(current_n as numeric)*previous_n) as deterioration_months,#(lf)        countif(current_compatible and current_n >= minimum_volume#(lf)            and 100 * cast(current_n-current_l as numeric) < target_pct * cast(current_n as numeric)) as underperformance_months#(lf)    from pairs cross join scenarios#(lf)    group by 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17#(lf)), rates as (#(lf)    select *, date_sub(current_start,interval 1 year) as previous_start,#(lf)        date_sub(current_end,interval 1 year) as previous_end,#(lf)        current_eligible_months=expected_months and previous_eligible_months=expected_months#(lf)            and services_in_comparison=1 as is_eligible,#(lf)        #(lf)        case when current_arrival_valid_months=expected_months then safe_divide(cast(current_l as numeric), cast(current_n as numeric)) end as current_rate,#(lf)        case when current_cancellation_valid_months=expected_months then safe_divide(cast(current_a as numeric), cast(current_p as numeric)) end as current_cancellation_rate,#(lf)        #(lf)        case when previous_arrival_valid_months=expected_months then safe_divide(cast(previous_l as numeric), cast(previous_n as numeric)) end as previous_rate,#(lf)        case when previous_cancellation_valid_months=expected_months then safe_divide(cast(previous_a as numeric), cast(previous_p as numeric)) end as previous_cancellation_rate,#(lf)        #(lf)        array(select reason from unnest([#(lf)            if(current_observed_months!=expected_months,'missing_current_months',null),#(lf)            if(previous_observed_months!=expected_months,'missing_previous_months',null),#(lf)            if(current_invalid_months>0,'invalid_current_counts',null),#(lf)            if(previous_invalid_months>0,'invalid_previous_counts',null),#(lf)            if(current_low_volume_months>0,'low_current_volume',null),#(lf)            if(previous_low_volume_months>0,'low_previous_volume',null),#(lf)            if(services_in_comparison!=1,'ambiguous_or_absent_service_scope',null)#(lf)        ]) reason where reason is not null) as exclusion_reasons#(lf)    from aggregated#(lf)), classified as (#(lf)    select *,#(lf)        case when is_eligible then safe_divide(100 * (cast(current_l as numeric) * previous_n#(lf)    - cast(previous_l as numeric) * current_n),#(lf)    cast(current_n as numeric) * previous_n) end as change_pp,#(lf)        case when not is_eligible then 'ineligible'#(lf)            when 100*(cast(current_l as numeric)*previous_n-cast(previous_l as numeric)*current_n)#(lf)                >= change_threshold_pp*cast(current_n as numeric)*previous_n then 'deterioration'#(lf)            when 100*(cast(current_l as numeric)*previous_n-cast(previous_l as numeric)*current_n)#(lf)                <= -change_threshold_pp*cast(current_n as numeric)*previous_n then 'improvement'#(lf)            else 'below_project_threshold' end as change_signal,#(lf)        case when is_eligible and persistence_applicable then deterioration_months>=4 end as is_deterioration_persistent,#(lf)        case when is_eligible and persistence_applicable then underperformance_months>=4 end as is_underperformance_persistent,#(lf)        'derived_population_not_certified_D01' as denominator_status#(lf)    from rates#(lf))#(lf)select * from classified), ranked as (select *,#(lf)    case when change_signal='deterioration' then rank() over (#(lf)        partition by version_id,comparison_id,scenario_id#(lf)        order by (change_signal='deterioration') desc,#(lf)            coalesce(is_deterioration_persistent,false) desc,change_pp desc,current_l desc#(lf)    ) end as deterioration_rank,#(lf)    case when is_underperformance_persistent then rank() over (#(lf)        partition by version_id,comparison_id,scenario_id#(lf)        order by coalesce(is_underperformance_persistent,false) desc,#(lf)            underperformance_months desc,current_rate desc,current_l desc#(lf)    ) end as underperformance_rank#(lf)from diagnostic)#(lf)select * from ranked order by comparison_id,deterioration_rank nulls last,departure_station,arrival_station#(lf))", "sncf-reliability-analytics.sncf_dev.", pProjectId & "." & pDataset & "."),
+				    Result = Value.NativeQuery(Project, Sql, null, [EnableFolding=true])
+				in
+				    Result
+

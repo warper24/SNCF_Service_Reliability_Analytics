@@ -1,0 +1,683 @@
+/// J07 — mart_route_priorities ; voir docs/powerbi_model.md.
+table mart_route_priorities
+	isHidden
+	lineageTag: 11cdfa09-2518-45b1-a084-ec75b9509ac2
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column version_id
+		dataType: string
+		isHidden
+		lineageTag: e7098f50-6d8d-41f3-a599-8df089b73d90
+		summarizeBy: none
+		sourceColumn: version_id
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column route_key
+		dataType: string
+		isHidden
+		lineageTag: 35446078-da08-497a-9257-684f135d5b07
+		summarizeBy: none
+		sourceColumn: route_key
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column service_key
+		dataType: string
+		isHidden
+		lineageTag: b12f86df-b40e-4852-9c68-d8517f793355
+		summarizeBy: none
+		sourceColumn: service_key
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column comparison_id
+		dataType: string
+		isHidden
+		lineageTag: b573b84b-3d4c-41a6-aa07-23c22168c3cb
+		summarizeBy: none
+		sourceColumn: comparison_id
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_start
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-MM-dd
+		lineageTag: 5f1e5a36-67ca-4ce7-8c34-1b4e2a267797
+		summarizeBy: none
+		sourceColumn: current_start
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_end
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-MM-dd
+		lineageTag: 675071f0-b82a-45a0-a2f6-68dccf68e83c
+		summarizeBy: none
+		sourceColumn: current_end
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column expected_months
+		dataType: int64
+		isHidden
+		lineageTag: d42a491e-0ec7-487b-a35b-492c1998838f
+		summarizeBy: sum
+		sourceColumn: expected_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column persistence_applicable
+		dataType: boolean
+		isHidden
+		lineageTag: a1e8f2fd-413b-4bfd-8b75-328f5a4f6a47
+		summarizeBy: none
+		sourceColumn: persistence_applicable
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column services_in_comparison
+		dataType: int64
+		isHidden
+		lineageTag: cd1a586a-5c24-4570-8bd6-994837f091de
+		summarizeBy: sum
+		sourceColumn: services_in_comparison
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_observed_months
+		dataType: int64
+		isHidden
+		lineageTag: 67e3d8b1-a624-41de-b0c1-f4e8bd403bef
+		summarizeBy: sum
+		sourceColumn: current_observed_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_eligible_months
+		dataType: int64
+		isHidden
+		lineageTag: c9bdbc4f-2e30-4152-8c80-7dad355f22fa
+		summarizeBy: sum
+		sourceColumn: current_eligible_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_cancellation_valid_months
+		dataType: int64
+		isHidden
+		lineageTag: 504e9c4c-3c9c-46aa-a075-0ee890965e97
+		summarizeBy: sum
+		sourceColumn: current_cancellation_valid_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_arrival_valid_months
+		dataType: int64
+		isHidden
+		lineageTag: 56a2a198-9dee-445c-8588-f1d3e38e343a
+		summarizeBy: sum
+		sourceColumn: current_arrival_valid_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_important_valid_months
+		dataType: int64
+		isHidden
+		lineageTag: 3f6730b5-9f48-49ac-9487-ca1862d72e03
+		summarizeBy: sum
+		sourceColumn: current_important_valid_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_important_count_valid_months
+		dataType: int64
+		isHidden
+		lineageTag: 6a662cbe-3bef-47b4-9cb5-c46303e5d393
+		summarizeBy: sum
+		sourceColumn: current_important_count_valid_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_cancellation_numerator
+		dataType: int64
+		isHidden
+		lineageTag: 5fd0486e-b913-4574-99ee-d5de35914f22
+		summarizeBy: sum
+		sourceColumn: current_cancellation_numerator
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_cancellation_denominator
+		dataType: int64
+		isHidden
+		lineageTag: 22970ce8-d309-4fa5-9caa-2813e653a073
+		summarizeBy: sum
+		sourceColumn: current_cancellation_denominator
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_arrival_numerator
+		dataType: int64
+		isHidden
+		lineageTag: b38ca25e-8187-4ff7-987f-526852175388
+		summarizeBy: sum
+		sourceColumn: current_arrival_numerator
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_arrival_denominator
+		dataType: int64
+		isHidden
+		lineageTag: 60e4e00c-1280-4348-a528-59f98b4f365a
+		summarizeBy: sum
+		sourceColumn: current_arrival_denominator
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_over_30_numerator
+		dataType: int64
+		isHidden
+		lineageTag: 75b9404e-390a-416e-97fe-9bdbcc1fbce2
+		summarizeBy: sum
+		sourceColumn: current_over_30_numerator
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_over_60_numerator
+		dataType: int64
+		isHidden
+		lineageTag: 0768c246-df47-48a6-87b9-99dfd7b49f95
+		summarizeBy: sum
+		sourceColumn: current_over_60_numerator
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_important_denominator
+		dataType: int64
+		isHidden
+		lineageTag: 6aa4e401-a43a-4b5f-87ca-49a2f4dc115e
+		summarizeBy: sum
+		sourceColumn: current_important_denominator
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_over_30_valid_count_sum
+		dataType: int64
+		isHidden
+		lineageTag: 235cfe52-dc04-4527-9eab-8fd59f2b664a
+		summarizeBy: sum
+		sourceColumn: current_over_30_valid_count_sum
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_over_60_valid_count_sum
+		dataType: int64
+		isHidden
+		lineageTag: bb8cb25a-084b-460c-ac74-eec87cf90c75
+		summarizeBy: sum
+		sourceColumn: current_over_60_valid_count_sum
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_observed_months
+		dataType: int64
+		isHidden
+		lineageTag: b5fbf090-e40c-483f-a355-002a08cb8d94
+		summarizeBy: sum
+		sourceColumn: previous_observed_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_eligible_months
+		dataType: int64
+		isHidden
+		lineageTag: 0b73c023-f975-4bf4-a67f-53a9fe3141e1
+		summarizeBy: sum
+		sourceColumn: previous_eligible_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_cancellation_valid_months
+		dataType: int64
+		isHidden
+		lineageTag: 4206e74a-4808-4dcd-9dfc-412f67db689e
+		summarizeBy: sum
+		sourceColumn: previous_cancellation_valid_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_arrival_valid_months
+		dataType: int64
+		isHidden
+		lineageTag: e22ecfc7-5b80-42d9-8a96-2ca4b7daca09
+		summarizeBy: sum
+		sourceColumn: previous_arrival_valid_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_important_valid_months
+		dataType: int64
+		isHidden
+		lineageTag: cfa0d595-f9c6-4ec0-b724-24c284bc4ce5
+		summarizeBy: sum
+		sourceColumn: previous_important_valid_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_important_count_valid_months
+		dataType: int64
+		isHidden
+		lineageTag: 40460a6b-cac7-404b-a3fe-4fd5ca68ad35
+		summarizeBy: sum
+		sourceColumn: previous_important_count_valid_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_cancellation_numerator
+		dataType: int64
+		isHidden
+		lineageTag: 48366e1a-c6a8-470f-bca9-f1efb4da1996
+		summarizeBy: sum
+		sourceColumn: previous_cancellation_numerator
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_cancellation_denominator
+		dataType: int64
+		isHidden
+		lineageTag: cccaf523-485e-47b2-be8e-b8cbc0638d88
+		summarizeBy: sum
+		sourceColumn: previous_cancellation_denominator
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_arrival_numerator
+		dataType: int64
+		isHidden
+		lineageTag: 278385bb-cc70-4ed8-97d1-080d7c4e6739
+		summarizeBy: sum
+		sourceColumn: previous_arrival_numerator
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_arrival_denominator
+		dataType: int64
+		isHidden
+		lineageTag: 70bc9796-ed37-4fec-9f0a-74c0be5d432b
+		summarizeBy: sum
+		sourceColumn: previous_arrival_denominator
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_over_30_numerator
+		dataType: int64
+		isHidden
+		lineageTag: d6f156e4-6cc6-4326-bf02-e1310adfbeeb
+		summarizeBy: sum
+		sourceColumn: previous_over_30_numerator
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_over_60_numerator
+		dataType: int64
+		isHidden
+		lineageTag: 7d4a55c5-114a-4233-a158-4676f26aefac
+		summarizeBy: sum
+		sourceColumn: previous_over_60_numerator
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_important_denominator
+		dataType: int64
+		isHidden
+		lineageTag: 60579fed-509f-41ee-9c88-1bbe6d3ba90b
+		summarizeBy: sum
+		sourceColumn: previous_important_denominator
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_over_30_valid_count_sum
+		dataType: int64
+		isHidden
+		lineageTag: 73165e75-c0cb-4ddf-93cd-f5587cc061fd
+		summarizeBy: sum
+		sourceColumn: previous_over_30_valid_count_sum
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_over_60_valid_count_sum
+		dataType: int64
+		isHidden
+		lineageTag: 4ad700ab-8f05-4b9d-88d8-cb14f8635bce
+		summarizeBy: sum
+		sourceColumn: previous_over_60_valid_count_sum
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column eligible_month_pairs
+		dataType: int64
+		isHidden
+		lineageTag: 55713852-4b1d-4602-9971-c9f8b6d2a123
+		summarizeBy: sum
+		sourceColumn: eligible_month_pairs
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column deterioration_months
+		dataType: int64
+		isHidden
+		lineageTag: 7da3ef5f-d043-4868-bdf9-52805ca4432d
+		summarizeBy: sum
+		sourceColumn: deterioration_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column underperformance_months
+		dataType: int64
+		isHidden
+		lineageTag: 28f0c849-d3d3-486b-8608-c05f6d514899
+		summarizeBy: sum
+		sourceColumn: underperformance_months
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_start
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-MM-dd
+		lineageTag: 6a30d402-19a7-41e1-879c-b77c9db8d6f8
+		summarizeBy: none
+		sourceColumn: previous_start
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_end
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-MM-dd
+		lineageTag: 741626a0-0ef0-4d93-bde7-286c7d32ff14
+		summarizeBy: none
+		sourceColumn: previous_end
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column is_comparison_eligible
+		dataType: boolean
+		isHidden
+		lineageTag: 84bf833e-bb3c-4ae9-95a0-82b6b3c78c78
+		summarizeBy: none
+		sourceColumn: is_comparison_eligible
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_observation_coverage
+		dataType: double
+		isHidden
+		lineageTag: 215c0400-532f-487c-b143-2d266afde962
+		summarizeBy: sum
+		sourceColumn: current_observation_coverage
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_cancellation_rate
+		dataType: double
+		isHidden
+		lineageTag: 336d12e8-b15f-4c44-9265-a792dedb2d0f
+		summarizeBy: sum
+		sourceColumn: current_cancellation_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_arrival_delay_rate
+		dataType: double
+		isHidden
+		lineageTag: ca7a42e8-3f80-450d-a38b-a5009b347a3b
+		summarizeBy: sum
+		sourceColumn: current_arrival_delay_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_composite_regularity_rate
+		dataType: double
+		isHidden
+		lineageTag: ecd1d196-13e8-4011-8f7c-de8e785611eb
+		summarizeBy: sum
+		sourceColumn: current_composite_regularity_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_over_30_delay_rate
+		dataType: double
+		isHidden
+		lineageTag: 7b50dcd8-7c0e-4fb0-9427-53d7eada02b6
+		summarizeBy: sum
+		sourceColumn: current_over_30_delay_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column current_over_60_delay_rate
+		dataType: double
+		isHidden
+		lineageTag: 86c4824e-c8fb-418b-927a-4199c559f813
+		summarizeBy: sum
+		sourceColumn: current_over_60_delay_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_observation_coverage
+		dataType: double
+		isHidden
+		lineageTag: 08ac3bcb-147e-493b-969a-ce4a428ec6a7
+		summarizeBy: sum
+		sourceColumn: previous_observation_coverage
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_cancellation_rate
+		dataType: double
+		isHidden
+		lineageTag: 01b6357b-d5ea-4832-b527-0b3ede255291
+		summarizeBy: sum
+		sourceColumn: previous_cancellation_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_arrival_delay_rate
+		dataType: double
+		isHidden
+		lineageTag: 9a374a10-9058-4570-b122-143dda3da44a
+		summarizeBy: sum
+		sourceColumn: previous_arrival_delay_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_composite_regularity_rate
+		dataType: double
+		isHidden
+		lineageTag: 8d84f69a-ed67-4e71-89f1-18d6d250f0c7
+		summarizeBy: sum
+		sourceColumn: previous_composite_regularity_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_over_30_delay_rate
+		dataType: double
+		isHidden
+		lineageTag: e369c7a4-7901-4235-8898-6de70c31ec68
+		summarizeBy: sum
+		sourceColumn: previous_over_30_delay_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column previous_over_60_delay_rate
+		dataType: double
+		isHidden
+		lineageTag: 98f1cc19-293c-44ed-9378-b5faa657a1f2
+		summarizeBy: sum
+		sourceColumn: previous_over_60_delay_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column exclusion_reasons
+		dataType: string
+		isHidden
+		lineageTag: 82ec2853-bae5-4870-b6e4-25d2905a9940
+		summarizeBy: none
+		sourceColumn: exclusion_reasons
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column arrival_delay_change_pp
+		dataType: double
+		isHidden
+		lineageTag: 212526f3-c23d-44ee-9cd8-b3be1bf69105
+		summarizeBy: sum
+		sourceColumn: arrival_delay_change_pp
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column change_signal
+		dataType: string
+		isHidden
+		lineageTag: ec9cd627-1d28-465f-af17-8ffed81c4b5c
+		summarizeBy: none
+		sourceColumn: change_signal
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column deterioration_persistence
+		dataType: double
+		isHidden
+		lineageTag: a730ca24-e13e-40a6-8d9a-3bb777c0873e
+		summarizeBy: sum
+		sourceColumn: deterioration_persistence
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column underperformance_persistence
+		dataType: double
+		isHidden
+		lineageTag: 2051786b-c53c-4f24-ba19-cfb45ee23713
+		summarizeBy: sum
+		sourceColumn: underperformance_persistence
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column is_deterioration_persistent
+		dataType: boolean
+		isHidden
+		lineageTag: 38556530-9053-4545-9cbf-50b008d3aa8e
+		summarizeBy: none
+		sourceColumn: is_deterioration_persistent
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column is_underperformance_persistent
+		dataType: boolean
+		isHidden
+		lineageTag: 8fdfaccf-4fb6-4712-9280-9251b1625659
+		summarizeBy: none
+		sourceColumn: is_underperformance_persistent
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column minimum_monthly_operated_proxy
+		dataType: int64
+		isHidden
+		lineageTag: 6b37fb09-6a52-4f66-8d88-bff7e0756cdf
+		summarizeBy: sum
+		sourceColumn: minimum_monthly_operated_proxy
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column deterioration_threshold_pp
+		dataType: int64
+		isHidden
+		lineageTag: 55b02a9b-019f-4522-b0c5-6848374c2b0b
+		summarizeBy: sum
+		sourceColumn: deterioration_threshold_pp
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column regularity_target_pct
+		dataType: int64
+		isHidden
+		lineageTag: b65febd5-d573-490a-95ae-37dd2f7bf03d
+		summarizeBy: sum
+		sourceColumn: regularity_target_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column denominator_status
+		dataType: string
+		isHidden
+		lineageTag: 0ad9d943-2f9e-4393-9d98-dff79560c88a
+		summarizeBy: none
+		sourceColumn: denominator_status
+
+	partition mart_route_priorities = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([BillingProject=pBillingProject, UseStorageApi=false]),
+				    Project = Source{[Name=pProjectId]}[Data],
+				    Dataset = Project{[Name=pDataset, Kind="Schema"]}[Data],
+				    Data = Dataset{[Name="mart_route_priorities", Kind="Table"]}[Data],
+				    Result = Table.TransformColumns(Data, {{"exclusion_reasons", each if _ = null then null else if Value.Is(_, type list) then Text.Combine(_, "; ") else Text.From(_), type text}}),
+				    Versions = List.Distinct(Result[version_id]),
+				    Checked = if List.Count(Versions) = 1 and Versions{0} = pExpectedVersion then Result else error "Version source inattendue ou multiple"
+				in
+				    Checked
+
+	annotation PBI_ResultType = Table
+

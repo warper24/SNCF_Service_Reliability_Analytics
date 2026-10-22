@@ -1,0 +1,47 @@
+/// J07 — dim_cause ; voir docs/powerbi_model.md.
+table dim_cause
+	lineageTag: f75332e9-bd68-4916-86be-a087b14cf2ce
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column cause_key
+		dataType: string
+		isHidden
+		lineageTag: 782b7793-ebf3-4554-94c4-e285c7f550c4
+		summarizeBy: none
+		sourceColumn: cause_key
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column cause_label
+		dataType: string
+		lineageTag: 6f8e6e22-7502-442c-b979-a04b873ea2ed
+		summarizeBy: none
+		sourceColumn: cause_label
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column normalized_field
+		dataType: string
+		isHidden
+		lineageTag: d6c49b6d-1ee0-4cdc-889b-0612611f0706
+		summarizeBy: none
+		sourceColumn: normalized_field
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column source_field
+		dataType: string
+		isHidden
+		lineageTag: 401b823d-db3d-4c09-a886-f0c814ef3e3d
+		summarizeBy: none
+		sourceColumn: source_field
+
+	partition dim_cause = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([BillingProject=pBillingProject, UseStorageApi=false]),
+				    Project = Source{[Name=pProjectId]}[Data],
+				    Dataset = Project{[Name=pDataset, Kind="Schema"]}[Data],
+				    Data = Dataset{[Name="dim_cause", Kind="Table"]}[Data],
+				    Result = Data
+				in
+				    Result
+

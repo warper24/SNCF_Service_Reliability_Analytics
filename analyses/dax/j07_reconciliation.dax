@@ -1,0 +1,19 @@
+// Exemple autonome : Dijon Ville → Paris Lyon, National, janvier 2025.
+// Les jours du mois entier sont sélectionnés ; les faits restent mensuels.
+EVALUATE
+CALCULATETABLE(
+    ROW(
+        "observed_months", [observed_months],
+        "expected_months", [expected_months],
+        "arrival_delay_count", [arrival_delay_count],
+        "operated_proxy_count", [operated_proxy_count],
+        "arrival_delay_rate", [arrival_delay_rate],
+        "important_coverage", [important_coverage],
+        "over_30_delay_rate", [over_30_delay_rate],
+        "monthly_status", [monthly_status]
+    ),
+    TREATAS({"DIJON VILLE"}, dim_route[departure_station]),
+    TREATAS({"PARIS LYON"}, dim_route[arrival_station]),
+    TREATAS({"National"}, dim_service[service_type]),
+    DATESBETWEEN(dim_date[date_key], DATE(2025,1,1), DATE(2025,1,31))
+)

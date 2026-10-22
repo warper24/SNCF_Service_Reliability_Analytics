@@ -1,0 +1,176 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "9169e3ca73eeb47d29e9",
+  "position": {
+    "x": 30,
+    "y": 30,
+    "z": 30,
+    "height": 180,
+    "width": 1500,
+    "tabOrder": 30
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_date"
+                    }
+                  },
+                  "Property": "month_label"
+                }
+              },
+              "queryRef": "dim_date.month_label",
+              "nativeQueryRef": "Mois",
+              "displayName": "Mois"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_measures"
+                    }
+                  },
+                  "Property": "arrival_delay_count"
+                }
+              },
+              "queryRef": "kpi_measures.arrival_delay_count",
+              "nativeQueryRef": "Retards composites",
+              "displayName": "Retards composites"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_measures"
+                    }
+                  },
+                  "Property": "operated_proxy_count"
+                }
+              },
+              "queryRef": "kpi_measures.operated_proxy_count",
+              "nativeQueryRef": "Circulations déduites",
+              "displayName": "Circulations déduites"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_measures"
+                    }
+                  },
+                  "Property": "arrival_delay_rate"
+                }
+              },
+              "queryRef": "kpi_measures.arrival_delay_rate",
+              "nativeQueryRef": "Taux de retard",
+              "displayName": "Taux de retard"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_measures"
+                    }
+                  },
+                  "Property": "cancellation_rate"
+                }
+              },
+              "queryRef": "kpi_measures.cancellation_rate",
+              "nativeQueryRef": "Annulations",
+              "displayName": "Annulations"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_measures"
+                    }
+                  },
+                  "Property": "composite_regularity_rate"
+                }
+              },
+              "queryRef": "kpi_measures.composite_regularity_rate",
+              "nativeQueryRef": "Régularité composite",
+              "displayName": "Régularité composite"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dijon Ville → Paris Lyon · National · janvier 2025 — filtres de page modifiables'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

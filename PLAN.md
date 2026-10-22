@@ -368,7 +368,7 @@ Le dictionnaire des KPI devra préciser, pour chacun : question métier, formule
 
 | J06 | Diagnostic SQL et priorisation | J05 | Terminé le 13 octobre 2026 — 36 contrôles J06 réussis, deux listes sans score, 27 scénarios par fenêtre, constats et investigations tracés ; limites dans le bilan |
 
-| J07 | Modèle Power BI, Power Query et DAX | J06 | À réaliser |
+| J07 | Modèle Power BI, Power Query et DAX | J06 | Terminé le 22 octobre 2026 — 12 tables Import, 57 mesures, 6 286 contrôles SQL/DAX réussis, expérience de cache et réouverture Desktop vérifiées |
 
 | J08 | Rapport Power BI et storytelling | J07 | À réaliser |
 
@@ -767,6 +767,8 @@ Les chemins des sections suivantes sont relatifs à la racine du dépôt. Ils d�
 **Risques et erreurs à éviter.** Classement de petits dénominateurs, choix de périodes opportunistes, confusion entre taux et volumes, cause dominante assimilée à cause de la dégradation, prescriptions techniques non étayées ou promesses d'économies.
 
 ### J07 — Modèle Power BI, Power Query et DAX
+
+**État au 22 octobre 2026 : terminé avec limites explicites.** Implémentation autorisée le 16 octobre (« ok tu peux implémenter le jalon »). Le PBIP comporte 12 tables Import, 16 relations simples, 57 mesures et trois pages techniques de contrôle. Qualification du 21 octobre : 6 286 contrôles réussis ; 29 sélections temporelles/cas limites, 232 comparaisons, 726 parts de causes et rangs J06 réconciliés. L'expérience BigQuery 1→2 démontre la conservation de 1 avant actualisation, puis l'import de 2. Réouverture Desktop et 37 tests Python locaux vérifiés le 22 octobre. Les données et réserves D01–D07 restent inchangées ; aucun taux national ni effectif par cause. Cache actif hors OneDrive, définitions et preuves anonymisées seules dans Git. Voir [le modèle](docs/powerbi_model.md), [la réconciliation](reports/sql_powerbi_reconciliation.md) et [le bilan J07](docs/milestones/J07_handoff.md). J08 n'est pas engagé.
 
 **Objectif.** Construire un modèle sémantique correct sous les différents filtres et réconcilié avec SQL.
 

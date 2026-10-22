@@ -1,0 +1,131 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "805797cb6d8801d44b5c",
+  "position": {
+    "x": 30,
+    "y": 740,
+    "z": 740,
+    "height": 150,
+    "width": 1500,
+    "tabOrder": 740
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_measures"
+                    }
+                  },
+                  "Property": "source_version"
+                }
+              },
+              "queryRef": "kpi_measures.source_version",
+              "nativeQueryRef": "Version source",
+              "displayName": "Version source"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_measures"
+                    }
+                  },
+                  "Property": "last_business_month"
+                }
+              },
+              "queryRef": "kpi_measures.last_business_month",
+              "nativeQueryRef": "Dernier mois métier",
+              "displayName": "Dernier mois métier"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_measures"
+                    }
+                  },
+                  "Property": "last_import_utc"
+                }
+              },
+              "queryRef": "kpi_measures.last_import_utc",
+              "nativeQueryRef": "Lecture métadonnées UTC",
+              "displayName": "Lecture métadonnées UTC"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Copie Import — relire après actualisation ; réserves D01–D07 inchangées'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

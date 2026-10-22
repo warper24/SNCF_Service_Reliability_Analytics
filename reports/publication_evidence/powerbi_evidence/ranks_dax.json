@@ -1,0 +1,877 @@
+[
+  {
+    "dim_route[route_key]": "baf87f6ead25ed980136e4a9c8127dbaf23728cf0d5cef6cbd65bb0fe5ea287e",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 1,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "f35a11a70168b7017b8f53231853cfd2244877a18d5f6965ab7556fb0fda2d0a",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 2,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "fa74485fb75429ffecb73d5878240a4c02f435bfdaaf2e4443945d4fb472668c",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 3,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "9f3006740461ed7669c3370373bf63c5faba105ee263d403443449dd7c88cedb",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 4,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "528566cf67b063176dcd3d22da3d805bfff6c56bc4963d1e540bb7534f35792b",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 5,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "1f721958a7f2e31cdaea3899b577c2b8accf958ca3c86862f2fa5c597991b230",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 6,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "51a02a3f9484ce1f43a5d8477141b2a2071e2a6a60f944bb80795488c10dc97f",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 7,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "775927b236f87328530df5d92962bcc4920b952400c9b46eb667868cb4255ba2",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 8,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "37099bcf8fe9d2d4bd878019005fc164febf35b6404f11cce7bdf8a8e61c0c74",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 9,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "1f3ec31db3a9e3433bc5f124f936bc75a69172f455a254bb72424339d1be658d",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 10,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "a4a592da31701f3e7da84a2a88b1632d27e920ef21ce9195d99e44a12535bbdc",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 11,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "62b4148b69b4b7ee550f1c50d7af25ec476989f8db85fe3379d991217024eed6",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 12,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "1851475616185fb8dcc1e806f4c11abf76a0f08f89d3e079573f381a494a3a3d",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 13,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "f0e62d394da07bb939b0e0ac24e35a6020e7d91975c2e517703588e4256d16da",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 14,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "a7595b2adc56dc4fc518e473c758b858cc62e01335b204882b0fa9ea3e6a6576",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 15,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "eeed9f3790e4d13e48262000f62ae5855a22ac5cc30f0b17a8f39b0ce58f73b5",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 16,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "57dbbdd3097b9caf0f3d057f3731f15e60627033189f891e2b9548daead3f57f",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 17,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "08a115c6b50467ab022176412861e2875cf27758b2d5a7fdcfe440b43f3c62d0",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 18,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "2bdfab397fc8039aa238bd3cff374dc68dfabf1f00c1e2ac352c4a519d2fb657",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 19,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "b18514a81c93824b41d8e024b72c085fe86c4cecda83f4f40687dcbbe2f41fb7",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 20,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "e2bfc7cd6f9969135cd7493d1144c8b736e319a290f90c7f29c319286d402341",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 21,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "358373f7ed945b913a42a47ba56b7cfda3faef9f983db4f2aca39408fb6d60b3",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 22,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "6b7e131b107f2d7f44fe810ad8056de71dba5ebac7bfe4133660dd89abaadab4",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 23,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "0543aa938c9a8e992d5e760175e5c89f86f5e9d84c61fb9a3bf93c58fcb7da9f",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 24,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "c41755fc3860da52180d465421853ffa865203fd187da5b9e298df333827568a",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[deterioration_rank]": 25,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "e978aaae3d4fb6092898cf9e82f8a5d6aad70e18a994a104ed0807d01605a2a9",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 64,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "3ffffef828c762038c5371344826a47146f137af661806cf9ad0cc05b2331bd0",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 67,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "a4a592da31701f3e7da84a2a88b1632d27e920ef21ce9195d99e44a12535bbdc",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 71,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "6b7e131b107f2d7f44fe810ad8056de71dba5ebac7bfe4133660dd89abaadab4",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 75,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "2bdfab397fc8039aa238bd3cff374dc68dfabf1f00c1e2ac352c4a519d2fb657",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 82,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "6217fde39e1397dfd38cb481c10250e2fd31206d470bde44e8b38b9fbd2bc69a",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 90,
+    "[underperformance_rank]": null
+  },
+  {
+    "dim_route[route_key]": "e4998a4fdbc1cdc41e12b20e0c96e2bbc1ec78c0e7ca1a670bf892b150c5c334",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 1,
+    "[underperformance_rank]": 45
+  },
+  {
+    "dim_route[route_key]": "0ca0e7df6e8cd00f3b0650cdbf204c2e8252650672c42ff2d56f010bcf4a8aed",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 2,
+    "[underperformance_rank]": 19
+  },
+  {
+    "dim_route[route_key]": "91cd8c6134ff4f5a1856316440f2aa041cc476c4ac4bbdb3211717dcdcb83a3e",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 3,
+    "[underperformance_rank]": 25
+  },
+  {
+    "dim_route[route_key]": "45a94f678f19b84830db8e5ba4190a8df2865b73a55ba0b7bd963a0c33fdacf9",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 4,
+    "[underperformance_rank]": 51
+  },
+  {
+    "dim_route[route_key]": "4afc272fd970549b6e41c26861d44aa4ed5d4fce98c59ef41cacd2032047c69e",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 5,
+    "[underperformance_rank]": 9
+  },
+  {
+    "dim_route[route_key]": "62c823cea35e34599fcd583d1ac5039014aa55f780994c354091039d0dc02628",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 6,
+    "[underperformance_rank]": 64
+  },
+  {
+    "dim_route[route_key]": "0543aa938c9a8e992d5e760175e5c89f86f5e9d84c61fb9a3bf93c58fcb7da9f",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 7,
+    "[underperformance_rank]": 26
+  },
+  {
+    "dim_route[route_key]": "2675c30d0c619661942d4b3be5ff7ba58e357d10820d3b37578eab51ddd16664",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 8,
+    "[underperformance_rank]": 16
+  },
+  {
+    "dim_route[route_key]": "29e4066a6aca601767955a1e9bc7de17cb6fdddfc7dc3258049702de2ee8f9cd",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 9,
+    "[underperformance_rank]": 79
+  },
+  {
+    "dim_route[route_key]": "4a9f90a2baab441c30a83df9eec377eb65b37068b44481b9c490fc20a929d5e2",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 10,
+    "[underperformance_rank]": 2
+  },
+  {
+    "dim_route[route_key]": "dccb26ce3f870e02986e895251af53b0edce014ccc657a81e2b76861532fe4b3",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 11,
+    "[underperformance_rank]": 58
+  },
+  {
+    "dim_route[route_key]": "998874e33a0455da10d16063ef3c85135c3f6dbcdf3d1fc47d627e7cb91f3de3",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 12,
+    "[underperformance_rank]": 82
+  },
+  {
+    "dim_route[route_key]": "997508c2159776a2bd518d53150ef3cf1b4e2c6c19df45adbda56b3a40599776",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 13,
+    "[underperformance_rank]": 35
+  },
+  {
+    "dim_route[route_key]": "908b2eb4bb0fd72a810d9b560d7a3ec6f60aedbbd34979d6254349217b32d313",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 14,
+    "[underperformance_rank]": 4
+  },
+  {
+    "dim_route[route_key]": "3a243e7b649b8ebcf108a729058e0aca109e1ff9189d19173a2b9361c866d87c",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 15,
+    "[underperformance_rank]": 6
+  },
+  {
+    "dim_route[route_key]": "1f3ec31db3a9e3433bc5f124f936bc75a69172f455a254bb72424339d1be658d",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 16,
+    "[underperformance_rank]": 44
+  },
+  {
+    "dim_route[route_key]": "a0553f4478213caed6992af8d7949abb350ce636e0e189bdc2ac84d1d424e0b6",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 17,
+    "[underperformance_rank]": 13
+  },
+  {
+    "dim_route[route_key]": "dd82d9f0c8b30849bbba10e76bc7be0aa5fb3516508292d4bbd0b8ba18abe16d",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 18,
+    "[underperformance_rank]": 11
+  },
+  {
+    "dim_route[route_key]": "e0302b3f25b4e90b9075265d0b0afc00e49ea53bde819fad498768884fd60353",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 19,
+    "[underperformance_rank]": 69
+  },
+  {
+    "dim_route[route_key]": "ab26bac0176b793adf903db0898b1efb4b524e6c9a059ac5896c38367b96b63d",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 20,
+    "[underperformance_rank]": 53
+  },
+  {
+    "dim_route[route_key]": "c4cac40ba48bd9acde4012988df8f71521f5b867c39e1fe020a3ad40e19f26ab",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 21,
+    "[underperformance_rank]": 57
+  },
+  {
+    "dim_route[route_key]": "67ab8f073a3ab0622874e4d27cebe5cc244b92df5103b50853c701ca9aa7d1b6",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 22,
+    "[underperformance_rank]": 40
+  },
+  {
+    "dim_route[route_key]": "08a115c6b50467ab022176412861e2875cf27758b2d5a7fdcfe440b43f3c62d0",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 23,
+    "[underperformance_rank]": 24
+  },
+  {
+    "dim_route[route_key]": "92f791b06cdd6a8c9de24236a8fca2b16c7368128aa7d1c8646322ae2478d3a0",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 24,
+    "[underperformance_rank]": 50
+  },
+  {
+    "dim_route[route_key]": "358373f7ed945b913a42a47ba56b7cfda3faef9f983db4f2aca39408fb6d60b3",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 25,
+    "[underperformance_rank]": 36
+  },
+  {
+    "dim_route[route_key]": "dcf148ac884667cb69c59f98e9ad3d5f110b7182f3f3fdd2359751fc39ed327f",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 26,
+    "[underperformance_rank]": 85
+  },
+  {
+    "dim_route[route_key]": "4edd754d7bbbcb3518751e37bcf2f4626a1acf335e6b64c0471b18754e99bad6",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 27,
+    "[underperformance_rank]": 33
+  },
+  {
+    "dim_route[route_key]": "0f1af4df1fcb6a12b8d0a288c3175381c39c7c09738e07b61a1760f55273a5ff",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 28,
+    "[underperformance_rank]": 81
+  },
+  {
+    "dim_route[route_key]": "51a02a3f9484ce1f43a5d8477141b2a2071e2a6a60f944bb80795488c10dc97f",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 29,
+    "[underperformance_rank]": 23
+  },
+  {
+    "dim_route[route_key]": "b6e3052a4306982b74f673671f921f768ecb45e136f9ce6990dd8eba3923a1f7",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 30,
+    "[underperformance_rank]": 54
+  },
+  {
+    "dim_route[route_key]": "406254b64d1472c60ed4c64b13264184bc79fc8db2dae963c43e3eb7e6d9ed68",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 31,
+    "[underperformance_rank]": 63
+  },
+  {
+    "dim_route[route_key]": "6f2e50a708e78527628091be32f731c3fdd7d7fe3fb7855429adcb68ab097eff",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 32,
+    "[underperformance_rank]": 66
+  },
+  {
+    "dim_route[route_key]": "82466a3832565e25f08161346ccd3c0c8a3b128288101a96c03ef18f590d5c3e",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 33,
+    "[underperformance_rank]": 70
+  },
+  {
+    "dim_route[route_key]": "445dd122955a5f9cb428b900ddb698f2dde4916105e889dfe1e669255b5a603c",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 34,
+    "[underperformance_rank]": 37
+  },
+  {
+    "dim_route[route_key]": "9f3006740461ed7669c3370373bf63c5faba105ee263d403443449dd7c88cedb",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 35,
+    "[underperformance_rank]": 48
+  },
+  {
+    "dim_route[route_key]": "26d1eb0f4bb5266eab150309eb616ef01095259885ed63344b00a174098e4a6e",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 36,
+    "[underperformance_rank]": 77
+  },
+  {
+    "dim_route[route_key]": "4c042c3051bef626588334a8668d3873f807c86d2e48b372da65331d0e96bfad",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 37,
+    "[underperformance_rank]": 67
+  },
+  {
+    "dim_route[route_key]": "4946929248ceff28dc85d17dd7bdb5a51d5044ddc339c3dd37b221aa998dbf61",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 38,
+    "[underperformance_rank]": 61
+  },
+  {
+    "dim_route[route_key]": "a7595b2adc56dc4fc518e473c758b858cc62e01335b204882b0fa9ea3e6a6576",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 39,
+    "[underperformance_rank]": 14
+  },
+  {
+    "dim_route[route_key]": "332a5f4d80015775cdb39b4c2d82f90e33eca0c38eeaca60aea32d201c3e8b3d",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 40,
+    "[underperformance_rank]": 88
+  },
+  {
+    "dim_route[route_key]": "fab12baa35fecae2ce9f1575ac6c82a9593cd3c606ec6f5246d58125cab08cd8",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 41,
+    "[underperformance_rank]": 20
+  },
+  {
+    "dim_route[route_key]": "f0e62d394da07bb939b0e0ac24e35a6020e7d91975c2e517703588e4256d16da",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 42,
+    "[underperformance_rank]": 84
+  },
+  {
+    "dim_route[route_key]": "37099bcf8fe9d2d4bd878019005fc164febf35b6404f11cce7bdf8a8e61c0c74",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 43,
+    "[underperformance_rank]": 10
+  },
+  {
+    "dim_route[route_key]": "c2634433c002bfff8a02481d1139a6b972945ed229c2e8c16ac6c9f31a1c97f3",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 44,
+    "[underperformance_rank]": 30
+  },
+  {
+    "dim_route[route_key]": "5408532b8069854293542d4fed6af48fe4cd11a98328975946f62b296e07d3e7",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 45,
+    "[underperformance_rank]": 38
+  },
+  {
+    "dim_route[route_key]": "b0fe8f262cd32209380e5b2c00597daf26e565e56bd46ab056dbe943561eb2dc",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 46,
+    "[underperformance_rank]": 76
+  },
+  {
+    "dim_route[route_key]": "d2ec5c1c27dba9ddde45fdf0e9a6aa2c3f7805e46d8a6f896f39c2033f663403",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 47,
+    "[underperformance_rank]": 72
+  },
+  {
+    "dim_route[route_key]": "c41755fc3860da52180d465421853ffa865203fd187da5b9e298df333827568a",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 48,
+    "[underperformance_rank]": 47
+  },
+  {
+    "dim_route[route_key]": "f40beac9904ad7f04ed65a73b1745ec734e761241f89236933a6aaecdd7d1d18",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 49,
+    "[underperformance_rank]": 92
+  },
+  {
+    "dim_route[route_key]": "98cded0142b601113baf7b795a2ecc959635ff2a4576b98bed1ecbc03100759f",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 50,
+    "[underperformance_rank]": 74
+  },
+  {
+    "dim_route[route_key]": "fa74485fb75429ffecb73d5878240a4c02f435bfdaaf2e4443945d4fb472668c",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 51,
+    "[underperformance_rank]": 15
+  },
+  {
+    "dim_route[route_key]": "57dbbdd3097b9caf0f3d057f3731f15e60627033189f891e2b9548daead3f57f",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 52,
+    "[underperformance_rank]": 83
+  },
+  {
+    "dim_route[route_key]": "eeed9f3790e4d13e48262000f62ae5855a22ac5cc30f0b17a8f39b0ce58f73b5",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 53,
+    "[underperformance_rank]": 41
+  },
+  {
+    "dim_route[route_key]": "d0a4d2750217000fc9b3981117dad76c42813eb41a5398aaba9e77ce3c364848",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 54,
+    "[underperformance_rank]": 32
+  },
+  {
+    "dim_route[route_key]": "62b4148b69b4b7ee550f1c50d7af25ec476989f8db85fe3379d991217024eed6",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 55,
+    "[underperformance_rank]": 29
+  },
+  {
+    "dim_route[route_key]": "c17ce405fcc0ae6151f10b8dfac30e20249eaca1f61176157e31d7d753b6e7fd",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 56,
+    "[underperformance_rank]": 5
+  },
+  {
+    "dim_route[route_key]": "4db1ee2b758d9ffbcfc5de5c63bb52374214c63e4ea4acfaf47422c0715e47ff",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 57,
+    "[underperformance_rank]": 31
+  },
+  {
+    "dim_route[route_key]": "75f219ba87ca17b7d55890d24dabf07f13c18bfdb4310109baea696c0aee8382",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 58,
+    "[underperformance_rank]": 1
+  },
+  {
+    "dim_route[route_key]": "4d45c9555ab5002b0ea53b15792aa62072fb173e2dbf06e652548988779efeb1",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 59,
+    "[underperformance_rank]": 56
+  },
+  {
+    "dim_route[route_key]": "5eb109dd042d4c2a9c28c29b54096ea0d947d226ee909ce88e078338db099b54",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 60,
+    "[underperformance_rank]": 60
+  },
+  {
+    "dim_route[route_key]": "a8cf012660a64486b1e5e7ab2b113a7f27d006d241d02380d5a351216c10f146",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 61,
+    "[underperformance_rank]": 28
+  },
+  {
+    "dim_route[route_key]": "fb393e3cfbf604a0733373c1683c63419adcd1e7512dd4c8710e6cc37e4e9c0f",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 62,
+    "[underperformance_rank]": 90
+  },
+  {
+    "dim_route[route_key]": "1620c578a1ced59966a6bac6c50e71bbf1ebdf48b3fa1c6bfd9a68944763972b",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 63,
+    "[underperformance_rank]": 73
+  },
+  {
+    "dim_route[route_key]": "9a566c0ea57b65c00017ad0cfc18a70f3491b0ff8bb2c3b300ac7ea2a73e962c",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 65,
+    "[underperformance_rank]": 75
+  },
+  {
+    "dim_route[route_key]": "ea455e998ae70c1a387974951d934ec322b86a9d494e039d0cdd5ca0b2a06902",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 66,
+    "[underperformance_rank]": 91
+  },
+  {
+    "dim_route[route_key]": "68f7d1c30226be7be802df37a89ade8fce2bf25f473dad2a9e4ef2ace1cb18cc",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 68,
+    "[underperformance_rank]": 46
+  },
+  {
+    "dim_route[route_key]": "f35a11a70168b7017b8f53231853cfd2244877a18d5f6965ab7556fb0fda2d0a",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 69,
+    "[underperformance_rank]": 55
+  },
+  {
+    "dim_route[route_key]": "1851475616185fb8dcc1e806f4c11abf76a0f08f89d3e079573f381a494a3a3d",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 70,
+    "[underperformance_rank]": 21
+  },
+  {
+    "dim_route[route_key]": "6681b3220726b8d410ecbe4d52c0787c1f095da75b1cc1fabc5acdf8ef999335",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 72,
+    "[underperformance_rank]": 42
+  },
+  {
+    "dim_route[route_key]": "528566cf67b063176dcd3d22da3d805bfff6c56bc4963d1e540bb7534f35792b",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 73,
+    "[underperformance_rank]": 62
+  },
+  {
+    "dim_route[route_key]": "6a305d646d84112c4dd07971bdee044313941491f5cf2e5207be7fb2fb10554a",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 74,
+    "[underperformance_rank]": 78
+  },
+  {
+    "dim_route[route_key]": "88c6d992f1d22d6f93139292d49af2d6256da6d20a5ee6c7b0c946b29181523d",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 76,
+    "[underperformance_rank]": 3
+  },
+  {
+    "dim_route[route_key]": "5ef562e75ee8fcfd47ed17b1cab125c0ec5384b5066b6b67771cdc99189df5f2",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 77,
+    "[underperformance_rank]": 7
+  },
+  {
+    "dim_route[route_key]": "034878434ae5d58f39c7ca3f6a24fabc5de1aba48fca39f341d5d380feeb52c5",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 78,
+    "[underperformance_rank]": 68
+  },
+  {
+    "dim_route[route_key]": "1ebce385520c1d6a34badd4a127e2c8f94bd5560c7d5648ce1bb56bb6182fb90",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 79,
+    "[underperformance_rank]": 86
+  },
+  {
+    "dim_route[route_key]": "e7371046c5178fb2107ede1d6b2f9a5b6e85063718bd89e372ee56b016f108b5",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 80,
+    "[underperformance_rank]": 39
+  },
+  {
+    "dim_route[route_key]": "9d59b9fe87c1c514ce9590d6fa2aa3c9a3efd873193338e5645e77d15ef5712a",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 81,
+    "[underperformance_rank]": 65
+  },
+  {
+    "dim_route[route_key]": "bf95697cb8af782f7a6f39c1ed1e2261658cef5296c89701b1120c00123ed5b1",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 83,
+    "[underperformance_rank]": 17
+  },
+  {
+    "dim_route[route_key]": "2320812fb81bb2096e464fb41f8a3265b4cd7930999f5ffdfe90b9a3cda9e635",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 84,
+    "[underperformance_rank]": 89
+  },
+  {
+    "dim_route[route_key]": "7926bc93d8822a2a567bac2553742baf4239dfe09a0c639da7b10af6fcd61ee2",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 85,
+    "[underperformance_rank]": 8
+  },
+  {
+    "dim_route[route_key]": "e2bfc7cd6f9969135cd7493d1144c8b736e319a290f90c7f29c319286d402341",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 86,
+    "[underperformance_rank]": 18
+  },
+  {
+    "dim_route[route_key]": "8a20af3770f38d8f3280fe838bb6289dbc8d1812864e43c0d153d10712d70147",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 87,
+    "[underperformance_rank]": 94
+  },
+  {
+    "dim_route[route_key]": "51d91755e7501cefb87018798c42e698aa0e4ecfb81cb3400f463db124c57469",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 88,
+    "[underperformance_rank]": 59
+  },
+  {
+    "dim_route[route_key]": "f58ed9c1417abaf65414132c883fd7a3956e6f9cfcdfc4c15182d0640d0882ee",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 89,
+    "[underperformance_rank]": 71
+  },
+  {
+    "dim_route[route_key]": "775927b236f87328530df5d92962bcc4920b952400c9b46eb667868cb4255ba2",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": 91,
+    "[underperformance_rank]": 80
+  },
+  {
+    "dim_route[route_key]": "baf87f6ead25ed980136e4a9c8127dbaf23728cf0d5cef6cbd65bb0fe5ea287e",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": null,
+    "[underperformance_rank]": 27
+  },
+  {
+    "dim_route[route_key]": "efe96ee7a788d67a8d4f34a02ee60c4665dfba1b3a9178f040a9dfe86dce5f5b",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": null,
+    "[underperformance_rank]": 43
+  },
+  {
+    "dim_route[route_key]": "c258a364ac8a46a47e22589e658c0d2d6314d7e6ec6b4d271a80de653107b368",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": null,
+    "[underperformance_rank]": 34
+  },
+  {
+    "dim_route[route_key]": "64f4ea311c7c818501e32ad17a64c68810da0968eb8513c5610daf8ca4f82730",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": null,
+    "[underperformance_rank]": 12
+  },
+  {
+    "dim_route[route_key]": "0df273ba9bd9af81061e9c392991ad31b3c07db11b859f42cf8475fec0f32f0f",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": null,
+    "[underperformance_rank]": 49
+  },
+  {
+    "dim_route[route_key]": "f4f1f7427ea8100f0a9120db00d583575171fe87abe3ca40df7980c706b0f66e",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": null,
+    "[underperformance_rank]": 22
+  },
+  {
+    "dim_route[route_key]": "eeaac37513f49580e9e660a8015925a5dfde3ebe8dd0ca359da89271846a9000",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": null,
+    "[underperformance_rank]": 93
+  },
+  {
+    "dim_route[route_key]": "1f721958a7f2e31cdaea3899b577c2b8accf958ca3c86862f2fa5c597991b230",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": null,
+    "[underperformance_rank]": 87
+  },
+  {
+    "dim_route[route_key]": "b18514a81c93824b41d8e024b72c085fe86c4cecda83f4f40687dcbbe2f41fb7",
+    "dim_service[service_key]": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[deterioration_rank]": null,
+    "[underperformance_rank]": 52
+  }
+]

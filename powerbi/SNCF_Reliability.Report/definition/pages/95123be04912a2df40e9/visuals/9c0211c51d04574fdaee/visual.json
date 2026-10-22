@@ -1,0 +1,221 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "9c0211c51d04574fdaee",
+  "position": {
+    "x": 30,
+    "y": 230,
+    "z": 230,
+    "height": 500,
+    "width": 1500,
+    "tabOrder": 230
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_comparison"
+                    }
+                  },
+                  "Property": "comparison_id"
+                }
+              },
+              "queryRef": "dim_comparison.comparison_id",
+              "nativeQueryRef": "Comparaison",
+              "displayName": "Comparaison"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_route"
+                    }
+                  },
+                  "Property": "route_label"
+                }
+              },
+              "queryRef": "dim_route.route_label",
+              "nativeQueryRef": "Liaison orientée",
+              "displayName": "Liaison orientée"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_service"
+                    }
+                  },
+                  "Property": "service_type"
+                }
+              },
+              "queryRef": "dim_service.service_type",
+              "nativeQueryRef": "Service",
+              "displayName": "Service"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_measures"
+                    }
+                  },
+                  "Property": "previous_arrival_delay_rate"
+                }
+              },
+              "queryRef": "kpi_measures.previous_arrival_delay_rate",
+              "nativeQueryRef": "Retard précédent",
+              "displayName": "Retard précédent"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_measures"
+                    }
+                  },
+                  "Property": "current_arrival_delay_rate"
+                }
+              },
+              "queryRef": "kpi_measures.current_arrival_delay_rate",
+              "nativeQueryRef": "Retard courant",
+              "displayName": "Retard courant"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_measures"
+                    }
+                  },
+                  "Property": "arrival_delay_change_pp"
+                }
+              },
+              "queryRef": "kpi_measures.arrival_delay_change_pp",
+              "nativeQueryRef": "Écart (points)",
+              "displayName": "Écart (points)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_measures"
+                    }
+                  },
+                  "Property": "change_signal"
+                }
+              },
+              "queryRef": "kpi_measures.change_signal",
+              "nativeQueryRef": "Signal SQL",
+              "displayName": "Signal SQL"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_measures"
+                    }
+                  },
+                  "Property": "deterioration_rank"
+                }
+              },
+              "queryRef": "kpi_measures.deterioration_rank",
+              "nativeQueryRef": "Rang dégradation",
+              "displayName": "Rang dégradation"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "kpi_measures"
+                    }
+                  },
+                  "Property": "underperformance_rank"
+                }
+              },
+              "queryRef": "kpi_measures.underperformance_rank",
+              "nativeQueryRef": "Rang sous-performance",
+              "displayName": "Rang sous-performance"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Contrôle des taux et rangs J06 — population déduite non certifiée (D01)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

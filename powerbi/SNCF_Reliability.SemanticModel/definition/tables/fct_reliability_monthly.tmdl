@@ -1,0 +1,573 @@
+/// J07 — fct_reliability_monthly ; voir docs/powerbi_model.md.
+table fct_reliability_monthly
+	lineageTag: e33dcd2e-c1ef-4087-83e4-f9a6a18d4262
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column version_id
+		dataType: string
+		isHidden
+		lineageTag: b28f0979-40e6-4441-9ca2-491ea3ea4825
+		summarizeBy: none
+		sourceColumn: version_id
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column row_number
+		dataType: int64
+		isHidden
+		lineageTag: b5b7d9fb-1fe6-416f-ba88-d6f1b9e89ad1
+		summarizeBy: none
+		sourceColumn: row_number
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column row_sha256
+		dataType: string
+		isHidden
+		lineageTag: 3856489b-33bb-4d7b-b58d-2c39003796f5
+		summarizeBy: none
+		sourceColumn: row_sha256
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column invalid_json
+		dataType: boolean
+		isHidden
+		lineageTag: 623af9b5-0444-4507-b807-bcf3b8131a7a
+		summarizeBy: none
+		sourceColumn: invalid_json
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column month
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-MM-dd
+		lineageTag: 45802bd3-da9d-4a82-98c9-6152651a7a69
+		summarizeBy: none
+		sourceColumn: month
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column service_type
+		dataType: string
+		isHidden
+		lineageTag: 650d356c-ab30-4257-9dad-cdf7014ce5d6
+		summarizeBy: none
+		sourceColumn: service_type
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column departure_station
+		dataType: string
+		isHidden
+		lineageTag: 621c62ff-b353-4bb6-932c-91e5a1d2fa80
+		summarizeBy: none
+		sourceColumn: departure_station
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column arrival_station
+		dataType: string
+		isHidden
+		lineageTag: 2c944de9-9aac-437c-9ff1-3ea8e1e434e4
+		summarizeBy: none
+		sourceColumn: arrival_station
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column scheduled_duration_minutes
+		dataType: int64
+		isHidden
+		lineageTag: d9d23408-cfe7-4c79-8080-a5ab22ea5bd9
+		summarizeBy: none
+		sourceColumn: scheduled_duration_minutes
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column scheduled_trains
+		dataType: int64
+		isHidden
+		lineageTag: 613797f0-1abe-48a5-9085-283dc7e1badc
+		summarizeBy: none
+		sourceColumn: scheduled_trains
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column cancelled_trains
+		dataType: int64
+		isHidden
+		lineageTag: cf5829ac-56ae-42d4-89e9-2442a6a9b54e
+		summarizeBy: none
+		sourceColumn: cancelled_trains
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column cancellation_comment
+		dataType: string
+		isHidden
+		lineageTag: 66c43183-c07f-4ff5-9b06-8966e39dbde1
+		summarizeBy: none
+		sourceColumn: cancellation_comment
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column departure_delayed_trains
+		dataType: int64
+		isHidden
+		lineageTag: 2d10534a-5ca7-468c-8fea-01b605d54724
+		summarizeBy: none
+		sourceColumn: departure_delayed_trains
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column mean_departure_delay_late_minutes
+		dataType: double
+		isHidden
+		lineageTag: 22b5b056-4572-4b4e-83e3-8b4887555473
+		summarizeBy: none
+		sourceColumn: mean_departure_delay_late_minutes
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column mean_departure_delay_all_minutes
+		dataType: double
+		isHidden
+		lineageTag: a71324c0-c993-4f80-b8a7-a39febd479f2
+		summarizeBy: none
+		sourceColumn: mean_departure_delay_all_minutes
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column departure_delay_comment
+		dataType: string
+		isHidden
+		lineageTag: 52216751-14db-4f77-8b8b-9e3641155d8a
+		summarizeBy: none
+		sourceColumn: departure_delay_comment
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column arrival_delayed_trains
+		dataType: int64
+		isHidden
+		lineageTag: f6f1b4a9-f19e-420d-97ac-95daa5725545
+		summarizeBy: none
+		sourceColumn: arrival_delayed_trains
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column mean_arrival_delay_late_minutes
+		dataType: double
+		isHidden
+		lineageTag: 80e6699e-23c4-4738-a74b-7facc2886166
+		summarizeBy: none
+		sourceColumn: mean_arrival_delay_late_minutes
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column mean_arrival_delay_all_minutes
+		dataType: double
+		isHidden
+		lineageTag: 7ed310df-0a29-4aad-beb6-73b59c77c092
+		summarizeBy: none
+		sourceColumn: mean_arrival_delay_all_minutes
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column arrival_delay_comment
+		dataType: string
+		isHidden
+		lineageTag: 1aef12ec-3815-4381-9c7e-97a9bb1dfb1f
+		summarizeBy: none
+		sourceColumn: arrival_delay_comment
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column arrival_delayed_over_15_trains
+		dataType: int64
+		isHidden
+		lineageTag: 380c8363-c204-4cea-a726-11921a531abe
+		summarizeBy: none
+		sourceColumn: arrival_delayed_over_15_trains
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column mean_arrival_delay_over_15_minutes
+		dataType: double
+		isHidden
+		lineageTag: ce516433-7435-4a24-8e4f-e637239faa56
+		summarizeBy: none
+		sourceColumn: mean_arrival_delay_over_15_minutes
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column arrival_delayed_over_30_trains
+		dataType: int64
+		isHidden
+		lineageTag: 92e0d593-6e05-4bd9-b42f-60664ee21b98
+		summarizeBy: none
+		sourceColumn: arrival_delayed_over_30_trains
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column arrival_delayed_over_60_trains
+		dataType: int64
+		isHidden
+		lineageTag: 6db232cb-c78d-436f-8f86-7b395918a05f
+		summarizeBy: none
+		sourceColumn: arrival_delayed_over_60_trains
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column conversion_error_fields
+		dataType: string
+		isHidden
+		lineageTag: 80206c63-e678-44ef-9e17-340ae32ea432
+		summarizeBy: none
+		sourceColumn: conversion_error_fields
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column missing_schema_fields
+		dataType: string
+		isHidden
+		lineageTag: 554a266c-0832-40d2-a441-670c348b66a0
+		summarizeBy: none
+		sourceColumn: missing_schema_fields
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column scheduled_population_valid
+		dataType: boolean
+		isHidden
+		lineageTag: 53cfe5f9-5736-4906-851f-e1c0274fed4f
+		summarizeBy: none
+		sourceColumn: scheduled_population_valid
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column central_counts_compatible
+		dataType: boolean
+		isHidden
+		lineageTag: a7e47589-048d-4ab7-88ce-d3d239964e46
+		summarizeBy: none
+		sourceColumn: central_counts_compatible
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column is_important_delay_quarantined
+		dataType: boolean
+		isHidden
+		lineageTag: 68f57a29-fc74-407e-b9dd-3ea6b248bf70
+		summarizeBy: none
+		sourceColumn: is_important_delay_quarantined
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column cause_present_count
+		dataType: int64
+		isHidden
+		lineageTag: e54c7f60-cb9b-40f9-8a6c-4b8109780369
+		summarizeBy: none
+		sourceColumn: cause_present_count
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column cause_out_of_bounds_count
+		dataType: int64
+		isHidden
+		lineageTag: 9c7f4275-0cfb-4205-80b6-f03996821bea
+		summarizeBy: none
+		sourceColumn: cause_out_of_bounds_count
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column cause_sum_pct
+		dataType: double
+		isHidden
+		lineageTag: b7fb9c73-bcc0-4def-bead-d203ae0a791d
+		summarizeBy: none
+		sourceColumn: cause_sum_pct
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column services_in_month
+		dataType: int64
+		isHidden
+		lineageTag: 77e953c8-f1bd-41f9-8317-34076c2ad72a
+		summarizeBy: none
+		sourceColumn: services_in_month
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column services_in_history
+		dataType: int64
+		isHidden
+		lineageTag: f198670b-e00b-43f7-b92f-438c651f8fff
+		summarizeBy: none
+		sourceColumn: services_in_history
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column operated_trains_proxy
+		dataType: int64
+		isHidden
+		lineageTag: 5e29bfb2-cbd9-41da-b40e-41398ee06448
+		summarizeBy: none
+		sourceColumn: operated_trains_proxy
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column important_delay_nesting_valid
+		dataType: boolean
+		isHidden
+		lineageTag: 564d0b33-632f-4b5a-8232-746c7e682f81
+		summarizeBy: none
+		sourceColumn: important_delay_nesting_valid
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column is_cause_profile_complete
+		dataType: boolean
+		isHidden
+		lineageTag: 823fbc67-868a-4ff2-831a-90b1383db70c
+		summarizeBy: none
+		sourceColumn: is_cause_profile_complete
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column is_cause_profile_all_zero
+		dataType: boolean
+		isHidden
+		lineageTag: 1eeedc9e-4b11-48cc-93b0-0607d0fdd601
+		summarizeBy: none
+		sourceColumn: is_cause_profile_all_zero
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column has_cause_sum_warning
+		dataType: boolean
+		isHidden
+		lineageTag: 4ea31a1b-e371-47af-93ca-4724c0ae5112
+		summarizeBy: none
+		sourceColumn: has_cause_sum_warning
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column is_cancellation_count_usable
+		dataType: boolean
+		isHidden
+		lineageTag: 4207047e-acf8-4550-8365-5fe6110494f2
+		summarizeBy: none
+		sourceColumn: is_cancellation_count_usable
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column is_cancellation_rate_usable
+		dataType: boolean
+		isHidden
+		lineageTag: 18e7b34c-624b-46d9-96eb-bf8c40e43534
+		summarizeBy: none
+		sourceColumn: is_cancellation_rate_usable
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column is_arrival_delay_count_usable
+		dataType: boolean
+		isHidden
+		lineageTag: df8a8281-7cd1-49ac-a6f5-a60467033f8c
+		summarizeBy: none
+		sourceColumn: is_arrival_delay_count_usable
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column is_arrival_delay_rate_usable
+		dataType: boolean
+		isHidden
+		lineageTag: 1b228387-272d-4ae7-a168-980303b5fb8f
+		summarizeBy: none
+		sourceColumn: is_arrival_delay_rate_usable
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column is_departure_delay_count_usable
+		dataType: boolean
+		isHidden
+		lineageTag: 112133bb-d953-484e-a3b5-2893644bf591
+		summarizeBy: none
+		sourceColumn: is_departure_delay_count_usable
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column is_important_delay_count_usable
+		dataType: boolean
+		isHidden
+		lineageTag: 5e0db998-5579-4840-adcb-a8a03779d7b4
+		summarizeBy: none
+		sourceColumn: is_important_delay_count_usable
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column is_important_delay_rate_usable
+		dataType: boolean
+		isHidden
+		lineageTag: 5ece8de6-71bd-4924-8abf-6e711ba315b1
+		summarizeBy: none
+		sourceColumn: is_important_delay_rate_usable
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column is_cause_profile_usable
+		dataType: boolean
+		isHidden
+		lineageTag: 2f4339bd-1f55-4115-be5a-7b4dffb44130
+		summarizeBy: none
+		sourceColumn: is_cause_profile_usable
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column is_mean_arrival_delay_late_usable
+		dataType: boolean
+		isHidden
+		lineageTag: 7ee9fc68-1fd5-4406-a570-ac5a12c65277
+		summarizeBy: none
+		sourceColumn: is_mean_arrival_delay_late_usable
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column is_mean_departure_delay_late_usable
+		dataType: boolean
+		isHidden
+		lineageTag: 9ee7076f-1444-46c7-8b04-0b174e33f2b0
+		summarizeBy: none
+		sourceColumn: is_mean_departure_delay_late_usable
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column is_over_15_generic_usable
+		dataType: boolean
+		isHidden
+		lineageTag: a3568bd3-60aa-4833-9bb7-fdc30fe721f4
+		summarizeBy: none
+		sourceColumn: is_over_15_generic_usable
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column has_negative_mean_departure_all
+		dataType: boolean
+		isHidden
+		lineageTag: bf406314-e64f-4b2a-b2ef-9a5335efd1e4
+		summarizeBy: none
+		sourceColumn: has_negative_mean_departure_all
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column has_negative_mean_arrival_all
+		dataType: boolean
+		isHidden
+		lineageTag: 51885152-3cea-48ef-ac1f-3abab98fff52
+		summarizeBy: none
+		sourceColumn: has_negative_mean_arrival_all
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column has_negative_mean_arrival_late
+		dataType: boolean
+		isHidden
+		lineageTag: 2fdb16d3-0081-44d3-96bf-5ebf468dd33e
+		summarizeBy: none
+		sourceColumn: has_negative_mean_arrival_late
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column has_negative_mean_departure_late
+		dataType: boolean
+		isHidden
+		lineageTag: 8e2526b2-0e3a-410b-809c-c32e633a4356
+		summarizeBy: none
+		sourceColumn: has_negative_mean_departure_late
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column has_negative_scheduled_duration
+		dataType: boolean
+		isHidden
+		lineageTag: 6d07efa1-4d53-4828-9dfa-9f68ae7cbb7f
+		summarizeBy: none
+		sourceColumn: has_negative_scheduled_duration
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column has_multiple_services_in_month
+		dataType: boolean
+		isHidden
+		lineageTag: 70a0f83d-aa38-4a34-8c3c-6c593fa464f2
+		summarizeBy: none
+		sourceColumn: has_multiple_services_in_month
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column has_multiple_services_in_history
+		dataType: boolean
+		isHidden
+		lineageTag: 7cc171b7-5f2c-43b8-9831-d69530685ec8
+		summarizeBy: none
+		sourceColumn: has_multiple_services_in_history
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column cause_profile_status
+		dataType: string
+		isHidden
+		lineageTag: 189f040e-949a-4403-bf09-8a50f21e408e
+		summarizeBy: none
+		sourceColumn: cause_profile_status
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column quality_reasons
+		dataType: string
+		isHidden
+		lineageTag: e60f014c-4eb2-424c-bb7a-cdb513b1c5a9
+		summarizeBy: none
+		sourceColumn: quality_reasons
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column route_key
+		dataType: string
+		isHidden
+		lineageTag: e958c9a2-20dd-4508-a0ab-e5e8e336228d
+		summarizeBy: none
+		sourceColumn: route_key
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column service_key
+		dataType: string
+		isHidden
+		lineageTag: 18990789-6375-4643-a840-9bd7f7f842c1
+		summarizeBy: none
+		sourceColumn: service_key
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column cancellation_rate
+		dataType: double
+		isHidden
+		lineageTag: f65079a2-0ee0-4b7c-9497-5d95bc754709
+		summarizeBy: none
+		sourceColumn: cancellation_rate
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column arrival_delay_rate
+		dataType: double
+		isHidden
+		lineageTag: ee6a83a8-8aaf-491d-b89a-d9389df0211c
+		summarizeBy: none
+		sourceColumn: arrival_delay_rate
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column composite_regularity_rate
+		dataType: double
+		isHidden
+		lineageTag: f79861e8-4318-4888-8c45-0887bbceedf0
+		summarizeBy: none
+		sourceColumn: composite_regularity_rate
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column over_30_delay_rate
+		dataType: double
+		isHidden
+		lineageTag: d052899c-c976-4470-862f-1c50269d748d
+		summarizeBy: none
+		sourceColumn: over_30_delay_rate
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column over_60_delay_rate
+		dataType: double
+		isHidden
+		lineageTag: c3106796-ff0f-47e9-ac80-0038add21c33
+		summarizeBy: none
+		sourceColumn: over_60_delay_rate
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column over_30_delay_count
+		dataType: int64
+		isHidden
+		lineageTag: fd9fa7e7-2d39-466e-be5f-a4c388091e61
+		summarizeBy: none
+		sourceColumn: over_30_delay_count
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column over_60_delay_count
+		dataType: int64
+		isHidden
+		lineageTag: e8dae7c6-8f2b-47f1-a7a9-7e357d100feb
+		summarizeBy: none
+		sourceColumn: over_60_delay_count
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column denominator_status
+		dataType: string
+		isHidden
+		lineageTag: 3a6a4ded-c53b-4cbc-859a-cb772f40697b
+		summarizeBy: none
+		sourceColumn: denominator_status
+
+	partition fct_reliability_monthly = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([BillingProject=pBillingProject, UseStorageApi=false]),
+				    Project = Source{[Name=pProjectId]}[Data],
+				    Dataset = Project{[Name=pDataset, Kind="Schema"]}[Data],
+				    Data = Dataset{[Name="fct_reliability_monthly", Kind="Table"]}[Data],
+				    Result = Table.TransformColumns(Data, {{"conversion_error_fields", each if _ = null then null else if Value.Is(_, type list) then Text.Combine(_, "; ") else Text.From(_), type text}, {"missing_schema_fields", each if _ = null then null else if Value.Is(_, type list) then Text.Combine(_, "; ") else Text.From(_), type text}, {"quality_reasons", each if _ = null then null else if Value.Is(_, type list) then Text.Combine(_, "; ") else Text.From(_), type text}}),
+				    Versions = List.Distinct(Result[version_id]),
+				    Checked = if List.Count(Versions) = 1 and Versions{0} = pExpectedVersion then Result else error "Version source inattendue ou multiple"
+				in
+				    Checked
+

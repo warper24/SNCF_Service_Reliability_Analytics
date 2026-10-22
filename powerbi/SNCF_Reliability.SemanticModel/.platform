@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "SNCF_Reliability"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "4109c8be-c10c-47ac-9b2f-a258cae3ef90"
+  }
+}

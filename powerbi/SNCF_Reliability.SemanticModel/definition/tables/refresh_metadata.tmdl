@@ -1,0 +1,50 @@
+/// J07 — refresh_metadata ; voir docs/powerbi_model.md.
+table refresh_metadata
+	isHidden
+	lineageTag: ab668574-bc83-4123-89f3-2a9c62b5ad1e
+
+	/// Champ repris du modèle SQL qualifié.
+	column version_id
+		dataType: string
+		lineageTag: b2341aaa-2665-4849-b9ba-10a51ffbb6eb
+		summarizeBy: none
+		sourceColumn: version_id
+
+	/// Champ repris du modèle SQL qualifié.
+	column last_business_month
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: 5ef2f5b0-1e11-4cdc-871c-35eb90293c11
+		summarizeBy: none
+		sourceColumn: last_business_month
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Champ repris du modèle SQL qualifié.
+	column imported_at_utc
+		dataType: dateTime
+		formatString: yyyy-MM-dd
+		lineageTag: b8ce13b9-6599-4c3a-bdeb-aba6c7e49f88
+		summarizeBy: none
+		sourceColumn: imported_at_utc
+
+	/// Champ repris du modèle SQL qualifié.
+	column version_count
+		dataType: int64
+		lineageTag: 2216ad69-2b38-45ce-9617-836843c64a75
+		summarizeBy: sum
+		sourceColumn: version_count
+
+		annotation SummarizationSetBy = Automatic
+
+	partition refresh_metadata = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([BillingProject=pBillingProject, UseStorageApi=false]),
+				    Project = Source{[Name=pProjectId]}[Data],
+				    Sql = Text.Replace("SELECT ANY_VALUE(version_id) AS version_id, MAX(month) AS last_business_month, CURRENT_TIMESTAMP() AS imported_at_utc, COUNT(DISTINCT version_id) AS version_count FROM `sncf-reliability-analytics.sncf_dev.fct_reliability_monthly`", "sncf-reliability-analytics.sncf_dev.", pProjectId & "." & pDataset & "."),
+				    Result = Value.NativeQuery(Project, Sql, null, [EnableFolding=true])
+				in
+				    Result
+

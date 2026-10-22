@@ -1,0 +1,31 @@
+/// J07 — dim_service ; voir docs/powerbi_model.md.
+table dim_service
+	lineageTag: c4b76063-8866-4dc6-bd9a-5d22ce8df48a
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column service_key
+		dataType: string
+		isHidden
+		lineageTag: ea887a97-5976-43de-a68b-f3f1ad063a81
+		summarizeBy: none
+		sourceColumn: service_key
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column service_type
+		dataType: string
+		lineageTag: 0a5a2e06-3f38-4b56-8e29-c77b1b337bb6
+		summarizeBy: none
+		sourceColumn: service_type
+
+	partition dim_service = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([BillingProject=pBillingProject, UseStorageApi=false]),
+				    Project = Source{[Name=pProjectId]}[Data],
+				    Dataset = Project{[Name=pDataset, Kind="Schema"]}[Data],
+				    Data = Dataset{[Name="dim_service", Kind="Table"]}[Data],
+				    Result = Data
+				in
+				    Result
+

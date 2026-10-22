@@ -1,0 +1,11 @@
+{
+  "schema": "codex.powerbi.unifiedReview.v1",
+  "generated": "2026-10-21T16:56:10",
+  "source": "C:\\Users\\<utilisateur>\\AppData\\Local\\SNCF_Service_Reliability_Analytics\\powerbi-j07",
+  "outputDirectory": "C:\\Users\\<utilisateur>\\AppData\\Local\\SNCF_Service_Reliability_Analytics\\powerbi-j07\\unified_review",
+  "offlineReview": "C:\\Users\\<utilisateur>\\AppData\\Local\\SNCF_Service_Reliability_Analytics\\powerbi-j07\\unified_review\\offline-review\\README.md",
+  "liveStatus": "Skipped",
+  "liveDetail": "Skipped by request.",
+  "liveReview": null,
+  "externalToolRegistration": "C:\\Users\\<utilisateur>\\AppData\\Local\\SNCF_Service_Reliability_Analytics\\powerbi-j07\\unified_review\\external-tool\\Codex Power BI Workbench.pbitool.json"
+}

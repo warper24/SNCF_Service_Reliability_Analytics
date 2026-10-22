@@ -1,0 +1,21 @@
+{
+  "stage": "change",
+  "completed_at_utc": "2026-10-21T14:27:16.305063+00:00",
+  "values": {
+    "dax_before_change": 1,
+    "sql_after_change": 2,
+    "dax_without_refresh": 1
+  },
+  "jobs": [
+    {
+      "job_id": "0f43a6c1-109f-4213-909f-d0d4f5473c96",
+      "sql": "UPDATE `sncf-reliability-analytics.sncf_test.j07_import_probe` SET probe_value=2,changed_at_utc=CURRENT_TIMESTAMP() WHERE probe_value=1",
+      "bytes_processed": 16
+    },
+    {
+      "job_id": "5b7b6cb2-56a9-489b-9278-2590640c6ce1",
+      "sql": "SELECT probe_value FROM `sncf-reliability-analytics.sncf_test.j07_import_probe`",
+      "bytes_processed": 8
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "name": "metadata",
+    "job_id": "6dc6e537-f72e-4f8f-8263-0bfd49febe58",
+    "bytes_processed": 0,
+    "bytes_billed": 0,
+    "cache_hit": true
+  },
+  {
+    "name": "routes",
+    "job_id": "b6449f03-78c8-46fd-aa42-d7e709012170",
+    "bytes_processed": 2197507,
+    "bytes_billed": 10485760,
+    "cache_hit": false
+  },
+  {
+    "name": "edge_cases",
+    "job_id": "e0f070a7-7996-4533-bc72-1763b56f36c5",
+    "bytes_processed": 0,
+    "bytes_billed": 0,
+    "cache_hit": true
+  },
+  {
+    "name": "monthly",
+    "job_id": "4539642b-8a16-4107-807d-8e5738909860",
+    "bytes_processed": 2664317,
+    "bytes_billed": 10485760,
+    "cache_hit": false
+  },
+  {
+    "name": "comparison",
+    "job_id": "49964ea1-973a-492d-867c-961f85a94fb9",
+    "bytes_processed": 0,
+    "bytes_billed": 0,
+    "cache_hit": true
+  },
+  {
+    "name": "summary",
+    "job_id": "e1dd2e24-9fe4-4419-96a4-738ae6706df9",
+    "bytes_processed": 0,
+    "bytes_billed": 0,
+    "cache_hit": true
+  },
+  {
+    "name": "causes",
+    "job_id": "ac7ec683-3973-476b-9e32-8fe1b7cb9f48",
+    "bytes_processed": 0,
+    "bytes_billed": 0,
+    "cache_hit": true
+  }
+]

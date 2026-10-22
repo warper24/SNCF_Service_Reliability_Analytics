@@ -1,0 +1,24 @@
+/// Paramètre de connexion/provenance ; ne contient aucun secret.
+expression pProjectId = "sncf-reliability-analytics" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 9758c662-2c75-47c9-8526-842689e2f2d7
+
+	annotation PBI_ResultType = Text
+
+/// Paramètre de connexion/provenance ; ne contient aucun secret.
+expression pBillingProject = "sncf-reliability-analytics" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 13e410c8-c213-46a2-813f-71fd5d4b8233
+
+	annotation PBI_ResultType = Text
+
+/// Paramètre de connexion/provenance ; ne contient aucun secret.
+expression pDataset = "sncf_dev" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 81cd7bad-422b-4231-afff-92a62388e64e
+
+	annotation PBI_ResultType = Text
+
+/// Paramètre de connexion/provenance ; ne contient aucun secret.
+expression pExpectedVersion = "e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 4cc80005-0c17-44d3-99c5-fe197aff5fb8
+
+	annotation PBI_ResultType = Text
+

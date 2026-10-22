@@ -1,0 +1,64 @@
+relationship fct_reliability_monthly_dim_route
+	fromColumn: fct_reliability_monthly.route_key
+	toColumn: dim_route.route_key
+
+relationship fct_reliability_monthly_dim_service
+	fromColumn: fct_reliability_monthly.service_key
+	toColumn: dim_service.service_key
+
+relationship fct_reliability_monthly_dim_date
+	fromColumn: fct_reliability_monthly.month
+	toColumn: dim_date.date_key
+
+relationship fct_delay_causes_monthly_dim_route
+	fromColumn: fct_delay_causes_monthly.route_key
+	toColumn: dim_route.route_key
+
+relationship fct_delay_causes_monthly_dim_service
+	fromColumn: fct_delay_causes_monthly.service_key
+	toColumn: dim_service.service_key
+
+relationship fct_delay_causes_monthly_dim_date
+	fromColumn: fct_delay_causes_monthly.month
+	toColumn: dim_date.date_key
+
+relationship mart_route_trends_dim_route
+	fromColumn: mart_route_trends.route_key
+	toColumn: dim_route.route_key
+
+relationship mart_route_trends_dim_service
+	fromColumn: mart_route_trends.service_key
+	toColumn: dim_service.service_key
+
+relationship mart_route_trends_dim_date
+	fromColumn: mart_route_trends.month
+	toColumn: dim_date.date_key
+
+relationship mart_route_priorities_dim_route
+	fromColumn: mart_route_priorities.route_key
+	toColumn: dim_route.route_key
+
+relationship mart_route_priorities_dim_service
+	fromColumn: mart_route_priorities.service_key
+	toColumn: dim_service.service_key
+
+relationship mart_route_priorities_dim_comparison
+	fromColumn: mart_route_priorities.comparison_id
+	toColumn: dim_comparison.comparison_id
+
+relationship route_diagnostic_dim_route
+	fromColumn: route_diagnostic.route_key
+	toColumn: dim_route.route_key
+
+relationship route_diagnostic_dim_service
+	fromColumn: route_diagnostic.service_key
+	toColumn: dim_service.service_key
+
+relationship route_diagnostic_dim_comparison
+	fromColumn: route_diagnostic.comparison_id
+	toColumn: dim_comparison.comparison_id
+
+relationship causes_category
+	fromColumn: fct_delay_causes_monthly.cause_key
+	toColumn: dim_cause.cause_key
+

@@ -1,0 +1,80 @@
+/// J07 — dim_date ; voir docs/powerbi_model.md.
+table dim_date
+	lineageTag: ec4099f0-5ca4-45e5-a959-1356de83ec03
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column date_key
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-MM-dd
+		lineageTag: 9d49334c-c0af-4af4-a3d5-0601b68107be
+		summarizeBy: none
+		sourceColumn: date_key
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column month
+		dataType: dateTime
+		isHidden
+		formatString: yyyy-MM-dd
+		lineageTag: 20a1147e-282e-4906-88e6-f360b22f42bf
+		summarizeBy: none
+		sourceColumn: month
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column year
+		dataType: int64
+		lineageTag: d8885eb1-2dab-407a-a3da-b345e0f6bb83
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column quarter
+		dataType: int64
+		lineageTag: 780aea81-cd93-4297-86d1-da52b15d5186
+		summarizeBy: sum
+		sourceColumn: quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column month_number
+		dataType: int64
+		lineageTag: cb5670bf-8f42-4979-a645-77ece90792bf
+		summarizeBy: sum
+		sourceColumn: month_number
+
+		annotation SummarizationSetBy = Automatic
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column month_label
+		dataType: string
+		lineageTag: 29ae56f3-de17-475a-8634-7253c689c75a
+		summarizeBy: none
+		sourceColumn: month_label
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column is_month_start
+		dataType: boolean
+		isHidden
+		lineageTag: 27ffb422-f34f-4c55-8a3e-1102fb941d15
+		summarizeBy: none
+		sourceColumn: is_month_start
+
+	partition dim_date = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([BillingProject=pBillingProject, UseStorageApi=false]),
+				    Project = Source{[Name=pProjectId]}[Data],
+				    Dataset = Project{[Name=pDataset, Kind="Schema"]}[Data],
+				    Data = Dataset{[Name="dim_date", Kind="Table"]}[Data],
+				    Result = Data
+				in
+				    Result
+

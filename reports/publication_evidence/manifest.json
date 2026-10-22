@@ -328,6 +328,192 @@
       "original_sha256": "3ee886416f1a92d9039cdaf1a8aacc6f7f5320a771f73b26fa7957b84b20a06c",
       "public_sha256": "3ee886416f1a92d9039cdaf1a8aacc6f7f5320a771f73b26fa7957b84b20a06c",
       "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/cases.json",
+      "original_sha256": "0c0752aac05159ade54ef5ec60b1f78f9ca575bcf7e7de0b3b3698ce13cd800d",
+      "public_sha256": "0c0752aac05159ade54ef5ec60b1f78f9ca575bcf7e7de0b3b3698ce13cd800d",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/causes_dax.json",
+      "original_sha256": "59c3ee240f78b1f74380d1509e59889486fb6b4d40bd33e3277b616e5e1334e2",
+      "public_sha256": "59c3ee240f78b1f74380d1509e59889486fb6b4d40bd33e3277b616e5e1334e2",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/causes_sql.json",
+      "original_sha256": "b863c24488920cfff5326c2c2b4035315dc1030019a21d7404222d9e4a878fce",
+      "public_sha256": "b863c24488920cfff5326c2c2b4035315dc1030019a21d7404222d9e4a878fce",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/change_20261021T142716Z.json",
+      "original_sha256": "626cf335d7d935e31e950b05a5bc1d39a72d24c44accd63f54c166a25c4810f4",
+      "public_sha256": "626cf335d7d935e31e950b05a5bc1d39a72d24c44accd63f54c166a25c4810f4",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/checks.json",
+      "original_sha256": "8fde93448ee80141bd0da0582c26d748483cf6e9c8f2c67cbadc41b0fbc04580",
+      "public_sha256": "8fde93448ee80141bd0da0582c26d748483cf6e9c8f2c67cbadc41b0fbc04580",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/comparison_dax.json",
+      "original_sha256": "73ae6b941ec93b743c19d6e25e24925d196bab04366c76bf840e46b41347b75e",
+      "public_sha256": "73ae6b941ec93b743c19d6e25e24925d196bab04366c76bf840e46b41347b75e",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/comparison_sql.json",
+      "original_sha256": "a9babfb86f99eabeec023735f23221096c7652a36f9605a4615a876b0e7bcc40",
+      "public_sha256": "a9babfb86f99eabeec023735f23221096c7652a36f9605a4615a876b0e7bcc40",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/create_20261021T142531Z.json",
+      "original_sha256": "51a2966ee5b2679dca8ab87811edc05dd0721ad5d0b7c1090815506d06d8d2fa",
+      "public_sha256": "51a2966ee5b2679dca8ab87811edc05dd0721ad5d0b7c1090815506d06d8d2fa",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/delivery_manifest.json",
+      "original_sha256": "5fa4fd104957787e23fb924246a2040e7589a6206ce0a3bdef7ca63a2f751994",
+      "public_sha256": "5fa4fd104957787e23fb924246a2040e7589a6206ce0a3bdef7ca63a2f751994",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/edge_cases_sql.json",
+      "original_sha256": "e67fde877f81837516331496381316476444cb5d989ed26cb9bd1edae58519f2",
+      "public_sha256": "e67fde877f81837516331496381316476444cb5d989ed26cb9bd1edae58519f2",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/execution_manifest.json",
+      "original_sha256": "246b65501fd8cc26221e70314665210de32ef6316664281b6e7ffca8ad82b54e",
+      "public_sha256": "f3f678e3b4096f9f20d5a29c24f5df040a8458c47b06bc670a933a3fb7b2ee9f",
+      "anonymized": true
+    },
+    {
+      "path": "powerbi_evidence/first_attempt_validation.json",
+      "original_sha256": "27e85402430db61ed7f21c17a0693602128618cd2ee1e0a978ae98c4ff35435b",
+      "public_sha256": "b8a3c72cf1fe6beac9645bd4e20e5147d0382e10a33b7ac9d52b771d0b336a50",
+      "anonymized": true
+    },
+    {
+      "path": "powerbi_evidence/git_review.json",
+      "original_sha256": "73afb7fc296f2e3531a4a5124e8af6b1b66d6e335563c9e184b92c36b1098d53",
+      "public_sha256": "73afb7fc296f2e3531a4a5124e8af6b1b66d6e335563c9e184b92c36b1098d53",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/guards_dax.json",
+      "original_sha256": "6db3c95a2fd2c1eb77194c3c665d946e7f31b45dd939f63dea36a976873fc276",
+      "public_sha256": "6db3c95a2fd2c1eb77194c3c665d946e7f31b45dd939f63dea36a976873fc276",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/heuristic_review.json",
+      "original_sha256": "87077beb263f37b3d2f97fa30d62d95d0a85d5994b02e0c6777790dda68832bc",
+      "public_sha256": "03f757c7a4c68844a5623e20f70adb547faa72240e4641353f25c57eba00ca09",
+      "anonymized": true
+    },
+    {
+      "path": "powerbi_evidence/jobs.json",
+      "original_sha256": "09110690497685918b22322cbe64e1aa92490253c74bf33e2e1b6e32b0e7041a",
+      "public_sha256": "09110690497685918b22322cbe64e1aa92490253c74bf33e2e1b6e32b0e7041a",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/manual_review.json",
+      "original_sha256": "9099174145279cf43f3d8d164e840a1bafd58f5bec5d07b0cb6463e1e7fec083",
+      "public_sha256": "e1ff8b15357f71e53dce4eed896f0bff816245c33b98580bf2f860c03d593b3e",
+      "anonymized": true
+    },
+    {
+      "path": "powerbi_evidence/metadata_dax.json",
+      "original_sha256": "3ac651c9998b0fc48b39fbc1f9f91020b627e043b27ef26fca5c0b229401999d",
+      "public_sha256": "3ac651c9998b0fc48b39fbc1f9f91020b627e043b27ef26fca5c0b229401999d",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/metadata_sql.json",
+      "original_sha256": "f5ff61e8da47e46fdf18dacacf65a484531a4faf2524faf38f82b7bfbf149481",
+      "public_sha256": "f5ff61e8da47e46fdf18dacacf65a484531a4faf2524faf38f82b7bfbf149481",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/model_audit.json",
+      "original_sha256": "f96c86d35f1a22a9bd3471743e151ca4f95fea83afc09ac9cbd9ac6abcc41e6b",
+      "public_sha256": "f96c86d35f1a22a9bd3471743e151ca4f95fea83afc09ac9cbd9ac6abcc41e6b",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/monthly_dax.json",
+      "original_sha256": "96a5dce3f7c57dd0b4141fc099539580dfaf52f86091eaa57e03ecbb803f7d3c",
+      "public_sha256": "96a5dce3f7c57dd0b4141fc099539580dfaf52f86091eaa57e03ecbb803f7d3c",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/monthly_sql.json",
+      "original_sha256": "913fc59714ec70875a6c4cdfa96999203d51628b8fc57c38af61d7c858005c5d",
+      "public_sha256": "913fc59714ec70875a6c4cdfa96999203d51628b8fc57c38af61d7c858005c5d",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/ranks_dax.json",
+      "original_sha256": "d77267b76664507623fe9a430ded828be0cdbc872641a15500d15d5980bf2421",
+      "public_sha256": "d77267b76664507623fe9a430ded828be0cdbc872641a15500d15d5980bf2421",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/reopened_audit.json",
+      "original_sha256": "f96c86d35f1a22a9bd3471743e151ca4f95fea83afc09ac9cbd9ac6abcc41e6b",
+      "public_sha256": "f96c86d35f1a22a9bd3471743e151ca4f95fea83afc09ac9cbd9ac6abcc41e6b",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/reopened_example.json",
+      "original_sha256": "3cd8da00f191478f1d47b9e8d72c0ce3c10b2b18c94154966d72b37b1147ceb4",
+      "public_sha256": "3cd8da00f191478f1d47b9e8d72c0ce3c10b2b18c94154966d72b37b1147ceb4",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/reopened_metadata.json",
+      "original_sha256": "3ac651c9998b0fc48b39fbc1f9f91020b627e043b27ef26fca5c0b229401999d",
+      "public_sha256": "3ac651c9998b0fc48b39fbc1f9f91020b627e043b27ef26fca5c0b229401999d",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/routes_sql.json",
+      "original_sha256": "e3f811d72f3a5c1dbd74e4832d17a2f886496c6a240c7e4f6d31dcd9b4d72853",
+      "public_sha256": "e3f811d72f3a5c1dbd74e4832d17a2f886496c6a240c7e4f6d31dcd9b4d72853",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/summary_dax.json",
+      "original_sha256": "742d4a7ed8ae2de5c7e57566618a944cc2b9d012199e496689afdf71f1cd7014",
+      "public_sha256": "742d4a7ed8ae2de5c7e57566618a944cc2b9d012199e496689afdf71f1cd7014",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/summary_sql.json",
+      "original_sha256": "d50053d2e0670ad997e1bac7acd309fd59ff442a8b42899e34536614ab8aad9b",
+      "public_sha256": "d50053d2e0670ad997e1bac7acd309fd59ff442a8b42899e34536614ab8aad9b",
+      "anonymized": false
+    },
+    {
+      "path": "powerbi_evidence/validation.json",
+      "original_sha256": "73e311421638a481c957fd8aacabb1f67542720ad18c979a0c54373b644573f9",
+      "public_sha256": "83d57892276cdb3dcacb39bca00733df95a9bc15c254f5e8b97e3b546367c535",
+      "anonymized": true
+    },
+    {
+      "path": "powerbi_evidence/verify_20261021T143002Z.json",
+      "original_sha256": "031ba082a5479d2faf2dc52f1a08427198baa428b23d1b64e2964a05312e7b40",
+      "public_sha256": "031ba082a5479d2faf2dc52f1a08427198baa428b23d1b64e2964a05312e7b40",
+      "anonymized": false
     }
   ]
 }

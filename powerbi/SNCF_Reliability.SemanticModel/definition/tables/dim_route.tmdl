@@ -1,0 +1,45 @@
+/// J07 — dim_route ; voir docs/powerbi_model.md.
+table dim_route
+	lineageTag: 55ef2f67-c2e9-4cb4-958f-b7ddc4044f7f
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column route_key
+		dataType: string
+		isHidden
+		lineageTag: f0066aa7-cc94-4fb1-9c80-82c12883c116
+		summarizeBy: none
+		sourceColumn: route_key
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column departure_station
+		dataType: string
+		lineageTag: ec504c3f-32cc-49c5-9b94-b2854263e461
+		summarizeBy: none
+		sourceColumn: departure_station
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column arrival_station
+		dataType: string
+		lineageTag: b478bc12-2132-4941-9895-d145bc62d667
+		summarizeBy: none
+		sourceColumn: arrival_station
+
+	/// Champ dbt qualifié ; contrat J01–J06 inchangé.
+	column route_label
+		dataType: string
+		lineageTag: a2081245-d2a1-455f-9e07-ad4e830a5a5b
+		summarizeBy: none
+		sourceColumn: route_label
+
+	partition dim_route = m
+		mode: import
+		source =
+				let
+				    Source = GoogleBigQuery.Database([BillingProject=pBillingProject, UseStorageApi=false]),
+				    Project = Source{[Name=pProjectId]}[Data],
+				    Dataset = Project{[Name=pDataset, Kind="Schema"]}[Data],
+				    Data = Dataset{[Name="dim_route", Kind="Table"]}[Data],
+				    Result = Data
+				in
+				    Result
+

@@ -1,0 +1,581 @@
+{
+  "compatibilityLevel": 1606,
+  "tables": [
+    {
+      "name": "dim_date",
+      "partitions": [
+        {
+          "name": "dim_date",
+          "mode": "Import",
+          "state": "Ready",
+          "refreshedTime": "2026-10-21T14:28:01.0966670"
+        }
+      ],
+      "measures": []
+    },
+    {
+      "name": "dim_route",
+      "partitions": [
+        {
+          "name": "dim_route",
+          "mode": "Import",
+          "state": "Ready",
+          "refreshedTime": "2026-10-21T14:28:00.8066670"
+        }
+      ],
+      "measures": []
+    },
+    {
+      "name": "dim_service",
+      "partitions": [
+        {
+          "name": "dim_service",
+          "mode": "Import",
+          "state": "Ready",
+          "refreshedTime": "2026-10-21T14:28:00.9333330"
+        }
+      ],
+      "measures": []
+    },
+    {
+      "name": "dim_cause",
+      "partitions": [
+        {
+          "name": "dim_cause",
+          "mode": "Import",
+          "state": "Ready",
+          "refreshedTime": "2026-10-21T14:28:00.8266670"
+        }
+      ],
+      "measures": []
+    },
+    {
+      "name": "fct_reliability_monthly",
+      "partitions": [
+        {
+          "name": "fct_reliability_monthly",
+          "mode": "Import",
+          "state": "Ready",
+          "refreshedTime": "2026-10-21T14:28:06.5866670"
+        }
+      ],
+      "measures": []
+    },
+    {
+      "name": "fct_delay_causes_monthly",
+      "partitions": [
+        {
+          "name": "fct_delay_causes_monthly",
+          "mode": "Import",
+          "state": "Ready",
+          "refreshedTime": "2026-10-21T14:28:06.9000000"
+        }
+      ],
+      "measures": []
+    },
+    {
+      "name": "mart_route_trends",
+      "partitions": [
+        {
+          "name": "mart_route_trends",
+          "mode": "Import",
+          "state": "Ready",
+          "refreshedTime": "2026-10-21T14:28:06.7633330"
+        }
+      ],
+      "measures": []
+    },
+    {
+      "name": "mart_route_priorities",
+      "partitions": [
+        {
+          "name": "mart_route_priorities",
+          "mode": "Import",
+          "state": "Ready",
+          "refreshedTime": "2026-10-21T14:28:02.5000000"
+        }
+      ],
+      "measures": []
+    },
+    {
+      "name": "route_diagnostic",
+      "partitions": [
+        {
+          "name": "route_diagnostic",
+          "mode": "Import",
+          "state": "Ready",
+          "refreshedTime": "2026-10-21T14:28:01.1866670"
+        }
+      ],
+      "measures": []
+    },
+    {
+      "name": "dim_comparison",
+      "partitions": [
+        {
+          "name": "dim_comparison",
+          "mode": "Import",
+          "state": "Ready",
+          "refreshedTime": "2026-10-21T14:28:03.2733330"
+        }
+      ],
+      "measures": []
+    },
+    {
+      "name": "refresh_metadata",
+      "partitions": [
+        {
+          "name": "refresh_metadata",
+          "mode": "Import",
+          "state": "Ready",
+          "refreshedTime": "2026-10-21T14:28:01.0600000"
+        }
+      ],
+      "measures": []
+    },
+    {
+      "name": "kpi_measures",
+      "partitions": [
+        {
+          "name": "kpi_measures",
+          "mode": "Import",
+          "state": "Ready",
+          "refreshedTime": "2026-10-21T14:28:00.2733330"
+        }
+      ],
+      "measures": [
+        {
+          "name": "single_route_service",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "complete_month_selection",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "monthly_context_allowed",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "expected_months",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "observed_months",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "observation_coverage",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "arrival_valid_months",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "arrival_coverage",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "cancellation_valid_months",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "cancellation_coverage",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "important_valid_months",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "important_coverage",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "important_count_valid_months",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "important_count_coverage",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "arrival_delay_count",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "operated_proxy_count",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "cancelled_count",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "scheduled_count",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "arrival_delay_rate",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "cancellation_rate",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "composite_regularity_rate",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "over_30_delay_count",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "over_30_delay_rate",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "over_60_delay_count",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "over_60_delay_rate",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "low_volume_months",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "monthly_status",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "comparison_context_allowed",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "candidate_route_count",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "eligible_route_count",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "deteriorating_route_count",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "improving_route_count",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "persistent_underperformance_route_count",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "persistent_deterioration_route_count",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "current_arrival_delay_rate",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "current_cancellation_rate",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "current_composite_regularity_rate",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "current_over_30_delay_rate",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "current_over_60_delay_rate",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "previous_arrival_delay_rate",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "previous_cancellation_rate",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "previous_composite_regularity_rate",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "previous_over_30_delay_rate",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "previous_over_60_delay_rate",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "arrival_delay_change_pp",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "deterioration_persistence",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "underperformance_persistence",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "change_signal",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "comparison_status",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "deterioration_rank",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "underperformance_rank",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "published_cause_share",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "published_cause_raw_pct",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "cause_profile_status",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "source_version",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "last_business_month",
+          "state": "Ready",
+          "errorMessage": ""
+        },
+        {
+          "name": "last_import_utc",
+          "state": "Ready",
+          "errorMessage": ""
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "name": "fct_reliability_monthly_dim_route",
+      "fromTable": "fct_reliability_monthly",
+      "toTable": "dim_route",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "name": "fct_reliability_monthly_dim_service",
+      "fromTable": "fct_reliability_monthly",
+      "toTable": "dim_service",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "name": "fct_reliability_monthly_dim_date",
+      "fromTable": "fct_reliability_monthly",
+      "toTable": "dim_date",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "name": "fct_delay_causes_monthly_dim_route",
+      "fromTable": "fct_delay_causes_monthly",
+      "toTable": "dim_route",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "name": "fct_delay_causes_monthly_dim_service",
+      "fromTable": "fct_delay_causes_monthly",
+      "toTable": "dim_service",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "name": "fct_delay_causes_monthly_dim_date",
+      "fromTable": "fct_delay_causes_monthly",
+      "toTable": "dim_date",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "name": "mart_route_trends_dim_route",
+      "fromTable": "mart_route_trends",
+      "toTable": "dim_route",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "name": "mart_route_trends_dim_service",
+      "fromTable": "mart_route_trends",
+      "toTable": "dim_service",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "name": "mart_route_trends_dim_date",
+      "fromTable": "mart_route_trends",
+      "toTable": "dim_date",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "name": "mart_route_priorities_dim_route",
+      "fromTable": "mart_route_priorities",
+      "toTable": "dim_route",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "name": "mart_route_priorities_dim_service",
+      "fromTable": "mart_route_priorities",
+      "toTable": "dim_service",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "name": "mart_route_priorities_dim_comparison",
+      "fromTable": "mart_route_priorities",
+      "toTable": "dim_comparison",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "name": "route_diagnostic_dim_route",
+      "fromTable": "route_diagnostic",
+      "toTable": "dim_route",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "name": "route_diagnostic_dim_service",
+      "fromTable": "route_diagnostic",
+      "toTable": "dim_service",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "name": "route_diagnostic_dim_comparison",
+      "fromTable": "route_diagnostic",
+      "toTable": "dim_comparison",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    },
+    {
+      "name": "causes_category",
+      "fromTable": "fct_delay_causes_monthly",
+      "toTable": "dim_cause",
+      "fromCardinality": "Many",
+      "toCardinality": "One",
+      "crossFilteringBehavior": "OneDirection",
+      "isActive": true
+    }
+  ]
+}

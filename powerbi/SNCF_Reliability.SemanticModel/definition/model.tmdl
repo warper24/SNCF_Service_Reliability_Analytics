@@ -1,0 +1,31 @@
+model Model
+	culture: fr-FR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: fr-FR
+	dataAccessOptions
+		legacyRedirects
+
+annotation PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["dim_date","dim_route","dim_service","dim_cause","fct_reliability_monthly","fct_delay_causes_monthly","mart_route_trends","mart_route_priorities","route_diagnostic","dim_comparison","refresh_metadata","kpi_measures","pProjectId","pBillingProject","pDataset","pExpectedVersion"]
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table dim_date
+ref table dim_route
+ref table dim_service
+ref table dim_cause
+ref table fct_reliability_monthly
+ref table fct_delay_causes_monthly
+ref table mart_route_trends
+ref table mart_route_priorities
+ref table route_diagnostic
+ref table dim_comparison
+ref table refresh_metadata
+ref table kpi_measures
+
+ref cultureInfo fr-FR
+
