@@ -2,7 +2,7 @@
 
 Date du plan : 9 septembre 2026.
 
-Dernière révision : 13 octobre 2026 — clôture analytique de J06 : diagnostic, deux listes de priorités, sensibilité et recommandations qualifiés. Révision pédagogique et du stockage discutée le 28 septembre 2026 et intégrée le 1er octobre 2026 après validation du porteur du projet.
+Dernière révision : 22 octobre 2026 — clôture J08 : rapport Power BI, parcours de décision, captures, PDF et synthèse qualifiés. Révision pédagogique et du stockage discutée le 28 septembre 2026 et intégrée le 1er octobre 2026 après validation du porteur du projet.
 
 Ce document sert de référence aux prochaines conversations adossées au dépôt. **Une conversation = un jalon.** Il décrit le travail à réaliser ; sa présence ne signifie pas que les jalons sont implémentés ou validés.
 
@@ -370,7 +370,7 @@ Le dictionnaire des KPI devra préciser, pour chacun : question métier, formule
 
 | J07 | Modèle Power BI, Power Query et DAX | J06 | Terminé le 22 octobre 2026 — 12 tables Import, 57 mesures, 6 286 contrôles SQL/DAX réussis, expérience de cache et réouverture Desktop vérifiées |
 
-| J08 | Rapport Power BI et storytelling | J07 | À réaliser |
+| J08 | Rapport Power BI et storytelling | J07 | Terminé le 22 octobre 2026 — quatre pages métier, 74 mesures, 1 405 contrôles J08 et 6 321 contrôles de réconciliation réussis ; interactions Desktop et PDF inspectés |
 
 | J09 | Exécution complète et contrôles automatiques | J08 | À réaliser |
 
@@ -768,7 +768,7 @@ Les chemins des sections suivantes sont relatifs à la racine du dépôt. Ils d�
 
 ### J07 — Modèle Power BI, Power Query et DAX
 
-**État au 22 octobre 2026 : terminé avec limites explicites.** Implémentation autorisée le 16 octobre (« ok tu peux implémenter le jalon »). Le PBIP comporte 12 tables Import, 16 relations simples, 57 mesures et trois pages techniques de contrôle. Qualification du 21 octobre : 6 286 contrôles réussis ; 29 sélections temporelles/cas limites, 232 comparaisons, 726 parts de causes et rangs J06 réconciliés. L'expérience BigQuery 1→2 démontre la conservation de 1 avant actualisation, puis l'import de 2. Réouverture Desktop et 37 tests Python locaux vérifiés le 22 octobre. Les données et réserves D01–D07 restent inchangées ; aucun taux national ni effectif par cause. Cache actif hors OneDrive, définitions et preuves anonymisées seules dans Git. Voir [le modèle](docs/powerbi_model.md), [la réconciliation](reports/sql_powerbi_reconciliation.md) et [le bilan J07](docs/milestones/J07_handoff.md). J08 n'est pas engagé.
+**État au 22 octobre 2026 : terminé avec limites explicites.** Implémentation autorisée le 16 octobre (« ok tu peux implémenter le jalon »). Le PBIP comporte 12 tables Import, 16 relations simples, 57 mesures et trois pages techniques de contrôle. Qualification du 21 octobre : 6 286 contrôles réussis ; 29 sélections temporelles/cas limites, 232 comparaisons, 726 parts de causes et rangs J06 réconciliés. L'expérience BigQuery 1→2 démontre la conservation de 1 avant actualisation, puis l'import de 2. Réouverture Desktop et 37 tests Python locaux vérifiés le 22 octobre. Les données et réserves D01–D07 restent inchangées ; aucun taux national ni effectif par cause. Cache actif hors OneDrive, définitions et preuves anonymisées seules dans Git. Voir [le modèle](docs/powerbi_model.md), [la réconciliation](reports/sql_powerbi_reconciliation.md) et [le bilan J07](docs/milestones/J07_handoff.md). J08 complète ensuite cette base ; voir son état ci-dessous.
 
 **Objectif.** Construire un modèle sémantique correct sous les différents filtres et réconcilié avec SQL.
 
@@ -809,6 +809,8 @@ Les chemins des sections suivantes sont relatifs à la racine du dépôt. Ils d�
 **Risques et erreurs à éviter.** Relations ambiguës, moyennes implicites, calculs DAX non testés sous filtre et mesures de faits répétées par cause. Le format PBIP étant documenté en préversion au moment du plan, vérifier sa compatibilité et prévoir un PBIX de livraison si nécessaire.
 
 ### J08 — Rapport Power BI et parcours de décision
+
+**État au 22 octobre 2026 : terminé avec limites explicites.** Implémentation autorisée après présentation par « ok tu as mon accord pour l'implémentation, go ». Quatre pages métier et trois contrôles J07 masqués, navigation/drillthrough et filtres isolés ; 12 tables Import, 16 relations et 74 mesures, dont les 57 expressions J07 inchangées. Qualification : 1 405 contrôles J08, 6 321 contrôles de réconciliation et 37 tests Python réussis. Export natif de quatre pages et captures inspectés ; synthèse et guide accessibles sans compte. Source et réserves D01–D07 inchangées. Pas de Service ni d'actualisation planifiée. Voir [le guide](docs/dashboard_guide.md), [le PDF](reports/dashboard.pdf), [la synthèse](reports/executive_summary.md) et [le bilan J08](docs/milestones/J08_handoff.md). J09 n'est pas engagé.
 
 **Objectif.** Permettre de passer d'un constat à une priorité puis à une investigation justifiée.
 

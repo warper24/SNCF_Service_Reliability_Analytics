@@ -1,0 +1,223 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "ed0d8ef7384bcabbf984",
+  "displayName": "Liaisons prioritaires",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#F3F6FA'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "Filter9482d475960a3c253eb0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_service"
+              }
+            },
+            "Property": "service_type"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dim_service",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "service_type"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'National'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "7941e1425441703eadbb",
+      "target": "43ca46d59469843b8096",
+      "type": "NoFilter"
+    },
+    {
+      "source": "7941e1425441703eadbb",
+      "target": "d8805d674e9012182aca",
+      "type": "NoFilter"
+    },
+    {
+      "source": "7941e1425441703eadbb",
+      "target": "ecdec229b14110390529",
+      "type": "NoFilter"
+    },
+    {
+      "source": "7941e1425441703eadbb",
+      "target": "0bfb91a6191997ccb899",
+      "type": "NoFilter"
+    },
+    {
+      "source": "7941e1425441703eadbb",
+      "target": "d606625613d07d4f9f81",
+      "type": "NoFilter"
+    },
+    {
+      "source": "7941e1425441703eadbb",
+      "target": "8ee4a16f692bb7dbc3a2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "7941e1425441703eadbb",
+      "target": "c844cae4ea3438b21a51",
+      "type": "NoFilter"
+    },
+    {
+      "source": "7941e1425441703eadbb",
+      "target": "219d7cb6b14fb00faae6",
+      "type": "NoFilter"
+    },
+    {
+      "source": "7941e1425441703eadbb",
+      "target": "73772983acd132e6e35e",
+      "type": "NoFilter"
+    },
+    {
+      "source": "7941e1425441703eadbb",
+      "target": "462df03b524e5c50c836",
+      "type": "NoFilter"
+    },
+    {
+      "source": "7941e1425441703eadbb",
+      "target": "df6c66fbc7d4d3a2ad1e",
+      "type": "NoFilter"
+    },
+    {
+      "source": "7941e1425441703eadbb",
+      "target": "6d073713ae546885ae96",
+      "type": "NoFilter"
+    },
+    {
+      "source": "7941e1425441703eadbb",
+      "target": "f869004b7e7475bef6f0",
+      "type": "NoFilter"
+    },
+    {
+      "source": "df6c66fbc7d4d3a2ad1e",
+      "target": "43ca46d59469843b8096",
+      "type": "NoFilter"
+    },
+    {
+      "source": "df6c66fbc7d4d3a2ad1e",
+      "target": "d8805d674e9012182aca",
+      "type": "NoFilter"
+    },
+    {
+      "source": "df6c66fbc7d4d3a2ad1e",
+      "target": "ecdec229b14110390529",
+      "type": "NoFilter"
+    },
+    {
+      "source": "df6c66fbc7d4d3a2ad1e",
+      "target": "0bfb91a6191997ccb899",
+      "type": "NoFilter"
+    },
+    {
+      "source": "df6c66fbc7d4d3a2ad1e",
+      "target": "d606625613d07d4f9f81",
+      "type": "NoFilter"
+    },
+    {
+      "source": "df6c66fbc7d4d3a2ad1e",
+      "target": "8ee4a16f692bb7dbc3a2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "df6c66fbc7d4d3a2ad1e",
+      "target": "c844cae4ea3438b21a51",
+      "type": "NoFilter"
+    },
+    {
+      "source": "df6c66fbc7d4d3a2ad1e",
+      "target": "219d7cb6b14fb00faae6",
+      "type": "NoFilter"
+    },
+    {
+      "source": "df6c66fbc7d4d3a2ad1e",
+      "target": "73772983acd132e6e35e",
+      "type": "NoFilter"
+    },
+    {
+      "source": "df6c66fbc7d4d3a2ad1e",
+      "target": "462df03b524e5c50c836",
+      "type": "NoFilter"
+    },
+    {
+      "source": "df6c66fbc7d4d3a2ad1e",
+      "target": "7941e1425441703eadbb",
+      "type": "NoFilter"
+    },
+    {
+      "source": "df6c66fbc7d4d3a2ad1e",
+      "target": "6d073713ae546885ae96",
+      "type": "NoFilter"
+    },
+    {
+      "source": "df6c66fbc7d4d3a2ad1e",
+      "target": "f869004b7e7475bef6f0",
+      "type": "NoFilter"
+    }
+  ]
+}

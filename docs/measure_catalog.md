@@ -1,6 +1,6 @@
-# Catalogue des mesures J07
+# Catalogue des mesures J07 et présentation J08
 
-Les 57 mesures explicites sont définies dans `powerbi/SNCF_Reliability.SemanticModel/definition/tables/kpi_measures.tmdl`. Ce catalogue décrit leur intention ; la preuve de qualification est dans le rapport SQL/Power BI. Les noms techniques restent en anglais, les descriptions en français.
+Les 57 mesures J07 et 17 mesures de présentation J08 (74 au total) sont définies dans `powerbi/SNCF_Reliability.SemanticModel/definition/tables/kpi_measures.tmdl`. Ce catalogue décrit leur intention ; la preuve de qualification est dans le rapport SQL/Power BI. Les noms techniques restent en anglais, les descriptions en français.
 
 BLANK signifie indisponible. Les gardes masquées protègent les mesures visibles. Les taux sont stockés en proportion 0–1 et affichés en pourcentage ; les écarts sont en points. Aucune agrégation interliaisons/services de trains ni moyenne des causes.
 
@@ -572,4 +572,209 @@ Provenance de la copie importée ; indépendante des sélections métier.
 
 ```dax
 SELECTEDVALUE(refresh_metadata[imported_at_utc])
+```
+
+## Compléments de présentation J08
+
+Les 57 expressions J07 restent identiques au commit `10b1808`. Les compléments
+ci-dessous exposent les résultats qualifiés et leur contexte ; aucun nouveau
+score, population ou classement n’est créé. Dossier : `Rapport J08`.
+
+### `dashboard_comparison_label`
+
+Fenêtre fixe et populations de référence.
+
+Format : `texte`.
+
+```dax
+SWITCH(SELECTEDVALUE(dim_comparison[comparison_id]), "2026_h1_vs_2025_h1", "Janvier–juin 2026 / janvier–juin 2025", "2025_vs_2024", "Année 2025 / année 2024", "Choisir une comparaison unique")
+```
+
+### `dashboard_coverage_label`
+
+Couverture des candidats ; ne compte pas des trains.
+
+Format : `texte`.
+
+```dax
+IF([comparison_context_allowed], FORMAT([eligible_route_count], "0") & " / " & FORMAT([candidate_route_count], "0") & " liaisons/service éligibles")
+```
+
+### `dashboard_excluded_count`
+
+Candidats non éligibles ; motifs susceptibles de se recouvrir.
+
+Format : `0`.
+
+```dax
+IF([comparison_context_allowed], [candidate_route_count] - [eligible_route_count])
+```
+
+### `dashboard_below_threshold_count`
+
+Variation sous le seuil du projet ; aucune stabilité statistique affirmée.
+
+Format : `0`.
+
+```dax
+IF([comparison_context_allowed], CALCULATE(COUNTROWS(mart_route_priorities), KEEPFILTERS(mart_route_priorities[change_signal] = "below_project_threshold")))
+```
+
+### `dashboard_current_l`
+
+Retards publiés, fenêtre fixe et liaison/service uniques, couverture valide complète.
+
+Format : `#,0`.
+
+```dax
+IF([comparison_context_allowed] && [single_route_service] && SELECTEDVALUE(mart_route_priorities[current_arrival_valid_months]) = SELECTEDVALUE(dim_comparison[expected_months]), SELECTEDVALUE(mart_route_priorities[current_arrival_numerator]))
+```
+
+### `dashboard_current_n`
+
+Circulations déduites non certifiées D01 ; même garde que le taux courant.
+
+Format : `#,0`.
+
+```dax
+IF([comparison_context_allowed] && [single_route_service] && SELECTEDVALUE(mart_route_priorities[current_arrival_valid_months]) = SELECTEDVALUE(dim_comparison[expected_months]), SELECTEDVALUE(mart_route_priorities[current_arrival_denominator]))
+```
+
+### `dashboard_deterioration_months`
+
+Nombre de mois en hausse selon la règle SQL ; annuel indisponible.
+
+Format : `0`.
+
+```dax
+IF([comparison_context_allowed] && [single_route_service] && SELECTEDVALUE(dim_comparison[persistence_applicable], FALSE()) && SELECTEDVALUE(mart_route_priorities[is_comparison_eligible], FALSE()), SELECTEDVALUE(mart_route_priorities[deterioration_months]))
+```
+
+### `dashboard_underperformance_months`
+
+Nombre de mois sous cible fictive ; annuel indisponible.
+
+Format : `0`.
+
+```dax
+IF([comparison_context_allowed] && [single_route_service] && SELECTEDVALUE(dim_comparison[persistence_applicable], FALSE()) && SELECTEDVALUE(mart_route_priorities[is_comparison_eligible], FALSE()), SELECTEDVALUE(mart_route_priorities[underperformance_months]))
+```
+
+### `dashboard_exclusion_reason`
+
+Motifs SQL de non-éligibilité, sans suppression des candidats.
+
+Format : `texte`.
+
+```dax
+IF([comparison_context_allowed] && [single_route_service], IF(SELECTEDVALUE(mart_route_priorities[is_comparison_eligible], FALSE()), "Éligible : couverture complète et N ≥30 chaque mois", COALESCE(SELECTEDVALUE(mart_route_priorities[exclusion_reasons]), "Hors population du classement")))
+```
+
+### `dashboard_route_label`
+
+Contexte de la fiche : sens et service explicites.
+
+Format : `texte`.
+
+```dax
+IF([single_route_service], SELECTEDVALUE(dim_route[route_label]) & " · " & SELECTEDVALUE(dim_service[service_type]) & " | " & [dashboard_comparison_label], "Sélectionner une liaison orientée et un service")
+```
+
+### `dashboard_freshness`
+
+Provenance importée ; heure du SELECT de métadonnées, sans garantie transactionnelle.
+
+Format : `texte`.
+
+```dax
+"Source jusqu'à " & FORMAT([last_business_month], "yyyy-MM") & " | Métadonnées lues : " & FORMAT([last_import_utc], "yyyy-MM-dd HH:mm") & " UTC | Version " & LEFT([source_version], 12)
+```
+
+### `dashboard_cause_status`
+
+Statut du profil mensuel, indépendant de la catégorie de cause.
+
+Format : `texte`.
+
+```dax
+IF([single_route_service] && [complete_month_selection] && HASONEVALUE(dim_date[month]), "Profil " & SELECTEDVALUE(dim_date[month_label]) & " : " & SWITCH(SELECTEDVALUE(fct_delay_causes_monthly[cause_profile_status]), "available", "disponible", "missing", "incomplet", "out_of_bounds", "valeurs hors bornes", "all_zero", "entièrement nul, non exploitable", "sum_warning", "somme hors tolérance, à examiner", "absent"), "Choisir une liaison, un service et un mois")
+```
+
+### `dashboard_investigation`
+
+Piste éditoriale R01–R06 ; bornée à la version et au semestre documentés, sans calcul causal.
+
+Format : `texte`.
+
+```dax
+VAR Route = SELECTEDVALUE(dim_route[route_label])
+VAR Allowed = [single_route_service] && SELECTEDVALUE(dim_service[service_type]) = "National" && SELECTEDVALUE(dim_comparison[comparison_id]) = "2026_h1_vs_2025_h1" && [source_version] = "e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6"
+RETURN IF(NOT Allowed, "Aucune investigation spécifique documentée pour ce contexte.", SWITCH(TRUE(),
+Route = "PARIS LYON → GRENOBLE", "R01 · Demander les événements datés et rapprocher exploitation, gares, matériel et infrastructure. Hypothèse : plusieurs mécanismes possibles. Suivi : L/N, A/P et mois en hausse ; aucune causalité établie.",
+Route = "PARIS MONTPARNASSE → NANTES", "R02 · Examiner préparation et rotations sur des dates documentées. Hypothèse : contraintes répétées possibles, à confronter aux incidents. Suivi : taux, annulations et persistance ; causes mensuelles sans moyenne.",
+CONTAINSSTRING(Route, "DOUAI") && CONTAINSSTRING(Route, "PARIS NORD"), "R03 · Examiner chaque sens séparément puis rapprocher dates et périmètres. Hypothèse commune à vérifier. Suivi : deux séries L/N et A/P, avec leurs volumes et couvertures.",
+CONTAINSSTRING(Route, "STRASBOURG") && CONTAINSSTRING(Route, "NANTES"), "R04 · Vérifier les six paires mensuelles, les volumes et les incidents. Signal sensible au seuil N≥60. Suivi : taux, couverture et éligibilité ; sortie du classement ≠ amélioration.",
+NOT ISBLANK([underperformance_rank]) && [underperformance_rank] <= 5, "R05 · Constituer une fiche d'événements pour cette liaison durablement sous cible. Hypothèse : difficultés récurrentes à documenter. Suivi : régularité mensuelle, mois sous cible, L et N.",
+NOT SELECTEDVALUE(mart_route_priorities[is_comparison_eligible], FALSE()), "R06 · Examiner absences, faibles volumes et changements de périmètre avant réintégration. Suivi : couverture valide et motifs d'exclusion.",
+"Pas de recommandation spécifique J06 : examiner couverture, évolution et événements datés avant de formuler une hypothèse."))
+```
+
+### `dashboard_delay_current_month`
+
+Taux mensuel J07 aligné sur la fenêtre fixe ; mois complets et gardes conservés.
+
+Format : `0.0%`.
+
+```dax
+VAR MonthNumber = SELECTEDVALUE(dim_date[month_number])
+VAR StartDate = SELECTEDVALUE(dim_comparison[current_start])
+VAR EndDate = SELECTEDVALUE(dim_comparison[current_end])
+VAR Allowed = [single_route_service] && HASONEVALUE(dim_comparison[comparison_id]) && NOT ISBLANK(MonthNumber) && NOT ISBLANK(StartDate) && MonthNumber >= MONTH(StartDate) && MonthNumber <= MONTH(EndDate)
+VAR TargetDate = DATE(YEAR(StartDate), COALESCE(MonthNumber, 1), 1)
+RETURN IF(Allowed, CALCULATE([arrival_delay_rate], REMOVEFILTERS(dim_date), DATESBETWEEN(dim_date[date_key], TargetDate, EOMONTH(TargetDate, 0))))
+```
+
+### `dashboard_delay_previous_month`
+
+Taux mensuel J07 aligné sur la fenêtre fixe ; mois complets et gardes conservés.
+
+Format : `0.0%`.
+
+```dax
+VAR MonthNumber = SELECTEDVALUE(dim_date[month_number])
+VAR StartDate = SELECTEDVALUE(dim_comparison[previous_start])
+VAR EndDate = SELECTEDVALUE(dim_comparison[previous_end])
+VAR Allowed = [single_route_service] && HASONEVALUE(dim_comparison[comparison_id]) && NOT ISBLANK(MonthNumber) && NOT ISBLANK(StartDate) && MonthNumber >= MONTH(StartDate) && MonthNumber <= MONTH(EndDate)
+VAR TargetDate = DATE(YEAR(StartDate), COALESCE(MonthNumber, 1), 1)
+RETURN IF(Allowed, CALCULATE([arrival_delay_rate], REMOVEFILTERS(dim_date), DATESBETWEEN(dim_date[date_key], TargetDate, EOMONTH(TargetDate, 0))))
+```
+
+### `dashboard_cancellation_current_month`
+
+Taux mensuel J07 aligné sur la fenêtre fixe ; mois complets et gardes conservés.
+
+Format : `0.0%`.
+
+```dax
+VAR MonthNumber = SELECTEDVALUE(dim_date[month_number])
+VAR StartDate = SELECTEDVALUE(dim_comparison[current_start])
+VAR EndDate = SELECTEDVALUE(dim_comparison[current_end])
+VAR Allowed = [single_route_service] && HASONEVALUE(dim_comparison[comparison_id]) && NOT ISBLANK(MonthNumber) && NOT ISBLANK(StartDate) && MonthNumber >= MONTH(StartDate) && MonthNumber <= MONTH(EndDate)
+VAR TargetDate = DATE(YEAR(StartDate), COALESCE(MonthNumber, 1), 1)
+RETURN IF(Allowed, CALCULATE([cancellation_rate], REMOVEFILTERS(dim_date), DATESBETWEEN(dim_date[date_key], TargetDate, EOMONTH(TargetDate, 0))))
+```
+
+### `dashboard_cancellation_previous_month`
+
+Taux mensuel J07 aligné sur la fenêtre fixe ; mois complets et gardes conservés.
+
+Format : `0.0%`.
+
+```dax
+VAR MonthNumber = SELECTEDVALUE(dim_date[month_number])
+VAR StartDate = SELECTEDVALUE(dim_comparison[previous_start])
+VAR EndDate = SELECTEDVALUE(dim_comparison[previous_end])
+VAR Allowed = [single_route_service] && HASONEVALUE(dim_comparison[comparison_id]) && NOT ISBLANK(MonthNumber) && NOT ISBLANK(StartDate) && MonthNumber >= MONTH(StartDate) && MonthNumber <= MONTH(EndDate)
+VAR TargetDate = DATE(YEAR(StartDate), COALESCE(MonthNumber, 1), 1)
+RETURN IF(Allowed, CALCULATE([cancellation_rate], REMOVEFILTERS(dim_date), DATESBETWEEN(dim_date[date_key], TargetDate, EOMONTH(TargetDate, 0))))
 ```

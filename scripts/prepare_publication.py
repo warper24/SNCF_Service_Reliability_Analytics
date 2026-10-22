@@ -7,7 +7,7 @@ from pathlib import Path
 import re
 
 REPO = Path(__file__).resolve().parents[1]
-GROUPS = ("audit_evidence", "ingestion_evidence", "data_quality_evidence", "data_model_evidence", "diagnostic_evidence", "powerbi_evidence")
+GROUPS = ("audit_evidence", "ingestion_evidence", "data_quality_evidence", "data_model_evidence", "diagnostic_evidence", "powerbi_evidence", "dashboard_evidence")
 # Journal Windows identifié à J06 : conversion de la copie, original intact.
 LEGACY_ENCODINGS = {("diagnostic_evidence", "compile.txt"): "cp1252"}
 USER_PATH = re.compile(r"([A-Za-z]:[\\/]+Users[\\/]+)([^\\/\r\n\"<>]+)")

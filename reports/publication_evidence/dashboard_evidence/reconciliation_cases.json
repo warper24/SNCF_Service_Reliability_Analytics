@@ -1,0 +1,288 @@
+[
+  {
+    "route_key": "fb393e3cfbf604a0733373c1683c63419adcd1e7512dd4c8710e6cc37e4e9c0f",
+    "service_key": "93202df2ec7081b28b47901b5c287a5a14c64d3834d2dfef64e198ca948c3d6e",
+    "departure_station": "DIJON VILLE",
+    "arrival_station": "PARIS LYON",
+    "service_type": "International",
+    "start": "2025-01-01",
+    "end": "2025-01-01",
+    "case_id": "period_00"
+  },
+  {
+    "route_key": "fb393e3cfbf604a0733373c1683c63419adcd1e7512dd4c8710e6cc37e4e9c0f",
+    "service_key": "93202df2ec7081b28b47901b5c287a5a14c64d3834d2dfef64e198ca948c3d6e",
+    "departure_station": "DIJON VILLE",
+    "arrival_station": "PARIS LYON",
+    "service_type": "International",
+    "start": "2025-01-01",
+    "end": "2025-06-01",
+    "case_id": "period_01"
+  },
+  {
+    "route_key": "fb393e3cfbf604a0733373c1683c63419adcd1e7512dd4c8710e6cc37e4e9c0f",
+    "service_key": "93202df2ec7081b28b47901b5c287a5a14c64d3834d2dfef64e198ca948c3d6e",
+    "departure_station": "DIJON VILLE",
+    "arrival_station": "PARIS LYON",
+    "service_type": "International",
+    "start": "2026-01-01",
+    "end": "2026-06-01",
+    "case_id": "period_02"
+  },
+  {
+    "route_key": "fb393e3cfbf604a0733373c1683c63419adcd1e7512dd4c8710e6cc37e4e9c0f",
+    "service_key": "93202df2ec7081b28b47901b5c287a5a14c64d3834d2dfef64e198ca948c3d6e",
+    "departure_station": "DIJON VILLE",
+    "arrival_station": "PARIS LYON",
+    "service_type": "International",
+    "start": "2025-01-01",
+    "end": "2025-12-01",
+    "case_id": "period_03"
+  },
+  {
+    "route_key": "fb393e3cfbf604a0733373c1683c63419adcd1e7512dd4c8710e6cc37e4e9c0f",
+    "service_key": "93202df2ec7081b28b47901b5c287a5a14c64d3834d2dfef64e198ca948c3d6e",
+    "departure_station": "DIJON VILLE",
+    "arrival_station": "PARIS LYON",
+    "service_type": "International",
+    "start": "2026-07-01",
+    "end": "2026-12-01",
+    "case_id": "period_04"
+  },
+  {
+    "route_key": "fb393e3cfbf604a0733373c1683c63419adcd1e7512dd4c8710e6cc37e4e9c0f",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "DIJON VILLE",
+    "arrival_station": "PARIS LYON",
+    "service_type": "National",
+    "start": "2025-01-01",
+    "end": "2025-01-01",
+    "case_id": "period_05"
+  },
+  {
+    "route_key": "fb393e3cfbf604a0733373c1683c63419adcd1e7512dd4c8710e6cc37e4e9c0f",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "DIJON VILLE",
+    "arrival_station": "PARIS LYON",
+    "service_type": "National",
+    "start": "2025-01-01",
+    "end": "2025-06-01",
+    "case_id": "period_06"
+  },
+  {
+    "route_key": "fb393e3cfbf604a0733373c1683c63419adcd1e7512dd4c8710e6cc37e4e9c0f",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "DIJON VILLE",
+    "arrival_station": "PARIS LYON",
+    "service_type": "National",
+    "start": "2026-01-01",
+    "end": "2026-06-01",
+    "case_id": "period_07"
+  },
+  {
+    "route_key": "fb393e3cfbf604a0733373c1683c63419adcd1e7512dd4c8710e6cc37e4e9c0f",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "DIJON VILLE",
+    "arrival_station": "PARIS LYON",
+    "service_type": "National",
+    "start": "2025-01-01",
+    "end": "2025-12-01",
+    "case_id": "period_08"
+  },
+  {
+    "route_key": "fb393e3cfbf604a0733373c1683c63419adcd1e7512dd4c8710e6cc37e4e9c0f",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "DIJON VILLE",
+    "arrival_station": "PARIS LYON",
+    "service_type": "National",
+    "start": "2026-07-01",
+    "end": "2026-12-01",
+    "case_id": "period_09"
+  },
+  {
+    "route_key": "c258a364ac8a46a47e22589e658c0d2d6314d7e6ec6b4d271a80de653107b368",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "GRENOBLE",
+    "arrival_station": "PARIS LYON",
+    "service_type": "National",
+    "start": "2025-01-01",
+    "end": "2025-01-01",
+    "case_id": "period_10"
+  },
+  {
+    "route_key": "c258a364ac8a46a47e22589e658c0d2d6314d7e6ec6b4d271a80de653107b368",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "GRENOBLE",
+    "arrival_station": "PARIS LYON",
+    "service_type": "National",
+    "start": "2025-01-01",
+    "end": "2025-06-01",
+    "case_id": "period_11"
+  },
+  {
+    "route_key": "c258a364ac8a46a47e22589e658c0d2d6314d7e6ec6b4d271a80de653107b368",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "GRENOBLE",
+    "arrival_station": "PARIS LYON",
+    "service_type": "National",
+    "start": "2026-01-01",
+    "end": "2026-06-01",
+    "case_id": "period_12"
+  },
+  {
+    "route_key": "c258a364ac8a46a47e22589e658c0d2d6314d7e6ec6b4d271a80de653107b368",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "GRENOBLE",
+    "arrival_station": "PARIS LYON",
+    "service_type": "National",
+    "start": "2025-01-01",
+    "end": "2025-12-01",
+    "case_id": "period_13"
+  },
+  {
+    "route_key": "c258a364ac8a46a47e22589e658c0d2d6314d7e6ec6b4d271a80de653107b368",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "GRENOBLE",
+    "arrival_station": "PARIS LYON",
+    "service_type": "National",
+    "start": "2026-07-01",
+    "end": "2026-12-01",
+    "case_id": "period_14"
+  },
+  {
+    "route_key": "0ca0e7df6e8cd00f3b0650cdbf204c2e8252650672c42ff2d56f010bcf4a8aed",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "start": "2025-01-01",
+    "end": "2025-01-01",
+    "case_id": "period_15"
+  },
+  {
+    "route_key": "0ca0e7df6e8cd00f3b0650cdbf204c2e8252650672c42ff2d56f010bcf4a8aed",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "start": "2025-01-01",
+    "end": "2025-06-01",
+    "case_id": "period_16"
+  },
+  {
+    "route_key": "0ca0e7df6e8cd00f3b0650cdbf204c2e8252650672c42ff2d56f010bcf4a8aed",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "start": "2026-01-01",
+    "end": "2026-06-01",
+    "case_id": "period_17"
+  },
+  {
+    "route_key": "0ca0e7df6e8cd00f3b0650cdbf204c2e8252650672c42ff2d56f010bcf4a8aed",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "start": "2025-01-01",
+    "end": "2025-12-01",
+    "case_id": "period_18"
+  },
+  {
+    "route_key": "0ca0e7df6e8cd00f3b0650cdbf204c2e8252650672c42ff2d56f010bcf4a8aed",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "start": "2026-07-01",
+    "end": "2026-12-01",
+    "case_id": "period_19"
+  },
+  {
+    "route_key": "e4998a4fdbc1cdc41e12b20e0c96e2bbc1ec78c0e7ca1a670bf892b150c5c334",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "STRASBOURG",
+    "arrival_station": "NANTES",
+    "service_type": "National",
+    "start": "2025-01-01",
+    "end": "2025-01-01",
+    "case_id": "period_20"
+  },
+  {
+    "route_key": "e4998a4fdbc1cdc41e12b20e0c96e2bbc1ec78c0e7ca1a670bf892b150c5c334",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "STRASBOURG",
+    "arrival_station": "NANTES",
+    "service_type": "National",
+    "start": "2025-01-01",
+    "end": "2025-06-01",
+    "case_id": "period_21"
+  },
+  {
+    "route_key": "e4998a4fdbc1cdc41e12b20e0c96e2bbc1ec78c0e7ca1a670bf892b150c5c334",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "STRASBOURG",
+    "arrival_station": "NANTES",
+    "service_type": "National",
+    "start": "2026-01-01",
+    "end": "2026-06-01",
+    "case_id": "period_22"
+  },
+  {
+    "route_key": "e4998a4fdbc1cdc41e12b20e0c96e2bbc1ec78c0e7ca1a670bf892b150c5c334",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "STRASBOURG",
+    "arrival_station": "NANTES",
+    "service_type": "National",
+    "start": "2025-01-01",
+    "end": "2025-12-01",
+    "case_id": "period_23"
+  },
+  {
+    "route_key": "e4998a4fdbc1cdc41e12b20e0c96e2bbc1ec78c0e7ca1a670bf892b150c5c334",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "STRASBOURG",
+    "arrival_station": "NANTES",
+    "service_type": "National",
+    "start": "2026-07-01",
+    "end": "2026-12-01",
+    "case_id": "period_24"
+  },
+  {
+    "route_key": "015464c18e789edfa4bdbe540832d52ab136de44c5f036697ae0ca5ec02c9057",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "month": "2026-09-01",
+    "edge_type": "low_volume",
+    "case_id": "low_volume",
+    "start": "2026-09-01",
+    "end": "2026-09-01"
+  },
+  {
+    "route_key": "4f422c9e3f8e5fc9b9019df18d790b8e33d1dc8b85617735a2ef17ab13e0ae95",
+    "service_key": "93202df2ec7081b28b47901b5c287a5a14c64d3834d2dfef64e198ca948c3d6e",
+    "month": "2020-06-01",
+    "edge_type": "null_population",
+    "case_id": "null_population",
+    "start": "2020-06-01",
+    "end": "2020-06-01"
+  },
+  {
+    "route_key": "4f422c9e3f8e5fc9b9019df18d790b8e33d1dc8b85617735a2ef17ab13e0ae95",
+    "service_key": "93202df2ec7081b28b47901b5c287a5a14c64d3834d2dfef64e198ca948c3d6e",
+    "month": "2020-12-01",
+    "edge_type": "zero_denominator",
+    "case_id": "zero_denominator",
+    "start": "2020-12-01",
+    "end": "2020-12-01"
+  },
+  {
+    "route_key": "d00bc5477baff529ca2f9dc1bcd064b20484ccec7474f8bcc0f235cc25569c5f",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "month": "2026-03-01",
+    "edge_type": "zero_rate",
+    "case_id": "zero_rate",
+    "start": "2026-03-01",
+    "end": "2026-03-01"
+  }
+]

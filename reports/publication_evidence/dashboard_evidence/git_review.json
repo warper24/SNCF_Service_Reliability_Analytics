@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "scope": "Tous les fichiers indexes J08, avant commit ; les binaires PDF/PNG font l’objet de la revue PDF separee.",
+  "staged_files_reviewed": 144,
+  "staged_json_parsed": 108,
+  "staged_bytes": 7401440,
+  "secret_and_personal_profile_patterns": 0,
+  "excluded_cache_identity_source_files": 0,
+  "markdown_local_links_missing": 0,
+  "historical_public_manifest_entries_unchanged": 85,
+  "historical_proofs_renewed": false,
+  "reviewed_categories": [
+    "Definitions Power BI et theme",
+    "PDF natif et quatre rendus publics",
+    "Code et documentation du jalon",
+    "Resultats de controles, revues et manifestes anonymises"
+  ],
+  "note": "Ce compte exclut ce compte rendu et la mise a jour ulterieure de son manifeste global ; ces fichiers sont controles par une seconde lecture avant commit."
+}

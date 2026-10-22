@@ -1,0 +1,31 @@
+{
+  "name": "SNCF Reliability · J08",
+  "dataColors": [
+    "#1C4E80",
+    "#A45B08",
+    "#087E82",
+    "#8396A8",
+    "#8764A4",
+    "#516348"
+  ],
+  "background": "#F3F6FA",
+  "foreground": "#152C43",
+  "tableAccent": "#1C4E80",
+  "textClasses": {
+    "title": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 14,
+      "color": "#152C43"
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 11,
+      "color": "#152C43"
+    },
+    "callout": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 30,
+      "color": "#1C4E80"
+    }
+  }
+}

@@ -1,0 +1,298 @@
+[
+  {
+    "Name": "single_route_service",
+    "Expression": "HASONEVALUE(dim_route[route_key]) && HASONEVALUE(dim_service[service_key])"
+  },
+  {
+    "Name": "complete_month_selection",
+    "Expression": "COUNTROWS(dim_date) > 0 && COUNTROWS(dim_date) = SUMX(VALUES(dim_date[month]), DAY(EOMONTH(dim_date[month], 0)))"
+  },
+  {
+    "Name": "monthly_context_allowed",
+    "Expression": "[single_route_service] && [complete_month_selection] && NOT ISFILTERED(dim_cause)"
+  },
+  {
+    "Name": "expected_months",
+    "Expression": "IF([monthly_context_allowed], COUNTROWS(VALUES(dim_date[month])))"
+  },
+  {
+    "Name": "observed_months",
+    "Expression": "IF([monthly_context_allowed], COALESCE(DISTINCTCOUNT(fct_reliability_monthly[month]), 0))"
+  },
+  {
+    "Name": "observation_coverage",
+    "Expression": "DIVIDE([observed_months], [expected_months])"
+  },
+  {
+    "Name": "arrival_valid_months",
+    "Expression": "IF([monthly_context_allowed], COALESCE(CALCULATE(DISTINCTCOUNT(fct_reliability_monthly[month]), KEEPFILTERS(fct_reliability_monthly[is_arrival_delay_rate_usable] = TRUE())), 0))"
+  },
+  {
+    "Name": "arrival_coverage",
+    "Expression": "DIVIDE([arrival_valid_months], [expected_months])"
+  },
+  {
+    "Name": "cancellation_valid_months",
+    "Expression": "IF([monthly_context_allowed], COALESCE(CALCULATE(DISTINCTCOUNT(fct_reliability_monthly[month]), KEEPFILTERS(fct_reliability_monthly[is_cancellation_rate_usable] = TRUE())), 0))"
+  },
+  {
+    "Name": "cancellation_coverage",
+    "Expression": "DIVIDE([cancellation_valid_months], [expected_months])"
+  },
+  {
+    "Name": "important_valid_months",
+    "Expression": "IF([monthly_context_allowed], COALESCE(CALCULATE(DISTINCTCOUNT(fct_reliability_monthly[month]), KEEPFILTERS(fct_reliability_monthly[is_important_delay_rate_usable] = TRUE())), 0))"
+  },
+  {
+    "Name": "important_coverage",
+    "Expression": "DIVIDE([important_valid_months], [expected_months])"
+  },
+  {
+    "Name": "important_count_valid_months",
+    "Expression": "IF([monthly_context_allowed], COALESCE(CALCULATE(DISTINCTCOUNT(fct_reliability_monthly[month]), KEEPFILTERS(fct_reliability_monthly[is_important_delay_count_usable] = TRUE())), 0))"
+  },
+  {
+    "Name": "important_count_coverage",
+    "Expression": "DIVIDE([important_count_valid_months], [expected_months])"
+  },
+  {
+    "Name": "arrival_delay_count",
+    "Expression": "IF([monthly_context_allowed] && [arrival_valid_months] = [expected_months], CALCULATE(SUM(fct_reliability_monthly[arrival_delayed_trains]), KEEPFILTERS(fct_reliability_monthly[is_arrival_delay_rate_usable] = TRUE())))"
+  },
+  {
+    "Name": "operated_proxy_count",
+    "Expression": "IF([monthly_context_allowed] && [arrival_valid_months] = [expected_months], CALCULATE(SUM(fct_reliability_monthly[operated_trains_proxy]), KEEPFILTERS(fct_reliability_monthly[is_arrival_delay_rate_usable] = TRUE())))"
+  },
+  {
+    "Name": "cancelled_count",
+    "Expression": "IF([monthly_context_allowed] && [cancellation_valid_months] = [expected_months], CALCULATE(SUM(fct_reliability_monthly[cancelled_trains]), KEEPFILTERS(fct_reliability_monthly[is_cancellation_rate_usable] = TRUE())))"
+  },
+  {
+    "Name": "scheduled_count",
+    "Expression": "IF([monthly_context_allowed] && [cancellation_valid_months] = [expected_months], CALCULATE(SUM(fct_reliability_monthly[scheduled_trains]), KEEPFILTERS(fct_reliability_monthly[is_cancellation_rate_usable] = TRUE())))"
+  },
+  {
+    "Name": "arrival_delay_rate",
+    "Expression": "DIVIDE([arrival_delay_count], [operated_proxy_count])"
+  },
+  {
+    "Name": "cancellation_rate",
+    "Expression": "DIVIDE([cancelled_count], [scheduled_count])"
+  },
+  {
+    "Name": "composite_regularity_rate",
+    "Expression": "VAR Rate = [arrival_delay_rate] RETURN IF(NOT ISBLANK(Rate), 1 - Rate)"
+  },
+  {
+    "Name": "over_30_delay_count",
+    "Expression": "IF([monthly_context_allowed], CALCULATE(SUM(fct_reliability_monthly[over_30_delay_count]), KEEPFILTERS(fct_reliability_monthly[is_important_delay_count_usable] = TRUE())))"
+  },
+  {
+    "Name": "over_30_delay_rate",
+    "Expression": "IF([monthly_context_allowed] && [important_valid_months] = [expected_months], DIVIDE(CALCULATE(SUM(fct_reliability_monthly[arrival_delayed_over_30_trains]), KEEPFILTERS(fct_reliability_monthly[is_important_delay_rate_usable] = TRUE())), CALCULATE(SUM(fct_reliability_monthly[operated_trains_proxy]), KEEPFILTERS(fct_reliability_monthly[is_important_delay_rate_usable] = TRUE()))))"
+  },
+  {
+    "Name": "over_60_delay_count",
+    "Expression": "IF([monthly_context_allowed], CALCULATE(SUM(fct_reliability_monthly[over_60_delay_count]), KEEPFILTERS(fct_reliability_monthly[is_important_delay_count_usable] = TRUE())))"
+  },
+  {
+    "Name": "over_60_delay_rate",
+    "Expression": "IF([monthly_context_allowed] && [important_valid_months] = [expected_months], DIVIDE(CALCULATE(SUM(fct_reliability_monthly[arrival_delayed_over_60_trains]), KEEPFILTERS(fct_reliability_monthly[is_important_delay_rate_usable] = TRUE())), CALCULATE(SUM(fct_reliability_monthly[operated_trains_proxy]), KEEPFILTERS(fct_reliability_monthly[is_important_delay_rate_usable] = TRUE()))))"
+  },
+  {
+    "Name": "low_volume_months",
+    "Expression": "IF([monthly_context_allowed], COALESCE(CALCULATE(COUNTROWS(fct_reliability_monthly), KEEPFILTERS(fct_reliability_monthly[central_counts_compatible] = TRUE()), KEEPFILTERS(fct_reliability_monthly[operated_trains_proxy] < 30)), 0))"
+  },
+  {
+    "Name": "monthly_status",
+    "Expression": "SWITCH(TRUE(), NOT [single_route_service], \"Sélectionner une liaison et un service\", NOT [complete_month_selection], \"Sélectionner des mois complets\", ISFILTERED(dim_cause), \"Taux par cause non défini\", [observed_months] < [expected_months], \"Mois absents\", [arrival_valid_months] < [expected_months], \"Taux indisponible : population nulle ou effectifs invalides\", [low_volume_months] > 0, \"Descriptif disponible ; faible volume\", \"Disponible — population déduite non certifiée D01\")"
+  },
+  {
+    "Name": "comparison_context_allowed",
+    "Expression": "HASONEVALUE(dim_comparison[comparison_id]) && NOT ISFILTERED(dim_date) && NOT ISFILTERED(dim_cause)"
+  },
+  {
+    "Name": "candidate_route_count",
+    "Expression": "IF([comparison_context_allowed], COALESCE(CALCULATE(COUNTROWS(mart_route_priorities)), 0))"
+  },
+  {
+    "Name": "eligible_route_count",
+    "Expression": "IF([comparison_context_allowed], COALESCE(CALCULATE(COUNTROWS(mart_route_priorities), KEEPFILTERS(mart_route_priorities[is_comparison_eligible] = TRUE())), 0))"
+  },
+  {
+    "Name": "deteriorating_route_count",
+    "Expression": "IF([comparison_context_allowed], COALESCE(CALCULATE(COUNTROWS(mart_route_priorities), KEEPFILTERS(mart_route_priorities[change_signal] = \"deterioration\")), 0))"
+  },
+  {
+    "Name": "improving_route_count",
+    "Expression": "IF([comparison_context_allowed], COALESCE(CALCULATE(COUNTROWS(mart_route_priorities), KEEPFILTERS(mart_route_priorities[change_signal] = \"improvement\")), 0))"
+  },
+  {
+    "Name": "persistent_underperformance_route_count",
+    "Expression": "IF([comparison_context_allowed] && SELECTEDVALUE(dim_comparison[persistence_applicable], FALSE()), COALESCE(CALCULATE(COUNTROWS(mart_route_priorities), KEEPFILTERS(mart_route_priorities[is_underperformance_persistent] = TRUE())), 0))"
+  },
+  {
+    "Name": "persistent_deterioration_route_count",
+    "Expression": "IF([comparison_context_allowed] && SELECTEDVALUE(dim_comparison[persistence_applicable], FALSE()), COALESCE(CALCULATE(COUNTROWS(mart_route_priorities), KEEPFILTERS(mart_route_priorities[is_deterioration_persistent] = TRUE())), 0))"
+  },
+  {
+    "Name": "current_arrival_delay_rate",
+    "Expression": "IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[current_arrival_delay_rate]))"
+  },
+  {
+    "Name": "current_cancellation_rate",
+    "Expression": "IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[current_cancellation_rate]))"
+  },
+  {
+    "Name": "current_composite_regularity_rate",
+    "Expression": "IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[current_composite_regularity_rate]))"
+  },
+  {
+    "Name": "current_over_30_delay_rate",
+    "Expression": "IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[current_over_30_delay_rate]))"
+  },
+  {
+    "Name": "current_over_60_delay_rate",
+    "Expression": "IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[current_over_60_delay_rate]))"
+  },
+  {
+    "Name": "previous_arrival_delay_rate",
+    "Expression": "IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[previous_arrival_delay_rate]))"
+  },
+  {
+    "Name": "previous_cancellation_rate",
+    "Expression": "IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[previous_cancellation_rate]))"
+  },
+  {
+    "Name": "previous_composite_regularity_rate",
+    "Expression": "IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[previous_composite_regularity_rate]))"
+  },
+  {
+    "Name": "previous_over_30_delay_rate",
+    "Expression": "IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[previous_over_30_delay_rate]))"
+  },
+  {
+    "Name": "previous_over_60_delay_rate",
+    "Expression": "IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[previous_over_60_delay_rate]))"
+  },
+  {
+    "Name": "arrival_delay_change_pp",
+    "Expression": "IF([comparison_context_allowed] && [single_route_service] && SELECTEDVALUE(mart_route_priorities[is_comparison_eligible], FALSE()), 100 * ([current_arrival_delay_rate] - [previous_arrival_delay_rate]))"
+  },
+  {
+    "Name": "deterioration_persistence",
+    "Expression": "IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[deterioration_persistence]))"
+  },
+  {
+    "Name": "underperformance_persistence",
+    "Expression": "IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[underperformance_persistence]))"
+  },
+  {
+    "Name": "change_signal",
+    "Expression": "IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(mart_route_priorities[change_signal]))"
+  },
+  {
+    "Name": "comparison_status",
+    "Expression": "IF(NOT [comparison_context_allowed], \"Choisir une comparaison fixe sans filtre de calendrier ni de cause\", \"Fenêtres fixes ; minimum 30/mois, seuil 2 points, cible fictive 90 %\")"
+  },
+  {
+    "Name": "deterioration_rank",
+    "Expression": "IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(route_diagnostic[deterioration_rank]))"
+  },
+  {
+    "Name": "underperformance_rank",
+    "Expression": "IF([comparison_context_allowed] && [single_route_service], SELECTEDVALUE(route_diagnostic[underperformance_rank]))"
+  },
+  {
+    "Name": "published_cause_share",
+    "Expression": "IF([single_route_service] && [complete_month_selection] && HASONEVALUE(dim_date[month]) && HASONEVALUE(dim_cause[cause_key]) && SELECTEDVALUE(fct_delay_causes_monthly[is_cause_profile_usable], FALSE()), DIVIDE(SELECTEDVALUE(fct_delay_causes_monthly[published_cause_pct]), 100))"
+  },
+  {
+    "Name": "published_cause_raw_pct",
+    "Expression": "IF([single_route_service] && [complete_month_selection] && HASONEVALUE(dim_date[month]) && HASONEVALUE(dim_cause[cause_key]), SELECTEDVALUE(fct_delay_causes_monthly[published_cause_pct]))"
+  },
+  {
+    "Name": "cause_profile_status",
+    "Expression": "IF([single_route_service] && [complete_month_selection] && HASONEVALUE(dim_date[month]) && HASONEVALUE(dim_cause[cause_key]), SELECTEDVALUE(fct_delay_causes_monthly[cause_profile_status]), \"Choisir une liaison, un service, un mois et une cause\")"
+  },
+  {
+    "Name": "source_version",
+    "Expression": "SELECTEDVALUE(refresh_metadata[version_id])"
+  },
+  {
+    "Name": "last_business_month",
+    "Expression": "SELECTEDVALUE(refresh_metadata[last_business_month])"
+  },
+  {
+    "Name": "last_import_utc",
+    "Expression": "SELECTEDVALUE(refresh_metadata[imported_at_utc])"
+  },
+  {
+    "Name": "dashboard_comparison_label",
+    "Expression": "SWITCH(SELECTEDVALUE(dim_comparison[comparison_id]), \"2026_h1_vs_2025_h1\", \"Janvier–juin 2026 / janvier–juin 2025\", \"2025_vs_2024\", \"Année 2025 / année 2024\", \"Choisir une comparaison unique\")"
+  },
+  {
+    "Name": "dashboard_coverage_label",
+    "Expression": "IF([comparison_context_allowed], FORMAT([eligible_route_count], \"0\") & \" / \" & FORMAT([candidate_route_count], \"0\") & \" liaisons/service éligibles\")"
+  },
+  {
+    "Name": "dashboard_excluded_count",
+    "Expression": "IF([comparison_context_allowed], [candidate_route_count] - [eligible_route_count])"
+  },
+  {
+    "Name": "dashboard_below_threshold_count",
+    "Expression": "IF([comparison_context_allowed], CALCULATE(COUNTROWS(mart_route_priorities), KEEPFILTERS(mart_route_priorities[change_signal] = \"below_project_threshold\")))"
+  },
+  {
+    "Name": "dashboard_current_l",
+    "Expression": "IF([comparison_context_allowed] && [single_route_service] && SELECTEDVALUE(mart_route_priorities[current_arrival_valid_months]) = SELECTEDVALUE(dim_comparison[expected_months]), SELECTEDVALUE(mart_route_priorities[current_arrival_numerator]))"
+  },
+  {
+    "Name": "dashboard_current_n",
+    "Expression": "IF([comparison_context_allowed] && [single_route_service] && SELECTEDVALUE(mart_route_priorities[current_arrival_valid_months]) = SELECTEDVALUE(dim_comparison[expected_months]), SELECTEDVALUE(mart_route_priorities[current_arrival_denominator]))"
+  },
+  {
+    "Name": "dashboard_deterioration_months",
+    "Expression": "IF([comparison_context_allowed] && [single_route_service] && SELECTEDVALUE(dim_comparison[persistence_applicable], FALSE()) && SELECTEDVALUE(mart_route_priorities[is_comparison_eligible], FALSE()), SELECTEDVALUE(mart_route_priorities[deterioration_months]))"
+  },
+  {
+    "Name": "dashboard_underperformance_months",
+    "Expression": "IF([comparison_context_allowed] && [single_route_service] && SELECTEDVALUE(dim_comparison[persistence_applicable], FALSE()) && SELECTEDVALUE(mart_route_priorities[is_comparison_eligible], FALSE()), SELECTEDVALUE(mart_route_priorities[underperformance_months]))"
+  },
+  {
+    "Name": "dashboard_exclusion_reason",
+    "Expression": "IF([comparison_context_allowed] && [single_route_service], IF(SELECTEDVALUE(mart_route_priorities[is_comparison_eligible], FALSE()), \"Éligible : couverture complète et N ≥30 chaque mois\", COALESCE(SELECTEDVALUE(mart_route_priorities[exclusion_reasons]), \"Hors population du classement\")))"
+  },
+  {
+    "Name": "dashboard_route_label",
+    "Expression": "IF([single_route_service], SELECTEDVALUE(dim_route[route_label]) & \" · \" & SELECTEDVALUE(dim_service[service_type]) & \" | \" & [dashboard_comparison_label], \"Sélectionner une liaison orientée et un service\")"
+  },
+  {
+    "Name": "dashboard_freshness",
+    "Expression": "\"Source jusqu'à \" & FORMAT([last_business_month], \"yyyy-MM\") & \" | Métadonnées lues : \" & FORMAT([last_import_utc], \"yyyy-MM-dd HH:mm\") & \" UTC | Version \" & LEFT([source_version], 12)"
+  },
+  {
+    "Name": "dashboard_cause_status",
+    "Expression": "IF([single_route_service] && [complete_month_selection] && HASONEVALUE(dim_date[month]), \"Profil \" & SELECTEDVALUE(dim_date[month_label]) & \" : \" & SWITCH(SELECTEDVALUE(fct_delay_causes_monthly[cause_profile_status]), \"available\", \"disponible\", \"missing\", \"incomplet\", \"out_of_bounds\", \"valeurs hors bornes\", \"all_zero\", \"entièrement nul, non exploitable\", \"sum_warning\", \"somme hors tolérance, à examiner\", \"absent\"), \"Choisir une liaison, un service et un mois\")"
+  },
+  {
+    "Name": "dashboard_investigation",
+    "Expression": "VAR Route = SELECTEDVALUE(dim_route[route_label])\nVAR Allowed = [single_route_service] && SELECTEDVALUE(dim_service[service_type]) = \"National\" && SELECTEDVALUE(dim_comparison[comparison_id]) = \"2026_h1_vs_2025_h1\" && [source_version] = \"e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6\"\nRETURN IF(NOT Allowed, \"Aucune investigation spécifique documentée pour ce contexte.\", SWITCH(TRUE(),\nRoute = \"PARIS LYON → GRENOBLE\", \"R01 · Demander les événements datés et rapprocher exploitation, gares, matériel et infrastructure. Hypothèse : plusieurs mécanismes possibles. Suivi : L/N, A/P et mois en hausse ; aucune causalité établie.\",\nRoute = \"PARIS MONTPARNASSE → NANTES\", \"R02 · Examiner préparation et rotations sur des dates documentées. Hypothèse : contraintes répétées possibles, à confronter aux incidents. Suivi : taux, annulations et persistance ; causes mensuelles sans moyenne.\",\nCONTAINSSTRING(Route, \"DOUAI\") && CONTAINSSTRING(Route, \"PARIS NORD\"), \"R03 · Examiner chaque sens séparément puis rapprocher dates et périmètres. Hypothèse commune à vérifier. Suivi : deux séries L/N et A/P, avec leurs volumes et couvertures.\",\nCONTAINSSTRING(Route, \"STRASBOURG\") && CONTAINSSTRING(Route, \"NANTES\"), \"R04 · Vérifier les six paires mensuelles, les volumes et les incidents. Signal sensible au seuil N≥60. Suivi : taux, couverture et éligibilité ; sortie du classement ≠ amélioration.\",\nNOT ISBLANK([underperformance_rank]) && [underperformance_rank] <= 5, \"R05 · Constituer une fiche d'événements pour cette liaison durablement sous cible. Hypothèse : difficultés récurrentes à documenter. Suivi : régularité mensuelle, mois sous cible, L et N.\",\nNOT SELECTEDVALUE(mart_route_priorities[is_comparison_eligible], FALSE()), \"R06 · Examiner absences, faibles volumes et changements de périmètre avant réintégration. Suivi : couverture valide et motifs d'exclusion.\",\n\"Pas de recommandation spécifique J06 : examiner couverture, évolution et événements datés avant de formuler une hypothèse.\"))"
+  },
+  {
+    "Name": "dashboard_delay_current_month",
+    "Expression": "VAR MonthNumber = SELECTEDVALUE(dim_date[month_number])\nVAR StartDate = SELECTEDVALUE(dim_comparison[current_start])\nVAR EndDate = SELECTEDVALUE(dim_comparison[current_end])\nVAR Allowed = [single_route_service] && HASONEVALUE(dim_comparison[comparison_id]) && NOT ISBLANK(MonthNumber) && NOT ISBLANK(StartDate) && MonthNumber >= MONTH(StartDate) && MonthNumber <= MONTH(EndDate)\nVAR TargetDate = DATE(YEAR(StartDate), COALESCE(MonthNumber, 1), 1)\nRETURN IF(Allowed, CALCULATE([arrival_delay_rate], REMOVEFILTERS(dim_date), DATESBETWEEN(dim_date[date_key], TargetDate, EOMONTH(TargetDate, 0))))"
+  },
+  {
+    "Name": "dashboard_delay_previous_month",
+    "Expression": "VAR MonthNumber = SELECTEDVALUE(dim_date[month_number])\nVAR StartDate = SELECTEDVALUE(dim_comparison[previous_start])\nVAR EndDate = SELECTEDVALUE(dim_comparison[previous_end])\nVAR Allowed = [single_route_service] && HASONEVALUE(dim_comparison[comparison_id]) && NOT ISBLANK(MonthNumber) && NOT ISBLANK(StartDate) && MonthNumber >= MONTH(StartDate) && MonthNumber <= MONTH(EndDate)\nVAR TargetDate = DATE(YEAR(StartDate), COALESCE(MonthNumber, 1), 1)\nRETURN IF(Allowed, CALCULATE([arrival_delay_rate], REMOVEFILTERS(dim_date), DATESBETWEEN(dim_date[date_key], TargetDate, EOMONTH(TargetDate, 0))))"
+  },
+  {
+    "Name": "dashboard_cancellation_current_month",
+    "Expression": "VAR MonthNumber = SELECTEDVALUE(dim_date[month_number])\nVAR StartDate = SELECTEDVALUE(dim_comparison[current_start])\nVAR EndDate = SELECTEDVALUE(dim_comparison[current_end])\nVAR Allowed = [single_route_service] && HASONEVALUE(dim_comparison[comparison_id]) && NOT ISBLANK(MonthNumber) && NOT ISBLANK(StartDate) && MonthNumber >= MONTH(StartDate) && MonthNumber <= MONTH(EndDate)\nVAR TargetDate = DATE(YEAR(StartDate), COALESCE(MonthNumber, 1), 1)\nRETURN IF(Allowed, CALCULATE([cancellation_rate], REMOVEFILTERS(dim_date), DATESBETWEEN(dim_date[date_key], TargetDate, EOMONTH(TargetDate, 0))))"
+  },
+  {
+    "Name": "dashboard_cancellation_previous_month",
+    "Expression": "VAR MonthNumber = SELECTEDVALUE(dim_date[month_number])\nVAR StartDate = SELECTEDVALUE(dim_comparison[previous_start])\nVAR EndDate = SELECTEDVALUE(dim_comparison[previous_end])\nVAR Allowed = [single_route_service] && HASONEVALUE(dim_comparison[comparison_id]) && NOT ISBLANK(MonthNumber) && NOT ISBLANK(StartDate) && MonthNumber >= MONTH(StartDate) && MonthNumber <= MONTH(EndDate)\nVAR TargetDate = DATE(YEAR(StartDate), COALESCE(MonthNumber, 1), 1)\nRETURN IF(Allowed, CALCULATE([cancellation_rate], REMOVEFILTERS(dim_date), DATESBETWEEN(dim_date[date_key], TargetDate, EOMONTH(TargetDate, 0))))"
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "attempts": [
+    {
+      "sha256": "29406efbce4c1e2dc9856922ee2781fe4d8f100d4bf6c2d93f50529d3e13b028",
+      "pages": 4,
+      "recovery_banner": false,
+      "french_status": false,
+      "delivered": false,
+      "rejected_reduced_scale": false
+    },
+    {
+      "sha256": "a2ae711ad04268f154343c63e222952b072edf26b0913af258281e03062cda95",
+      "pages": 4,
+      "recovery_banner": false,
+      "french_status": false,
+      "delivered": false,
+      "rejected_reduced_scale": false
+    },
+    {
+      "sha256": "c8c3120225a134319711d349318212d8f4b40e3592a3ca5feccc3378133befa5",
+      "pages": 4,
+      "recovery_banner": false,
+      "french_status": false,
+      "delivered": false,
+      "rejected_reduced_scale": false
+    },
+    {
+      "sha256": "88e67b33deabdf8e5fbae440c41b78a73e819689e29e1c03e91d349ad63c7198",
+      "pages": 4,
+      "recovery_banner": true,
+      "french_status": false,
+      "delivered": false,
+      "rejected_reduced_scale": false
+    },
+    {
+      "sha256": "bae7b6fb9dd865eeff428dd5a22bc3e8b04e5dac14bd4bf97cf49bf78723b8b5",
+      "pages": 4,
+      "recovery_banner": false,
+      "french_status": true,
+      "delivered": true,
+      "rejected_reduced_scale": false
+    },
+    {
+      "sha256": "255eb728c303cb4d136036c9a78c1f63c2751364681b5f740f7255f9dcd9f98e",
+      "pages": 4,
+      "recovery_banner": false,
+      "french_status": true,
+      "delivered": false,
+      "rejected_reduced_scale": true
+    }
+  ],
+  "retained_outside_repository": true
+}

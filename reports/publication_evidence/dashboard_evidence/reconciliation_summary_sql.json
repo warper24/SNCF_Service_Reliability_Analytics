@@ -1,0 +1,20 @@
+[
+  {
+    "comparison_id": "2026_h1_vs_2025_h1",
+    "candidate_route_count": 116,
+    "eligible_route_count": 102,
+    "deteriorating_route_count": 91,
+    "improving_route_count": 1,
+    "persistent_underperformance_route_count": 94,
+    "persistent_deterioration_route_count": 69
+  },
+  {
+    "comparison_id": "2025_vs_2024",
+    "candidate_route_count": 116,
+    "eligible_route_count": 88,
+    "deteriorating_route_count": 25,
+    "improving_route_count": 7,
+    "persistent_underperformance_route_count": null,
+    "persistent_deterioration_route_count": null
+  }
+]

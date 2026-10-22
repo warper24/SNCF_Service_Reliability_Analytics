@@ -1,0 +1,7 @@
+{
+  "tables": 12,
+  "relationships": 16,
+  "measures": 74,
+  "unique_measures": 74,
+  "status": "passed"
+}

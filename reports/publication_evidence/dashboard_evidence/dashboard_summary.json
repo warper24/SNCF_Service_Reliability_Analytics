@@ -1,0 +1,14 @@
+[
+  {
+    "dim_comparison[comparison_id]": "2026_h1_vs_2025_h1",
+    "[eligible]": 102,
+    "[excluded]": 14,
+    "[below]": 10
+  },
+  {
+    "dim_comparison[comparison_id]": "2025_vs_2024",
+    "[eligible]": 88,
+    "[excluded]": 28,
+    "[below]": 56
+  }
+]

@@ -23,6 +23,7 @@ dbt/logs/
 /reports/data_model_evidence/
 /reports/diagnostic_evidence/
 /reports/powerbi_evidence/
+/reports/dashboard_evidence/
 # Local BI files may contain imported data.
 *.pbix
 *.pbit

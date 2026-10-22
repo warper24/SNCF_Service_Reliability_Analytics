@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "reviewer": "Codex â€” revue Desktop et inspection des pages exportÃ©es",
+  "desktop_version": "2.159.883.0",
+  "date": "2026-10-22",
+  "model_server": "localhost:50527",
+  "observations": [
+    "Navigation activÃ©e au clavier Ctrl+EntrÃ©e : listes, diagnostic et retour vers synthÃ¨se.",
+    "Drillthrough Paris Lyon â†’ Grenoble et Strasbourg â†’ Nantes : liaison, National et semestre transmis.",
+    "Mois juin vers mai : profils modifiÃ©s, taux fixes et courbes inchangÃ©s.",
+    "Effacer les segments : causes indisponibles, contexte fixe prÃ©servÃ©.",
+    "Comparaison 2025/2024 synchronisÃ©e : 88 Ã©ligibles et seconde liste indisponible.",
+    "Quatre pages mÃ©tier ; cinq rangs par liste et six parts mensuelles lisibles dans export natif.",
+    "Cache des visuels recalculÃ© via Optimiser â†’ Actualiser les visuels, sans actualisation des donnÃ©es.",
+    "Export a echelle reduite rejete ; diagnostic recalcule a 100 %, nouvel export natif inspecte sur quatre pages. Projet sauvegarde avec la vue d’ensemble comme accueil."
+  ],
+  "private_screenshots": {
+    "annual_comparison_synced.png": "3b65cf522ec53b08780e141c110cb80e8948174cc64d14f4f3415bdafd0ff48c",
+    "clear_month_preserves_comparison.png": "de5719d04d664a64e68fcc12e2a2cc93b465637075165228c9bb158a48a8de32",
+    "diagnostic_final_french_status.png": "42d0d2bc20940714477ce801704216484778afd6df4391cb697c5338c8f8ab45",
+    "diagnostic_refreshed_french_status.png": "8f50aeb0a531bba459cb24f29c1f996f15dbf7f94ebe5fe92d8ece728a2e2971",
+    "drillthrough_strasbourg.png": "189d82839d349af019422f9181f8edc239b55c3fa015bbb260c7414b1b1fd08a",
+    "method_final.png": "dc036ca02646a71e75b8b3b8560c7a3b7fc872429a79138fca2340c8e112a9e7",
+    "month_may_fixed_rates_preserved.png": "df1b2b67d3181a0acdfd6ac8739f60ca3ca35f1046a9ca04478d66031d9cb5fb",
+    "overview_default.png": "37ef7ff7951c11631e7c8accb39afef893e4517edb84bba8ccac0b07d196cd33"
+  },
+  "screenshots_private_reason": "Interface du compte et notifications possibles : seules les empreintes sont publiques. Les captures publiques sont des rendus du PDF.",
+  "not_tested": [
+    "Certification complÃ¨te au lecteur dâ€™Ã©cran",
+    "Power BI Service",
+    "Actualisation planifiÃ©e",
+    "Nouvelle machine",
+    "Nouvelles donnÃ©es source"
+  ],
+  "initial_python_attempt": {
+    "interpreter": "Python global hors environnement J02",
+    "status": "failed",
+    "errors": 24,
+    "reason": "PyYAML absent ; aucune installation effectuÃ©e",
+    "corrected_run": "37 tests rÃ©ussis avec venv J02"
+  },
+  "final_pdf_sha256": "bae7b6fb9dd865eeff428dd5a22bc3e8b04e5dac14bd4bf97cf49bf78723b8b5"
+}

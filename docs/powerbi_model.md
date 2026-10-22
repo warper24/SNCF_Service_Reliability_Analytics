@@ -190,3 +190,29 @@ Hors J07 : mise en page métier et storytelling (J08), orchestration complète (
 publication Power BI Service/Fabric, refresh planifié, RLS, optimisation de grande
 volumétrie, reconstruction sur machine neuve. Leur valeur et leur effort doivent
 être évalués selon un besoin explicite ; ils ne sont pas ajoutés automatiquement.
+
+## Compléments J08 — rapport et contexte de présentation
+
+J08 conserve les 12 tables Import et les 16 relations. Les 57 expressions de
+mesures J07 sont inchangées ; 17 mesures de présentation portent le total à 74.
+Le catalogue décrit les titres, effectifs de fenêtres fixes, statuts, annotations
+d'investigation et quatre séries mensuelles alignées. La colonne calculée
+`dim_comparison[comparison_label]` expose deux libellés français ; les identifiants
+et bornes SQL restent inchangés. Aucune relation ni population nouvelle.
+
+Les séries mensuelles réévaluent les taux J07 sur un mois complet de chaque
+fenêtre. Le segment de mois du profil de causes est isolé par les interactions
+PBIR ; il ne filtre pas les comparaisons ou courbes. Le drillthrough transmet
+liaison, service et comparaison, sans filtre supplémentaire hérité.
+
+Les textes R01–R06 sont éditoriaux, rattachés à leur version et semestre ; ils
+ne constituent pas des faits opérationnels nouveaux. Les statuts de causes
+présentés sont traduits en français ; les codes SQL restent conservés.
+
+Voir [le guide](dashboard_guide.md) et [le bilan J08](milestones/J08_handoff.md).
+La commande J07 reçoit `--include-dashboard` pour vérifier les 74 mesures : les
+contrôles des populations, ratios, rangs et relations restent exécutés. Le contrôle
+J08 compare en outre les 57 expressions réelles avec le commit J07 et les séries
+mensuelles avec les effectifs BigQuery. La preuve Import 1→2 historique est
+réutilisée sans être réinitialisée ; les données et la date de lecture restent
+identiques. Les définitions et caches gardent la séparation hors OneDrive.

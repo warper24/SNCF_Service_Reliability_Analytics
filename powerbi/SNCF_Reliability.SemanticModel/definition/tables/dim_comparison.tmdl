@@ -71,6 +71,12 @@ table dim_comparison
 
 		annotation UnderlyingDateTimeDataType = Date
 
+	/// Libellé de présentation J08 ; identifiant et fenêtres SQL inchangés.
+	column comparison_label = SWITCH([comparison_id], "2026_h1_vs_2025_h1", "S1 2026 / S1 2025", "2025_vs_2024", "2025 / 2024", [comparison_id])
+		dataType: string
+		lineageTag: 26098fdb-c42e-40ce-bb43-b757b6039955
+		summarizeBy: none
+
 	partition dim_comparison = m
 		mode: import
 		source =

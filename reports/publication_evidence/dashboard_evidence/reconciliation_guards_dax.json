@@ -1,0 +1,34 @@
+[
+  {
+    "[case_id]": "all_routes",
+    "[value]": null
+  },
+  {
+    "[case_id]": "all_services",
+    "[value]": null
+  },
+  {
+    "[case_id]": "partial_days",
+    "[value]": null
+  },
+  {
+    "[case_id]": "cause_filter",
+    "[value]": null
+  },
+  {
+    "[case_id]": "comparison_total",
+    "[value]": null
+  },
+  {
+    "[case_id]": "comparison_calendar",
+    "[value]": null
+  },
+  {
+    "[case_id]": "causes_multiple_months",
+    "[value]": null
+  },
+  {
+    "[case_id]": "causes_total",
+    "[value]": null
+  }
+]

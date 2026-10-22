@@ -1,6 +1,6 @@
 # SNCF Service Reliability Analytics
 
-**Projet de portfolio en cours — J01 à J07 validés.**
+**Projet de portfolio en cours — J01 à J08 validés.**
 
 L'objectif est de comprendre l'évolution de la fiabilité des liaisons TGV et de
 fournir un outil d'aide à la priorisation des investigations. Le projet utilise
@@ -17,7 +17,7 @@ les données publiques SNCF, Python, BigQuery, dbt et Power BI.
 | J05 — Modèle analytique | Huit tables de référence, ratios pondérés, comparaisons et éligibilité vérifiés ; 76 tests J05 réussis. | Validé |
 | J06 — Diagnostic | Deux listes de priorités, décomposition volume/taux, sensibilité sur 27 scénarios par fenêtre et investigations tracées ; 36 contrôles réussis. | Validé |
 | J07 — Modèle Power BI | 12 tables Import, 16 relations, 57 mesures et 6 286 contrôles SQL/DAX réussis ; cache et réouverture Desktop vérifiés. | Validé |
-| J08 — Rapport | Concevoir les pages et le parcours de lecture pour faciliter la décision. | À réaliser |
+| J08 — Rapport | Quatre pages métier, drillthrough, PDF, captures et synthèse ; 1 405 contrôles J08 et 6 321 contrôles SQL/DAX réussis. | Validé |
 | J09 — Automatisation et reprise | Assembler les étapes, automatiser les contrôles et vérifier la reprise après échec. | À réaliser |
 | J10 — Livraison finale | Finaliser la documentation et les livrables accessibles aux recruteurs. | À réaliser |
 | J11 — Extension Intercités | Ajouter une seconde source après publication de la première version TGV. | Facultatif |
@@ -39,7 +39,8 @@ signal de dégradation de 2 points au premier semestre 2026 face à 2025. Paris 
 cinq premières positions de dégradation dans tous les scénarios testés. Strasbourg
 → Nantes arrive première sous la règle principale, avec une sensibilité au volume
 mensuel explicitement présentée. J07 livre le modèle Power BI réconcilié et trois
-pages techniques de contrôle. Le rapport métier et son parcours de lecture restent à J08.
+pages techniques de contrôle. J08 les complète avec quatre pages métier et un
+parcours de décision vérifié : synthèse → priorité → diagnostic → investigation.
 
 Les [constats chiffrés](reports/findings.md) et les
 [investigations proposées](reports/recommendations.md) sont consultables sans
@@ -49,6 +50,18 @@ publiés, une convention non certifiée ; aucun gain opérationnel n'est revendi
 Les analyses restent au niveau d'une liaison orientée et d'un service. Les données
 ne permettent pas de reconstruire un taux national, de convertir les causes en
 effectifs ou de démontrer une causalité. Les anomalies et exclusions sont conservées.
+
+## Consulter le rapport
+
+[Rapport PDF](reports/dashboard.pdf) · [Synthèse de décision](reports/executive_summary.md) · [Guide des pages et filtres](docs/dashboard_guide.md)
+
+![Vue d’ensemble du rapport](powerbi/screenshots/01_overview.png)
+
+Les quatre pages et la synthèse sont consultables sans compte cloud ni licence
+Power BI. Le [projet PBIP](powerbi/SNCF_Reliability.pbip) contient les définitions ;
+un nouvel environnement doit importer les données avec ses propres accès.
+Le scénario principal reste janvier–juin 2026/2025 ; les réserves D01–D07 sont
+visibles dans le rapport. La publication finale du portfolio reste à J10.
 
 ## Pour aller plus loin
 

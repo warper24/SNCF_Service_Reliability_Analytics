@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "checks": {
+    "four_pages": true,
+    "no_recovery_banner": true,
+    "french_status": true,
+    "five_degradation_rows": true,
+    "five_underperformance_rows": true,
+    "native_scale_and_full_page_layout_visually_reviewed": true
+  },
+  "pages": 4,
+  "metadata": {
+    "/CreationDate": "D:20261022151058",
+    "/Creator": "PDFium",
+    "/Producer": "PDFium"
+  },
+  "source_pdf_sha256": "bae7b6fb9dd865eeff428dd5a22bc3e8b04e5dac14bd4bf97cf49bf78723b8b5",
+  "native_export": true,
+  "source_path": "C:\\Users\\<utilisateur>\\AppData\\Local\\Temp\\Power BI Desktop\\print-job-b88fcbfd-b4ed-409a-aa8b-b32ea626a619\\SNCF_Reliability.pdf",
+  "visual_review": "Les quatre PNG du PDF final inspectes : page entiere, cinq lignes par liste, six parts de causes, statut francais, aucune interface de compte. Diagnostic recalcule a 100 % avant export.",
+  "page_png_sha256": {
+    "01_overview.png": "d7fa83ea643fbac7b9175286c077df4808e2f9441093a5f7b6280cf0165b55b8",
+    "02_priorities.png": "a9599dc33a037d268de7ad2e72f29375ae9842607ef6820cd6ca50cdb0eda122",
+    "03_diagnostic.png": "f3a2a2c856001da48a4a23db4fdbbde506af969ee8bb084f86a6027715c09207",
+    "04_method.png": "fac43c968fb8f455a94a1854351cb7b56e64c34689c058c1a105c5bb383f339e"
+  }
+}

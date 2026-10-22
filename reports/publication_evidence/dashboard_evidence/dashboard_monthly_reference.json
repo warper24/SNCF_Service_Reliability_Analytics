@@ -1,0 +1,299 @@
+[
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2025,
+    "month_number": 3,
+    "delay_rate": 0.11857707509881422,
+    "cancellation_rate": 0.0
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2025,
+    "month_number": 1,
+    "delay_rate": 0.09876543209876543,
+    "cancellation_rate": 0.004098360655737705
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2025,
+    "month_number": 2,
+    "delay_rate": 0.18502202643171806,
+    "cancellation_rate": 0.0043859649122807015
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2024,
+    "month_number": 4,
+    "delay_rate": 0.18518518518518517,
+    "cancellation_rate": 0.0
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2025,
+    "month_number": 4,
+    "delay_rate": 0.09433962264150944,
+    "cancellation_rate": 0.0
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2026,
+    "month_number": 3,
+    "delay_rate": 0.14166666666666666,
+    "cancellation_rate": 0.0
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2024,
+    "month_number": 8,
+    "delay_rate": 0.12101910828025478,
+    "cancellation_rate": 0.0
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2024,
+    "month_number": 5,
+    "delay_rate": 0.1552511415525114,
+    "cancellation_rate": 0.0
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2025,
+    "month_number": 5,
+    "delay_rate": 0.06965174129353234,
+    "cancellation_rate": 0.0
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2024,
+    "month_number": 6,
+    "delay_rate": 0.17972350230414746,
+    "cancellation_rate": 0.0
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2026,
+    "month_number": 4,
+    "delay_rate": 0.19289340101522842,
+    "cancellation_rate": 0.0
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2024,
+    "month_number": 12,
+    "delay_rate": 0.14473684210526316,
+    "cancellation_rate": 0.0
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2026,
+    "month_number": 2,
+    "delay_rate": 0.1583710407239819,
+    "cancellation_rate": 0.0
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2025,
+    "month_number": 8,
+    "delay_rate": 0.11594202898550725,
+    "cancellation_rate": 0.0
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2024,
+    "month_number": 1,
+    "delay_rate": 0.18315018315018314,
+    "cancellation_rate": 0.0
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2025,
+    "month_number": 10,
+    "delay_rate": 0.14761904761904762,
+    "cancellation_rate": 0.0
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2025,
+    "month_number": 7,
+    "delay_rate": 0.19463087248322147,
+    "cancellation_rate": 0.019736842105263157
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2024,
+    "month_number": 2,
+    "delay_rate": 0.1455223880597015,
+    "cancellation_rate": 0.0
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2024,
+    "month_number": 7,
+    "delay_rate": 0.1488095238095238,
+    "cancellation_rate": 0.017543859649122806
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2025,
+    "month_number": 6,
+    "delay_rate": 0.1724137931034483,
+    "cancellation_rate": 0.0
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2026,
+    "month_number": 9,
+    "delay_rate": 0.20618556701030927,
+    "cancellation_rate": 0.0
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2024,
+    "month_number": 11,
+    "delay_rate": 0.19900497512437812,
+    "cancellation_rate": 0.0
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2024,
+    "month_number": 3,
+    "delay_rate": 0.2698412698412698,
+    "cancellation_rate": 0.0
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2025,
+    "month_number": 11,
+    "delay_rate": 0.20408163265306123,
+    "cancellation_rate": 0.005076142131979695
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2026,
+    "month_number": 8,
+    "delay_rate": 0.16149068322981366,
+    "cancellation_rate": 0.0
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2026,
+    "month_number": 6,
+    "delay_rate": 0.28717948717948716,
+    "cancellation_rate": 0.015151515151515152
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2024,
+    "month_number": 9,
+    "delay_rate": 0.1651376146788991,
+    "cancellation_rate": 0.0
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2024,
+    "month_number": 10,
+    "delay_rate": 0.16228070175438597,
+    "cancellation_rate": 0.0
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2025,
+    "month_number": 9,
+    "delay_rate": 0.15816326530612246,
+    "cancellation_rate": 0.010101010101010102
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2026,
+    "month_number": 7,
+    "delay_rate": 0.2670807453416149,
+    "cancellation_rate": 0.012269938650306749
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2025,
+    "month_number": 12,
+    "delay_rate": 0.205607476635514,
+    "cancellation_rate": 0.0
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2026,
+    "month_number": 1,
+    "delay_rate": 0.27802690582959644,
+    "cancellation_rate": 0.004464285714285714
+  },
+  {
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National",
+    "year": 2026,
+    "month_number": 5,
+    "delay_rate": 0.29213483146067415,
+    "cancellation_rate": 0.0
+  }
+]

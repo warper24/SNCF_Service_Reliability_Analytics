@@ -144,3 +144,23 @@ L'identité Git locale utilise le compte GitHub vérifié `warper24` et son adre
 `noreply`, sans publier l'adresse de contact personnelle ni modifier la configuration
 Git des autres projets. La licence du code reste à choisir à J10 ; l'attribution
 SNCF et la licence déclarée ODbL sont conservées dans le README et les rapports.
+## Clôture J08 — 22 octobre 2026
+
+L'accord d'implémentation suit la présentation complète du jalon :
+« ok tu as mon accord pour l'implémentation, go ». La branche `codex/j08-dashboard`
+part du commit réel `10b1808`. Elle ajoute quatre pages métier, le thème, les
+captures issues du PDF natif, la synthèse, le guide, les contrôles et le bilan.
+Le modèle garde 12 tables et 16 relations ; 17 mesures de présentation portent
+le total à 74, avec les 57 expressions J07 inchangées.
+
+Les qualifications finales réussissent : 1 405 contrôles J08, 6 321 contrôles
+SQL/DAX et 37 tests Python. La source figée et la date de lecture Import restent
+inchangées. Les preuves historiques J01–J07 ne sont pas rejouées pour publication.
+Les nouvelles preuves locales sont dans `reports/dashboard_evidence/`, ignoré ;
+leurs copies publiques anonymisées rejoignent le groupe du même nom dans le
+manifeste global. Les captures d'interface restent privées, les images publiques
+étant les rendus des quatre pages PDF inspectées.
+
+La clôture applique l'envoi ordinaire déjà autorisé, sans forçage, vers `main` et
+la branche de jalon après contrôle de l'index. Le lien du commit réel est transmis
+après vérification distante. Aucune release finale J10 ni publication Service.

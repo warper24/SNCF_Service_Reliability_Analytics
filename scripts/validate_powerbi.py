@@ -37,6 +37,7 @@ def main():
     parser.add_argument('--project', required=True)
     parser.add_argument('--server', required=True)
     parser.add_argument('--work-directory', required=True)
+    parser.add_argument('--include-dashboard', action='store_true', help='Qualifier également les mesures de présentation J08.')
     args = parser.parse_args()
     work = Path(args.work_directory).resolve()
     if work.is_relative_to(REPO) or 'onedrive' in str(work).lower():
@@ -98,7 +99,13 @@ def main():
         audit=json.loads(audit_path.read_text(encoding='utf-8-sig'))
         check('structure:12 tables',len(audit['tables']),12,0)
         check('structure:16 relations',len(audit['relationships']),16,0)
-        check('structure:57 mesures',sum(len(t['measures']) for t in audit['tables']),57,0)
+        expected_measures = 57
+        if args.include_dashboard:
+            from build_powerbi_dashboard import MEASURES
+            expected_measures += len(MEASURES)
+            actual_names = {m['name'] for t in audit['tables'] for m in t['measures']}
+            check('mesures de présentation J08 présentes', set(MEASURES).issubset(actual_names), True)
+        check('structure:nombre de mesures explicites',sum(len(t['measures']) for t in audit['tables']),expected_measures,0)
         for table in audit['tables']:
             for partition in table['partitions']:
                 check('Import:'+table['name'],partition['mode'],'Import')

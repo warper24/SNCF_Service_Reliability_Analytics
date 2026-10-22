@@ -1,0 +1,37 @@
+[
+  {
+    "route_key": "fb393e3cfbf604a0733373c1683c63419adcd1e7512dd4c8710e6cc37e4e9c0f",
+    "service_key": "93202df2ec7081b28b47901b5c287a5a14c64d3834d2dfef64e198ca948c3d6e",
+    "departure_station": "DIJON VILLE",
+    "arrival_station": "PARIS LYON",
+    "service_type": "International"
+  },
+  {
+    "route_key": "fb393e3cfbf604a0733373c1683c63419adcd1e7512dd4c8710e6cc37e4e9c0f",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "DIJON VILLE",
+    "arrival_station": "PARIS LYON",
+    "service_type": "National"
+  },
+  {
+    "route_key": "c258a364ac8a46a47e22589e658c0d2d6314d7e6ec6b4d271a80de653107b368",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "GRENOBLE",
+    "arrival_station": "PARIS LYON",
+    "service_type": "National"
+  },
+  {
+    "route_key": "0ca0e7df6e8cd00f3b0650cdbf204c2e8252650672c42ff2d56f010bcf4a8aed",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "PARIS LYON",
+    "arrival_station": "GRENOBLE",
+    "service_type": "National"
+  },
+  {
+    "route_key": "e4998a4fdbc1cdc41e12b20e0c96e2bbc1ec78c0e7ca1a670bf892b150c5c334",
+    "service_key": "865b30e2fae6d778db9b748c30705b8ea7ec051a61182126f110d484c4347055",
+    "departure_station": "STRASBOURG",
+    "arrival_station": "NANTES",
+    "service_type": "National"
+  }
+]

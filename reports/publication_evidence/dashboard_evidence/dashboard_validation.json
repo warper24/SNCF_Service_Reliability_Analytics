@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "checks": 1405,
+  "failed": 0,
+  "run_directory": "C:\\Users\\<utilisateur>\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\LocalCache\\Local\\SNCF_Service_Reliability_Analytics\\powerbi-j08\\dashboard_validation_20261022T125019Z",
+  "checked_at_utc": "2026-10-22T12:50:28.616691+00:00",
+  "source_version": "e4c3c2853a9692acb327fd37bbccc713349e5b33b66c1fe1f0e53d5cb0f12ce6",
+  "code_sha256": {
+    "scripts\\validate_dashboard.py": "d720ce500fbc6ecadc9176135bb8e069699e2662fdef5d05fa7ebb0db38bd5d3",
+    "scripts\\build_powerbi_dashboard.py": "3a7be67f696c5c2bb2debb308c7f2c2eabbc575581c86f37d09b830b6f350fd8"
+  },
+  "limitations": [
+    "Navigation, clavier, interactions effectives et exports exigent une revue Desktop séparée.",
+    "D01–D07 non certifiées par ces contrôles."
+  ]
+}

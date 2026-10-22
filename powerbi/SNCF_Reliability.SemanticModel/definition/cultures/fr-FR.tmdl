@@ -315,6 +315,16 @@ cultureInfo fr-FR
 			            },
 			            "Weight": 0.6
 			          }
+			        },
+			        {
+			          "Mois calendaire": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -433,6 +443,16 @@ cultureInfo fr-FR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.571
+			          }
+			        },
+			        {
+			          "Mois du profil de causes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        },
 			        {
@@ -1986,6 +2006,16 @@ cultureInfo fr-FR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.571
+			          }
+			        },
+			        {
+			          "Motif déclaré": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        },
 			        {
@@ -34496,6 +34526,16 @@ cultureInfo fr-FR
 			          }
 			        },
 			        {
+			          "Liaisons éligibles": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
 			          "Éligibles": {
 			            "State": "Suggested",
 			            "Source": {
@@ -34555,6 +34595,16 @@ cultureInfo fr-FR
 			          }
 			        },
 			        {
+			          "Hausse ≥2 points": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
 			          "Dégradations ≥2 points": {
 			            "State": "Suggested",
 			            "Source": {
@@ -34611,6 +34661,16 @@ cultureInfo fr-FR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "Baisse ≥2 points": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        },
 			        {
@@ -34899,6 +34959,16 @@ cultureInfo fr-FR
 			          }
 			        },
 			        {
+			          "Taux courant": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
 			          "Retard courant": {
 			            "State": "Suggested",
 			            "Source": {
@@ -35035,6 +35105,16 @@ cultureInfo fr-FR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "Annulations A/P": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -35587,6 +35667,16 @@ cultureInfo fr-FR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "Taux précédent": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        },
 			        {
@@ -36169,6 +36259,16 @@ cultureInfo fr-FR
 			          }
 			        },
 			        {
+			          "Écart en points": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
 			          "Écart (points)": {
 			            "State": "Suggested",
 			            "Source": {
@@ -36728,6 +36828,16 @@ cultureInfo fr-FR
 			          }
 			        },
 			        {
+			          "Rang J06": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
 			          "Rang dégradation": {
 			            "State": "Suggested",
 			            "Source": {
@@ -36758,6 +36868,16 @@ cultureInfo fr-FR
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Rang J06": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        },
 			        {
@@ -36903,6 +37023,16 @@ cultureInfo fr-FR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "Part publiée": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        },
 			        {
@@ -37507,6 +37637,354 @@ cultureInfo fr-FR
 			        }
 			      ],
 			      "SemanticType": "Time"
+			    },
+			    "kpi_measures.dashboard_excluded_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_measures",
+			          "ConceptualProperty": "dashboard_excluded_count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Candidates exclues": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_measures.dashboard_comparison_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_measures",
+			          "ConceptualProperty": "dashboard_comparison_label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Périodes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_measures.dashboard_coverage_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_measures",
+			          "ConceptualProperty": "dashboard_coverage_label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Couverture": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_measures.dashboard_freshness": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_measures",
+			          "ConceptualProperty": "dashboard_freshness"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "kpi_measures.dashboard_deterioration_months": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_measures",
+			          "ConceptualProperty": "dashboard_deterioration_months"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Mois / 6": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_measures.dashboard_current_l": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_measures",
+			          "ConceptualProperty": "dashboard_current_l"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "L": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "L courant": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_measures.dashboard_current_n": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_measures",
+			          "ConceptualProperty": "dashboard_current_n"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "N déduit": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "N courant": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_measures.dashboard_underperformance_months": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_measures",
+			          "ConceptualProperty": "dashboard_underperformance_months"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Mois / 6": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_measures.dashboard_cancellation_current_month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_measures",
+			          "ConceptualProperty": "dashboard_cancellation_current_month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Courant": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_measures.dashboard_cancellation_previous_month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_measures",
+			          "ConceptualProperty": "dashboard_cancellation_previous_month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Référence": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_measures.dashboard_route_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_measures",
+			          "ConceptualProperty": "dashboard_route_label"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "kpi_measures.dashboard_cause_status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_measures",
+			          "ConceptualProperty": "dashboard_cause_status"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "kpi_measures.dashboard_investigation": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_measures",
+			          "ConceptualProperty": "dashboard_investigation"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "kpi_measures.dashboard_exclusion_reason": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_measures",
+			          "ConceptualProperty": "dashboard_exclusion_reason"
+			        }
+			      },
+			      "State": "Generated"
+			    },
+			    "kpi_measures.dashboard_delay_current_month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_measures",
+			          "ConceptualProperty": "dashboard_delay_current_month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Courant": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_measures.dashboard_delay_previous_month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_measures",
+			          "ConceptualProperty": "dashboard_delay_previous_month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Référence": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "kpi_measures.dashboard_below_threshold_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "kpi_measures",
+			          "ConceptualProperty": "dashboard_below_threshold_count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Sous le seuil ±2 points": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dim_comparison.comparison_label": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_comparison",
+			          "ConceptualProperty": "comparison_label"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Comparaison fixe": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Comparaison": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {

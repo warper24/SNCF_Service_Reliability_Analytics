@@ -4,5 +4,6 @@
   "displayName": "J07 · Comparaisons fixes",
   "displayOption": "FitToPage",
   "height": 900,
-  "width": 1560
+  "width": 1560,
+  "visibility": "HiddenInViewMode"
 }

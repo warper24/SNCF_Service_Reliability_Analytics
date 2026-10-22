@@ -1,0 +1,421 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
+  "name": "f01f8ee1e829f496120c",
+  "displayName": "Diagnostic d'une liaison",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#F3F6FA'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "Filter06e3fc02fdefb7001fe0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_route"
+              }
+            },
+            "Property": "route_label"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dim_route",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "route_label"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'PARIS LYON → GRENOBLE'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "Filtera79bd82b6b957666f752",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_service"
+              }
+            },
+            "Property": "service_type"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dim_service",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "service_type"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'National'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "Drillthrough"
+      },
+      {
+        "name": "Filter2fb88bf9a506deaa96ee",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_comparison"
+              }
+            },
+            "Property": "comparison_label"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dim_comparison",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "comparison_label"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'S1 2026 / S1 2025'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "pageBinding": {
+    "name": "J08Diagnostic",
+    "type": "Drillthrough",
+    "acceptsFilterContext": "None",
+    "parameters": [
+      {
+        "name": "Param_Filter06e3fc02fdefb7001fe0",
+        "boundFilter": "Filter06e3fc02fdefb7001fe0",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_route"
+              }
+            },
+            "Property": "route_label"
+          }
+        }
+      },
+      {
+        "name": "Param_Filtera79bd82b6b957666f752",
+        "boundFilter": "Filtera79bd82b6b957666f752",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_service"
+              }
+            },
+            "Property": "service_type"
+          }
+        }
+      },
+      {
+        "name": "Param_Filter2fb88bf9a506deaa96ee",
+        "boundFilter": "Filter2fb88bf9a506deaa96ee",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_comparison"
+              }
+            },
+            "Property": "comparison_label"
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "51827e0c2410c9938ffe",
+      "target": "70ed0b8500b35da7e72b",
+      "type": "NoFilter"
+    },
+    {
+      "source": "51827e0c2410c9938ffe",
+      "target": "97fe129310ac2dc60a3a",
+      "type": "NoFilter"
+    },
+    {
+      "source": "51827e0c2410c9938ffe",
+      "target": "55f9e3027ba96b1c8604",
+      "type": "NoFilter"
+    },
+    {
+      "source": "51827e0c2410c9938ffe",
+      "target": "56362ea54911aeb7f588",
+      "type": "NoFilter"
+    },
+    {
+      "source": "51827e0c2410c9938ffe",
+      "target": "f6418838f76e1c64b47f",
+      "type": "NoFilter"
+    },
+    {
+      "source": "51827e0c2410c9938ffe",
+      "target": "5139b0b0234fae8319c5",
+      "type": "NoFilter"
+    },
+    {
+      "source": "51827e0c2410c9938ffe",
+      "target": "ec265f454724a5c7e63a",
+      "type": "NoFilter"
+    },
+    {
+      "source": "51827e0c2410c9938ffe",
+      "target": "31b011c61132502ae52a",
+      "type": "NoFilter"
+    },
+    {
+      "source": "51827e0c2410c9938ffe",
+      "target": "5fc8a07f57fa9295e246",
+      "type": "NoFilter"
+    },
+    {
+      "source": "51827e0c2410c9938ffe",
+      "target": "90aa15b1cdd4038f1589",
+      "type": "NoFilter"
+    },
+    {
+      "source": "51827e0c2410c9938ffe",
+      "target": "1272f486fb83827c0332",
+      "type": "NoFilter"
+    },
+    {
+      "source": "51827e0c2410c9938ffe",
+      "target": "8ce84c6be70deed3fa9f",
+      "type": "NoFilter"
+    },
+    {
+      "source": "51827e0c2410c9938ffe",
+      "target": "1d270f1c10615d2f2753",
+      "type": "NoFilter"
+    },
+    {
+      "source": "51827e0c2410c9938ffe",
+      "target": "2fc6ee1becc289cda982",
+      "type": "DataFilter"
+    },
+    {
+      "source": "51827e0c2410c9938ffe",
+      "target": "699dd847150c1a95d344",
+      "type": "DataFilter"
+    },
+    {
+      "source": "51827e0c2410c9938ffe",
+      "target": "8c868c9d5ac3ecfbe106",
+      "type": "NoFilter"
+    },
+    {
+      "source": "51827e0c2410c9938ffe",
+      "target": "8b03fccc1d89f131f244",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2fc6ee1becc289cda982",
+      "target": "70ed0b8500b35da7e72b",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2fc6ee1becc289cda982",
+      "target": "97fe129310ac2dc60a3a",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2fc6ee1becc289cda982",
+      "target": "55f9e3027ba96b1c8604",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2fc6ee1becc289cda982",
+      "target": "56362ea54911aeb7f588",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2fc6ee1becc289cda982",
+      "target": "f6418838f76e1c64b47f",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2fc6ee1becc289cda982",
+      "target": "5139b0b0234fae8319c5",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2fc6ee1becc289cda982",
+      "target": "ec265f454724a5c7e63a",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2fc6ee1becc289cda982",
+      "target": "31b011c61132502ae52a",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2fc6ee1becc289cda982",
+      "target": "5fc8a07f57fa9295e246",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2fc6ee1becc289cda982",
+      "target": "90aa15b1cdd4038f1589",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2fc6ee1becc289cda982",
+      "target": "1272f486fb83827c0332",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2fc6ee1becc289cda982",
+      "target": "8ce84c6be70deed3fa9f",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2fc6ee1becc289cda982",
+      "target": "1d270f1c10615d2f2753",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2fc6ee1becc289cda982",
+      "target": "51827e0c2410c9938ffe",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2fc6ee1becc289cda982",
+      "target": "699dd847150c1a95d344",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2fc6ee1becc289cda982",
+      "target": "8c868c9d5ac3ecfbe106",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2fc6ee1becc289cda982",
+      "target": "8b03fccc1d89f131f244",
+      "type": "NoFilter"
+    }
+  ]
+}
