@@ -631,8 +631,8 @@
     },
     {
       "path": "dashboard_evidence/delivery_manifest.json",
-      "original_sha256": "63d6ddb57cb2d20a8bd45b4251c509d80bd4333ba7243292b19f70a97b046847",
-      "public_sha256": "63d6ddb57cb2d20a8bd45b4251c509d80bd4333ba7243292b19f70a97b046847",
+      "original_sha256": "2e95781bd9aeace46809d40e12c09e59b0c1a83c6f36a935da23a236cebb1adb",
+      "public_sha256": "2e95781bd9aeace46809d40e12c09e59b0c1a83c6f36a935da23a236cebb1adb",
       "anonymized": false
     },
     {
@@ -649,8 +649,8 @@
     },
     {
       "path": "dashboard_evidence/manual_review.json",
-      "original_sha256": "f068f78f9cb96d6c3e421264cbe64517cc77c3b623496a0ec019e4c4cf380f73",
-      "public_sha256": "f068f78f9cb96d6c3e421264cbe64517cc77c3b623496a0ec019e4c4cf380f73",
+      "original_sha256": "cf0cf8ac9e7225bef799e40b7410d39516b2d94b2c1f684b34712a978af50275",
+      "public_sha256": "cf0cf8ac9e7225bef799e40b7410d39516b2d94b2c1f684b34712a978af50275",
       "anonymized": false
     },
     {

@@ -1,17 +1,17 @@
 {
   "status": "passed",
-  "reviewer": "Codex â€” revue Desktop et inspection des pages exportÃ©es",
+  "reviewer": "Codex — revue Desktop et inspection des pages exportées",
   "desktop_version": "2.159.883.0",
   "date": "2026-10-22",
   "model_server": "localhost:50527",
   "observations": [
-    "Navigation activÃ©e au clavier Ctrl+EntrÃ©e : listes, diagnostic et retour vers synthÃ¨se.",
-    "Drillthrough Paris Lyon â†’ Grenoble et Strasbourg â†’ Nantes : liaison, National et semestre transmis.",
-    "Mois juin vers mai : profils modifiÃ©s, taux fixes et courbes inchangÃ©s.",
-    "Effacer les segments : causes indisponibles, contexte fixe prÃ©servÃ©.",
-    "Comparaison 2025/2024 synchronisÃ©e : 88 Ã©ligibles et seconde liste indisponible.",
-    "Quatre pages mÃ©tier ; cinq rangs par liste et six parts mensuelles lisibles dans export natif.",
-    "Cache des visuels recalculÃ© via Optimiser â†’ Actualiser les visuels, sans actualisation des donnÃ©es.",
+    "Navigation activée au clavier Ctrl+Entrée : listes, diagnostic et retour vers synthèse.",
+    "Drillthrough Paris Lyon → Grenoble et Strasbourg → Nantes : liaison, National et semestre transmis.",
+    "Mois juin vers mai : profils modifiés, taux fixes et courbes inchangés.",
+    "Effacer les segments : causes indisponibles, contexte fixe préservé.",
+    "Comparaison 2025/2024 synchronisée : 88 éligibles et seconde liste indisponible.",
+    "Quatre pages métier ; cinq rangs par liste et six parts mensuelles lisibles dans export natif.",
+    "Cache des visuels recalculé via Optimiser → Actualiser les visuels, sans actualisation des données.",
     "Export a echelle reduite rejete ; diagnostic recalcule a 100 %, nouvel export natif inspecte sur quatre pages. Projet sauvegarde avec la vue d’ensemble comme accueil."
   ],
   "private_screenshots": {
@@ -26,18 +26,19 @@
   },
   "screenshots_private_reason": "Interface du compte et notifications possibles : seules les empreintes sont publiques. Les captures publiques sont des rendus du PDF.",
   "not_tested": [
-    "Certification complÃ¨te au lecteur dâ€™Ã©cran",
+    "Certification complète au lecteur d’écran",
     "Power BI Service",
-    "Actualisation planifiÃ©e",
+    "Actualisation planifiée",
     "Nouvelle machine",
-    "Nouvelles donnÃ©es source"
+    "Nouvelles données source"
   ],
   "initial_python_attempt": {
     "interpreter": "Python global hors environnement J02",
     "status": "failed",
     "errors": 24,
-    "reason": "PyYAML absent ; aucune installation effectuÃ©e",
-    "corrected_run": "37 tests rÃ©ussis avec venv J02"
+    "reason": "PyYAML absent ; aucune installation effectuée",
+    "corrected_run": "37 tests réussis avec venv J02"
   },
-  "final_pdf_sha256": "bae7b6fb9dd865eeff428dd5a22bc3e8b04e5dac14bd4bf97cf49bf78723b8b5"
+  "final_pdf_sha256": "bae7b6fb9dd865eeff428dd5a22bc3e8b04e5dac14bd4bf97cf49bf78723b8b5",
+  "encoding_correction": "Correction UTF-8 des commentaires de revue ; observations, captures, tests et PDF inchanges."
 }

@@ -164,3 +164,10 @@ manifeste global. Les captures d'interface restent privées, les images publique
 La clôture applique l'envoi ordinaire déjà autorisé, sans forçage, vers `main` et
 la branche de jalon après contrôle de l'index. Le lien du commit réel est transmis
 après vérification distante. Aucune release finale J10 ni publication Service.
+
+La livraison principale J08 est publiée et vérifiée sur GitHub dans le commit
+[`12bd52d`](https://github.com/warper24/SNCF_Service_Reliability_Analytics/commit/12bd52dad244849b984c4729816b8864a32a9c48).
+Une lecture Windows sans encodage explicite avait altéré les accents du seul
+compte rendu manuel JSON. La correction complémentaire rétablit UTF-8 et ses
+empreintes ; calculs, PDF et qualifications ne sont pas renouvelés. L’historique
+initial est conservé, sans réécriture ni envoi forcé.

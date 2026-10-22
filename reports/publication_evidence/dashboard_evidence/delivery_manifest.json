@@ -20,7 +20,7 @@
     "docs/measure_catalog.md": "e2ae4469cf18d57230091c651a2a03a808237acd0db6f96759fd1b23b3426cba",
     "docs/milestones/J08_handoff.md": "034829ea4c78fdc44b238548da726f2b66771c65a48cc758002c44e913e633a7",
     "docs/powerbi_model.md": "ee1a692db2f37561fa57b8cfcdd09cfcdc777d4a7a73449593a8870d2e981cbc",
-    "docs/publication.md": "21aa077a96cd380f4ea2ce0a112fe7f9591fdc4b55c520f348a7ba620faf2cb7",
+    "docs/publication.md": "24b89a4c1d80d8b1a3d6281f2541f40f6e21089afdaf39b8d84a1e30afe5c57a",
     "PLAN.md": "9af45d5820f93f65f4c4241f3c0ed6f8df9ef545295773d8f02698897c0e1137",
     "powerbi/screenshots/01_overview.png": "d7fa83ea643fbac7b9175286c077df4808e2f9441093a5f7b6280cf0165b55b8",
     "powerbi/screenshots/02_priorities.png": "a9599dc33a037d268de7ad2e72f29375ae9842607ef6820cd6ca50cdb0eda122",
@@ -157,7 +157,7 @@
     "dashboard_summary.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "dashboard_validation.json": "f88a7a6a44436d5659fcd6463f77a11d28ba4e7b86d24f077fdfdfcdd0cda767",
     "export_attempts.json": "14063ee046dbeaa2012c6370d86ac8fb60df8138b4fffb0fddf0cbd2b9f70544",
-    "manual_review.json": "f068f78f9cb96d6c3e421264cbe64517cc77c3b623496a0ec019e4c4cf380f73",
+    "manual_review.json": "cf0cf8ac9e7225bef799e40b7410d39516b2d94b2c1f684b34712a978af50275",
     "parser_first_attempt_checks.json": "f45ee1d59efc19d3b0c00c81e9b7ca6da03e662f20914fd9c05ee5856ccd027c",
     "parser_first_attempt_validation.json": "ca4e609066f0ba8cb254be68391f6c69deabc0685399616c2e536ce5934006bf",
     "pdf_review.json": "78f535ff21ed0200c7ebe3df15c06eeebfbe168313641c32010615dd4edfd178",
@@ -190,5 +190,6 @@
     "reconciliation_summary_sql.json": "d50053d2e0670ad997e1bac7acd309fd59ff442a8b42899e34536614ab8aad9b",
     "reconciliation_validation.json": "3e4bf43049d5001ce1c61c6c17ffad4d794fede4a9cf6fed21046d7bcda5476a"
   },
-  "scope": "Definitions et livrables publics ; aucun cache, export source complet ou identite. La publication ne renouvelle pas les qualifications."
+  "scope": "Definitions et livrables publics ; aucun cache, export source complet ou identite. La publication ne renouvelle pas les qualifications.",
+  "proof_metadata_correction": "Accents du compte rendu manuel retablis en UTF-8 apres verification GitHub du commit 12bd52d ; aucune nouvelle execution de qualification."
 }
